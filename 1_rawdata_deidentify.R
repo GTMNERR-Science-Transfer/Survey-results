@@ -4,10 +4,21 @@
 #### NOT TO BE SHARED WITH ANYONE ####
 #### NOT TO BE SAVED TO SHARED DRIVES, CLOUD DRIVES ETC ####
 
-# do renv, do the whole if required install thing
-library(qualtRics)
-library(questionr)
-library(tidyverse)
+# This script / project is set up with renv, meaning it 
+# See https://rstudio.github.io/renv/articles/renv.html
+
+# Start all runs of this script with:
+renv::restore()
+# This ensures it uses the packages last used when everything worked okay.
+
+install.packages("pacman") # This package is used in the next line of code to
+# check for installed packages and load them
+
+# The following line checks if the required packages are installed, and if not,
+# install them and then loads them. If yes, it loads them
+pacman::p_load("qualtRics","questionr", "tidyverse")
+
+# Documentation for qualtRics: https://docs.ropensci.org/qualtRics/
 
 #### Set up API credentials ####
 # To get this information, log into Qualtrics, in the top-right, click
