@@ -1,0 +1,86 @@
+qid,qname,question,force_resp
+QID3,Informed Consent,"<strong>Protocol Title:</strong> “Using collaborative open science tools to improve engagement with the ecology of the Guana River Estuary” - IRB#202202509<br>
+<br>
+<u>Please read this consent document carefully before you decide to participate in this study.</u><br>
+<br>
+<strong>Purpose of the research study:</strong> The University of Florida and Guana Tolomato Matanzas (GTM) Research Reserve are partnering with the local community and broader science community to develop a web-based, public-facing, interactive dashboard to provide access to Guana Estuary datasets. <strong>The aim of this work is to support open science and to increase diverse engagement by making the data available interactively, using visualization tools.</strong> To this end, we are seeking feedback from those who have been involved with the Guana Estuary to help us better understand their needs.<br>
+<br>
+<strong>What you will be asked to do in the study:</strong> Answer survey questions on your involvement with the Guana Estuary, your current and potential data needs, and your preferences for functionalities of the dashboard.<br>
+<br>
+<strong>Time required:</strong> Approximately 15 to 30 minutes to answer the survey questions<br>
+<br>
+<strong>Benefits:</strong> There are no direct benefits to you for participating in the study.<br>
+<br>
+<strong>Risks: </strong>There are no risks to you for participating in the study.<br>
+<br>
+<strong>Compensation: </strong>There is no compensation for participating in the study.<br>
+<br>
+<strong>Confidentiality: </strong>Your identity will be kept confidential to the extent provided by law. The names of the participants will not be used in any research reports or presentations. Your name or email address will not be connected to your responses once data collection is concluded. Data related to the survey will be de-identified, i.e., codes such as p1, p2, p3 etc. will be used instead of personal information. This will happen prior to any analyses or reporting of the data. During data collection, the table linking unique IDs (p1, p2, p3 etc.) to participant's identification will be accessed only by the PI and study coordinator. The results might be presented in a paper and might be sent to research journals for possible publication or used in research conference presentations. No names or other identifying information will be used in reporting.<br>
+<br>
+<strong>Voluntary participation: </strong>Your participation in this study is completely voluntary.<br>
+<br>
+<strong>Right to withdraw from the study: </strong>You have the right to withdraw from the study at any time without consequence. You do not have to answer any questions you do not want to answer.<br>
+<br>
+<strong>Whom to contact if you have questions about the study: </strong>Dr. Geraldine Klarenberg, School of Forest, Fisheries, and Geomatics Sciences. University of Florida (gklarenberg@ufl.edu), or Kristie Perez, School of Natural Resources and Environment. University of Florida (kristieperez@ufl.edu).<br>
+<br>
+If you have any questions about your rights as a participant in this study, please contact the UF IRB office: Telephone: (352) 392-0433, e-mail address: irb2@ufl.edu<br>
+<br>
+<u>I have read the procedure outlined above. I voluntarily agree to participate in this study. </u><br>
+<strong>Please click ""I agree"" if you would like to participate in the study. If you do not want to participate in the study, click “I do not agree”.</strong>",TRUE
+QID5,   ,"<img height=""166"" src=""https://ufl.qualtrics.com/CP/Graphic.php?IM=IM_cAO0fg33fulB0ay"" style=""width: 150px; height: 166px;"" width=""150""><br>
+<br>
+BACKGROUND<br>
+<br>
+The University of Florida and Guana Tolomato Matanzas (GTM) Research Reserve are partnering with the local community and broader science community <u>to develop a web-based, public-facing, interactive dashboard to provide access to <strong>Guana Estuary</strong> datasets</u>. <strong>The aim of this research is to support open science and to increase diverse engagement by making the data available interactively, using visualization tools</strong>. To this end, we are seeking feedback from those who have been involved with the Guana Estuary to help us better understand their needs!<br>
+<br>
+For the purposes of this project, and this survey, ""Guana Estuary"" refers to the Guana Lake and Guana River: the area north and south of the Guana Dam, from Micklers Road to the Tolomato River / intracoastal - see the map below.<br>
+<br>
+<img src=""https://ufl.qualtrics.com/CP/Graphic.php?IM=IM_5uLTerVyl5LqdT0"" style=""width: 103px; height: 292px;"">",FALSE
+QID6,D-1,How are you connected to the Guana Estuary? (check all that apply),TRUE
+QID7,D-2,"How often do you engage with the Guana Estuary, on average?",TRUE
+QID8,D-3,"Regardless of whether you can currently access data, <strong>what kind of information would or are you generally interested in from the area?</strong><br />
+<br />
+<u>Pick <strong>only</strong> those that apply</u>, and please rank your selection in order of interest: <u>1 = most interested in.</u>",FALSE
+QID9,D-4,"Have you ever accessed data* about the Guana Estuary?<br>
+<br>
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps. ",TRUE
+QID10,ND-1,"If you had the opportunity to access data in the future, how often would you access or obtain these data?",TRUE
+QID11,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",TRUE
+QID27,TOOL CHARACTERISTICS,"<br>The major goal of this project is to develop a dashboard* to enhance open access to scientific data about the Guana Estuary. The next series of questions asks for feedback about this tool.<br><br>*by ""dashboard"" we mean a user interface on a computer display that presents (up-to-date) information with visualization tools such as graphs, charts, and tables - in a dynamic and interactive way.<br>",FALSE
+QID23,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)<br>",TRUE
+QID25,T-2,"What type of information would you want to see on the dashboard? <br><br>Pick all those that apply, and please <u>rank your selection in order of interest</u>: 1 = would want to see most.",TRUE
+QID49,T-3,"What form of information would you want to see on the dashboard? <br><br>Pick all those that apply, and please <u>rank your selection in order of interest</u>: 1 = would want to see most.",TRUE
+QID24,T-4,"What format of data delivery would suit your needs best? <br><br>Pick all those that apply, and please <u>rank your selection</u>: 1 = would suit my needs best.",TRUE
+QID48,TR-0,"Are you part of the <strong>stakeholder group</strong> that was invited to participate in the project kick-off meetings in <u>November and December 2022</u> (If you are unsure, click &quot;No&quot;. If you were invited but could not make it, click &quot;Yes&quot;).",TRUE
+QID32,TRUST,"For our work, stakeholders are people who would be impacted by the availability of a Guana Estuary data dashboard such as community members, natural resource managers, and professionals like educators, local officials, and others.<br>
+<br>
+Stakeholder engagement has become a key element in the natural resource management and environmental science and policy domains. Trust is imperative to meaningful stakeholder engagement. Trust can be defined as a willingness of one entity (for instance stakeholders) to be vulnerable to the discretionary actions of another (for instance the project team).<br>
+<br>
+For the next set of questions, we are interested in understanding your opinions on trust and other related concepts as they pertain to our work together in creating an open data/open science dashboard.<br>
+<br>
+Your thoughts and feedback will not only enable us to evaluate our process design and make any necessary adjustments going forward to ensure the success of our project, but also allow us to evaluate aspects of our project within the broader context of global stakeholder engagement in natural resources.<br>
+<br>
+As a reminder, the UF team implementing this project includes <u>Kristie Perez</u> (PhD Student), <u>Geraldine Klarenberg</u> (Lecturer), <u>Nia Morales</u> (Assistant Professor), and <u>Shirley Baker</u> (Professor).",FALSE
+QID33,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,FALSE
+QID34,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,FALSE
+QID35,TR-3,"To date, please indicate your level of satisfaction with:",FALSE
+QID36,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,FALSE
+QID38,TR-5,"In general, how well do you think the scientific community <u>in general</u> does in engaging with local communities?",FALSE
+QID40,TR-6,How well do you think <u>this project</u> has done in engaging with the local community?,FALSE
+QID42,FURTHER INPUT,"<br>We would like to know if you are interested in staying involved in this project, and if so, how.",FALSE
+QID26,F-1,Would you be interested in giving (further) input for the project?,TRUE
+QID28,F-2,What would be your preferred method of giving us feedback and input? (check all that apply),FALSE
+QID29,F-3,"Although you do not want to give further input on the project, would you like to receive email updates?",FALSE
+QID30,F-4,What is your email address?,TRUE
+QID41,DEMOGRAPHICS,"<br>These last few questions are about you, to give us an idea of the demographics of interested parties.",FALSE
+QID12,DE-1,"What is your primary occupation (if retired, what was your primary occupation)?",FALSE
+QID13,DE-2,What is your age?,TRUE
+QID14,DE-3,What gender do you identify with?,TRUE
+QID15,DE-4,What is the driving time from your primary residence to the GTMNERR Visitor Center (505 Guana River Rd) on average?,TRUE
+QID16,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",TRUE
+QID17,YD-2,How do you <strong>most frequently</strong> obtain or access Guana Estuary data on <u><strong>${lm://Field/1}</strong></u>?,TRUE
+QID18,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on <u><strong>${lm://Field/1}</strong></u>? (check all that apply),TRUE
+QID19,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on <u><strong>${lm://Field/1}</strong></u>? (check all that apply),TRUE
+QID20,YD-5,How often do/did you access or obtain Guana Estuary data on <u><strong>${lm://Field/1}</strong></u>?,TRUE
+QID21,YD-6,What do you typically use Guana Estuary data on <u><strong>${lm://Field/1}</strong></u> for? (check all that apply),TRUE
+QID22,YD-7,How well do Guana Estuary data on <u><strong>${lm://Field/1}</strong></u> generally satisfy your need(s)?,TRUE

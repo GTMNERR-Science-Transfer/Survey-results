@@ -1,10 +1,18 @@
-# Survey data processing 
-# THIS IS THE RAW **NON DE-IDENTIFIED DATA**: hence confidential
+### Using collaborative open science tools to improve engagement with the 
+# ecology of the Guana River Estuary
+# Geraldine Klarenberg, PhD
+# 12 May 2023
+
+# Survey data extraction
+
+# THIS IS THE RAW **NON DE-IDENTIFIED DATA** and it includes my personal
+# API key: hence confidential
 
 #### NOT TO BE SHARED WITH ANYONE ####
 #### NOT TO BE SAVED TO SHARED DRIVES, CLOUD DRIVES ETC ####
 
-# This script / project is set up with renv, meaning it 
+# This script / project is set up with renv, meaning it restores the versions of
+# the packages that were last used (when everything worked, we assume)
 # See https://rstudio.github.io/renv/articles/renv.html
 
 # Start all runs of this script with:
@@ -36,35 +44,51 @@ qualtrics_api_credentials(api_key = "mPL8Fr97QRvWHw7TFXCmBDDwVvsS6quKdnMwQcT2",
                           base_url = "ca1.qualtrics.com",
                           install = TRUE)
 
-#API/V3/UR_0MJe8Ic1zAztWER
+# You can only use the API to download Qualtrics results for surveys that you are
+# admin on. To check which surveys you can access, you can uncomment and run 
+# the next line:
+# all_surveys()
 
-# Get questionnaire metadata
+# Our survey IDs are
+all_survey_ids <- c("SV_agTpds5m6MDrqAe", # visitor's center
+                    "SV_bqMgSIcEsmEy91Q", # kiosk
+                    "SV_ezASGpdQPyOr8Xk", # social media
+                    "SV_9RjNbEveqMo0MLk") # email
+names(all_survey_ids) <- c("visitor", "kiosk", "socialmedia", "email")
 
-# Get questions
+#### Extract metadata ####
+# Get questions - I am getting these from the emailed survey, as this one also has
+# the trust questions
+questions <- survey_questions("SV_9RjNbEveqMo0MLk")
+write_csv(questions, "metadata/survey_questions_all.csv")
 
-# Get questionnaires
+# More detailed dataframe of questions and answer options (since our survey is
+# complicated...)
+questions_detail <- extract_colmap(fetch_survey(surveyID = "SV_9RjNbEveqMo0MLk"))
+write_csv(questions_detail, "metadata/questions_detail.csv")
 
-# Create a metadata file from the first two lines of the results file
-metadata <- read_csv("Using collaborative open science tools to improve engagement with the ecology of the Guana River Est_May 2, 2023_19.26.csv",
-                     n_max = 2, col_names = FALSE)
-metadata <- as.data.frame(t(metadata))
-colnames(metadata) <- c("code", "question")
-# This dataframe now has a column with the Qualtrics codes and a column with the actual questions
-write_csv(metadata, "metadata.csv")
-##### Update this manually with all the choices
+# Get questionnaire metadata: this is a list with 2 dataframes with information and
+# a list of lists of the questions. The latter is not really necessary to save
+metadata_responses <- data.frame()
+for (survey in all_survey_ids){
+  metadata_surveys <- metadata(survey)
+  combined <- cbind(metadata_surveys$metadata, metadata_surveys$responsecounts)
+  metadata_responses <- rbind(metadata_responses, combined)
+}
+# Add date that this info was gathered
+metadata_responses$date_checked <- paste(Sys.Date(), Sys.time())
+write_csv(metadata_responses, "metadata/response_info.csv")
 
-# Read in all files
-# Skip first line wit the questions to ensure R picks the correct data types; 
-# the column names now are the Qualtrics codes, which don't really make sense,
-# they're not well-ordered. But that's fine, we'll change that in the next script.
-# Add a column that indicates source
-results_email <- read_csv("Using collaborative open science tools to improve engagement with the ecology of the Guana River Est_May 2, 2023_19.26.csv",
-                          skip = 2)
-results_email$source <- "email"
-# results_socialmedia
-# results_socialmedia$source <- "social"
-# results_qr
-# results_qr$source <- "qr"
+#### Get surveys ####
+
+# Collect all our surveys (this can take a while to run)
+survey_data <- data.frame()
+for (survey in all_survey_ids){
+  survey_ind <- fetch_survey(surveyID = survey)
+  survey_ind$source <- names(all_survey_ids[which(all_survey_ids == survey)])
+  survey_data <- full_join(survey_data, survey_ind)
+
+  }
 
 
 # Combine all files/responses - add a column that indicates source
