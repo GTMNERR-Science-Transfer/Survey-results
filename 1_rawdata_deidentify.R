@@ -82,13 +82,19 @@ write_csv(metadata_responses, "metadata/response_info.csv")
 #### Get surveys ####
 
 # Collect all our surveys (this can take a while to run)
-survey_data <- data.frame()
 for (survey in all_survey_ids){
-  survey_ind <- fetch_survey(surveyID = survey)
-  survey_ind$source <- names(all_survey_ids[which(all_survey_ids == survey)])
-  survey_data <- full_join(survey_data, survey_ind)
-
+  survey_ind <- fetch_survey(surveyID = survey) # read survey data
+  if (nrow(survey_ind != 0)){ # only if the survey has results, attach them
+    if (!exists("survey_data")){ # if survey_data does not yet exist, create it
+      survey_ind$source <- names(all_survey_ids[which(all_survey_ids == survey)])
+      survey_data <- survey_ind
+    } else { # if it does exist, add on
+      survey_ind$source <- names(all_survey_ids[which(all_survey_ids == survey)])
+      survey_data <- full_join(survey_data, survey_ind)
+    } # change something here about how data is read in! QD-2 has 7 levels in one
+    # survey and 8 in the other!
   }
+}
 
 
 # Combine all files/responses - add a column that indicates source
