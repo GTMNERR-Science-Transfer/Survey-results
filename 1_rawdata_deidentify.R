@@ -17,14 +17,12 @@
 
 # Start all runs of this script with:
 renv::restore()
-# This ensures it uses the packages last used when everything worked okay.
+# This ensures it uses the packages last used when everything worked okay. This 
+# also ensures these packages are installed if you don't have them
 
-install.packages("pacman") # This package is used in the next line of code to
-# check for installed packages and load them
-
-# The following line checks if the required packages are installed, and if not,
-# install them and then loads them. If yes, it loads them
-pacman::p_load("qualtRics","questionr", "tidyverse")
+# Load packages
+library("qualtRics")
+library("tidyverse")
 
 # Documentation for qualtRics: https://docs.ropensci.org/qualtRics/
 
@@ -40,6 +38,9 @@ pacman::p_load("qualtRics","questionr", "tidyverse")
 # Where {datacenterid} is a specific datacenter assigned to you based on 
 # your location.
 # Your datacenterid is listed in the box "User".
+
+# You only have to run this function once, as install = TRUE saves it to your 
+# environment
 qualtrics_api_credentials(api_key = "mPL8Fr97QRvWHw7TFXCmBDDwVvsS6quKdnMwQcT2",
                           base_url = "ca1.qualtrics.com",
                           install = TRUE)
@@ -94,7 +95,7 @@ for (survey in all_survey_ids){
                              convert = FALSE, # no conversion to proper data type
                              force_request = TRUE, # this forces a download (instead 
                              # of loading existing temporary data downloaded earlier)
-                             save_dir = "survey_downloads") # surveys will be saved 
+                             save_dir = "survey_downloads_confidential") # surveys will be saved 
   # as RDS files in this directory
   if (nrow(survey_ind != 0)){ # only if the survey has results, attach them
     if (!exists("survey_data")){ # if survey_data does not yet exist, create it
@@ -118,6 +119,27 @@ survey_data <- survey_data %>%
 # These questions are F-1 through F-4
 survey_data_contacts <- survey_data %>% 
   select(starts_with("F-"))
+# Add proper questions as headers instead of codes
+names(survey_data_contacts) <- questions_detail %>% 
+  filter(str_detect(qname, "F-")) %>% 
+  pull(description) # pull instead of select gives a vector, which what we need
+# for renaming the headers
+
+# Make long version
+survey_data_contacts <- survey_data_contacts %>%
+  pivot_longer(cols = 2:4,
+               names_to = "question",
+               values_to = "type_input") %>% 
+  select(!question) %>%  # superfluous column now
+  mutate(type_input = if_else(condition = (`Although you do not want to give further input on the project, would you like to receive email updates?` == "Yes"),
+         true = "Email updates only",
+         false = type_input,
+         missing = type_input)) %>% 
+  distinct() # Remove duplicates
+# Am not removing the NAs in type_input, this way we are also keeping people that
+# said no to wanting to give further input and also no to receiving email updates.
+# Maybe/probably still good info to have?
+
 write_csv(survey_data_contacts, "data_deidentified/survey_data_contacts.csv")
 
 # De-identify data
@@ -137,4 +159,5 @@ survey_data_safe <- survey_data_safe %>%
             "RecipientFirstName", "RecipientEmail", "ExternalReference", 
             "DistributionChannel", "UserLanguage", "Informed Consent"))
 
-write_csv(survey_data_safe, "data_deindentified/survey_data_safe_raw.csv")
+write_csv(survey_data_safe, "data_deidentified/survey_data_safe_raw.csv")
+
