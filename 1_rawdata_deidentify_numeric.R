@@ -69,11 +69,15 @@ write_csv(questions, "metadata/survey_questions_all.csv")
 questions_detail <- extract_colmap(fetch_survey(surveyID = "SV_9RjNbEveqMo0MLk"))
 write_csv(questions_detail, "metadata/questions_detail.csv")
 
+description <- fetch_description(surveyID = "SV_9RjNbEveqMo0MLk",
+                  elements = c("questions", "responsesets"))
+
 # Get questionnaire metadata: this is a list with 2 dataframes with information and
-# a list of lists of the questions. The latter is not really necessary to save
+# a list of lists of the questions. The latter is saved separately later.
 metadata_responses <- data.frame()
 for (survey in all_survey_ids){
   metadata_surveys <- metadata(survey)
+  # Get general survey and response info
   combined <- cbind(metadata_surveys$metadata, 
                     metadata_surveys$responsecounts)
   metadata_responses <- rbind(metadata_responses, 
@@ -82,6 +86,30 @@ for (survey in all_survey_ids){
 # Add date that this info was gathered
 metadata_responses$date_checked <- paste(Sys.Date(), Sys.time())
 write_csv(metadata_responses, "metadata/response_info.csv")
+
+# Accessing the questions metadata to get the multiple choice codes and text
+mc_questions <- metadata("SV_9RjNbEveqMo0MLk")
+mc_questions <- mc_questions$questions
+
+# Loop over each QID, get choices, and then recode and description
+mc_info_all <- data.frame()
+for(i in 1:length(mc_questions)){
+  if(!is.null(mc_questions[[i]]$choices)){ # check if choices exists, if not, skip
+    mc_info_q <- data.frame()
+    ch <- mc_questions[[i]]$choices # get only the choices info
+    for(j in 1:length(ch)){ # Now loop over every choice
+      q_code <- names(ch[j]) # the "names" are the codes
+      q_recode <- ch[[j]]$recode # to be on the safe side also get the recode
+      q_text <- ch[[j]]$description # get question text
+      mc_info <- data.frame(q_code, q_recode, q_text)
+      mc_info_q <- rbind(mc_info_q, mc_info)
+    }
+    mc_info_q$QID <- names(mc_questions)[i] 
+    mc_info_all <- rbind(mc_info_all, mc_info_q)  
+  }
+}
+
+write_csv(mc_info_all, "metadata/mc_questions_options.csv")
 
 #### Get surveys ####
 

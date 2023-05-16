@@ -55,7 +55,7 @@ intro <- all_surveys %>%
   pivot_longer(cols = 3:ncol(.),
                names_to = "question",
                values_to = "answer")
-write_csv(text_only, "data_deidentified/subsets/intro_results_basic.csv")
+write_csv(intro, "data_deidentified/subsets/intro_results_basic.csv")
 
 #### Make "has accessed data" dataset ####
 yes_data <- all_surveys %>% 
@@ -64,7 +64,7 @@ yes_data <- all_surveys %>%
   pivot_longer(cols = 3:ncol(.),
                names_to = "question",
                values_to = "answer")
-write_csv(text_only, "data_deidentified/subsets/data_yes_results_basic.csv")
+write_csv(yes_data, "data_deidentified/subsets/data_yes_results_basic.csv")
 
 #### Make "has NOT accessed data" dataset ####
 no_data <- all_surveys %>% 
@@ -73,7 +73,7 @@ no_data <- all_surveys %>%
   pivot_longer(cols = 3:ncol(.),
                names_to = "question",
                values_to = "answer")
-write_csv(text_only, "data_deidentified/subsets/data_no_results_basic.csv")
+write_csv(no_data, "data_deidentified/subsets/data_no_results_basic.csv")
 
 #### Make "dashboard" dataset ####
 dashboard <- all_surveys %>% 
@@ -82,7 +82,7 @@ dashboard <- all_surveys %>%
   pivot_longer(cols = 3:ncol(.),
                names_to = "question",
                values_to = "answer")
-write_csv(text_only, "data_deidentified/subsets/dashboard_results_basic.csv")
+write_csv(dashboard, "data_deidentified/subsets/dashboard_results_basic.csv")
 
 #### Make "trust" dataset ####
 trust <- all_surveys %>% 
@@ -91,7 +91,7 @@ trust <- all_surveys %>%
   pivot_longer(cols = 3:ncol(.),
                names_to = "question",
                values_to = "answer")
-write_csv(text_only, "data_deidentified/subsets/trust_results_basic.csv")
+write_csv(trust, "data_deidentified/subsets/trust_results_basic.csv")
 
 
 #### Make "demographics" dataset ####
@@ -101,5 +101,5 @@ demographics <- all_surveys %>%
   pivot_longer(cols = 4:ncol(.),
                names_to = "question",
                values_to = "answer")
-write_csv(text_only, "data_deidentified/subsets/demographics_results_basic.csv")
+write_csv(demographics, "data_deidentified/subsets/demographics_results_basic.csv")
 

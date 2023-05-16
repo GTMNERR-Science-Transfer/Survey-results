@@ -1,0 +1,160 @@
+q_code,q_recode,q_text,QID
+1,1,I agree,QID3
+2,2,I do not agree,QID3
+1,1,"Recreational (fishing, boating, hiking, birding, etc.)",QID6
+2,2,"Educational (I use the Guana Estuary for educational workshops, field trips, classroom activities, etc.)",QID6
+3,3,Scientific (I collect/use data about the Guana Estuary),QID6
+6,6,Work-related (Not research or education),QID6
+4,4,GTMNERR volunteer,QID6
+7,7,"“Friends of GTM"" member",QID6
+5,5,Other (please specify):,QID6
+1,1,Daily,QID7
+2,2,At least once a week,QID7
+3,3,2-3 times a month,QID7
+4,4,Once a month,QID7
+5,5,Once every 6 months,QID7
+6,6,Once every year,QID7
+7,7,Less than once a year,QID7
+1,1,Weather information,QID8
+2,2,Water quality information (including nutrients and algae),QID8
+3,3,"Water level information (tides, Guana lake, river)",QID8
+4,4,Reserve or trail closures,QID8
+5,5,Information on vegetation (salt marsh or uplands),QID8
+6,6,"Information on fish, shellfish or other aquatic organisms",QID8
+7,7,Information on terrestrial animals,QID8
+8,8,None,QID8
+9,9,Other (please specify),QID8
+1,1,Yes,QID9
+2,2,No,QID9
+1,1,Daily,QID10
+2,2,At least once a week,QID10
+3,3,2-3 times a month,QID10
+4,4,Once a month,QID10
+5,5,Once every 6 months,QID10
+6,6,Once every year,QID10
+7,7,Less than once a year,QID10
+8,8,Never (not interested in accessing data),QID10
+1,1,Research,QID11
+2,2,Educational purposes,QID11
+3,3,Work-related purposes (not research or education),QID11
+4,4,Decision making (recreational/educational/scientific visits),QID11
+5,5,Monitoring,QID11
+6,6,No specific use: curiosity,QID11
+7,7,Other (please specify),QID11
+1,1,Computer,QID23
+2,2,Mobile phone,QID23
+3,3,Tablet,QID23
+4,4,Other (please specify),QID23
+1,1,Historical data (older than 1 year),QID25
+2,2,Recent data (within the last year),QID25
+3,3,Current data (within the last month),QID25
+4,4,Current conditions (today),QID25
+7,7,Not sure,QID25
+8,8,Other (please specify),QID25
+5,5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",QID49
+6,6,"Aggregated data, summarized for time periods",QID49
+9,9,"Aggregated data, summarized for locations",QID49
+7,7,Not sure,QID49
+8,8,Other (please specify),QID49
+1,1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",QID24
+2,2,Tables online,QID24
+3,3,Figures or plots,QID24
+4,4,Maps,QID24
+5,5,Not sure,QID24
+6,6,Other (please specify),QID24
+1,1,Yes,QID48
+2,2,No,QID48
+1,1,Not at all,QID33
+2,2,Not very much,QID33
+3,3,Somewhat,QID33
+4,4,Very much,QID33
+1,1,Not at all capable,QID34
+2,2,Not very capable,QID34
+3,3,Somewhat capable,QID34
+4,4,Very capable,QID34
+9,9,Extremely dissatisfied,QID35
+10,10,Somewhat dissatisfied,QID35
+11,11,Neither satisfied nor dissatisfied,QID35
+12,12,Somewhat satisfied,QID35
+13,13,Extremely satisfied,QID35
+4,4,Strongly disagree,QID36
+5,5,Somewhat disagree,QID36
+6,6,Neither agree nor disagree,QID36
+7,7,Somewhat agree,QID36
+8,8,Strongly agree,QID36
+9,9,Terribly,QID38
+10,10,Poorly,QID38
+11,11,Average,QID38
+12,12,Well,QID38
+13,13,Very well,QID38
+9,9,Terribly,QID40
+10,10,Poorly,QID40
+11,11,Average,QID40
+12,12,Well,QID40
+13,13,Very well,QID40
+1,1,Yes,QID26
+2,2,Maybe,QID26
+3,3,No,QID26
+1,1,Participate in meetings to aid the development of the dashboard,QID28
+2,2,Participate in additional online surveys related to the development of the dashboard,QID28
+3,3,Participate in testing and evaluating the dashboard,QID28
+1,1,Yes,QID29
+2,2,No,QID29
+1,1,Under 18,QID13
+2,2,18 - 24,QID13
+3,3,25 - 34,QID13
+4,4,35 - 44,QID13
+5,5,45 - 54,QID13
+6,6,55 - 64,QID13
+7,7,65 or over,QID13
+8,8,Prefer not to answer,QID13
+1,1,Female,QID14
+2,2,Male,QID14
+3,3,Non-binary / other,QID14
+4,4,Prefer not to answer,QID14
+1,1,10 minutes or less,QID15
+2,2,11 - 30 minutes,QID15
+3,3,31 – 60 minutes,QID15
+4,4,Greater than 60 minutes,QID15
+6,6,"Information on fish, shellfish or other aquatic organisms",QID16
+7,7,Information on terrestrial animals,QID16
+5,5,Information on vegetation (salt marsh or uplands),QID16
+4,4,Reserve or trail closures,QID16
+3,3,"Water level information (tides, Guana lake, river)",QID16
+2,2,Water quality information (including nutrients and algae),QID16
+1,1,Weather information,QID16
+8,8,Other (please specify),QID16
+1,1,Request from a GTMNERR staff member by email,QID17
+2,2,"Download from website (If so, what website?)",QID17
+3,3,Pick-up paper copy in person,QID17
+4,4,Other (please specify),QID17
+1,1,Easy/convenient to access,QID18
+2,2,Data is received quickly after request,QID18
+3,3,Requesting the data is quick,QID18
+4,4,The format the data are delivered / accessed in is useful,QID18
+6,6,There are no advantages,QID18
+5,5,Other (please specify),QID18
+1,1,Difficult/Complicated to access,QID19
+2,2,Slow to receive,QID19
+3,3,Time consuming to request,QID19
+4,4,The format the data are delivered / accessed in is not user-friendly,QID19
+6,6,There are no disadvantages,QID19
+5,5,Other (please specify),QID19
+1,1,Daily,QID20
+2,2,At least once a week,QID20
+3,3,2-3 times a month,QID20
+4,4,Once a month,QID20
+5,5,Once every 6 months,QID20
+6,6,Once every year,QID20
+7,7,Less than once a year,QID20
+1,1,Research,QID21
+2,2,Educational purposes,QID21
+3,3,Work-related purposes (not research or education),QID21
+4,4,Decision making (for recreational/educational/scientific visits),QID21
+5,5,Monitoring,QID21
+6,6,Other (please specify),QID21
+1,1,Not well at all,QID22
+2,2,Slightly well,QID22
+3,3,Moderately well,QID22
+4,4,Very well,QID22
+5,5,Extremely well,QID22

@@ -1,19 +1,55 @@
-ID,source,D-1_5_TEXT,D-3_9_TEXT,ND-2_7_TEXT,T-1_4_TEXT,T-2_8_TEXT,T-3_8_TEXT,T-4_6_TEXT,YD-1_8_TEXT,1_YD-2_2_TEXT,1_YD-2_4_TEXT,1_YD-3_5_TEXT,1_YD-4_5_TEXT,1_YD-6_6_TEXT,2_YD-2_2_TEXT,2_YD-2_4_TEXT,2_YD-3_5_TEXT,2_YD-4_5_TEXT,2_YD-6_6_TEXT,3_YD-2_2_TEXT,3_YD-2_4_TEXT,3_YD-3_5_TEXT,3_YD-4_5_TEXT,3_YD-6_6_TEXT,4_YD-2_2_TEXT,4_YD-2_4_TEXT,4_YD-3_5_TEXT,4_YD-4_5_TEXT,4_YD-6_6_TEXT,5_YD-2_2_TEXT,5_YD-2_4_TEXT,5_YD-3_5_TEXT,5_YD-4_5_TEXT,5_YD-6_6_TEXT,6_YD-2_2_TEXT,6_YD-2_4_TEXT,6_YD-3_5_TEXT,6_YD-4_5_TEXT,6_YD-6_6_TEXT,7_YD-2_2_TEXT,7_YD-2_4_TEXT,7_YD-3_5_TEXT,7_YD-4_5_TEXT,7_YD-6_6_TEXT,8_YD-2_2_TEXT,8_YD-2_4_TEXT,8_YD-3_5_TEXT,8_YD-4_5_TEXT,8_YD-6_6_TEXT
-10,socialmedia,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,get from GTM files (I am an employee),NA,NA,NA,NA,get from GTM servers (I am an employee),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-7,socialmedia,NA,NA,NA,NA,NA,NA,NA,NA,NA,Weather Channel App,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,gtmnerr.org,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-2,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"FieldMaps, Survey123 apps using GTM Staff Access",NA,NA,Monitoring of invasive plant species sites for re-ocurrence / growth,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-15,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,GTM website,NA,NA,NA,Leisure,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-18,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEACAR,NA,NA,NA,NA,SEACAR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-8,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-12,email,NA,historical maps,NA,NA,NA,NA,NA,NA,johnson county weather stations,NA,NA,NA,NA,swmp,NA,NA,various formats,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,swmp; seacar,NA,"one stop shop, right now data is across so many websites...",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-3,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-11,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,login required,NA,NA,NA,NA,NA,NA
-9,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,View on website (no download),NA,"Not current; hard to find on website (although once found, easy to access)",Personal interest,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Attending GTM info sessions or obtaining info from newsletter,NA,"Again, somewhat haphazard","Personal use, plus is helpful during some of the volunteer programs",NA,NA,NA,NA,NA,NA,Newsletter info or directly ask staff,NA,"It's a bit haphazard, almost anecdotal",Personal interest; useful in some of my volunteer activities,NA,NA,NA,NA,NA
-13,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Ths was a one-off special case,NA,NA,NA,NA,NA,NA,https://gtmnerr.org/visit/,NA,NA,the info might not always be up to date,NA,NA,NA,NA,NA,NA,NA,NA,Done as part of oyster monitoring volunteering,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-14,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-16,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Attending state of the reserve presentations.,NA,Only available when presented by the staff.,NA,National Weather Service Tide Data,NA,NA,Not easy to view on mobile devices.,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-4,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,FWC data,already have the data,NA,NA,NA,FWC,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,FWC Data,already have data,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-17,email,NA,NA,NA,NA,NA,NA,NA,NA,Research Reserve Website,NA,NA,NA,Recreation,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-5,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,GTMNERR.org,NA,NA,NA,NA,gtmnerr.org,NA,NA,NA,NA,NA,NA,NA,NA,NA,GTMNERR.org,NA,NA,NA,NA,NA,State sites,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-1,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+ID,source,DE-1,question,answer
+10,socialmedia,research coordinator,DE-2,4
+10,socialmedia,research coordinator,DE-3,1
+10,socialmedia,research coordinator,DE-4,3
+7,socialmedia,Admin Assistant,DE-2,2
+7,socialmedia,Admin Assistant,DE-3,1
+7,socialmedia,Admin Assistant,DE-4,3
+2,email,Mechanical Engineer (2005-2020); Currently seeking UF Grad Cert in Weed Science to pursue Invasive Plant Mgmt in natural areas.  Interested in the intersection of tools like this one to assist in monitoring and restoration of our natural systems.,DE-2,4
+2,email,Mechanical Engineer (2005-2020); Currently seeking UF Grad Cert in Weed Science to pursue Invasive Plant Mgmt in natural areas.  Interested in the intersection of tools like this one to assist in monitoring and restoration of our natural systems.,DE-3,1
+2,email,Mechanical Engineer (2005-2020); Currently seeking UF Grad Cert in Weed Science to pursue Invasive Plant Mgmt in natural areas.  Interested in the intersection of tools like this one to assist in monitoring and restoration of our natural systems.,DE-4,2
+15,email,Park Ranger- Natural Resource Manager,DE-2,6
+15,email,Park Ranger- Natural Resource Manager,DE-3,2
+15,email,Park Ranger- Natural Resource Manager,DE-4,3
+18,email,Land manager,DE-2,4
+18,email,Land manager,DE-3,1
+18,email,Land manager,DE-4,4
+6,email,Researcher,DE-2,2
+6,email,Researcher,DE-3,2
+6,email,Researcher,DE-4,4
+8,email,Faculty and Consultant - not science related,DE-2,7
+8,email,Faculty and Consultant - not science related,DE-3,1
+8,email,Faculty and Consultant - not science related,DE-4,2
+12,email,PhD student,DE-2,3
+12,email,PhD student,DE-3,1
+12,email,PhD student,DE-4,4
+3,email,Environmental scientist,DE-2,7
+3,email,Environmental scientist,DE-3,2
+3,email,Environmental scientist,DE-4,4
+11,email,Chemist,DE-2,7
+11,email,Chemist,DE-3,2
+11,email,Chemist,DE-4,2
+9,email,Health care administrator,DE-2,7
+9,email,Health care administrator,DE-3,1
+9,email,Health care administrator,DE-4,2
+13,email,NOAA fisheries scientist (retired),DE-2,7
+13,email,NOAA fisheries scientist (retired),DE-3,2
+13,email,NOAA fisheries scientist (retired),DE-4,4
+14,email,Scientist,DE-2,4
+14,email,Scientist,DE-3,1
+14,email,Scientist,DE-4,4
+16,email,"Retired, Information Technology Management",DE-2,7
+16,email,"Retired, Information Technology Management",DE-3,2
+16,email,"Retired, Information Technology Management",DE-4,2
+4,email,Fisheries Biologist,DE-2,5
+4,email,Fisheries Biologist,DE-3,2
+4,email,Fisheries Biologist,DE-4,3
+17,email,Biologist,DE-2,3
+17,email,Biologist,DE-3,1
+17,email,Biologist,DE-4,3
+5,email,estuarine ecologist,DE-2,7
+5,email,estuarine ecologist,DE-3,2
+5,email,estuarine ecologist,DE-4,4
+1,email,State Government Coastal Management,DE-2,7
+1,email,State Government Coastal Management,DE-3,2
+1,email,State Government Coastal Management,DE-4,3
