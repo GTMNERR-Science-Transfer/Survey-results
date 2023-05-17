@@ -19,13 +19,16 @@ library(tidyverse)
 
 # Important notes on how the data is organized:
 # 1. If there is only one choice for people to pick, the results show  as different
-# numbers (1, 2, 3 etc). NOTE TO SELF: FIND WHERE THE OPTIONS ARE LISTED!
+# numbers (1, 2, 3 etc). See file "mc_questions_text.csv" in the metadata folder.
 # 2. If people can choose several options, there will be a column for each option,
-# and there will be a 1 in the column if they picked it. The document 
-# "questions_details.csv" in the metadata folder shows which column is which
-# question and which option.
+# with _1, _2, etc added on, and there will be a 1 in the column if they picked it. 
+# The document "questions_details.csv" in the metadata folder shows which column 
+# is which question and which option.
 # 3. Question IDs (QID...) in "question_details.csv" are not in necessarily order 
 # and neither are the multiple choice options from point 1. 
+# 4. For the data questions where we ask several questions about different data
+# types, the pre-fix 1_, 2_, 3_, etc refers directly to the choices made in the
+# question before.
 
 # Read in de-identified dataset
 all_surveys <- read_csv("data_deidentified/survey_data_safe_numeric_raw.csv")

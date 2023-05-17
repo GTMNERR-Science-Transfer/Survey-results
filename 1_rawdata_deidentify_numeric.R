@@ -59,6 +59,7 @@ all_survey_ids <- c("SV_agTpds5m6MDrqAe", # visitor's center
 names(all_survey_ids) <- c("visitor", "kiosk", "socialmedia", "email")
 
 #### Extract metadata ####
+#### 1. Questions ####
 # Get questions - I am getting these from the emailed survey, as this one also has
 # the trust questions
 questions <- survey_questions("SV_9RjNbEveqMo0MLk")
@@ -67,11 +68,57 @@ write_csv(questions, "metadata/survey_questions_all.csv")
 # More detailed dataframe of questions and answer options (since our survey is
 # complicated...)
 questions_detail <- extract_colmap(fetch_survey(surveyID = "SV_9RjNbEveqMo0MLk"))
-write_csv(questions_detail, "metadata/questions_detail.csv")
+# Clean this up so we can easily match codes and text later. Do this separate for 
+# "regular" questions, and the questions on data that people accessed (as this 
+# has more complicated codes), and then joi later.
 
-description <- fetch_description(surveyID = "SV_9RjNbEveqMo0MLk",
-                  elements = c("questions", "responsesets"))
+# "regular" questions
+questions_detail2 <- questions_detail %>%
+  filter(!str_detect(qname, "^[0-9]")) %>% 
+  separate(qname, c("qname_main", "option", "option1"), sep = "_", remove = FALSE)
 
+questions_detail3 <- questions_detail %>%
+  filter(str_detect(qname, "^[0-9]")) %>% 
+  separate(qname, c("field_no", "qname_main", "option", "option1"), sep = "_", remove = FALSE)
+
+questions_detail <- full_join(questions_detail2, questions_detail3)
+# Remove description as it is main and sub combined, and timeZone.
+# Column choiceId is less comprehensive than option, so also remove
+questions_detail <- questions_detail %>% 
+  select(-c("description","timeZone", "choiceId"))
+#write_csv(questions_detail, "metadata/questions_detail.csv")
+
+# Accessing the questions metadata to get the multiple choice codes and text
+mc_questions <- metadata("SV_9RjNbEveqMo0MLk")
+mc_questions <- mc_questions$questions
+
+# Loop over each QID, get choices, and then recode and description
+mc_info_all <- data.frame()
+for(i in 1:length(mc_questions)){
+  if(!is.null(mc_questions[[i]]$choices)){ # check if choices exists, if not, skip
+    mc_info_q <- data.frame()
+    ch <- mc_questions[[i]]$choices # get only the choices info
+    for(j in 1:length(ch)){ # Now loop over every choice
+      q_code <- names(ch[j]) # the "names" are the codes
+      option <- ch[[j]]$recode # to be on the safe side also get the recode
+      q_text <- ch[[j]]$description # get question text
+      mc_info <- data.frame(q_code, option, q_text)
+      mc_info_q <- rbind(mc_info_q, mc_info)
+    }
+    mc_info_q$ImportId <- names(mc_questions)[i] 
+    mc_info_all <- rbind(mc_info_all, mc_info_q)  
+  }
+}
+
+# Combine questions_detail and mc_info_all
+questions_detail_2 <- full_join(questions_detail, mc_info_all)
+
+##### still working on this
+test = left_join(mc_info_all, questions_detail, by = "ImportId")
+
+write_csv(mc_info_all, "metadata/mc_questions_options.csv")
+
+#### 2. Questionaire metadata ####
 # Get questionnaire metadata: this is a list with 2 dataframes with information and
 # a list of lists of the questions. The latter is saved separately later.
 metadata_responses <- data.frame()
@@ -87,29 +134,6 @@ for (survey in all_survey_ids){
 metadata_responses$date_checked <- paste(Sys.Date(), Sys.time())
 write_csv(metadata_responses, "metadata/response_info.csv")
 
-# Accessing the questions metadata to get the multiple choice codes and text
-mc_questions <- metadata("SV_9RjNbEveqMo0MLk")
-mc_questions <- mc_questions$questions
-
-# Loop over each QID, get choices, and then recode and description
-mc_info_all <- data.frame()
-for(i in 1:length(mc_questions)){
-  if(!is.null(mc_questions[[i]]$choices)){ # check if choices exists, if not, skip
-    mc_info_q <- data.frame()
-    ch <- mc_questions[[i]]$choices # get only the choices info
-    for(j in 1:length(ch)){ # Now loop over every choice
-      q_code <- names(ch[j]) # the "names" are the codes
-      q_recode <- ch[[j]]$recode # to be on the safe side also get the recode
-      q_text <- ch[[j]]$description # get question text
-      mc_info <- data.frame(q_code, q_recode, q_text)
-      mc_info_q <- rbind(mc_info_q, mc_info)
-    }
-    mc_info_q$QID <- names(mc_questions)[i] 
-    mc_info_all <- rbind(mc_info_all, mc_info_q)  
-  }
-}
-
-write_csv(mc_info_all, "metadata/mc_questions_options.csv")
 
 #### Get surveys ####
 
