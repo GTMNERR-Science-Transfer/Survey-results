@@ -134,20 +134,41 @@ interest_classes <- mc_text_lookup %>% filter(ImportId == "QID8") %>% pull(q_tex
 interest <- data.frame(choiceId=c(1,2,3,4,5,6,7,8,9), interest_classes)
 ggplot(intro %>% 
          filter(str_detect(question, "D-3")) %>% 
-         rename(choiceId = answer, qname = question) %>% 
-         filter(!is.na(choiceId)) %>% 
-         separate(col = qname, into = c("q", "choiceId2"), sep = "_",
+         rename(choiceId2 = answer, qname = question) %>% 
+         filter(!is.na(choiceId2)) %>% 
+         separate(col = qname, into = c("q", "choiceId"), sep = "_",
                   remove = FALSE) %>% 
          select(!q) %>% 
-         mutate(choiceId2 = as.numeric(choiceId2)) %>% 
+         mutate(choiceId = as.numeric(choiceId)) %>% 
          left_join(interest),
        aes(y = fct_rev(fct_infreq(interest_classes)), fill = interest_classes))+
   geom_bar() +
   labs(y = "", x = "", title = "What datasets are you interested in?") +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
-  scale_fill_viridis_d(option = "plasma")+
+  scale_fill_viridis_d(option = "plasma", name = "Rank")+
   theme_bw()+
-  theme(legend.position = "none", axis.text.y = element_text(size=15))
+  theme(legend.position = "none", 
+        axis.text.y = element_text(size=15))
+
+ggplot(intro %>% 
+         filter(str_detect(question, "D-3")) %>% 
+         rename(choiceId2 = answer, qname = question) %>% 
+         filter(!is.na(choiceId2)) %>% 
+         separate(col = qname, into = c("q", "choiceId"), sep = "_",
+                  remove = FALSE) %>% 
+         select(!q) %>% 
+         mutate(choiceId = as.numeric(choiceId)) %>% 
+         left_join(interest),
+       aes(x = choiceId2))+
+  geom_bar() +
+  labs(y = "", x = "", title = "What datasets are you interested in?") +
+  scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
+  #scale_fill_viridis_d(option = "plasma", name = "Rank")+
+  theme_bw()+
+  theme(#legend.position = "none", 
+    axis.text.y = element_text(size=15))+
+  facet_wrap(.~ interest_classes)
+
 ggsave("results/intro_interests.jpg", width = 12, height = 7)
 
 access_classes <- mc_text_lookup %>% filter(ImportId == "QID9") %>% pull(q_text)

@@ -109,8 +109,7 @@ for (survey in all_survey_ids){
     } else { # if it does exist, add on
       survey_ind$source <- names(all_survey_ids[which(all_survey_ids == survey)])
       survey_data <- full_join(survey_data, survey_ind)
-    } # change something here about how data is read in! QD-2 has 7 levels in one
-    # survey and 8 in the other!
+    } 
   }
 }
 
