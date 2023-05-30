@@ -1,55 +1,112 @@
-Would you be interested in giving (further) input for the project?,"Although you do not want to give further input on the project, would you like to receive email updates?",What is your email address?,input_type,selected
-1,NA,Nikki.Dix@dep.state.fl.us,Participate in meetings to aid the development of the dashboard,1
-1,NA,Nikki.Dix@dep.state.fl.us,Participate in additional online surveys related to the development of the dashboard,1
-1,NA,Nikki.Dix@dep.state.fl.us,Participate in testing and evaluating the dashboard,1
-2,NA,jessica.cantin@gtmnerr.org,Participate in meetings to aid the development of the dashboard,NA
-2,NA,jessica.cantin@gtmnerr.org,Participate in additional online surveys related to the development of the dashboard,1
-2,NA,jessica.cantin@gtmnerr.org,Participate in testing and evaluating the dashboard,NA
-2,NA,marielym@gmail.com,Participate in meetings to aid the development of the dashboard,NA
-2,NA,marielym@gmail.com,Participate in additional online surveys related to the development of the dashboard,NA
-2,NA,marielym@gmail.com,Participate in testing and evaluating the dashboard,1
-2,NA,kurt_foote@nps.gov,Participate in meetings to aid the development of the dashboard,NA
-2,NA,kurt_foote@nps.gov,Participate in additional online surveys related to the development of the dashboard,1
-2,NA,kurt_foote@nps.gov,Participate in testing and evaluating the dashboard,NA
-2,NA,jmhinton@coj.net,Participate in meetings to aid the development of the dashboard,NA
-2,NA,jmhinton@coj.net,Participate in additional online surveys related to the development of the dashboard,1
-2,NA,jmhinton@coj.net,Participate in testing and evaluating the dashboard,NA
-2,NA,Jacob.Berna@FloridaDEP.gov,Participate in meetings to aid the development of the dashboard,NA
-2,NA,Jacob.Berna@FloridaDEP.gov,Participate in additional online surveys related to the development of the dashboard,1
-2,NA,Jacob.Berna@FloridaDEP.gov,Participate in testing and evaluating the dashboard,NA
-1,NA,keysandassociates@gmail.com,Participate in meetings to aid the development of the dashboard,1
-1,NA,keysandassociates@gmail.com,Participate in additional online surveys related to the development of the dashboard,NA
-1,NA,keysandassociates@gmail.com,Participate in testing and evaluating the dashboard,NA
-1,NA,jqp3@cornell.edu,Participate in meetings to aid the development of the dashboard,NA
-1,NA,jqp3@cornell.edu,Participate in additional online surveys related to the development of the dashboard,1
-1,NA,jqp3@cornell.edu,Participate in testing and evaluating the dashboard,NA
-1,NA,cjacoby@sjrwmd.com,Participate in meetings to aid the development of the dashboard,NA
-1,NA,cjacoby@sjrwmd.com,Participate in additional online surveys related to the development of the dashboard,1
-1,NA,cjacoby@sjrwmd.com,Participate in testing and evaluating the dashboard,1
-3,1,JeffFinnan@gmail.com,Participate in meetings to aid the development of the dashboard,NA
-3,1,JeffFinnan@gmail.com,Participate in additional online surveys related to the development of the dashboard,NA
-3,1,JeffFinnan@gmail.com,Participate in testing and evaluating the dashboard,NA
-1,NA,maryafinnan@gmail.com,Participate in meetings to aid the development of the dashboard,1
-1,NA,maryafinnan@gmail.com,Participate in additional online surveys related to the development of the dashboard,1
-1,NA,maryafinnan@gmail.com,Participate in testing and evaluating the dashboard,1
-1,NA,stephenkbrown1@gmail.com,Participate in meetings to aid the development of the dashboard,1
-1,NA,stephenkbrown1@gmail.com,Participate in additional online surveys related to the development of the dashboard,1
-1,NA,stephenkbrown1@gmail.com,Participate in testing and evaluating the dashboard,NA
-1,NA,ashley.smyth@ufl.edu,Participate in meetings to aid the development of the dashboard,1
-1,NA,ashley.smyth@ufl.edu,Participate in additional online surveys related to the development of the dashboard,NA
-1,NA,ashley.smyth@ufl.edu,Participate in testing and evaluating the dashboard,1
-2,NA,thomas800@bellsouth.net,Participate in meetings to aid the development of the dashboard,NA
-2,NA,thomas800@bellsouth.net,Participate in additional online surveys related to the development of the dashboard,1
-2,NA,thomas800@bellsouth.net,Participate in testing and evaluating the dashboard,1
-2,NA,Russell.Brodie@MyFWC.com,Participate in meetings to aid the development of the dashboard,NA
-2,NA,Russell.Brodie@MyFWC.com,Participate in additional online surveys related to the development of the dashboard,NA
-2,NA,Russell.Brodie@MyFWC.com,Participate in testing and evaluating the dashboard,NA
-2,NA,kathryn.e.lebow@usace.army.mil,Participate in meetings to aid the development of the dashboard,1
-2,NA,kathryn.e.lebow@usace.army.mil,Participate in additional online surveys related to the development of the dashboard,1
-2,NA,kathryn.e.lebow@usace.army.mil,Participate in testing and evaluating the dashboard,1
-2,NA,rbrockmeyer@sjrwmd.com,Participate in meetings to aid the development of the dashboard,1
-2,NA,rbrockmeyer@sjrwmd.com,Participate in additional online surveys related to the development of the dashboard,NA
-2,NA,rbrockmeyer@sjrwmd.com,Participate in testing and evaluating the dashboard,1
-2,NA,michael.shirley@floridadep.gov,Participate in meetings to aid the development of the dashboard,NA
-2,NA,michael.shirley@floridadep.gov,Participate in additional online surveys related to the development of the dashboard,1
-2,NA,michael.shirley@floridadep.gov,Participate in testing and evaluating the dashboard,NA
+F-1,F-3,F-4,input_type,selected
+1,NA,Nikki.Dix@dep.state.fl.us,F-2_1,1
+1,NA,Nikki.Dix@dep.state.fl.us,F-2_2,1
+1,NA,Nikki.Dix@dep.state.fl.us,F-2_3,1
+2,NA,jessica.cantin@gtmnerr.org,F-2_1,NA
+2,NA,jessica.cantin@gtmnerr.org,F-2_2,1
+2,NA,jessica.cantin@gtmnerr.org,F-2_3,NA
+2,NA,marielym@gmail.com,F-2_1,NA
+2,NA,marielym@gmail.com,F-2_2,NA
+2,NA,marielym@gmail.com,F-2_3,1
+2,NA,kurt_foote@nps.gov,F-2_1,NA
+2,NA,kurt_foote@nps.gov,F-2_2,1
+2,NA,kurt_foote@nps.gov,F-2_3,NA
+2,NA,jmhinton@coj.net,F-2_1,NA
+2,NA,jmhinton@coj.net,F-2_2,1
+2,NA,jmhinton@coj.net,F-2_3,NA
+2,NA,Jacob.Berna@FloridaDEP.gov,F-2_1,NA
+2,NA,Jacob.Berna@FloridaDEP.gov,F-2_2,1
+2,NA,Jacob.Berna@FloridaDEP.gov,F-2_3,NA
+1,NA,keysandassociates@gmail.com,F-2_1,1
+1,NA,keysandassociates@gmail.com,F-2_2,NA
+1,NA,keysandassociates@gmail.com,F-2_3,NA
+1,NA,jqp3@cornell.edu,F-2_1,NA
+1,NA,jqp3@cornell.edu,F-2_2,1
+1,NA,jqp3@cornell.edu,F-2_3,NA
+1,NA,cjacoby@sjrwmd.com,F-2_1,NA
+1,NA,cjacoby@sjrwmd.com,F-2_2,1
+1,NA,cjacoby@sjrwmd.com,F-2_3,1
+3,1,JeffFinnan@gmail.com,F-2_1,NA
+3,1,JeffFinnan@gmail.com,F-2_2,NA
+3,1,JeffFinnan@gmail.com,F-2_3,NA
+1,NA,maryafinnan@gmail.com,F-2_1,1
+1,NA,maryafinnan@gmail.com,F-2_2,1
+1,NA,maryafinnan@gmail.com,F-2_3,1
+1,NA,stephenkbrown1@gmail.com,F-2_1,1
+1,NA,stephenkbrown1@gmail.com,F-2_2,1
+1,NA,stephenkbrown1@gmail.com,F-2_3,NA
+1,NA,ashley.smyth@ufl.edu,F-2_1,1
+1,NA,ashley.smyth@ufl.edu,F-2_2,NA
+1,NA,ashley.smyth@ufl.edu,F-2_3,1
+2,NA,thomas800@bellsouth.net,F-2_1,NA
+2,NA,thomas800@bellsouth.net,F-2_2,1
+2,NA,thomas800@bellsouth.net,F-2_3,1
+2,NA,Russell.Brodie@MyFWC.com,F-2_1,NA
+2,NA,Russell.Brodie@MyFWC.com,F-2_2,NA
+2,NA,Russell.Brodie@MyFWC.com,F-2_3,NA
+2,NA,kathryn.e.lebow@usace.army.mil,F-2_1,1
+2,NA,kathryn.e.lebow@usace.army.mil,F-2_2,1
+2,NA,kathryn.e.lebow@usace.army.mil,F-2_3,1
+2,NA,rbrockmeyer@sjrwmd.com,F-2_1,1
+2,NA,rbrockmeyer@sjrwmd.com,F-2_2,NA
+2,NA,rbrockmeyer@sjrwmd.com,F-2_3,1
+2,NA,michael.shirley@floridadep.gov,F-2_1,NA
+2,NA,michael.shirley@floridadep.gov,F-2_2,1
+2,NA,michael.shirley@floridadep.gov,F-2_3,NA
+2,NA,wmiller@citystaug.com,F-2_1,1
+2,NA,wmiller@citystaug.com,F-2_2,NA
+2,NA,wmiller@citystaug.com,F-2_3,1
+2,NA,emcginley@flagler.edu,F-2_1,NA
+2,NA,emcginley@flagler.edu,F-2_2,1
+2,NA,emcginley@flagler.edu,F-2_3,1
+1,NA,tessa.ricker@myfwc.com,F-2_1,1
+1,NA,tessa.ricker@myfwc.com,F-2_2,1
+1,NA,tessa.ricker@myfwc.com,F-2_3,1
+2,NA,jbeach@citystaug.com,F-2_1,1
+2,NA,jbeach@citystaug.com,F-2_2,1
+2,NA,jbeach@citystaug.com,F-2_3,NA
+2,NA,jbeal@ducks.org,F-2_1,1
+2,NA,jbeal@ducks.org,F-2_2,1
+2,NA,jbeal@ducks.org,F-2_3,1
+2,NA,ksmith@unf.edu,F-2_1,1
+2,NA,ksmith@unf.edu,F-2_2,NA
+2,NA,ksmith@unf.edu,F-2_3,NA
+2,NA,kathryn.petrinec@dep.state.fl.us,F-2_1,NA
+2,NA,kathryn.petrinec@dep.state.fl.us,F-2_2,1
+2,NA,kathryn.petrinec@dep.state.fl.us,F-2_3,NA
+1,NA,patrludwig@gmail.com,F-2_1,NA
+1,NA,patrludwig@gmail.com,F-2_2,1
+1,NA,patrludwig@gmail.com,F-2_3,1
+1,NA,medeiros@erau.edu,F-2_1,NA
+1,NA,medeiros@erau.edu,F-2_2,1
+1,NA,medeiros@erau.edu,F-2_3,1
+1,NA,ashleyreaume@knights.ucf.edu,F-2_1,1
+1,NA,ashleyreaume@knights.ucf.edu,F-2_2,1
+1,NA,ashleyreaume@knights.ucf.edu,F-2_3,1
+1,NA,wiles1964@bellsouth.net,F-2_1,NA
+1,NA,wiles1964@bellsouth.net,F-2_2,NA
+1,NA,wiles1964@bellsouth.net,F-2_3,NA
+2,NA,filami@nefrc.org,F-2_1,NA
+2,NA,filami@nefrc.org,F-2_2,NA
+2,NA,filami@nefrc.org,F-2_3,1
+1,NA,spvanews@comcast.net,F-2_1,1
+1,NA,spvanews@comcast.net,F-2_2,1
+1,NA,spvanews@comcast.net,F-2_3,1
+1,NA,gpd3@cornell.edu,F-2_1,1
+1,NA,gpd3@cornell.edu,F-2_2,1
+1,NA,gpd3@cornell.edu,F-2_3,NA
+2,NA,wade.brenner@myfwc.com,F-2_1,1
+2,NA,wade.brenner@myfwc.com,F-2_2,NA
+2,NA,wade.brenner@myfwc.com,F-2_3,NA
+1,NA,W100ML@GMAIL.COM,F-2_1,1
+1,NA,W100ML@GMAIL.COM,F-2_2,1
+1,NA,W100ML@GMAIL.COM,F-2_3,NA
+1,NA,wqualls@amcdfl.org,F-2_1,NA
+1,NA,wqualls@amcdfl.org,F-2_2,1
+1,NA,wqualls@amcdfl.org,F-2_3,1
+2,NA,info@matanzasriverkeeper.org,F-2_1,1
+2,NA,info@matanzasriverkeeper.org,F-2_2,1
+2,NA,info@matanzasriverkeeper.org,F-2_3,1
+2,NA,Avondaa@ufl.edu,F-2_1,NA
+2,NA,Avondaa@ufl.edu,F-2_2,1
+2,NA,Avondaa@ufl.edu,F-2_3,NA
