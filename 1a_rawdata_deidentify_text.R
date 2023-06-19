@@ -1,14 +1,16 @@
 ### Using collaborative open science tools to improve engagement with the 
 # ecology of the Guana River Estuary
 # Geraldine Klarenberg, PhD
-# 12 May 2023
+# 19 June 2023
 # gklarenberg@ufl.edu
 
-# Survey data extraction
+#### Survey data extraction ####
 
-# This script is a COPY of the original script that does the downloading and 
-# deidentifying of data because the original includes my personal API key,
-# and of course the de-identified data: hence confidential.
+# THIS SCRIPT ONLY WORKS ON THE RAW **NON DE-IDENTIFIED DATA** 
+
+# You will need to run the script that sets your Qualtrics key FIRST, before running
+# this script. This script will only work if you have admin access to the project's
+# suvreys (see below).
 # If you have questions about this script or need to access the raw data, please
 # contact the author of this script (see above).
 
@@ -31,24 +33,7 @@ library("tidyverse")
 
 # Documentation for qualtRics: https://docs.ropensci.org/qualtRics/
 
-#### Set up API credentials ####
-# To get this information, log into Qualtrics, in the top-right, click
-# on the "My Account" bubble and pick "Account settings". Go to the tab
-# "Qualtrics IDs".
-# In the box "API" click on "Generate token". Copy-paste the code that appears
-# in the function below for api_key =
-
-# To send a request to a specific endpoint, you need to know your datacenter. 
-# The format here is: {datacenterid}.qualtrics.com
-# Where {datacenterid} is a specific datacenter assigned to you based on 
-# your location.
-# Your datacenterid is listed in the box "User".
-
-# You only have to run this function once, as install = TRUE saves it to your 
-# environment
-qualtrics_api_credentials(api_key = "YOUR-KEY",
-                          base_url = "ca1.qualtrics.com",
-                          install = TRUE)
+#### API credentials were set up in file 0a ####
 
 # You can only use the API to download Qualtrics results for surveys that you are
 # admin on. To check which surveys you can access, you can uncomment and run 
@@ -62,35 +47,12 @@ all_survey_ids <- c("SV_agTpds5m6MDrqAe", # visitor's center
                     "SV_9RjNbEveqMo0MLk") # email
 names(all_survey_ids) <- c("visitor", "kiosk", "socialmedia", "email")
 
-#### Extract metadata ####
-# Get questions - I am getting these from the emailed survey, as this one also has
-# the trust questions
-questions <- survey_questions("SV_9RjNbEveqMo0MLk")
-write_csv(questions, "metadata/survey_questions_all.csv")
-
-# More detailed dataframe of questions and answer options (since our survey is
-# complicated...)
-questions_detail <- extract_colmap(fetch_survey(surveyID = "SV_9RjNbEveqMo0MLk"))
-write_csv(questions_detail, "metadata/questions_detail.csv")
-
-# Get questionnaire metadata: this is a list with 2 dataframes with information and
-# a list of lists of the questions. The latter is not really necessary to save
-metadata_responses <- data.frame()
-for (survey in all_survey_ids){
-  metadata_surveys <- metadata(survey)
-  combined <- cbind(metadata_surveys$metadata, 
-                    metadata_surveys$responsecounts)
-  metadata_responses <- rbind(metadata_responses, 
-                              combined)
-}
-# Add date that this info was gathered
-metadata_responses$date_checked <- paste(Sys.Date(), Sys.time())
-write_csv(metadata_responses, "metadata/response_info.csv")
-
 #### Get surveys ####
 
 # Collect all our surveys (this can take a while to run)
-rm(survey_data)
+if(exists("survey_data")){
+  rm(survey_data)
+}
 for (survey in all_survey_ids){
   survey_ind <- fetch_survey(surveyID = survey, # read survey data
                              # FYI without changing convert I could not get the 
@@ -109,9 +71,20 @@ for (survey in all_survey_ids){
     } else { # if it does exist, add on
       survey_ind$source <- names(all_survey_ids[which(all_survey_ids == survey)])
       survey_data <- full_join(survey_data, survey_ind)
-    } 
+    } # change something here about how data is read in! QD-2 has 7 levels in one
+    # survey and 8 in the other!
   }
 }
+
+# Filter for those who agreed and for those who did not finalize the survey
+survey_data_unfinished <- survey_data %>% 
+  filter(`Informed Consent` == "I agree",
+         Finished == FALSE)
+# Print to screen how many unfinished surveys...
+nrow(survey_data_unfinished)
+# None of these probably have email addresses in them, but just in case, saving
+# these to the confidential folder (not tracked by git)
+write_csv(survey_data_unfinished, "survey_downloads_confidential/survey_data_unfinished_text_raw.csv")
 
 # Filter for those who agreed and for those who finalized the survey
 survey_data <- survey_data %>% 
@@ -124,21 +97,26 @@ survey_data <- survey_data %>%
 survey_data_contacts <- survey_data %>% 
   select(starts_with("F-"))
 # Add proper questions as headers instead of codes
+questions_detail <- read_csv("metadata/mc_questions_options.csv")
 names(survey_data_contacts) <- questions_detail %>% 
   filter(str_detect(qname, "F-")) %>% 
-  pull(description) # pull instead of select gives a vector, which what we need
+  filter(!duplicated(qname)) %>% 
+  pull(main) # pull instead of select gives a vector, which what we need
 # for renaming the headers
+names(survey_data_contacts)[2] <- paste0(names(survey_data_contacts)[2], " - meetings") 
+names(survey_data_contacts)[3] <- paste0(names(survey_data_contacts)[3], " - surveys") 
+names(survey_data_contacts)[4] <- paste0(names(survey_data_contacts)[4], " - testing") 
 
 # Make long version
 survey_data_contacts <- survey_data_contacts %>%
   pivot_longer(cols = 2:4,
                names_to = "question",
                values_to = "type_input") %>% 
-  select(!question) %>%  # superfluous column now
+  #select(!question) %>%  # superfluous column now
   mutate(type_input = if_else(condition = (`Although you do not want to give further input on the project, would you like to receive email updates?` == "Yes"),
-                              true = "Email updates only",
-                              false = type_input,
-                              missing = type_input)) %>% 
+         true = "Email updates only",
+         false = type_input,
+         missing = type_input)) %>% 
   distinct() # Remove duplicates
 # Am not removing the NAs in type_input, this way we are also keeping people that
 # said no to wanting to give further input and also no to receiving email updates.
@@ -163,4 +141,5 @@ survey_data_safe <- survey_data_safe %>%
             "RecipientFirstName", "RecipientEmail", "ExternalReference", 
             "DistributionChannel", "UserLanguage", "Informed Consent"))
 
-write_csv(survey_data_safe, "data_deidentified/survey_data_safe_raw.csv")
+write_csv(survey_data_safe, "data_deidentified/survey_data_safe_text_raw.csv")
+

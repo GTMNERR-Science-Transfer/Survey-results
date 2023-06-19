@@ -4,7 +4,5 @@
 .Ruserdata
 .DS_Store
 /survey_downloads_confidential/
-00_set_key_CONFIDENTIAL.R
-1_rawdata_deidentify_CONFIDENTIAL.R
-1_rawdata_deidentify_numeric_CONFIDENTIAL.R
+0a_set_key_CONFIDENTIAL.R
 /data_deidentified/survey_data_contacts*
