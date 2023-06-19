@@ -19,18 +19,20 @@ library(tidyverse)
 
 # Important notes on how the data is organized:
 # 1. If there is only one choice for people to pick, the results show  as different
-# numbers (1, 2, 3 etc). See file "mc_questions_text.csv" in the metadata folder.
+# numbers (1, 2, 3 etc). See file "mc_questions_options.csv" in the metadata folder.
 # 2. If people can choose several options, there will be a column for each option,
 # with _1, _2, etc added on, and there will be a 1 in the column if they picked it. 
-# The document "questions_details.csv" in the metadata folder shows which column 
+# The document "mc_questions_options.csv" in the metadata folder shows which column 
 # is which question and which option.
-# 3. Question IDs (QID...) in "question_details.csv" are not in necessarily order 
+# 3. Question IDs (QID...) in "mc_questions_options.csv" are not in necessarily order 
 # and neither are the multiple choice options from point 1. 
 # 4. For the data questions where we ask several questions about different data
 # types, the pre-fix 1_, 2_, 3_, etc refers directly to the choices made in the
 # question before.
 
-# Read in de-identified dataset
+# Read in de-identified dataset. I prefer to use the numeric results. The "text" results
+# also have numeric results for some questions, and when making long datasets, mixing text
+# and numeric data complicates things.
 all_surveys <- read_csv("data_deidentified/survey_data_safe_numeric_raw.csv")
 
 ##### Create sub datasets #####
@@ -45,6 +47,13 @@ all_surveys <- read_csv("data_deidentified/survey_data_safe_numeric_raw.csv")
 
 names(all_surveys)
 
+# Load question metadata
+questions_detail <- read_csv("metadata/mc_questions_options.csv")
+# Add on the actual questions and options picked (in text)
+
+# HOW TO DEAL WITH ORDER?? Check how that's saved
+
+
 #### Save all text answers separately ####
 # (as they prevent pivoting the data to a long format)
 text_only <- all_surveys %>% 
@@ -52,12 +61,42 @@ text_only <- all_surveys %>%
 write_csv(text_only, "data_deidentified/subsets/text_results_basic.csv")
 
 #### Make dataset with "intro" questions ####
+
+## Issue to solve: 
+# For questions with multiple options, the second number in the question name is an option, and a 1 as an "answer" 
+# indicates it was picked 
+# For only one possible option, the actual number associated with the answer is given. 
+# For multiple options that can be ordered, the number in the answer indicates the order, the number in the question
+# name the option
+# So the column "choice" is either yes/no (1/0), or the actual choice (1,2,3,4, etc), or the order of an option.
+
+
 intro <- all_surveys %>% 
   select("ID", "source", starts_with("D-")) %>% # Get section D questions
   select(!ends_with("_TEXT")) %>% # Take out the text answers
   pivot_longer(cols = 3:ncol(.),
-               names_to = "question",
-               values_to = "answer")
+               names_to = "qname",
+               values_to = "choice") %>% 
+  # separate main questions code and numeric options
+  separate(qname, c("qname_main", "q_code"), sep = "_", remove = FALSE, convert = TRUE) %>% 
+  left_join(select(questions_detail, qname_main, q_type), relationship = "many-to-many") %>%  # add on question type so we can use it to add correct text
+  filter(!duplicated(.)) %>% 
+  mutate(order = if_else(q_type == "RO", # For the ordering questions, save the order as a separate column
+                         true = choice, 
+                         false = NA)) %>% 
+  # mutate(choice = if_else(q_type == "RO", # Now remove the ordering answers from the column "choice"
+  #                        true = NA, 
+  #                        false = choice)) %>% 
+  mutate(q_code = if_else(is.na(q_code), # If the response is NA in column q_code, it means it's a single answer MC question
+                          true = choice, # Move the answer in choice to q_code
+                          false = q_code)) %>%  # Otherwise just keep q_code
+  filter(!is.na(choice)) %>% # Remove NA (not picked) questions/answers
+  select(!choice) %>% # no need for this column anymore
+  left_join(select(questions_detail, qname, qname_main, main, q_code, q_text)) %>% 
+  # reorder columns...
+  select(ID, source, qname, qname_main, main, q_code, q_text, order)
+
+
 write_csv(intro, "data_deidentified/subsets/intro_results_basic.csv")
 
 #### Make "has accessed data" dataset ####
