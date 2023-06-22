@@ -62,6 +62,13 @@ questions_detail3 <- questions_detail %>%
   filter(str_detect(qname, "^[0-9]")) %>% # Filter for questions that DO start with a number
   separate(qname, c("field_no", "qname_main", "option", "option1"), sep = "_", remove = FALSE) %>% 
   separate(ImportId, c("field_no2", "ImportId", "no1", "no2"), sep = "_", remove = FALSE)
+# For questions YD-5 and YD-7, the actual question is in the column "sub". Column
+# "main" has the dataset type that the question is about. This causes problems
+# later, so move this text from sub to main
+questions_detail3 <- questions_detail3 %>%  
+  mutate(main = if_else(qname_main == "YD-5" | qname_main == "YD-7", 
+                         true = sub, 
+                         false = main))
 
 # Put back together
 questions_detail_all <- full_join(questions_detail2, questions_detail3)
@@ -105,7 +112,7 @@ mc_info_all <- left_join(mc_info_all, select(questions_detail_all, c("ImportId",
 # Take out duplicate rows
 mc_info_all <- mc_info_all %>%
   filter(!duplicated(.))
-# Join again -> YD-5 and YD-7 go wrong here?
+# Join again 
 questions_detail_all2 <- full_join(questions_detail_all, mc_info_all, 
                                    by = c("main", "ImportId"),
                                    relationship = "many-to-many")
