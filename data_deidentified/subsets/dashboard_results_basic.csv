@@ -1,778 +1,1089 @@
-ID,source,question,answer
-19,socialmedia,T-1_1,1
-19,socialmedia,T-1_2,NA
-19,socialmedia,T-1_3,NA
-19,socialmedia,T-1_4,NA
-19,socialmedia,T-2_1,2
-19,socialmedia,T-2_2,1
-19,socialmedia,T-2_3,NA
-19,socialmedia,T-2_4,NA
-19,socialmedia,T-2_7,NA
-19,socialmedia,T-2_8,NA
-19,socialmedia,T-3_5,3
-19,socialmedia,T-3_6,1
-19,socialmedia,T-3_9,2
-19,socialmedia,T-3_7,NA
-19,socialmedia,T-3_8,NA
-19,socialmedia,T-4_1,3
-19,socialmedia,T-4_2,2
-19,socialmedia,T-4_3,1
-19,socialmedia,T-4_4,4
-19,socialmedia,T-4_5,NA
-19,socialmedia,T-4_6,NA
-31,socialmedia,T-1_1,1
-31,socialmedia,T-1_2,1
-31,socialmedia,T-1_3,NA
-31,socialmedia,T-1_4,NA
-31,socialmedia,T-2_1,4
-31,socialmedia,T-2_2,1
-31,socialmedia,T-2_3,2
-31,socialmedia,T-2_4,3
-31,socialmedia,T-2_7,NA
-31,socialmedia,T-2_8,NA
-31,socialmedia,T-3_5,3
-31,socialmedia,T-3_6,2
-31,socialmedia,T-3_9,1
-31,socialmedia,T-3_7,NA
-31,socialmedia,T-3_8,NA
-31,socialmedia,T-4_1,4
-31,socialmedia,T-4_2,2
-31,socialmedia,T-4_3,1
-31,socialmedia,T-4_4,3
-31,socialmedia,T-4_5,NA
-31,socialmedia,T-4_6,NA
-28,email,T-1_1,1
-28,email,T-1_2,1
-28,email,T-1_3,NA
-28,email,T-1_4,NA
-28,email,T-2_1,1
-28,email,T-2_2,2
-28,email,T-2_3,NA
-28,email,T-2_4,3
-28,email,T-2_7,NA
-28,email,T-2_8,NA
-28,email,T-3_5,NA
-28,email,T-3_6,2
-28,email,T-3_9,1
-28,email,T-3_7,NA
-28,email,T-3_8,NA
-28,email,T-4_1,2
-28,email,T-4_2,NA
-28,email,T-4_3,NA
-28,email,T-4_4,1
-28,email,T-4_5,NA
-28,email,T-4_6,NA
-2,email,T-1_1,1
-2,email,T-1_2,NA
-2,email,T-1_3,NA
-2,email,T-1_4,NA
-2,email,T-2_1,4
-2,email,T-2_2,3
-2,email,T-2_3,2
-2,email,T-2_4,1
-2,email,T-2_7,NA
-2,email,T-2_8,NA
-2,email,T-3_5,NA
-2,email,T-3_6,1
-2,email,T-3_9,2
-2,email,T-3_7,NA
-2,email,T-3_8,NA
-2,email,T-4_1,NA
-2,email,T-4_2,NA
-2,email,T-4_3,2
-2,email,T-4_4,1
-2,email,T-4_5,NA
-2,email,T-4_6,NA
-15,email,T-1_1,1
-15,email,T-1_2,NA
-15,email,T-1_3,NA
-15,email,T-1_4,NA
-15,email,T-2_1,4
-15,email,T-2_2,3
-15,email,T-2_3,2
-15,email,T-2_4,1
-15,email,T-2_7,NA
-15,email,T-2_8,NA
-15,email,T-3_5,3
-15,email,T-3_6,2
-15,email,T-3_9,1
-15,email,T-3_7,NA
-15,email,T-3_8,NA
-15,email,T-4_1,1
-15,email,T-4_2,4
-15,email,T-4_3,3
-15,email,T-4_4,2
-15,email,T-4_5,NA
-15,email,T-4_6,NA
-26,email,T-1_1,1
-26,email,T-1_2,NA
-26,email,T-1_3,NA
-26,email,T-1_4,NA
-26,email,T-2_1,3
-26,email,T-2_2,2
-26,email,T-2_3,1
-26,email,T-2_4,NA
-26,email,T-2_7,NA
-26,email,T-2_8,NA
-26,email,T-3_5,1
-26,email,T-3_6,2
-26,email,T-3_9,NA
-26,email,T-3_7,NA
-26,email,T-3_8,NA
-26,email,T-4_1,1
-26,email,T-4_2,2
-26,email,T-4_3,3
-26,email,T-4_4,NA
-26,email,T-4_5,NA
-26,email,T-4_6,NA
-22,email,T-1_1,1
-22,email,T-1_2,1
-22,email,T-1_3,NA
-22,email,T-1_4,NA
-22,email,T-2_1,4
-22,email,T-2_2,3
-22,email,T-2_3,2
-22,email,T-2_4,1
-22,email,T-2_7,NA
-22,email,T-2_8,NA
-22,email,T-3_5,NA
-22,email,T-3_6,NA
-22,email,T-3_9,NA
-22,email,T-3_7,1
-22,email,T-3_8,NA
-22,email,T-4_1,NA
-22,email,T-4_2,2
-22,email,T-4_3,3
-22,email,T-4_4,1
-22,email,T-4_5,NA
-22,email,T-4_6,NA
-8,email,T-1_1,1
-8,email,T-1_2,NA
-8,email,T-1_3,NA
-8,email,T-1_4,NA
-8,email,T-2_1,1
-8,email,T-2_2,2
-8,email,T-2_3,3
-8,email,T-2_4,4
-8,email,T-2_7,NA
-8,email,T-2_8,NA
-8,email,T-3_5,2
-8,email,T-3_6,1
-8,email,T-3_9,3
-8,email,T-3_7,NA
-8,email,T-3_8,NA
-8,email,T-4_1,1
-8,email,T-4_2,4
-8,email,T-4_3,3
-8,email,T-4_4,2
-8,email,T-4_5,NA
-8,email,T-4_6,NA
-24,email,T-1_1,1
-24,email,T-1_2,1
-24,email,T-1_3,NA
-24,email,T-1_4,NA
-24,email,T-2_1,NA
-24,email,T-2_2,2
-24,email,T-2_3,1
-24,email,T-2_4,NA
-24,email,T-2_7,NA
-24,email,T-2_8,NA
-24,email,T-3_5,NA
-24,email,T-3_6,NA
-24,email,T-3_9,NA
-24,email,T-3_7,1
-24,email,T-3_8,NA
-24,email,T-4_1,2
-24,email,T-4_2,3
-24,email,T-4_3,1
-24,email,T-4_4,NA
-24,email,T-4_5,NA
-24,email,T-4_6,NA
-3,email,T-1_1,1
-3,email,T-1_2,NA
-3,email,T-1_3,1
-3,email,T-1_4,NA
-3,email,T-2_1,3
-3,email,T-2_2,2
-3,email,T-2_3,1
-3,email,T-2_4,4
-3,email,T-2_7,NA
-3,email,T-2_8,NA
-3,email,T-3_5,1
-3,email,T-3_6,3
-3,email,T-3_9,2
-3,email,T-3_7,NA
-3,email,T-3_8,NA
-3,email,T-4_1,1
-3,email,T-4_2,2
-3,email,T-4_3,3
-3,email,T-4_4,4
-3,email,T-4_5,NA
-3,email,T-4_6,NA
-29,email,T-1_1,1
-29,email,T-1_2,NA
-29,email,T-1_3,NA
-29,email,T-1_4,NA
-29,email,T-2_1,3
-29,email,T-2_2,2
-29,email,T-2_3,1
-29,email,T-2_4,NA
-29,email,T-2_7,NA
-29,email,T-2_8,NA
-29,email,T-3_5,NA
-29,email,T-3_6,1
-29,email,T-3_9,2
-29,email,T-3_7,NA
-29,email,T-3_8,NA
-29,email,T-4_1,NA
-29,email,T-4_2,1
-29,email,T-4_3,3
-29,email,T-4_4,2
-29,email,T-4_5,NA
-29,email,T-4_6,NA
-30,email,T-1_1,1
-30,email,T-1_2,1
-30,email,T-1_3,NA
-30,email,T-1_4,NA
-30,email,T-2_1,4
-30,email,T-2_2,3
-30,email,T-2_3,2
-30,email,T-2_4,1
-30,email,T-2_7,NA
-30,email,T-2_8,NA
-30,email,T-3_5,3
-30,email,T-3_6,1
-30,email,T-3_9,2
-30,email,T-3_7,NA
-30,email,T-3_8,NA
-30,email,T-4_1,4
-30,email,T-4_2,1
-30,email,T-4_3,3
-30,email,T-4_4,2
-30,email,T-4_5,NA
-30,email,T-4_6,NA
-36,email,T-1_1,1
-36,email,T-1_2,1
-36,email,T-1_3,NA
-36,email,T-1_4,NA
-36,email,T-2_1,3
-36,email,T-2_2,2
-36,email,T-2_3,4
-36,email,T-2_4,1
-36,email,T-2_7,NA
-36,email,T-2_8,NA
-36,email,T-3_5,3
-36,email,T-3_6,2
-36,email,T-3_9,1
-36,email,T-3_7,NA
-36,email,T-3_8,NA
-36,email,T-4_1,1
-36,email,T-4_2,NA
-36,email,T-4_3,3
-36,email,T-4_4,2
-36,email,T-4_5,NA
-36,email,T-4_6,NA
-33,email,T-1_1,1
-33,email,T-1_2,1
-33,email,T-1_3,NA
-33,email,T-1_4,NA
-33,email,T-2_1,4
-33,email,T-2_2,3
-33,email,T-2_3,2
-33,email,T-2_4,1
-33,email,T-2_7,NA
-33,email,T-2_8,NA
-33,email,T-3_5,3
-33,email,T-3_6,2
-33,email,T-3_9,1
-33,email,T-3_7,NA
-33,email,T-3_8,NA
-33,email,T-4_1,4
-33,email,T-4_2,2
-33,email,T-4_3,3
-33,email,T-4_4,1
-33,email,T-4_5,NA
-33,email,T-4_6,NA
-32,email,T-1_1,1
-32,email,T-1_2,NA
-32,email,T-1_3,NA
-32,email,T-1_4,NA
-32,email,T-2_1,1
-32,email,T-2_2,2
-32,email,T-2_3,3
-32,email,T-2_4,NA
-32,email,T-2_7,NA
-32,email,T-2_8,NA
-32,email,T-3_5,1
-32,email,T-3_6,2
-32,email,T-3_9,3
-32,email,T-3_7,NA
-32,email,T-3_8,NA
-32,email,T-4_1,1
-32,email,T-4_2,3
-32,email,T-4_3,4
-32,email,T-4_4,2
-32,email,T-4_5,NA
-32,email,T-4_6,NA
-12,email,T-1_1,1
-12,email,T-1_2,NA
-12,email,T-1_3,NA
-12,email,T-1_4,NA
-12,email,T-2_1,4
-12,email,T-2_2,2
-12,email,T-2_3,1
-12,email,T-2_4,3
-12,email,T-2_7,NA
-12,email,T-2_8,NA
-12,email,T-3_5,1
-12,email,T-3_6,3
-12,email,T-3_9,2
-12,email,T-3_7,NA
-12,email,T-3_8,NA
-12,email,T-4_1,3
-12,email,T-4_2,4
-12,email,T-4_3,2
-12,email,T-4_4,1
-12,email,T-4_5,NA
-12,email,T-4_6,NA
-37,email,T-1_1,1
-37,email,T-1_2,1
-37,email,T-1_3,NA
-37,email,T-1_4,NA
-37,email,T-2_1,2
-37,email,T-2_2,NA
-37,email,T-2_3,1
-37,email,T-2_4,NA
-37,email,T-2_7,NA
-37,email,T-2_8,NA
-37,email,T-3_5,3
-37,email,T-3_6,2
-37,email,T-3_9,1
-37,email,T-3_7,NA
-37,email,T-3_8,NA
-37,email,T-4_1,2
-37,email,T-4_2,NA
-37,email,T-4_3,NA
-37,email,T-4_4,1
-37,email,T-4_5,NA
-37,email,T-4_6,NA
-20,email,T-1_1,1
-20,email,T-1_2,NA
-20,email,T-1_3,1
-20,email,T-1_4,NA
-20,email,T-2_1,4
-20,email,T-2_2,3
-20,email,T-2_3,2
-20,email,T-2_4,1
-20,email,T-2_7,NA
-20,email,T-2_8,NA
-20,email,T-3_5,NA
-20,email,T-3_6,NA
-20,email,T-3_9,1
-20,email,T-3_7,NA
-20,email,T-3_8,NA
-20,email,T-4_1,NA
-20,email,T-4_2,2
-20,email,T-4_3,3
-20,email,T-4_4,1
-20,email,T-4_5,NA
-20,email,T-4_6,NA
-23,email,T-1_1,1
-23,email,T-1_2,NA
-23,email,T-1_3,NA
-23,email,T-1_4,NA
-23,email,T-2_1,1
-23,email,T-2_2,2
-23,email,T-2_3,3
-23,email,T-2_4,NA
-23,email,T-2_7,NA
-23,email,T-2_8,NA
-23,email,T-3_5,1
-23,email,T-3_6,3
-23,email,T-3_9,2
-23,email,T-3_7,NA
-23,email,T-3_8,NA
-23,email,T-4_1,1
-23,email,T-4_2,3
-23,email,T-4_3,NA
-23,email,T-4_4,2
-23,email,T-4_5,NA
-23,email,T-4_6,NA
-18,email,T-1_1,1
-18,email,T-1_2,1
-18,email,T-1_3,NA
-18,email,T-1_4,NA
-18,email,T-2_1,NA
-18,email,T-2_2,3
-18,email,T-2_3,2
-18,email,T-2_4,1
-18,email,T-2_7,NA
-18,email,T-2_8,NA
-18,email,T-3_5,1
-18,email,T-3_6,2
-18,email,T-3_9,3
-18,email,T-3_7,NA
-18,email,T-3_8,NA
-18,email,T-4_1,1
-18,email,T-4_2,2
-18,email,T-4_3,4
-18,email,T-4_4,3
-18,email,T-4_5,NA
-18,email,T-4_6,NA
-27,email,T-1_1,1
-27,email,T-1_2,1
-27,email,T-1_3,NA
-27,email,T-1_4,NA
-27,email,T-2_1,4
-27,email,T-2_2,3
-27,email,T-2_3,2
-27,email,T-2_4,1
-27,email,T-2_7,NA
-27,email,T-2_8,NA
-27,email,T-3_5,3
-27,email,T-3_6,2
-27,email,T-3_9,1
-27,email,T-3_7,NA
-27,email,T-3_8,NA
-27,email,T-4_1,3
-27,email,T-4_2,1
-27,email,T-4_3,2
-27,email,T-4_4,4
-27,email,T-4_5,NA
-27,email,T-4_6,NA
-6,email,T-1_1,1
-6,email,T-1_2,NA
-6,email,T-1_3,NA
-6,email,T-1_4,NA
-6,email,T-2_1,4
-6,email,T-2_2,3
-6,email,T-2_3,2
-6,email,T-2_4,1
-6,email,T-2_7,NA
-6,email,T-2_8,NA
-6,email,T-3_5,NA
-6,email,T-3_6,NA
-6,email,T-3_9,NA
-6,email,T-3_7,1
-6,email,T-3_8,NA
-6,email,T-4_1,3
-6,email,T-4_2,4
-6,email,T-4_3,2
-6,email,T-4_4,1
-6,email,T-4_5,NA
-6,email,T-4_6,NA
-16,email,T-1_1,1
-16,email,T-1_2,NA
-16,email,T-1_3,NA
-16,email,T-1_4,NA
-16,email,T-2_1,3
-16,email,T-2_2,2
-16,email,T-2_3,1
-16,email,T-2_4,4
-16,email,T-2_7,NA
-16,email,T-2_8,NA
-16,email,T-3_5,3
-16,email,T-3_6,2
-16,email,T-3_9,1
-16,email,T-3_7,NA
-16,email,T-3_8,NA
-16,email,T-4_1,4
-16,email,T-4_2,3
-16,email,T-4_3,2
-16,email,T-4_4,1
-16,email,T-4_5,NA
-16,email,T-4_6,NA
-11,email,T-1_1,1
-11,email,T-1_2,NA
-11,email,T-1_3,NA
-11,email,T-1_4,NA
-11,email,T-2_1,4
-11,email,T-2_2,3
-11,email,T-2_3,1
-11,email,T-2_4,2
-11,email,T-2_7,NA
-11,email,T-2_8,NA
-11,email,T-3_5,2
-11,email,T-3_6,1
-11,email,T-3_9,NA
-11,email,T-3_7,NA
-11,email,T-3_8,NA
-11,email,T-4_1,1
-11,email,T-4_2,3
-11,email,T-4_3,2
-11,email,T-4_4,4
-11,email,T-4_5,NA
-11,email,T-4_6,NA
-5,email,T-1_1,1
-5,email,T-1_2,1
-5,email,T-1_3,1
-5,email,T-1_4,NA
-5,email,T-2_1,4
-5,email,T-2_2,3
-5,email,T-2_3,2
-5,email,T-2_4,1
-5,email,T-2_7,NA
-5,email,T-2_8,NA
-5,email,T-3_5,3
-5,email,T-3_6,2
-5,email,T-3_9,1
-5,email,T-3_7,NA
-5,email,T-3_8,NA
-5,email,T-4_1,3
-5,email,T-4_2,4
-5,email,T-4_3,2
-5,email,T-4_4,1
-5,email,T-4_5,NA
-5,email,T-4_6,NA
-4,email,T-1_1,1
-4,email,T-1_2,1
-4,email,T-1_3,1
-4,email,T-1_4,NA
-4,email,T-2_1,4
-4,email,T-2_2,3
-4,email,T-2_3,2
-4,email,T-2_4,1
-4,email,T-2_7,NA
-4,email,T-2_8,NA
-4,email,T-3_5,3
-4,email,T-3_6,2
-4,email,T-3_9,1
-4,email,T-3_7,NA
-4,email,T-3_8,NA
-4,email,T-4_1,NA
-4,email,T-4_2,2
-4,email,T-4_3,NA
-4,email,T-4_4,1
-4,email,T-4_5,NA
-4,email,T-4_6,NA
-14,email,T-1_1,1
-14,email,T-1_2,NA
-14,email,T-1_3,NA
-14,email,T-1_4,NA
-14,email,T-2_1,3
-14,email,T-2_2,2
-14,email,T-2_3,1
-14,email,T-2_4,4
-14,email,T-2_7,NA
-14,email,T-2_8,NA
-14,email,T-3_5,1
-14,email,T-3_6,2
-14,email,T-3_9,3
-14,email,T-3_7,NA
-14,email,T-3_8,NA
-14,email,T-4_1,1
-14,email,T-4_2,NA
-14,email,T-4_3,NA
-14,email,T-4_4,NA
-14,email,T-4_5,NA
-14,email,T-4_6,NA
-17,email,T-1_1,1
-17,email,T-1_2,1
-17,email,T-1_3,NA
-17,email,T-1_4,NA
-17,email,T-2_1,1
-17,email,T-2_2,2
-17,email,T-2_3,3
-17,email,T-2_4,4
-17,email,T-2_7,NA
-17,email,T-2_8,NA
-17,email,T-3_5,1
-17,email,T-3_6,3
-17,email,T-3_9,2
-17,email,T-3_7,NA
-17,email,T-3_8,NA
-17,email,T-4_1,1
-17,email,T-4_2,4
-17,email,T-4_3,2
-17,email,T-4_4,3
-17,email,T-4_5,NA
-17,email,T-4_6,NA
-7,email,T-1_1,1
-7,email,T-1_2,1
-7,email,T-1_3,NA
-7,email,T-1_4,NA
-7,email,T-2_1,NA
-7,email,T-2_2,2
-7,email,T-2_3,NA
-7,email,T-2_4,1
-7,email,T-2_7,NA
-7,email,T-2_8,NA
-7,email,T-3_5,NA
-7,email,T-3_6,NA
-7,email,T-3_9,NA
-7,email,T-3_7,1
-7,email,T-3_8,NA
-7,email,T-4_1,1
-7,email,T-4_2,NA
-7,email,T-4_3,2
-7,email,T-4_4,NA
-7,email,T-4_5,NA
-7,email,T-4_6,NA
-34,email,T-1_1,1
-34,email,T-1_2,1
-34,email,T-1_3,NA
-34,email,T-1_4,NA
-34,email,T-2_1,5
-34,email,T-2_2,3
-34,email,T-2_3,1
-34,email,T-2_4,2
-34,email,T-2_7,NA
-34,email,T-2_8,4
-34,email,T-3_5,1
-34,email,T-3_6,2
-34,email,T-3_9,3
-34,email,T-3_7,NA
-34,email,T-3_8,NA
-34,email,T-4_1,1
-34,email,T-4_2,NA
-34,email,T-4_3,3
-34,email,T-4_4,2
-34,email,T-4_5,NA
-34,email,T-4_6,NA
-25,email,T-1_1,1
-25,email,T-1_2,NA
-25,email,T-1_3,NA
-25,email,T-1_4,NA
-25,email,T-2_1,2
-25,email,T-2_2,4
-25,email,T-2_3,3
-25,email,T-2_4,1
-25,email,T-2_7,NA
-25,email,T-2_8,NA
-25,email,T-3_5,3
-25,email,T-3_6,2
-25,email,T-3_9,1
-25,email,T-3_7,NA
-25,email,T-3_8,NA
-25,email,T-4_1,3
-25,email,T-4_2,2
-25,email,T-4_3,4
-25,email,T-4_4,1
-25,email,T-4_5,NA
-25,email,T-4_6,NA
-10,email,T-1_1,1
-10,email,T-1_2,NA
-10,email,T-1_3,NA
-10,email,T-1_4,NA
-10,email,T-2_1,1
-10,email,T-2_2,2
-10,email,T-2_3,NA
-10,email,T-2_4,NA
-10,email,T-2_7,NA
-10,email,T-2_8,NA
-10,email,T-3_5,3
-10,email,T-3_6,1
-10,email,T-3_9,2
-10,email,T-3_7,NA
-10,email,T-3_8,NA
-10,email,T-4_1,1
-10,email,T-4_2,NA
-10,email,T-4_3,2
-10,email,T-4_4,3
-10,email,T-4_5,NA
-10,email,T-4_6,NA
-35,email,T-1_1,1
-35,email,T-1_2,1
-35,email,T-1_3,NA
-35,email,T-1_4,NA
-35,email,T-2_1,NA
-35,email,T-2_2,NA
-35,email,T-2_3,1
-35,email,T-2_4,NA
-35,email,T-2_7,NA
-35,email,T-2_8,NA
-35,email,T-3_5,NA
-35,email,T-3_6,NA
-35,email,T-3_9,1
-35,email,T-3_7,NA
-35,email,T-3_8,NA
-35,email,T-4_1,NA
-35,email,T-4_2,1
-35,email,T-4_3,NA
-35,email,T-4_4,NA
-35,email,T-4_5,NA
-35,email,T-4_6,NA
-9,email,T-1_1,1
-9,email,T-1_2,NA
-9,email,T-1_3,NA
-9,email,T-1_4,NA
-9,email,T-2_1,1
-9,email,T-2_2,2
-9,email,T-2_3,3
-9,email,T-2_4,NA
-9,email,T-2_7,NA
-9,email,T-2_8,NA
-9,email,T-3_5,NA
-9,email,T-3_6,1
-9,email,T-3_9,2
-9,email,T-3_7,NA
-9,email,T-3_8,NA
-9,email,T-4_1,1
-9,email,T-4_2,4
-9,email,T-4_3,2
-9,email,T-4_4,3
-9,email,T-4_5,NA
-9,email,T-4_6,NA
-1,email,T-1_1,1
-1,email,T-1_2,NA
-1,email,T-1_3,NA
-1,email,T-1_4,NA
-1,email,T-2_1,1
-1,email,T-2_2,2
-1,email,T-2_3,3
-1,email,T-2_4,NA
-1,email,T-2_7,NA
-1,email,T-2_8,NA
-1,email,T-3_5,3
-1,email,T-3_6,2
-1,email,T-3_9,1
-1,email,T-3_7,NA
-1,email,T-3_8,NA
-1,email,T-4_1,1
-1,email,T-4_2,3
-1,email,T-4_3,4
-1,email,T-4_4,2
-1,email,T-4_5,NA
-1,email,T-4_6,NA
-13,email,T-1_1,1
-13,email,T-1_2,1
-13,email,T-1_3,1
-13,email,T-1_4,NA
-13,email,T-2_1,4
-13,email,T-2_2,2
-13,email,T-2_3,1
-13,email,T-2_4,3
-13,email,T-2_7,NA
-13,email,T-2_8,NA
-13,email,T-3_5,3
-13,email,T-3_6,1
-13,email,T-3_9,2
-13,email,T-3_7,NA
-13,email,T-3_8,NA
-13,email,T-4_1,4
-13,email,T-4_2,3
-13,email,T-4_3,1
-13,email,T-4_4,2
-13,email,T-4_5,NA
-13,email,T-4_6,NA
-21,email,T-1_1,NA
-21,email,T-1_2,1
-21,email,T-1_3,NA
-21,email,T-1_4,NA
-21,email,T-2_1,4
-21,email,T-2_2,3
-21,email,T-2_3,2
-21,email,T-2_4,1
-21,email,T-2_7,NA
-21,email,T-2_8,NA
-21,email,T-3_5,3
-21,email,T-3_6,1
-21,email,T-3_9,2
-21,email,T-3_7,NA
-21,email,T-3_8,NA
-21,email,T-4_1,NA
-21,email,T-4_2,3
-21,email,T-4_3,1
-21,email,T-4_4,2
-21,email,T-4_5,NA
-21,email,T-4_6,NA
+ID,source,qname,qname_main,main,q_code,q_text,order
+19,socialmedia,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+19,socialmedia,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),2
+19,socialmedia,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),1
+19,socialmedia,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",3
+19,socialmedia,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",1
+19,socialmedia,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",2
+19,socialmedia,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",3
+19,socialmedia,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,2
+19,socialmedia,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,1
+19,socialmedia,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,4
+31,socialmedia,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+31,socialmedia,T-1_2,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",2,Mobile phone,NA
+31,socialmedia,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),4
+31,socialmedia,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),1
+31,socialmedia,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),2
+31,socialmedia,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),3
+31,socialmedia,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",3
+31,socialmedia,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",2
+31,socialmedia,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",1
+31,socialmedia,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",4
+31,socialmedia,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,2
+31,socialmedia,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,1
+31,socialmedia,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,3
+28,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+28,email,T-1_2,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",2,Mobile phone,NA
+28,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),1
+28,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),2
+28,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),3
+28,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",2
+28,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",1
+28,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",2
+28,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,1
+2,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+2,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),4
+2,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),3
+2,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),2
+2,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),1
+2,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",1
+2,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",2
+2,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,2
+2,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,1
+15,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+15,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),4
+15,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),3
+15,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),2
+15,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),1
+15,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",3
+15,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",2
+15,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",1
+15,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",1
+15,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,4
+15,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,3
+15,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,2
+26,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+26,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),3
+26,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),2
+26,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),1
+26,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",1
+26,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",2
+26,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",1
+26,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,2
+26,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,3
+22,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+22,email,T-1_2,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",2,Mobile phone,NA
+22,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),4
+22,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),3
+22,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),2
+22,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),1
+22,email,T-3_7,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",7,Not sure,1
+22,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,2
+22,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,3
+22,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,1
+8,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+8,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),1
+8,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),2
+8,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),3
+8,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),4
+8,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",2
+8,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",1
+8,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",3
+8,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",1
+8,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,4
+8,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,3
+8,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,2
+24,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+24,email,T-1_2,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",2,Mobile phone,NA
+24,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),2
+24,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),1
+24,email,T-3_7,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",7,Not sure,1
+24,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",2
+24,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,3
+24,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,1
+3,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+3,email,T-1_3,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",3,Tablet,NA
+3,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),3
+3,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),2
+3,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),1
+3,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),4
+3,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",1
+3,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",3
+3,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",2
+3,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",1
+3,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,2
+3,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,3
+3,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,4
+29,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+29,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),3
+29,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),2
+29,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),1
+29,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",1
+29,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",2
+29,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,1
+29,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,3
+29,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,2
+30,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+30,email,T-1_2,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",2,Mobile phone,NA
+30,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),4
+30,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),3
+30,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),2
+30,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),1
+30,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",3
+30,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",1
+30,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",2
+30,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",4
+30,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,1
+30,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,3
+30,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,2
+36,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+36,email,T-1_2,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",2,Mobile phone,NA
+36,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),3
+36,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),2
+36,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),4
+36,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),1
+36,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",3
+36,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",2
+36,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",1
+36,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",1
+36,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,3
+36,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,2
+33,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+33,email,T-1_2,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",2,Mobile phone,NA
+33,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),4
+33,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),3
+33,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),2
+33,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),1
+33,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",3
+33,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",2
+33,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",1
+33,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",4
+33,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,2
+33,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,3
+33,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,1
+32,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+32,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),1
+32,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),2
+32,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),3
+32,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",1
+32,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",2
+32,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",3
+32,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",1
+32,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,3
+32,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,4
+32,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,2
+12,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+12,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),4
+12,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),2
+12,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),1
+12,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),3
+12,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",1
+12,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",3
+12,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",2
+12,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",3
+12,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,4
+12,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,2
+12,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,1
+37,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+37,email,T-1_2,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",2,Mobile phone,NA
+37,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),2
+37,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),1
+37,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",3
+37,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",2
+37,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",1
+37,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",2
+37,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,1
+20,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+20,email,T-1_3,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",3,Tablet,NA
+20,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),4
+20,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),3
+20,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),2
+20,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),1
+20,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",1
+20,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,2
+20,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,3
+20,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,1
+23,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+23,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),1
+23,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),2
+23,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),3
+23,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",1
+23,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",3
+23,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",2
+23,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",1
+23,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,3
+23,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,2
+18,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+18,email,T-1_2,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",2,Mobile phone,NA
+18,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),3
+18,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),2
+18,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),1
+18,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",1
+18,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",2
+18,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",3
+18,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",1
+18,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,2
+18,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,4
+18,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,3
+27,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+27,email,T-1_2,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",2,Mobile phone,NA
+27,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),4
+27,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),3
+27,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),2
+27,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),1
+27,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",3
+27,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",2
+27,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",1
+27,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",3
+27,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,1
+27,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,2
+27,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,4
+6,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+6,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),4
+6,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),3
+6,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),2
+6,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),1
+6,email,T-3_7,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",7,Not sure,1
+6,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",3
+6,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,4
+6,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,2
+6,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,1
+16,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+16,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),3
+16,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),2
+16,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),1
+16,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),4
+16,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",3
+16,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",2
+16,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",1
+16,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",4
+16,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,3
+16,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,2
+16,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,1
+11,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+11,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),4
+11,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),3
+11,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),1
+11,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),2
+11,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",2
+11,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",1
+11,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",1
+11,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,3
+11,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,2
+11,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,4
+5,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+5,email,T-1_2,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",2,Mobile phone,NA
+5,email,T-1_3,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",3,Tablet,NA
+5,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),4
+5,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),3
+5,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),2
+5,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),1
+5,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",3
+5,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",2
+5,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",1
+5,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",3
+5,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,4
+5,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,2
+5,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,1
+4,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+4,email,T-1_2,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",2,Mobile phone,NA
+4,email,T-1_3,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",3,Tablet,NA
+4,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),4
+4,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),3
+4,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),2
+4,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),1
+4,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",3
+4,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",2
+4,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",1
+4,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,2
+4,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,1
+14,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+14,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),3
+14,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),2
+14,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),1
+14,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),4
+14,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",1
+14,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",2
+14,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",3
+14,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",1
+17,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+17,email,T-1_2,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",2,Mobile phone,NA
+17,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),1
+17,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),2
+17,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),3
+17,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),4
+17,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",1
+17,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",3
+17,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",2
+17,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",1
+17,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,4
+17,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,2
+17,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,3
+7,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+7,email,T-1_2,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",2,Mobile phone,NA
+7,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),2
+7,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),1
+7,email,T-3_7,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",7,Not sure,1
+7,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",1
+7,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,2
+34,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+34,email,T-1_2,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",2,Mobile phone,NA
+34,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),5
+34,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),3
+34,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),1
+34,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),2
+34,email,T-2_8,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",8,Other (please specify),4
+34,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",1
+34,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",2
+34,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",3
+34,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",1
+34,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,3
+34,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,2
+25,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+25,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),2
+25,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),4
+25,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),3
+25,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),1
+25,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",3
+25,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",2
+25,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",1
+25,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",3
+25,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,2
+25,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,4
+25,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,1
+10,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+10,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),1
+10,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),2
+10,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",3
+10,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",1
+10,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",2
+10,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",1
+10,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,2
+10,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,3
+35,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+35,email,T-1_2,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",2,Mobile phone,NA
+35,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),1
+35,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",1
+35,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,1
+9,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+9,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),1
+9,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),2
+9,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),3
+9,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",1
+9,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",2
+9,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",1
+9,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,4
+9,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,2
+9,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,3
+1,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+1,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),1
+1,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),2
+1,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),3
+1,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",3
+1,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",2
+1,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",1
+1,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",1
+1,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,3
+1,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,4
+1,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,2
+13,email,T-1_1,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",1,Computer,NA
+13,email,T-1_2,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",2,Mobile phone,NA
+13,email,T-1_3,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",3,Tablet,NA
+13,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),4
+13,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),2
+13,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),1
+13,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),3
+13,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",3
+13,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",1
+13,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",2
+13,email,T-4_1,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",1,"Data downloads (for instance text or comma-delimited files, spreadsheets)",4
+13,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,3
+13,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,1
+13,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,2
+21,email,T-1_2,T-1,"Once this dashboard has been developed, how would you prefer to access it? (check all that apply)",2,Mobile phone,NA
+21,email,T-2_1,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",1,Historical data (older than 1 year),4
+21,email,T-2_2,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",2,Recent data (within the last year),3
+21,email,T-2_3,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",3,Current data (within the last month),2
+21,email,T-2_4,T-2,"What type of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",4,Current conditions (today),1
+21,email,T-3_5,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",5,"Non-aggregated data (meaning: ""raw"" data, no summaries)",3
+21,email,T-3_6,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",6,"Aggregated data, summarized for time periods",1
+21,email,T-3_9,T-3,"What form of information would you want to see on the dashboard? 
+
+Pick all those that apply, and please rank your selection in order of interest: 1 = would want to see most.",9,"Aggregated data, summarized for locations",2
+21,email,T-4_2,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",2,Tables online,3
+21,email,T-4_3,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",3,Figures or plots,1
+21,email,T-4_4,T-4,"What format of data delivery would suit your needs best? 
+
+Pick all those that apply, and please rank your selection: 1 = would suit my needs best.",4,Maps,2

@@ -84,9 +84,6 @@ intro <- all_surveys %>%
   mutate(order = if_else(q_type == "RO", # For the ordering questions, save the order as a separate column
                          true = choice, 
                          false = NA)) %>% 
-  # mutate(choice = if_else(q_type == "RO", # Now remove the ordering answers from the column "choice"
-  #                        true = NA, 
-  #                        false = choice)) %>% 
   mutate(q_code = if_else(is.na(q_code), # If the response is NA in column q_code, it means it's a single answer MC question
                           true = choice, # Move the answer in choice to q_code
                           false = q_code)) %>%  # Otherwise just keep q_code
@@ -96,16 +93,63 @@ intro <- all_surveys %>%
   # reorder columns...
   select(ID, source, qname, qname_main, main, q_code, q_text, order)
 
-
 write_csv(intro, "data_deidentified/subsets/intro_results_basic.csv")
 
 #### Make "has accessed data" dataset ####
-yes_data <- all_surveys %>% 
+#### NEEDS FIXING ####
+# Do in two parts, because the way the questions codes are created is different 
+# First only the question about which data
+# Then the part that refers to each data type that people picked
+
+yes_data1 <- all_surveys %>% 
   select("ID", "source", contains("YD-")) %>% 
   select(!ends_with("_TEXT")) %>% # Take out the text answers
+  select("ID", "source", starts_with("YD")) %>% # Filter for questions that do NOT start with a number
+  select(!contains("DO")) %>% # Take out the results that indicate in which order the choices were displayed
+  # to the survey takers (not relevant for us - question was set up to randomize the order)
+  pivot_longer(cols = 3:ncol(.), 
+               names_to = "qname",
+               values_to = "choice") %>% 
+  separate(qname, c("qname_main", "q_code"), sep = "_", remove = FALSE, convert = TRUE) %>% 
+  left_join(select(questions_detail, qname_main, q_type), relationship = "many-to-many") %>%  # add on question type so we can use it to add correct text
+  filter(!duplicated(.)) %>% 
+  mutate(order = if_else(q_type == "RO", # For the ordering questions, save the order as a separate column
+                         true = choice, 
+                         false = NA)) %>% 
+  mutate(q_code = if_else(is.na(q_code), # If the response is NA in column q_code, it means it's a single answer MC question
+                          true = choice, # Move the answer in choice to q_code
+                          false = q_code)) %>%  # Otherwise just keep q_code
+  filter(!is.na(choice)) %>% # Remove NA (not picked) questions/answers
+  select(!choice) %>% # no need for this column anymore
+  left_join(select(questions_detail, qname, qname_main, main, q_code, q_text)) %>% 
+  # reorder columns...
+  select(ID, source, qname, qname_main, main, q_code, q_text, order)
+
+########## FIX THIS PART!!! #######
+yes_data2 <- all_surveys %>% 
+  select("ID", "source", contains("YD-")) %>% 
+  select(!ends_with("_TEXT")) %>% # Take out the text answers
+  select("ID", "source", !starts_with("YD")) %>% # Filter for questions that start with a number
   pivot_longer(cols = 3:ncol(.),
-               names_to = "question",
-               values_to = "answer")
+               names_to = "qname",
+               values_to = "choice") %>% 
+  # separate main questions code and numeric options
+  separate(qname, c("field", "qname_main", "q_code"), sep = "_", remove = FALSE, convert = TRUE) %>% 
+  left_join(select(questions_detail, qname_main, q_type), relationship = "many-to-many") %>%  # add on question type so we can use it to add correct text
+  filter(!duplicated(.)) %>% 
+  ##### RIGHT NOW, YD-5 and YD-7 COLUMN "main" SAYS THE FIELD (dataset) INSTEAD OF THE QUESTION!!
+  mutate(order = if_else(q_type == "RO", # For the ordering questions, save the order as a separate column
+                         true = choice, 
+                         false = NA)) %>% 
+  mutate(q_code = if_else(is.na(q_code), # If the response is NA in column q_code, it means it's a single answer MC question
+                          true = choice, # Move the answer in choice to q_code
+                          false = q_code)) %>%  # Otherwise just keep q_code
+  filter(!is.na(choice)) %>% # Remove NA (not picked) questions/answers
+  select(!choice) %>% # no need for this column anymore
+  left_join(select(questions_detail, qname, qname_main, main, q_code, q_text)) %>% 
+  # reorder columns...
+  select(ID, source, qname, qname_main, main, q_code, q_text, order)
+
 write_csv(yes_data, "data_deidentified/subsets/data_yes_results_basic.csv")
 
 #### Make "has NOT accessed data" dataset ####
@@ -113,8 +157,24 @@ no_data <- all_surveys %>%
   select("ID", "source", starts_with("ND-")) %>% 
   select(!ends_with("_TEXT")) %>% # Take out the text answers
   pivot_longer(cols = 3:ncol(.),
-               names_to = "question",
-               values_to = "answer")
+               names_to = "qname",
+               values_to = "choice") %>% 
+  # separate main questions code and numeric options
+  separate(qname, c("qname_main", "q_code"), sep = "_", remove = FALSE, convert = TRUE) %>% 
+  left_join(select(questions_detail, qname_main, q_type), relationship = "many-to-many") %>%  # add on question type so we can use it to add correct text
+  filter(!duplicated(.)) %>% 
+  mutate(order = if_else(q_type == "RO", # For the ordering questions, save the order as a separate column
+                         true = choice, 
+                         false = NA)) %>% 
+  mutate(q_code = if_else(is.na(q_code), # If the response is NA in column q_code, it means it's a single answer MC question
+                          true = choice, # Move the answer in choice to q_code
+                          false = q_code)) %>%  # Otherwise just keep q_code
+  filter(!is.na(choice)) %>% # Remove NA (not picked) questions/answers
+  select(!choice) %>% # no need for this column anymore
+  left_join(select(questions_detail, qname, qname_main, main, q_code, q_text)) %>% 
+  # reorder columns...
+  select(ID, source, qname, qname_main, main, q_code, q_text, order)
+
 write_csv(no_data, "data_deidentified/subsets/data_no_results_basic.csv")
 
 #### Make "dashboard" dataset ####
@@ -122,8 +182,24 @@ dashboard <- all_surveys %>%
   select("ID", "source", starts_with("T-")) %>% 
   select(!ends_with("_TEXT")) %>% # Take out the text answers
   pivot_longer(cols = 3:ncol(.),
-               names_to = "question",
-               values_to = "answer")
+               names_to = "qname",
+               values_to = "choice") %>% 
+  # separate main questions code and numeric options
+  separate(qname, c("qname_main", "q_code"), sep = "_", remove = FALSE, convert = TRUE) %>% 
+  left_join(select(questions_detail, qname_main, q_type), relationship = "many-to-many") %>%  # add on question type so we can use it to add correct text
+  filter(!duplicated(.)) %>% 
+  mutate(order = if_else(q_type == "RO", # For the ordering questions, save the order as a separate column
+                         true = choice, 
+                         false = NA)) %>% 
+  mutate(q_code = if_else(is.na(q_code), # If the response is NA in column q_code, it means it's a single answer MC question
+                          true = choice, # Move the answer in choice to q_code
+                          false = q_code)) %>%  # Otherwise just keep q_code
+  filter(!is.na(choice)) %>% # Remove NA (not picked) questions/answers
+  select(!choice) %>% # no need for this column anymore
+  left_join(select(questions_detail, qname, qname_main, main, q_code, q_text)) %>% 
+  # reorder columns...
+  select(ID, source, qname, qname_main, main, q_code, q_text, order)
+
 write_csv(dashboard, "data_deidentified/subsets/dashboard_results_basic.csv")
 
 #### Make "trust" dataset ####
@@ -131,8 +207,24 @@ trust <- all_surveys %>%
   select("ID", "source", starts_with("TR-")) %>% 
   select(!ends_with("_TEXT")) %>% # Take out the text answers
   pivot_longer(cols = 3:ncol(.),
-               names_to = "question",
-               values_to = "answer")
+               names_to = "qname",
+               values_to = "choice") %>% 
+  # separate main questions code and numeric options
+  separate(qname, c("qname_main", "q_code"), sep = "_", remove = FALSE, convert = TRUE) %>% 
+  left_join(select(questions_detail, qname_main, q_type), relationship = "many-to-many") %>%  # add on question type so we can use it to add correct text
+  filter(!duplicated(.)) %>% 
+  mutate(order = if_else(q_type == "RO", # For the ordering questions, save the order as a separate column
+                         true = choice, 
+                         false = NA)) %>% 
+  mutate(q_code = if_else(is.na(q_code), # If the response is NA in column q_code, it means it's a single answer MC question
+                          true = choice, # Move the answer in choice to q_code
+                          false = q_code)) %>%  # Otherwise just keep q_code
+  filter(!is.na(choice)) %>% # Remove NA (not picked) questions/answers
+  select(!choice) %>% # no need for this column anymore
+  left_join(select(questions_detail, qname, qname_main, main, q_code, q_text)) %>% 
+  # reorder columns...
+  select(ID, source, qname, qname_main, main, q_code, q_text, order)
+
 write_csv(trust, "data_deidentified/subsets/trust_results_basic.csv")
 
 
@@ -141,7 +233,23 @@ demographics <- all_surveys %>%
   select("ID", "source", starts_with("DE-")) %>% 
   select(!ends_with("_TEXT")) %>% # Take out the text answers
   pivot_longer(cols = 4:ncol(.),
-               names_to = "question",
-               values_to = "answer")
+               names_to = "qname",
+               values_to = "choice") %>% 
+  # separate main questions code and numeric options
+  separate(qname, c("qname_main", "q_code"), sep = "_", remove = FALSE, convert = TRUE) %>% 
+  left_join(select(questions_detail, qname_main, q_type), relationship = "many-to-many") %>%  # add on question type so we can use it to add correct text
+  filter(!duplicated(.)) %>% 
+  mutate(order = if_else(q_type == "RO", # For the ordering questions, save the order as a separate column
+                         true = choice, 
+                         false = NA)) %>% 
+  mutate(q_code = if_else(is.na(q_code), # If the response is NA in column q_code, it means it's a single answer MC question
+                          true = choice, # Move the answer in choice to q_code
+                          false = q_code)) %>%  # Otherwise just keep q_code
+  filter(!is.na(choice)) %>% # Remove NA (not picked) questions/answers
+  select(!choice) %>% # no need for this column anymore
+  left_join(select(questions_detail, qname, qname_main, main, q_code, q_text)) %>% 
+  # reorder columns...
+  select(ID, source, `DE-1`, qname, qname_main, main, q_code, q_text, order)
+
 write_csv(demographics, "data_deidentified/subsets/demographics_results_basic.csv")
 
