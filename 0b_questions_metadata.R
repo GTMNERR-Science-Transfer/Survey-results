@@ -105,12 +105,12 @@ mc_info_all <- left_join(mc_info_all, select(questions_detail_all, c("ImportId",
 # Take out duplicate rows
 mc_info_all <- mc_info_all %>%
   filter(!duplicated(.))
-# Join again
+# Join again -> YD-5 and YD-7 go wrong here?
 questions_detail_all2 <- full_join(questions_detail_all, mc_info_all, 
                                    by = c("main", "ImportId"),
                                    relationship = "many-to-many")
 
-# REMOVE:
+# REMOVE: 
 # if !is.na(option.x) & !is.na(option1) & q_selector != "Likert" & option.x != option.y 
 questions_detail_all2 <- questions_detail_all2[!((!is.na(questions_detail_all2$option.x) | !is.na(questions_detail_all2$option1)) &
                                   questions_detail_all2$q_selector != "Likert" &
@@ -138,7 +138,7 @@ for (survey in all_survey_ids){
 metadata_responses$date_checked <- paste(Sys.Date(), Sys.time())
 write_csv(metadata_responses, "metadata/response_info.csv")
 
-#### 3. Questionaire metadata ####
+#### 3. Questionnaire metadata ####
 # Get questionnaire metadata: this is a list with 2 dataframes with information and
 # a list of lists of the questions. The latter is not really necessary to save
 metadata_responses <- data.frame()
