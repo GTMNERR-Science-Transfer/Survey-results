@@ -51,9 +51,6 @@ names(all_surveys)
 questions_detail <- read_csv("metadata/mc_questions_options.csv")
 # Add on the actual questions and options picked (in text)
 
-# HOW TO DEAL WITH ORDER?? Check how that's saved
-
-
 #### Save all text answers separately ####
 # (as they prevent pivoting the data to a long format)
 text_only <- all_surveys %>% 
@@ -69,7 +66,6 @@ write_csv(text_only, "data_deidentified/subsets/text_results_basic.csv")
 # For multiple options that can be ordered, the number in the answer indicates the order, the number in the question
 # name the option
 # So the column "choice" is either yes/no (1/0), or the actual choice (1,2,3,4, etc), or the order of an option.
-
 
 intro <- all_surveys %>% 
   select("ID", "source", starts_with("D-")) %>% # Get section D questions
@@ -96,7 +92,6 @@ intro <- all_surveys %>%
 write_csv(intro, "data_deidentified/subsets/intro_results_basic.csv")
 
 #### Make "has accessed data" dataset ####
-#### NEEDS FIXING ####
 # Do in two parts, because the way the questions codes are created is different 
 # First only the question about which data
 # Then the part that refers to each data type that people picked
@@ -125,7 +120,6 @@ yes_data1 <- all_surveys %>%
   # reorder columns...
   select(ID, source, qname, qname_main, main, q_code, q_text, order)
 
-########## FIX THIS PART!!! #######
 yes_data2 <- all_surveys %>% 
   select("ID", "source", contains("YD-")) %>% 
   select(!ends_with("_TEXT")) %>% # Take out the text answers
@@ -137,7 +131,6 @@ yes_data2 <- all_surveys %>%
   separate(qname, c("field", "qname_main", "q_code"), sep = "_", remove = FALSE, convert = TRUE) %>% 
   left_join(select(questions_detail, qname_main, q_type), relationship = "many-to-many") %>%  # add on question type so we can use it to add correct text
   filter(!duplicated(.)) %>% 
-  ##### RIGHT NOW, YD-5 and YD-7 COLUMN "main" SAYS THE FIELD (dataset) INSTEAD OF THE QUESTION!!
   mutate(order = if_else(q_type == "RO", # For the ordering questions, save the order as a separate column
                          true = choice, 
                          false = NA)) %>% 
@@ -149,6 +142,11 @@ yes_data2 <- all_surveys %>%
   left_join(select(questions_detail, qname, qname_main, main, q_code, q_text)) %>% 
   # reorder columns...
   select(ID, source, qname, qname_main, main, q_code, q_text, order)
+
+####### FIX: WE ALSO NEED FIELD-1 HERE!!!! ###########
+
+# Put together
+yes_data <- full_join(yes_data1, yes_data2)
 
 write_csv(yes_data, "data_deidentified/subsets/data_yes_results_basic.csv")
 

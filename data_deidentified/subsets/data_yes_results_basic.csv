@@ -1,0 +1,824 @@
+ID,source,qname,qname_main,main,q_code,q_text,order
+19,socialmedia,YD-1_3,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",3,"Water level information (tides, Guana lake, river)",NA
+19,socialmedia,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+31,socialmedia,YD-1_6,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",6,"Information on fish, shellfish or other aquatic organisms",NA
+31,socialmedia,YD-1_7,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",7,Information on terrestrial animals,NA
+31,socialmedia,YD-1_5,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",5,Information on vegetation (salt marsh or uplands),NA
+31,socialmedia,YD-1_4,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",4,Reserve or trail closures,NA
+31,socialmedia,YD-1_3,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",3,"Water level information (tides, Guana lake, river)",NA
+31,socialmedia,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+31,socialmedia,YD-1_1,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",1,Weather information,NA
+28,email,YD-1_5,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",5,Information on vegetation (salt marsh or uplands),NA
+2,email,YD-1_5,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",5,Information on vegetation (salt marsh or uplands),NA
+2,email,YD-1_4,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",4,Reserve or trail closures,NA
+2,email,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+26,email,YD-1_6,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",6,"Information on fish, shellfish or other aquatic organisms",NA
+26,email,YD-1_5,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",5,Information on vegetation (salt marsh or uplands),NA
+8,email,YD-1_6,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",6,"Information on fish, shellfish or other aquatic organisms",NA
+8,email,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+8,email,YD-1_1,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",1,Weather information,NA
+24,email,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+3,email,YD-1_7,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",7,Information on terrestrial animals,NA
+3,email,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+29,email,YD-1_7,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",7,Information on terrestrial animals,NA
+29,email,YD-1_5,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",5,Information on vegetation (salt marsh or uplands),NA
+29,email,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+30,email,YD-1_6,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",6,"Information on fish, shellfish or other aquatic organisms",NA
+30,email,YD-1_4,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",4,Reserve or trail closures,NA
+30,email,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+36,email,YD-1_6,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",6,"Information on fish, shellfish or other aquatic organisms",NA
+36,email,YD-1_5,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",5,Information on vegetation (salt marsh or uplands),NA
+36,email,YD-1_3,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",3,"Water level information (tides, Guana lake, river)",NA
+36,email,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+33,email,YD-1_3,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",3,"Water level information (tides, Guana lake, river)",NA
+33,email,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+32,email,YD-1_6,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",6,"Information on fish, shellfish or other aquatic organisms",NA
+32,email,YD-1_3,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",3,"Water level information (tides, Guana lake, river)",NA
+32,email,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+12,email,YD-1_6,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",6,"Information on fish, shellfish or other aquatic organisms",NA
+12,email,YD-1_7,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",7,Information on terrestrial animals,NA
+12,email,YD-1_5,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",5,Information on vegetation (salt marsh or uplands),NA
+12,email,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+12,email,YD-1_1,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",1,Weather information,NA
+37,email,YD-1_6,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",6,"Information on fish, shellfish or other aquatic organisms",NA
+37,email,YD-1_5,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",5,Information on vegetation (salt marsh or uplands),NA
+37,email,YD-1_3,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",3,"Water level information (tides, Guana lake, river)",NA
+37,email,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+20,email,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+23,email,YD-1_6,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",6,"Information on fish, shellfish or other aquatic organisms",NA
+23,email,YD-1_3,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",3,"Water level information (tides, Guana lake, river)",NA
+23,email,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+23,email,YD-1_1,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",1,Weather information,NA
+18,email,YD-1_6,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",6,"Information on fish, shellfish or other aquatic organisms",NA
+18,email,YD-1_3,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",3,"Water level information (tides, Guana lake, river)",NA
+18,email,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+18,email,YD-1_1,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",1,Weather information,NA
+27,email,YD-1_3,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",3,"Water level information (tides, Guana lake, river)",NA
+27,email,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+27,email,YD-1_1,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",1,Weather information,NA
+6,email,YD-1_3,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",3,"Water level information (tides, Guana lake, river)",NA
+6,email,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+16,email,YD-1_6,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",6,"Information on fish, shellfish or other aquatic organisms",NA
+16,email,YD-1_5,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",5,Information on vegetation (salt marsh or uplands),NA
+16,email,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+11,email,YD-1_6,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",6,"Information on fish, shellfish or other aquatic organisms",NA
+11,email,YD-1_5,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",5,Information on vegetation (salt marsh or uplands),NA
+11,email,YD-1_3,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",3,"Water level information (tides, Guana lake, river)",NA
+11,email,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+11,email,YD-1_1,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",1,Weather information,NA
+5,email,YD-1_3,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",3,"Water level information (tides, Guana lake, river)",NA
+5,email,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+4,email,YD-1_6,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",6,"Information on fish, shellfish or other aquatic organisms",NA
+4,email,YD-1_7,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",7,Information on terrestrial animals,NA
+4,email,YD-1_5,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",5,Information on vegetation (salt marsh or uplands),NA
+4,email,YD-1_4,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",4,Reserve or trail closures,NA
+4,email,YD-1_3,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",3,"Water level information (tides, Guana lake, river)",NA
+4,email,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+4,email,YD-1_1,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",1,Weather information,NA
+14,email,YD-1_8,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",8,Other (please specify),NA
+17,email,YD-1_6,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",6,"Information on fish, shellfish or other aquatic organisms",NA
+17,email,YD-1_3,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",3,"Water level information (tides, Guana lake, river)",NA
+17,email,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+17,email,YD-1_1,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",1,Weather information,NA
+25,email,YD-1_6,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",6,"Information on fish, shellfish or other aquatic organisms",NA
+25,email,YD-1_7,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",7,Information on terrestrial animals,NA
+25,email,YD-1_5,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",5,Information on vegetation (salt marsh or uplands),NA
+25,email,YD-1_4,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",4,Reserve or trail closures,NA
+25,email,YD-1_3,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",3,"Water level information (tides, Guana lake, river)",NA
+25,email,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+25,email,YD-1_1,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",1,Weather information,NA
+10,email,YD-1_6,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",6,"Information on fish, shellfish or other aquatic organisms",NA
+35,email,YD-1_3,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",3,"Water level information (tides, Guana lake, river)",NA
+1,email,YD-1_5,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",5,Information on vegetation (salt marsh or uplands),NA
+1,email,YD-1_3,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",3,"Water level information (tides, Guana lake, river)",NA
+1,email,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+13,email,YD-1_2,YD-1,"What Guana Estuary data do you currently use, or have you used in the past? (check all that apply)",2,Water quality information (including nutrients and algae),NA
+19,socialmedia,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,4,Other (please specify),NA
+19,socialmedia,2_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+19,socialmedia,2_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+19,socialmedia,2_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+19,socialmedia,2_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+19,socialmedia,2_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+19,socialmedia,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,3,2-3 times a month,NA
+19,socialmedia,2_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+19,socialmedia,2_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+19,socialmedia,2_YD-6_5,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),5,Monitoring,NA
+19,socialmedia,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+19,socialmedia,3_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,4,Other (please specify),NA
+19,socialmedia,3_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+19,socialmedia,3_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+19,socialmedia,3_YD-4_4,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is not user-friendly,NA
+19,socialmedia,3_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,5,Once every 6 months,NA
+19,socialmedia,3_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+19,socialmedia,3_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+19,socialmedia,3_YD-6_5,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),5,Monitoring,NA
+19,socialmedia,3_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+31,socialmedia,1_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,4,Other (please specify),NA
+31,socialmedia,1_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+31,socialmedia,1_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+31,socialmedia,1_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,1,Daily,NA
+31,socialmedia,1_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+31,socialmedia,1_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+31,socialmedia,1_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+31,socialmedia,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+31,socialmedia,2_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+31,socialmedia,2_YD-4_3,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Time consuming to request,NA
+31,socialmedia,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,4,Once a month,NA
+31,socialmedia,2_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+31,socialmedia,2_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+31,socialmedia,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+31,socialmedia,3_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+31,socialmedia,3_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+31,socialmedia,3_YD-4_3,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Time consuming to request,NA
+31,socialmedia,3_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,1,Daily,NA
+31,socialmedia,3_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+31,socialmedia,3_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+31,socialmedia,3_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+31,socialmedia,4_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+31,socialmedia,4_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+31,socialmedia,4_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+31,socialmedia,4_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,1,Daily,NA
+31,socialmedia,4_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+31,socialmedia,4_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+31,socialmedia,4_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,5,Extremely well,NA
+31,socialmedia,5_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+31,socialmedia,5_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+31,socialmedia,5_YD-4_3,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Time consuming to request,NA
+31,socialmedia,5_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,3,2-3 times a month,NA
+31,socialmedia,5_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+31,socialmedia,5_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+31,socialmedia,5_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+31,socialmedia,6_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+31,socialmedia,6_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+31,socialmedia,6_YD-4_3,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Time consuming to request,NA
+31,socialmedia,6_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,3,2-3 times a month,NA
+31,socialmedia,6_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+31,socialmedia,6_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+31,socialmedia,6_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+31,socialmedia,7_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+31,socialmedia,7_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+31,socialmedia,7_YD-4_3,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Time consuming to request,NA
+31,socialmedia,7_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,1,Daily,NA
+31,socialmedia,7_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+31,socialmedia,7_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+31,socialmedia,7_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,5,Extremely well,NA
+28,email,5_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,4,Other (please specify),NA
+28,email,5_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+28,email,5_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+28,email,5_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+28,email,5_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,3,2-3 times a month,NA
+28,email,5_YD-6_5,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),5,Monitoring,NA
+28,email,5_YD-6_6,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),6,Other (please specify),NA
+28,email,5_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+2,email,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+2,email,2_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+2,email,2_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+2,email,2_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+2,email,2_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+2,email,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,6,Once every year,NA
+2,email,2_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+2,email,2_YD-6_5,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),5,Monitoring,NA
+2,email,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+2,email,4_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+2,email,4_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+2,email,4_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+2,email,4_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+2,email,4_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+2,email,4_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+2,email,4_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,6,Once every year,NA
+2,email,4_YD-6_6,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),6,Other (please specify),NA
+2,email,4_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+2,email,5_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+2,email,5_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+2,email,5_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+2,email,5_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+2,email,5_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+2,email,5_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,6,Once every year,NA
+2,email,5_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+2,email,5_YD-6_5,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),5,Monitoring,NA
+2,email,5_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+26,email,5_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+26,email,5_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+26,email,5_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+26,email,5_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,1,Daily,NA
+26,email,5_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+26,email,5_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+26,email,6_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+26,email,6_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+26,email,6_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+26,email,6_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,1,Daily,NA
+26,email,6_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+26,email,6_YD-6_5,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),5,Monitoring,NA
+26,email,6_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+8,email,1_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+8,email,1_YD-3_6,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no advantages,NA
+8,email,1_YD-4_1,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Difficult/Complicated to access,NA
+8,email,1_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,6,Once every year,NA
+8,email,1_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+8,email,1_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,2,Slightly well,NA
+8,email,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+8,email,2_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+8,email,2_YD-4_4,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is not user-friendly,NA
+8,email,2_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+8,email,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,6,Once every year,NA
+8,email,2_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+8,email,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,2,Slightly well,NA
+8,email,6_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+8,email,6_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+8,email,6_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+8,email,6_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+8,email,6_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+8,email,6_YD-3_5,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+8,email,6_YD-4_1,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Difficult/Complicated to access,NA
+8,email,6_YD-4_4,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is not user-friendly,NA
+8,email,6_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,5,Once every 6 months,NA
+8,email,6_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+8,email,6_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+8,email,6_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+24,email,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+24,email,2_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+24,email,2_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+24,email,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,7,Less than once a year,NA
+24,email,2_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+24,email,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+3,email,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+3,email,2_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+3,email,2_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+3,email,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,6,Once every year,NA
+3,email,2_YD-6_5,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),5,Monitoring,NA
+3,email,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+3,email,7_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+3,email,7_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+3,email,7_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+3,email,7_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,5,Once every 6 months,NA
+3,email,7_YD-6_5,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),5,Monitoring,NA
+3,email,7_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+29,email,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,4,Other (please specify),NA
+29,email,2_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+29,email,2_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+29,email,2_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+29,email,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,5,Once every 6 months,NA
+29,email,2_YD-6_6,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),6,Other (please specify),NA
+29,email,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,2,Slightly well,NA
+29,email,5_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,4,Other (please specify),NA
+29,email,5_YD-3_6,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no advantages,NA
+29,email,5_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+29,email,5_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,6,Once every year,NA
+29,email,5_YD-6_6,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),6,Other (please specify),NA
+29,email,5_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+29,email,7_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,4,Other (please specify),NA
+29,email,7_YD-3_6,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no advantages,NA
+29,email,7_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+29,email,7_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,5,Once every 6 months,NA
+29,email,7_YD-6_6,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),6,Other (please specify),NA
+29,email,7_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+30,email,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+30,email,2_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+30,email,2_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+30,email,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,7,Less than once a year,NA
+30,email,2_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+30,email,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+30,email,4_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+30,email,4_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+30,email,4_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+30,email,4_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+30,email,4_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+30,email,4_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+30,email,4_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,5,Once every 6 months,NA
+30,email,4_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+30,email,4_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+30,email,6_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+30,email,6_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+30,email,6_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+30,email,6_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+30,email,6_YD-3_5,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+30,email,6_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+30,email,6_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,3,2-3 times a month,NA
+30,email,6_YD-6_5,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),5,Monitoring,NA
+30,email,6_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+36,email,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+36,email,2_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+36,email,2_YD-4_4,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is not user-friendly,NA
+36,email,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,5,Once every 6 months,NA
+36,email,2_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+36,email,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+36,email,3_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+36,email,3_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+36,email,3_YD-4_2,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Slow to receive,NA
+36,email,3_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,4,Once a month,NA
+36,email,3_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+36,email,3_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,5,Extremely well,NA
+36,email,5_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+36,email,5_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+36,email,5_YD-4_4,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is not user-friendly,NA
+36,email,5_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,7,Less than once a year,NA
+36,email,5_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+36,email,5_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+36,email,6_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+36,email,6_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+36,email,6_YD-4_4,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is not user-friendly,NA
+36,email,6_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,7,Less than once a year,NA
+36,email,6_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+36,email,6_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,5,Extremely well,NA
+33,email,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,4,Other (please specify),NA
+33,email,2_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+33,email,2_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+33,email,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,6,Once every year,NA
+33,email,2_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+33,email,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+33,email,3_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+33,email,3_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+33,email,3_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+33,email,3_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,5,Once every 6 months,NA
+33,email,3_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+33,email,3_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+32,email,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,4,Other (please specify),NA
+32,email,2_YD-3_5,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+32,email,2_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+32,email,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,7,Less than once a year,NA
+32,email,2_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+32,email,2_YD-6_5,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),5,Monitoring,NA
+32,email,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+32,email,3_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,4,Other (please specify),NA
+32,email,3_YD-3_6,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no advantages,NA
+32,email,3_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+32,email,3_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,7,Less than once a year,NA
+32,email,3_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+32,email,3_YD-6_5,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),5,Monitoring,NA
+32,email,3_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+32,email,6_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,4,Other (please specify),NA
+32,email,6_YD-3_5,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+32,email,6_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+32,email,6_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,7,Less than once a year,NA
+32,email,6_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+32,email,6_YD-6_5,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),5,Monitoring,NA
+32,email,6_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+12,email,1_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+12,email,1_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+12,email,1_YD-4_2,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Slow to receive,NA
+12,email,1_YD-4_3,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Time consuming to request,NA
+12,email,1_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,4,Once a month,NA
+12,email,1_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+12,email,1_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+12,email,1_YD-6_6,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),6,Other (please specify),NA
+12,email,1_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+12,email,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+12,email,2_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+12,email,2_YD-4_1,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Difficult/Complicated to access,NA
+12,email,2_YD-4_2,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Slow to receive,NA
+12,email,2_YD-4_3,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Time consuming to request,NA
+12,email,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,4,Once a month,NA
+12,email,2_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+12,email,2_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+12,email,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,2,Slightly well,NA
+12,email,5_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+12,email,5_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+12,email,5_YD-4_1,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Difficult/Complicated to access,NA
+12,email,5_YD-4_2,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Slow to receive,NA
+12,email,5_YD-4_3,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Time consuming to request,NA
+12,email,5_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,4,Once a month,NA
+12,email,5_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+12,email,5_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+12,email,5_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+12,email,6_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+12,email,6_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+12,email,6_YD-4_1,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Difficult/Complicated to access,NA
+12,email,6_YD-4_2,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Slow to receive,NA
+12,email,6_YD-4_3,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Time consuming to request,NA
+12,email,6_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,4,Once a month,NA
+12,email,6_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+12,email,6_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+12,email,6_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+12,email,7_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+12,email,7_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+12,email,7_YD-4_1,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Difficult/Complicated to access,NA
+12,email,7_YD-4_2,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Slow to receive,NA
+12,email,7_YD-4_3,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Time consuming to request,NA
+12,email,7_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,4,Once a month,NA
+12,email,7_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+12,email,7_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+12,email,7_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,2,Slightly well,NA
+37,email,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+37,email,2_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+37,email,2_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+37,email,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,5,Once every 6 months,NA
+37,email,2_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+37,email,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+37,email,3_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+37,email,3_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+37,email,3_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+37,email,3_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,5,Once every 6 months,NA
+37,email,3_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+37,email,3_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+37,email,5_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+37,email,5_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+37,email,5_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+37,email,5_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,6,Once every year,NA
+37,email,5_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+37,email,5_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+37,email,6_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,4,Other (please specify),NA
+37,email,6_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+37,email,6_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+37,email,6_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,5,Once every 6 months,NA
+37,email,6_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+37,email,6_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+20,email,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+20,email,2_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+20,email,2_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+20,email,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,6,Once every year,NA
+20,email,2_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+20,email,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+23,email,1_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+23,email,1_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+23,email,1_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+23,email,1_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,5,Once every 6 months,NA
+23,email,1_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+23,email,1_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+23,email,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+23,email,2_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+23,email,2_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+23,email,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,6,Once every year,NA
+23,email,2_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+23,email,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+23,email,3_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+23,email,3_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+23,email,3_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+23,email,3_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,7,Less than once a year,NA
+23,email,3_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+23,email,3_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+23,email,6_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+23,email,6_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+23,email,6_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+23,email,6_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,7,Less than once a year,NA
+23,email,6_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+23,email,6_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+18,email,1_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+18,email,1_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+18,email,1_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+18,email,1_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+18,email,1_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+18,email,1_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+18,email,1_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,4,Once a month,NA
+18,email,1_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+18,email,1_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+18,email,1_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+18,email,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+18,email,2_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+18,email,2_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+18,email,2_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+18,email,2_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+18,email,2_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+18,email,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,4,Once a month,NA
+18,email,2_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+18,email,2_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+18,email,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+18,email,3_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+18,email,3_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+18,email,3_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+18,email,3_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+18,email,3_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+18,email,3_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+18,email,3_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,2,At least once a week,NA
+18,email,3_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+18,email,3_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+18,email,3_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+18,email,3_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+18,email,6_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+18,email,6_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+18,email,6_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+18,email,6_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+18,email,6_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+18,email,6_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,3,2-3 times a month,NA
+18,email,6_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+18,email,6_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+27,email,1_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+27,email,1_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+27,email,1_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+27,email,1_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+27,email,1_YD-4_2,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Slow to receive,NA
+27,email,1_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+27,email,1_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,4,Once a month,NA
+27,email,1_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+27,email,1_YD-6_6,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),6,Other (please specify),NA
+27,email,1_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+27,email,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,4,Other (please specify),NA
+27,email,2_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+27,email,2_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+27,email,2_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+27,email,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,2,At least once a week,NA
+27,email,2_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+27,email,2_YD-6_5,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),5,Monitoring,NA
+27,email,2_YD-6_6,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),6,Other (please specify),NA
+27,email,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+27,email,3_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+27,email,3_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+27,email,3_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+27,email,3_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+27,email,3_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,2,At least once a week,NA
+27,email,3_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+27,email,3_YD-6_6,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),6,Other (please specify),NA
+27,email,3_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+6,email,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+6,email,2_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+6,email,2_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+6,email,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,6,Once every year,NA
+6,email,2_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+6,email,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+6,email,3_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+6,email,3_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+6,email,3_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+6,email,3_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,5,Once every 6 months,NA
+6,email,3_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+6,email,3_YD-6_6,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),6,Other (please specify),NA
+6,email,3_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+16,email,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+16,email,2_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+16,email,2_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+16,email,2_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+16,email,2_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+16,email,2_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+16,email,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,5,Once every 6 months,NA
+16,email,2_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+16,email,2_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+16,email,2_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+16,email,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+16,email,5_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+16,email,5_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+16,email,5_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+16,email,5_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+16,email,5_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+16,email,5_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+16,email,5_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,5,Once every 6 months,NA
+16,email,5_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+16,email,5_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+16,email,5_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+16,email,5_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+16,email,6_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+16,email,6_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+16,email,6_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+16,email,6_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+16,email,6_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+16,email,6_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+16,email,6_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,5,Once every 6 months,NA
+16,email,6_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+16,email,6_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+16,email,6_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+16,email,6_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+11,email,1_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+11,email,1_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+11,email,1_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+11,email,1_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,4,Once a month,NA
+11,email,1_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+11,email,1_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+11,email,1_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+11,email,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+11,email,2_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+11,email,2_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+11,email,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,3,2-3 times a month,NA
+11,email,2_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+11,email,2_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+11,email,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+11,email,3_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+11,email,3_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+11,email,3_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+11,email,3_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,4,Once a month,NA
+11,email,3_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+11,email,3_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+11,email,3_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+11,email,5_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+11,email,5_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+11,email,5_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+11,email,5_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,4,Once a month,NA
+11,email,5_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+11,email,5_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+11,email,5_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+11,email,6_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+11,email,6_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+11,email,6_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+11,email,6_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+11,email,6_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+11,email,6_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,4,Once a month,NA
+11,email,6_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+11,email,6_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+11,email,6_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,2,Slightly well,NA
+5,email,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+5,email,2_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+5,email,2_YD-4_1,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Difficult/Complicated to access,NA
+5,email,2_YD-4_3,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Time consuming to request,NA
+5,email,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,7,Less than once a year,NA
+5,email,2_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+5,email,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+5,email,3_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+5,email,3_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+5,email,3_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+5,email,3_YD-4_1,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Difficult/Complicated to access,NA
+5,email,3_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,7,Less than once a year,NA
+5,email,3_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+5,email,3_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+4,email,1_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,4,Other (please specify),NA
+4,email,1_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+4,email,1_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+4,email,1_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+4,email,1_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,4,Once a month,NA
+4,email,1_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+4,email,1_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+4,email,1_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+4,email,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+4,email,2_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+4,email,2_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+4,email,2_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+4,email,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,4,Once a month,NA
+4,email,2_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+4,email,2_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+4,email,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,2,Slightly well,NA
+4,email,3_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,4,Other (please specify),NA
+4,email,3_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+4,email,3_YD-4_3,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Time consuming to request,NA
+4,email,3_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+4,email,3_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,4,Once a month,NA
+4,email,3_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+4,email,3_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+4,email,3_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,2,Slightly well,NA
+4,email,4_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,3,Pick-up paper copy in person,NA
+4,email,4_YD-3_6,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no advantages,NA
+4,email,4_YD-3_5,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+4,email,4_YD-4_1,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Difficult/Complicated to access,NA
+4,email,4_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+4,email,4_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,4,Once a month,NA
+4,email,4_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+4,email,4_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+4,email,5_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+4,email,5_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+4,email,5_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+4,email,5_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+4,email,5_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,4,Once a month,NA
+4,email,5_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+4,email,5_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+4,email,6_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+4,email,6_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+4,email,6_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+4,email,6_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+4,email,6_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,4,Once a month,NA
+4,email,6_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+4,email,6_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+4,email,7_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+4,email,7_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+4,email,7_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+4,email,7_YD-4_3,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Time consuming to request,NA
+4,email,7_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+4,email,7_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,4,Once a month,NA
+4,email,7_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+4,email,7_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+4,email,7_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,2,Slightly well,NA
+14,email,8_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+14,email,8_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+14,email,8_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+14,email,8_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+14,email,8_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+14,email,8_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,7,Less than once a year,NA
+14,email,8_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+14,email,8_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+17,email,1_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,4,Other (please specify),NA
+17,email,1_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+17,email,1_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+17,email,1_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+17,email,1_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+17,email,1_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+17,email,1_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,5,Once every 6 months,NA
+17,email,1_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+17,email,1_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,5,Extremely well,NA
+17,email,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,4,Other (please specify),NA
+17,email,2_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+17,email,2_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+17,email,2_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+17,email,2_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+17,email,2_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+17,email,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,5,Once every 6 months,NA
+17,email,2_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+17,email,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,5,Extremely well,NA
+17,email,3_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+17,email,3_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+17,email,3_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+17,email,3_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+17,email,3_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,5,Once every 6 months,NA
+17,email,3_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+17,email,3_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+17,email,6_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+17,email,6_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+17,email,6_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+17,email,6_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+17,email,6_YD-4_5,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),5,Other (please specify),NA
+17,email,6_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,5,Once every 6 months,NA
+17,email,6_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+17,email,6_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+25,email,1_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+25,email,1_YD-3_6,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no advantages,NA
+25,email,1_YD-4_1,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Difficult/Complicated to access,NA
+25,email,1_YD-4_4,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is not user-friendly,NA
+25,email,1_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,4,Once a month,NA
+25,email,1_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+25,email,1_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+25,email,1_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,2,Slightly well,NA
+25,email,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+25,email,2_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+25,email,2_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+25,email,2_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+25,email,2_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+25,email,2_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+25,email,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,5,Once every 6 months,NA
+25,email,2_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+25,email,2_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+25,email,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+25,email,3_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+25,email,3_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+25,email,3_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+25,email,3_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+25,email,3_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+25,email,3_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+25,email,3_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,1,Daily,NA
+25,email,3_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+25,email,3_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+25,email,4_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+25,email,4_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+25,email,4_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+25,email,4_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,5,Once every 6 months,NA
+25,email,4_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+25,email,4_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+25,email,4_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+25,email,4_YD-6_5,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),5,Monitoring,NA
+25,email,4_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+25,email,5_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+25,email,5_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+25,email,5_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+25,email,5_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+25,email,5_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+25,email,5_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+25,email,5_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,3,2-3 times a month,NA
+25,email,5_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+25,email,5_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+25,email,5_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+25,email,5_YD-6_5,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),5,Monitoring,NA
+25,email,5_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+25,email,6_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+25,email,6_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+25,email,6_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+25,email,6_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+25,email,6_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+25,email,6_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,3,2-3 times a month,NA
+25,email,6_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+25,email,6_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+25,email,6_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+25,email,6_YD-6_5,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),5,Monitoring,NA
+25,email,6_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+25,email,7_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+25,email,7_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+25,email,7_YD-3_3,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Requesting the data is quick,NA
+25,email,7_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+25,email,7_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+25,email,7_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,3,2-3 times a month,NA
+25,email,7_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+25,email,7_YD-6_2,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),2,Educational purposes,NA
+25,email,7_YD-6_5,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),5,Monitoring,NA
+25,email,7_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,4,Very well,NA
+10,email,6_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,2,"Download from website (If so, what website?)",NA
+10,email,6_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+10,email,6_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+10,email,6_YD-4_6,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no disadvantages,NA
+10,email,6_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,5,Once every 6 months,NA
+10,email,6_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+10,email,6_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,2,Slightly well,NA
+35,email,3_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,4,Other (please specify),NA
+35,email,3_YD-3_1,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Easy/convenient to access,NA
+35,email,3_YD-3_2,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Data is received quickly after request,NA
+35,email,3_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+35,email,3_YD-4_2,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),2,Slow to receive,NA
+35,email,3_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,2,At least once a week,NA
+35,email,3_YD-6_3,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),3,Work-related purposes (not research or education),NA
+35,email,3_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+1,email,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+1,email,2_YD-3_6,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no advantages,NA
+1,email,2_YD-4_1,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),1,Difficult/Complicated to access,NA
+1,email,2_YD-4_4,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is not user-friendly,NA
+1,email,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,7,Less than once a year,NA
+1,email,2_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+1,email,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+1,email,3_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+1,email,3_YD-3_6,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no advantages,NA
+1,email,3_YD-4_4,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is not user-friendly,NA
+1,email,3_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,7,Less than once a year,NA
+1,email,3_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+1,email,3_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+1,email,5_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+1,email,5_YD-3_6,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),6,There are no advantages,NA
+1,email,5_YD-4_4,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is not user-friendly,NA
+1,email,5_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,7,Less than once a year,NA
+1,email,5_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+1,email,5_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
+13,email,2_YD-2,YD-2,How do you most frequently obtain or access Guana Estuary data on [Field-1]?,1,Request from a GTMNERR staff member by email,NA
+13,email,2_YD-3_4,YD-3,What are the advantages of this primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),4,The format the data are delivered / accessed in is useful,NA
+13,email,2_YD-4_3,YD-4,What are the disadvantages of the primary method of accessing or obtaining Guana Estuary data on [Field-1]? (check all that apply),3,Time consuming to request,NA
+13,email,2_YD-5,YD-5,How often do/did you access or obtain Guana Estuary data on [Field-1]?,4,Once a month,NA
+13,email,2_YD-6_1,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),1,Research,NA
+13,email,2_YD-6_4,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),4,Decision making (for recreational/educational/scientific visits),NA
+13,email,2_YD-6_5,YD-6,What do you typically use Guana Estuary data on [Field-1] for? (check all that apply),5,Monitoring,NA
+13,email,2_YD-7,YD-7,How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?,3,Moderately well,NA
