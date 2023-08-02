@@ -59,14 +59,6 @@ write_csv(text_only, "data_deidentified/subsets/text_results_basic.csv")
 
 #### Make dataset with "intro" questions ####
 
-## Issue to solve: 
-# For questions with multiple options, the second number in the question name is an option, and a 1 as an "answer" 
-# indicates it was picked 
-# For only one possible option, the actual number associated with the answer is given. 
-# For multiple options that can be ordered, the number in the answer indicates the order, the number in the question
-# name the option
-# So the column "choice" is either yes/no (1/0), or the actual choice (1,2,3,4, etc), or the order of an option.
-
 intro <- all_surveys %>% 
   select("ID", "source", starts_with("D-")) %>% # Get section D questions
   select(!ends_with("_TEXT")) %>% # Take out the text answers
@@ -128,7 +120,7 @@ yes_data2 <- all_surveys %>%
                names_to = "qname",
                values_to = "choice") %>% 
   # separate main questions code and numeric options
-  separate(qname, c("field", "qname_main", "q_code"), sep = "_", remove = FALSE, convert = TRUE) %>% 
+  separate(qname, c("field_no", "qname_main", "q_code"), sep = "_", remove = FALSE, convert = TRUE) %>% 
   left_join(select(questions_detail, qname_main, q_type), relationship = "many-to-many") %>%  # add on question type so we can use it to add correct text
   filter(!duplicated(.)) %>% 
   mutate(order = if_else(q_type == "RO", # For the ordering questions, save the order as a separate column
@@ -139,11 +131,9 @@ yes_data2 <- all_surveys %>%
                           false = q_code)) %>%  # Otherwise just keep q_code
   filter(!is.na(choice)) %>% # Remove NA (not picked) questions/answers
   select(!choice) %>% # no need for this column anymore
-  left_join(select(questions_detail, qname, qname_main, main, q_code, q_text)) %>% 
+  left_join(select(questions_detail, qname, qname_main, main, field_no, field_name, q_code, q_text)) %>% 
   # reorder columns...
-  select(ID, source, qname, qname_main, main, q_code, q_text, order)
-
-####### FIX: WE ALSO NEED FIELD-1 HERE!!!! ###########
+  select(ID, source, qname, qname_main, field_no, field_name, main, q_code, q_text, order)
 
 # Put together
 yes_data <- full_join(yes_data1, yes_data2)
