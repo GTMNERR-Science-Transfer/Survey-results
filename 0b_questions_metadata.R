@@ -21,7 +21,8 @@ library("tidyverse")
 
 # Documentation for qualtRics: https://docs.ropensci.org/qualtRics/
 
-#### API credentials were set up in file 00 ####
+#### API credentials were set up in file 0a ####
+# This script will only work if these credentials are set!!!
 
 # You can only use the API to download Qualtrics results for surveys that you are
 # admin on. To check which surveys you can access, you can uncomment and run 
@@ -136,21 +137,6 @@ metadata_responses <- data.frame()
 for (survey in all_survey_ids){
   metadata_surveys <- metadata(survey)
   # Get general survey and response info
-  combined <- cbind(metadata_surveys$metadata, 
-                    metadata_surveys$responsecounts)
-  metadata_responses <- rbind(metadata_responses, 
-                              combined)
-}
-# Add date that this info was gathered
-metadata_responses$date_checked <- paste(Sys.Date(), Sys.time())
-write_csv(metadata_responses, "metadata/response_info.csv")
-
-#### 3. Questionnaire metadata ####
-# Get questionnaire metadata: this is a list with 2 dataframes with information and
-# a list of lists of the questions. The latter is not really necessary to save
-metadata_responses <- data.frame()
-for (survey in all_survey_ids){
-  metadata_surveys <- metadata(survey)
   combined <- cbind(metadata_surveys$metadata, 
                     metadata_surveys$responsecounts)
   metadata_responses <- rbind(metadata_responses, 

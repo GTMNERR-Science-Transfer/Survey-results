@@ -10,7 +10,7 @@
 
 # You will need to run the script that sets your Qualtrics key FIRST, before running
 # this script. This script will only work if you have admin access to the project's
-# suvreys (see below).
+# surveys (see below).
 # If you have questions about this script or need to access the raw data, please
 # contact the author of this script (see above).
 
@@ -34,6 +34,7 @@ library("tidyverse")
 # Documentation for qualtRics: https://docs.ropensci.org/qualtRics/
 
 #### API credentials were set up in file 0a ####
+# This script will only work if these credentials are set!!!
 
 # You can only use the API to download Qualtrics results for surveys that you are
 # admin on. To check which surveys you can access, you can uncomment and run 

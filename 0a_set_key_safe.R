@@ -6,10 +6,8 @@
 
 # Set key
 
-# This script includes my personal API key: hence confidential
-
-#### NOT TO BE SHARED WITH ANYONE ####
-#### NOT TO BE SAVED TO SHARED DRIVES, CLOUD DRIVES ETC ####
+# This script shows how to set an API key for accessing Qualtrics results.
+# It does not contain an actual key.
 
 # This script / project is set up with renv, meaning it restores the versions of
 # the packages that were last used (when everything worked, we assume)
