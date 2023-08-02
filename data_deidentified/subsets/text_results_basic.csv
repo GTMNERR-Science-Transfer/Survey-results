@@ -1,38 +1,102 @@
-ID,source,D-1_5_TEXT,D-3_9_TEXT,ND-2_7_TEXT,T-1_4_TEXT,T-2_8_TEXT,T-3_8_TEXT,T-4_6_TEXT,YD-1_8_TEXT,1_YD-2_2_TEXT,1_YD-2_4_TEXT,1_YD-3_5_TEXT,1_YD-4_5_TEXT,1_YD-6_6_TEXT,2_YD-2_2_TEXT,2_YD-2_4_TEXT,2_YD-3_5_TEXT,2_YD-4_5_TEXT,2_YD-6_6_TEXT,3_YD-2_2_TEXT,3_YD-2_4_TEXT,3_YD-3_5_TEXT,3_YD-4_5_TEXT,3_YD-6_6_TEXT,4_YD-2_2_TEXT,4_YD-2_4_TEXT,4_YD-3_5_TEXT,4_YD-4_5_TEXT,4_YD-6_6_TEXT,5_YD-2_2_TEXT,5_YD-2_4_TEXT,5_YD-3_5_TEXT,5_YD-4_5_TEXT,5_YD-6_6_TEXT,6_YD-2_2_TEXT,6_YD-2_4_TEXT,6_YD-3_5_TEXT,6_YD-4_5_TEXT,6_YD-6_6_TEXT,7_YD-2_2_TEXT,7_YD-2_4_TEXT,7_YD-3_5_TEXT,7_YD-4_5_TEXT,7_YD-6_6_TEXT,8_YD-2_2_TEXT,8_YD-2_4_TEXT,8_YD-3_5_TEXT,8_YD-4_5_TEXT,8_YD-6_6_TEXT
-19,socialmedia,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,get from GTM files (I am an employee),NA,NA,NA,NA,get from GTM servers (I am an employee),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-31,socialmedia,NA,NA,NA,NA,NA,NA,NA,NA,NA,Weather Channel App,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,gtmnerr.org,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-28,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"FieldMaps, Survey123 apps using GTM Staff Access",NA,NA,Monitoring of invasive plant species sites for re-ocurrence / growth,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-2,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,GTM website,NA,NA,NA,Leisure,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-15,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-26,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEACAR,NA,NA,NA,NA,SEACAR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-22,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-8,email,NA,historical maps,NA,NA,NA,NA,NA,NA,johnson county weather stations,NA,NA,NA,NA,swmp,NA,NA,various formats,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,swmp; seacar,NA,"one stop shop, right now data is across so many websites...",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-24,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-3,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,login required,NA,NA,NA,NA,NA,NA
-29,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,View on website (no download),NA,"Not current; hard to find on website (although once found, easy to access)",Personal interest,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Attending GTM info sessions or obtaining info from newsletter,NA,"Again, somewhat haphazard","Personal use, plus is helpful during some of the volunteer programs",NA,NA,NA,NA,NA,NA,Newsletter info or directly ask staff,NA,"It's a bit haphazard, almost anecdotal",Personal interest; useful in some of my volunteer activities,NA,NA,NA,NA,NA
-30,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Ths was a one-off special case,NA,NA,NA,NA,NA,NA,https://gtmnerr.org/visit/,NA,NA,the info might not always be up to date,NA,NA,NA,NA,NA,NA,NA,NA,Done as part of oyster monitoring volunteering,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-36,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-33,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Attending state of the reserve presentations.,NA,Only available when presented by the staff.,NA,National Weather Service Tide Data,NA,NA,Not easy to view on mobile devices.,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-32,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,FWC data,already have the data,NA,NA,NA,FWC,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,FWC Data,already have data,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-12,email,NA,NA,NA,NA,NA,NA,NA,NA,Research Reserve Website,NA,NA,NA,Recreation,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-37,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,GTMNERR.org,NA,NA,NA,NA,gtmnerr.org,NA,NA,NA,NA,NA,NA,NA,NA,NA,GTMNERR.org,NA,NA,NA,NA,NA,State sites,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-20,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-23,email,NA,NA,NA,NA,NA,NA,NA,NA,https://cdmo.baruch.sc.edu//,NA,NA,NA,NA,https://cdmo.baruch.sc.edu//,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-18,email,NA,NA,NA,NA,NA,NA,NA,NA,CDMO,NA,NA,NA,NA,CDMO,NA,NA,NA,NA,CDMO,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Being a pain to the researchers,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-27,email,Lake management - FWC,NA,NA,NA,NA,NA,NA,NA,https://www.weather.gov/jax/fire,NA,NA,SPOT weather forecast not available to general public,Prescribed fire weather forecasts,NA,Spot monitoring of salinity each week,NA,Not as accurate as other salinity measuring techniques,Vegetation management on lake,https://www.windfinder.com/tide/south_ponte_vedra_beach,NA,NA,Not directly representative of the Guana System,Guana Dam management,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Website to  download/access is cumbersome otherwise I'd do it myself. Want to make sure I am getting the latest data and I trust staff,NA,NA,NA,NA,Not familiar with how to access it on my own,I would access it more if I knew how to get to the data,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-16,email,NA,waterfowl,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,easier if online,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,easier if online,NA,NA,NA,NA,would be easier if online,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-11,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-5,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-4,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,Google,NA,Sometimes inaccurate,NA,UF IFAS and FL DEP,NA,NA,"Lots of data, lots out of date, doesn't address current situation",NA,NA,call the Visitor center,NA,Need to call during hours of operation,NA,NA,NA,It would be easier to go online and find out what's open or closed,may have a plan on visit but then can't do what you planned,NA,UF IFAS and FL DEP,NA,NA,Have to go to multiple places to get data,NA,UF IFAS and Florida DEP,NA,NA,Multiple sources required to find info,NA,Florida DEP,NA,NA,Some information available in all trails from a user perspective not from the actual reserve,NA,NA,NA,NA,NA,NA
-14,email,NA,Dam Operations,NA,NA,NA,NA,NA,Lidar,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NOAA Digital Coast,NA,NA,NA,NA
-17,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,SWMP CDMO or email,NA,Not all guana data is available in SWMP CDMO,NA,NA,SWMP CDMO or email,NA,Not all data is available on SWMP CDMO,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Would be nice to have a public database,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-7,email,Health,NA,Environmental impacts,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-34,email,NA,NA,Resilience planning,NA,Projections,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-25,email,NA,NA,NA,NA,NA,NA,NA,NA,weather.gov,NA,NA,NA,NA,NA,NA,NA,NA,NA,https://www.surf-forecast.com/breaks/South-Ponte-Vedra-Beach/tides/latest,NA,NA,NA,NA,NA,NA,NA,NA,NA,inaturalist.org,NA,NA,NA,NA,inaturalist.org,NA,NA,NA,NA,inaturalist.org,NA,NA,NA,NA,NA,NA,NA,NA,NA
-10,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,SEACAR,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-35,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NOAA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-9,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-1,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-13,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-21,email,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+ID,source,qname,field_no,qname_main,q_code,text_answer
+19,socialmedia,2_YD-2_4_TEXT,2,YD-2,4,get from GTM files (I am an employee)
+19,socialmedia,3_YD-2_4_TEXT,3,YD-2,4,get from GTM servers (I am an employee)
+31,socialmedia,1_YD-2_4_TEXT,1,YD-2,4,Weather Channel App
+31,socialmedia,4_YD-2_2_TEXT,4,YD-2,2,gtmnerr.org
+28,email,5_YD-2_4_TEXT,5,YD-2,4,"FieldMaps, Survey123 apps using GTM Staff Access"
+28,email,5_YD-6_6_TEXT,5,YD-6,6,Monitoring of invasive plant species sites for re-ocurrence / growth
+2,email,4_YD-2_2_TEXT,4,YD-2,2,GTM website
+2,email,4_YD-6_6_TEXT,4,YD-6,6,Leisure
+26,email,5_YD-2_2_TEXT,5,YD-2,2,SEACAR
+26,email,6_YD-2_2_TEXT,6,YD-2,2,SEACAR
+8,email,D-3_9_TEXT,NA,D-3,9,historical maps
+8,email,1_YD-2_2_TEXT,1,YD-2,2,johnson county weather stations
+8,email,2_YD-2_2_TEXT,2,YD-2,2,swmp
+8,email,2_YD-4_5_TEXT,2,YD-4,5,various formats
+8,email,6_YD-2_2_TEXT,6,YD-2,2,swmp; seacar
+8,email,6_YD-3_5_TEXT,6,YD-3,5,"one stop shop, right now data is across so many websites..."
+3,email,7_YD-4_5_TEXT,7,YD-4,5,login required
+29,email,2_YD-2_4_TEXT,2,YD-2,4,View on website (no download)
+29,email,2_YD-4_5_TEXT,2,YD-4,5,"Not current; hard to find on website (although once found, easy to access)"
+29,email,2_YD-6_6_TEXT,2,YD-6,6,Personal interest
+29,email,5_YD-2_4_TEXT,5,YD-2,4,Attending GTM info sessions or obtaining info from newsletter
+29,email,5_YD-4_5_TEXT,5,YD-4,5,"Again, somewhat haphazard"
+29,email,5_YD-6_6_TEXT,5,YD-6,6,"Personal use, plus is helpful during some of the volunteer programs"
+29,email,7_YD-2_4_TEXT,7,YD-2,4,Newsletter info or directly ask staff
+29,email,7_YD-4_5_TEXT,7,YD-4,5,"It's a bit haphazard, almost anecdotal"
+29,email,7_YD-6_6_TEXT,7,YD-6,6,Personal interest; useful in some of my volunteer activities
+30,email,2_YD-4_5_TEXT,2,YD-4,5,Ths was a one-off special case
+30,email,4_YD-2_2_TEXT,4,YD-2,2,https://gtmnerr.org/visit/
+30,email,4_YD-4_5_TEXT,4,YD-4,5,the info might not always be up to date
+30,email,6_YD-3_5_TEXT,6,YD-3,5,Done as part of oyster monitoring volunteering
+33,email,2_YD-2_4_TEXT,2,YD-2,4,Attending state of the reserve presentations.
+33,email,2_YD-4_5_TEXT,2,YD-4,5,Only available when presented by the staff.
+33,email,3_YD-2_2_TEXT,3,YD-2,2,National Weather Service Tide Data
+33,email,3_YD-4_5_TEXT,3,YD-4,5,Not easy to view on mobile devices.
+32,email,2_YD-2_4_TEXT,2,YD-2,4,FWC data
+32,email,2_YD-3_5_TEXT,2,YD-3,5,already have the data
+32,email,3_YD-2_4_TEXT,3,YD-2,4,FWC
+32,email,6_YD-2_4_TEXT,6,YD-2,4,FWC Data
+32,email,6_YD-3_5_TEXT,6,YD-3,5,already have data
+12,email,1_YD-2_2_TEXT,1,YD-2,2,Research Reserve Website
+12,email,1_YD-6_6_TEXT,1,YD-6,6,Recreation
+37,email,2_YD-2_2_TEXT,2,YD-2,2,GTMNERR.org
+37,email,3_YD-2_2_TEXT,3,YD-2,2,gtmnerr.org
+37,email,5_YD-2_2_TEXT,5,YD-2,2,GTMNERR.org
+37,email,6_YD-2_4_TEXT,6,YD-2,4,State sites
+23,email,1_YD-2_2_TEXT,1,YD-2,2,https://cdmo.baruch.sc.edu//
+23,email,2_YD-2_2_TEXT,2,YD-2,2,https://cdmo.baruch.sc.edu//
+18,email,1_YD-2_2_TEXT,1,YD-2,2,CDMO
+18,email,2_YD-2_2_TEXT,2,YD-2,2,CDMO
+18,email,3_YD-2_2_TEXT,3,YD-2,2,CDMO
+18,email,6_YD-4_5_TEXT,6,YD-4,5,Being a pain to the researchers
+27,email,D-1_5_TEXT,NA,D-1,5,Lake management - FWC
+27,email,1_YD-2_2_TEXT,1,YD-2,2,https://www.weather.gov/jax/fire
+27,email,1_YD-4_5_TEXT,1,YD-4,5,SPOT weather forecast not available to general public
+27,email,1_YD-6_6_TEXT,1,YD-6,6,Prescribed fire weather forecasts
+27,email,2_YD-2_4_TEXT,2,YD-2,4,Spot monitoring of salinity each week
+27,email,2_YD-4_5_TEXT,2,YD-4,5,Not as accurate as other salinity measuring techniques
+27,email,2_YD-6_6_TEXT,2,YD-6,6,Vegetation management on lake
+27,email,3_YD-2_2_TEXT,3,YD-2,2,https://www.windfinder.com/tide/south_ponte_vedra_beach
+27,email,3_YD-4_5_TEXT,3,YD-4,5,Not directly representative of the Guana System
+27,email,3_YD-6_6_TEXT,3,YD-6,6,Guana Dam management
+6,email,2_YD-4_5_TEXT,2,YD-4,5,Website to  download/access is cumbersome otherwise I'd do it myself. Want to make sure I am getting the latest data and I trust staff
+6,email,3_YD-4_5_TEXT,3,YD-4,5,Not familiar with how to access it on my own
+6,email,3_YD-6_6_TEXT,3,YD-6,6,I would access it more if I knew how to get to the data
+16,email,D-3_9_TEXT,NA,D-3,9,waterfowl
+16,email,2_YD-4_5_TEXT,2,YD-4,5,easier if online
+16,email,5_YD-4_5_TEXT,5,YD-4,5,easier if online
+16,email,6_YD-4_5_TEXT,6,YD-4,5,would be easier if online
+4,email,1_YD-2_4_TEXT,1,YD-2,4,Google
+4,email,1_YD-4_5_TEXT,1,YD-4,5,Sometimes inaccurate
+4,email,2_YD-2_2_TEXT,2,YD-2,2,UF IFAS and FL DEP
+4,email,2_YD-4_5_TEXT,2,YD-4,5,"Lots of data, lots out of date, doesn't address current situation"
+4,email,3_YD-2_4_TEXT,3,YD-2,4,call the Visitor center
+4,email,3_YD-4_5_TEXT,3,YD-4,5,Need to call during hours of operation
+4,email,4_YD-3_5_TEXT,4,YD-3,5,It would be easier to go online and find out what's open or closed
+4,email,4_YD-4_5_TEXT,4,YD-4,5,may have a plan on visit but then can't do what you planned
+4,email,5_YD-2_2_TEXT,5,YD-2,2,UF IFAS and FL DEP
+4,email,5_YD-4_5_TEXT,5,YD-4,5,Have to go to multiple places to get data
+4,email,6_YD-2_2_TEXT,6,YD-2,2,UF IFAS and Florida DEP
+4,email,6_YD-4_5_TEXT,6,YD-4,5,Multiple sources required to find info
+4,email,7_YD-2_2_TEXT,7,YD-2,2,Florida DEP
+4,email,7_YD-4_5_TEXT,7,YD-4,5,Some information available in all trails from a user perspective not from the actual reserve
+14,email,D-3_9_TEXT,NA,D-3,9,Dam Operations
+14,email,YD-1_8_TEXT,NA,YD-1,8,Lidar
+14,email,8_YD-2_2_TEXT,8,YD-2,2,NOAA Digital Coast
+17,email,1_YD-2_4_TEXT,1,YD-2,4,SWMP CDMO or email
+17,email,1_YD-4_5_TEXT,1,YD-4,5,Not all guana data is available in SWMP CDMO
+17,email,2_YD-2_4_TEXT,2,YD-2,4,SWMP CDMO or email
+17,email,2_YD-4_5_TEXT,2,YD-4,5,Not all data is available on SWMP CDMO
+17,email,6_YD-4_5_TEXT,6,YD-4,5,Would be nice to have a public database
+7,email,D-1_5_TEXT,NA,D-1,5,Health
+7,email,ND-2_7_TEXT,NA,ND-2,7,Environmental impacts
+34,email,ND-2_7_TEXT,NA,ND-2,7,Resilience planning
+34,email,T-2_8_TEXT,NA,T-2,8,Projections
+25,email,1_YD-2_2_TEXT,1,YD-2,2,weather.gov
+25,email,3_YD-2_2_TEXT,3,YD-2,2,https://www.surf-forecast.com/breaks/South-Ponte-Vedra-Beach/tides/latest
+25,email,5_YD-2_2_TEXT,5,YD-2,2,inaturalist.org
+25,email,6_YD-2_2_TEXT,6,YD-2,2,inaturalist.org
+25,email,7_YD-2_2_TEXT,7,YD-2,2,inaturalist.org
+10,email,6_YD-2_2_TEXT,6,YD-2,2,SEACAR
+35,email,3_YD-2_4_TEXT,3,YD-2,4,NOAA

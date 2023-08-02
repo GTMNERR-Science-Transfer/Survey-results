@@ -54,7 +54,14 @@ questions_detail <- read_csv("metadata/mc_questions_options.csv")
 #### Save all text answers separately ####
 # (as they prevent pivoting the data to a long format)
 text_only <- all_surveys %>% 
-  select("ID", "source", ends_with("_TEXT"))
+  select("ID", "source", ends_with("_TEXT")) %>% # select text questions
+  pivot_longer(cols  = c(-1, -2), names_to = "qname", values_to = "text_answer") %>% # make long
+  filter(!is.na(text_answer)) %>% # remove NAs
+  separate(qname, c("field_no", "qname_main", "q_code", "type"), 
+           sep = "_", remove = FALSE, convert = TRUE, fill = "left") %>% 
+  select(-type)
+# OPTION: also add actual questions here? Not strictly necessary as we can use
+# question codes to link them
 write_csv(text_only, "data_deidentified/subsets/text_results_basic.csv")
 
 #### Make dataset with "intro" questions ####
