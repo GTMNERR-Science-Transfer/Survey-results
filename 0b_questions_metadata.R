@@ -124,9 +124,20 @@ questions_detail_all2 <- questions_detail_all2[!((!is.na(questions_detail_all2$o
                                   questions_detail_all2$q_selector != "Likert" &
                                   questions_detail_all2$option.x != questions_detail_all2$option.y), ]
 
+# Extract "field names" with number choices for the data question(s), and add a
+# column with the names
+lookup_table <- questions_detail_all2 %>% 
+  filter(qname_main == "YD-1") %>% 
+  select(q_text, q_code) %>% 
+  filter(!duplicated(.)) %>% 
+  rename(field_name = q_text, field_no = q_code) 
+
+questions_detail_all2 <- left_join(questions_detail_all2, lookup_table)
+
 # reorder columns
 questions_detail_all2 <- questions_detail_all2 %>% 
-  select(ImportId, qname, qname_main, main, field_no, q_text, q_code, option1, q_type, q_selector)
+  select(ImportId, qname, qname_main, main, field_no, field_name, q_text, q_code, option1, q_type, q_selector)
+
 # Save
 write_csv(questions_detail_all2, "metadata/mc_questions_options.csv")
 
