@@ -13,49 +13,39 @@ renv::restore()
 
 library(tidyverse)
 
-#### Load data ####
+#### Load data --------------------------------------------------
 dashboard <- read_csv("data_deidentified/subsets/dashboard_results_basic.csv")
-# Load the file with text details so these can be added to plots
-q_text_lookup <- read_csv("metadata/questions_detail.csv")
-# And load the file with multiple choice text and codes
-mc_text_lookup <- read_csv("metadata/mc_questions_options.csv")
 
-###### STILL FIX THIS (make nicer/more useful) AND ADD IT TO SCRIPT 1
-# Join the latter two together so it is easier to get text for visualizations
-names(mc_text_lookup)[4] <- "ImportId"
-names(mc_text_lookup)[2] <- "choiceId"
-
-#### Visualize demographics ####
+#### Visualize dashboard preferences ------------------------------------------
 # T-1 How to access? (QID23)
 # T-2 Type of information? (QID25)
 # T-3 Form of information? (QID49)
 # T-4 Data delivery? (QID24)
 # All these questions are questions where people could pick several items
 
-#### T-1 How to access? (QID23) #####
-# This label solution is TEMPORARY!!
-how_classes <- mc_text_lookup %>% filter(ImportId == "QID23") %>% pull(q_text)
-how <- data.frame(choiceId=c(1,2,3,4), how_classes)
+##### T-1 How to access? (QID23) ---------------------------------------------
+
 ggplot(dashboard %>% 
-         filter(str_detect(question, "T-1")) %>% 
-         rename(choiceId = answer, qname = question) %>% 
-         filter(!is.na(choiceId)) %>% 
-         separate(col = qname, into = c("q", "choiceId"), sep = "_",
-                  remove = FALSE) %>% 
-         select(!q) %>% 
-         mutate(choiceId = as.numeric(choiceId)) %>% 
-         left_join(how),
-       aes(y = fct_rev(fct_infreq(how_classes)), fill = how_classes))+
+         filter(qname_main == "T-1"), #%>% 
+         # rename(choiceId = answer, qname = question) %>% 
+         # filter(!is.na(choiceId)) %>% 
+         # separate(col = qname, into = c("q", "choiceId"), sep = "_",
+         #          remove = FALSE) %>% 
+         # select(!q) %>% 
+         # mutate(choiceId = as.numeric(choiceId)) %>% 
+         # left_join(how),
+       aes(y = fct_rev(fct_infreq(q_text)), fill = q_text))+
   geom_bar() +
   labs(y = "", x = "", title = "How would you prefer to access data?") +
-  scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
+  #scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
   scale_fill_viridis_d()+
   theme_bw()+
   theme(legend.position = "none", axis.text.y = element_text(size=12))
 
 ggsave("results/dashboard_access.jpg")
 
-#### T-2 Type of information? (QID25) ####
+####################### 08/02 DONE UP TO HERE
+##### T-2 Type of information? (QID25) ---------------------------------------
 type_classes <- mc_text_lookup %>% filter(ImportId == "QID25") %>% pull(q_text)
 type_info <- data.frame(choiceId=c(1,2,3,4,5,6), type_classes)
 ggplot(dashboard %>% 
@@ -77,7 +67,7 @@ ggplot(dashboard %>%
 
 ggsave("results/dashboard_type.jpg")
 
-#### T-3 Form of information? (QID49) ####
+##### T-3 Form of information? (QID49) ----------------------------------------
 form_classes <- mc_text_lookup %>% filter(ImportId == "QID49") %>% pull(q_text)
 form_info <- data.frame(choiceId=c(5,6,9,7,8), form_classes)
 ggplot(dashboard %>% # can add fill for preferences??
@@ -99,4 +89,4 @@ ggplot(dashboard %>% # can add fill for preferences??
 
 ggsave("results/dashboard_form.jpg", width = 12, height = 7)
 
-#### T-4 Data delivery? (QID24) ####
+##### T-4 Data delivery? (QID24) ----------------------------------------------
