@@ -13,7 +13,7 @@ renv::restore()
 
 library(tidyverse)
 
-#### Load data ####
+#### Load data -----------------------------------
 intro <- read_csv("data_deidentified/subsets/intro_results_basic.csv")
 demogr <- read_csv("data_deidentified/subsets/demographics_results_basic.csv")
 
@@ -22,11 +22,12 @@ demogr <- read_csv("data_deidentified/subsets/demographics_results_basic.csv")
 #   # so we can order according to frequency of occurrence, and reverse to have highest
 #   # on top
 
-#### Visualize demographics ####
+#### Visualize demographics -----------------------------------
 # DE-2 is age 
 # DE-3 is gender 
 # DE-4 is distance from GTM 
 
+##### Age -----------------------------------
 ggplot(demogr %>% 
          filter(qname == "DE-2"),
        aes(y = fct_rev(factor(q_text))))+
@@ -36,6 +37,7 @@ ggplot(demogr %>%
   theme_bw()
 ggsave("results/demographics_age.jpg")
 
+##### Gender -----------------------------------
 ggplot(demogr %>% 
          filter(qname == "DE-3"),
        aes(x = factor(q_text), fill = factor(q_text)))+
@@ -47,6 +49,7 @@ ggplot(demogr %>%
   theme(legend.position = "none")
 ggsave("results/demographics_gender.jpg")
 
+##### Distance -----------------------------------
 ggplot(demogr %>% 
          filter(qname == "DE-4"),
        aes(y = q_text))+
@@ -56,12 +59,13 @@ ggplot(demogr %>%
   theme_bw()
 ggsave("results/demographics_distance.jpg")
 
-#### Visualize introductory questions ####
+#### Visualize introductory questions -----------------------------------
 # D-1 How are you connected? (QID6)
 # D-2 How often do you engage? (QID7)
 # D-3 What data generally interested in? (QID8)
 # D-4 Ever accessed data? (QID9)
 
+##### How are you connected to the GTM? -----------------------------------
 ggplot(intro %>% 
          filter(str_detect(qname, "D-1")), 
        aes(y = fct_rev(fct_infreq(q_text)), fill = q_text))+
@@ -94,6 +98,7 @@ ggplot(intro_engage %>%
   theme(legend.position = "none")
 ggsave("results/intro_GTM_engage.jpg")
 
+##### What data are you generally interested in? -----------------------------------
 # For this question, people could order their preferences
 ggplot(intro %>% 
          filter(str_detect(qname, "D-3")),
@@ -118,6 +123,7 @@ ggplot(intro %>%
   theme(axis.text.y = element_text(size=15))
 ggsave("results/intro_interests2.jpg", width = 12, height = 7)
 
+##### Have you ever accessed data? -----------------------------------
 ggplot(intro %>% 
          filter(qname == "D-4"),
        aes(x = q_text, fill = q_text))+
