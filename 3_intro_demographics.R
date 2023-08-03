@@ -102,45 +102,28 @@ ggplot(intro %>%
   labs(y = "", x = "", title = "What datasets are you interested in?") +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
   scale_fill_viridis_d(option = "plasma", name = "Rank")+
-  # add annotation with average score
-  geom_text(data = intro %>% 
-             filter(str_detect(qname, "D-3")) %>% 
-             group_by(q_text) %>% summarize(ave_rank = mean(order, na.rm = TRUE)),
-           aes(x = 5, y = q_text, label = ave_rank))+ ######## 07/17/2023 LEFT OFF HERE: error with 2nd layer and unique()
   theme_bw()+
   theme(axis.text.y = element_text(size=15))
+ggsave("results/intro_interests1.jpg", width = 12, height = 7)
 
-test1 <- intro %>% 
-  filter(str_detect(qname, "D-3")) %>% 
-  group_by(q_text) %>% summarize(ave_rank = mean(order, na.rm = TRUE),
-                                 med_rank = median(order, na.rm = TRUE)) %>% ### NOT WORKING
-  mutate(q_text = factor(q_text)) %>% 
-  mutate(loc = 5) 
-ggplot(data = test1, aes(x = ave_rank, y = fct_rev(fct_reorder(q_text, ave_rank))))+
-  geom_col()
-
+# Similar plot, but with the average ranks (1 = most interested)
 ggplot(intro %>% 
-         filter(str_detect(qname, "D-3")),
-       aes(y = fct_rev(fct_infreq(q_text)), fill = factor(order)))+
-  geom_bar() +
-  labs(y = "", x = "", title = "What datasets are you interested in?") +
-  scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
-  scale_fill_viridis_d(option = "plasma", name = "Rank")+
-  # add annotation with average score
-  #geom_text(data = test1,
-  #          aes(x = 5, y = q_text, label = q_text))+ ######## 07/17/2023 LEFT OFF HERE: error with 2nd layer and unique()
+         filter(str_detect(qname, "D-3")) %>% 
+         group_by(q_text) %>% summarize(ave_rank = mean(order, na.rm = TRUE)) %>% 
+         mutate(q_text = fct_reorder(q_text, ave_rank)),
+       aes(x = ave_rank, y = fct_rev(q_text))) +
+  geom_col(fill = "royalblue")+
+  labs(y = "", x = "", title = "What datasets are you interested in?\nAverage ranking (1 = most interested in)")+
   theme_bw()+
   theme(axis.text.y = element_text(size=15))
-
-ggsave("results/intro_interests.jpg", width = 12, height = 7)
+ggsave("results/intro_interests2.jpg", width = 12, height = 7)
 
 ggplot(intro %>% 
-         filter(qname == "D-4"),# %>% 
-         #rename(choiceId = answer, qname = question) %>% 
-         #left_join(access),
+         filter(qname == "D-4"),
        aes(x = q_text, fill = q_text))+
   geom_bar() +
   labs(x = "", y = "", title = "Have you accessed data before?") +
+  scale_fill_manual(values = c("chocolate1", "darkorchid2"))+
   theme_bw()+
   theme(legend.position = "none")
 ggsave("results/intro_data_access.jpg")
