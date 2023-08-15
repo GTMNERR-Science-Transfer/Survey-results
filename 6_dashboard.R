@@ -37,7 +37,6 @@ ggplot(dashboard %>%
 
 ggsave("results/dashboard_access.jpg")
 
-####################### 08/02 DONE UP TO HERE
 ##### T-2 Type of information? (QID25) ---------------------------------------
 ggplot(dashboard %>% 
          filter(qname_main == "T-2"),

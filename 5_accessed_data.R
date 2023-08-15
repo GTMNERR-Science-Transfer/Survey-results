@@ -34,6 +34,7 @@ ggplot(yes_data %>%
   #scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
   labs(x = "", y = "", title = "What Guana Estuary data do you currently use,\nor have you used in the past?") +
   theme_bw()+
+  #xlim(0,75)+
   theme(legend.position = "none")
 ggsave("results/yes_access_which_data.jpg")
 

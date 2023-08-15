@@ -89,7 +89,11 @@ intro_engage <- intro %>%
 # Plot
 ggplot(intro_engage %>% 
          filter(qname == "D-2"), 
-       aes(y = fct_rev(q_text), fill = q_text))+
+       aes(y = fct_rev(factor(q_text, levels = c("Daily", "At least once a week",
+                                                 "2-3 times a month", "Once a month",
+                                                 "Once every 6 months", "Once every year",
+                                                 "Less than once a year"))),
+           fill = q_text))+
   geom_bar() +
   labs(x = "", y = "", title = "How often do you engage with the GTM?") +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
