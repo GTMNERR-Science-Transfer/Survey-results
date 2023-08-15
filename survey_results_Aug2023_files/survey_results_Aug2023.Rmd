@@ -1,0 +1,348 @@
+---
+title: "survey_results_Aug2023"
+author: "Geraldine Klarenberg"
+date: "2023-08-14"
+#output: html_document
+output: pdf_document
+---
+
+# Using collaborative open science tools to improve engagement with the ecology of the Guana River Estuary
+
+### August 2023
+
+#### *Geraldine Klarenberg, Kristie Perez, Nikki Dix, Nia Morales, and Shirley Baker*
+
+The University of Florida and Guana Tolomato Matanzas National Estuarine Research Reserve (GTMNERR) are partnering with the local community and broader science community to develop a web-based, public-facing, interactive dashboard to provide access to Guana River Estuary (GRE) datasets. The aim of this work is to support open science and to increase diverse engagement with GRE within the GTMNERR by making the data available interactively, using visualization tools.
+
+To this end, the project team sought feedback from those who have been involved with the GTMNERR to help them to better understand their needs. This document summarizes the results of an online survey that was made available via email, social media, and QR code.
+
+```{r, load_package_data, echo = FALSE, message = FALSE}
+library(tidyverse)
+library(kableExtra)
+library(cowplot)
+
+intro <- read_csv("../data_deidentified/subsets/intro_results_basic.csv")
+no_access <- read_csv("../data_deidentified/subsets/data_no_results_basic.csv")
+yes_data <- read_csv("../data_deidentified/subsets/data_yes_results_basic.csv")
+dashboard <- read_csv("../data_deidentified/subsets/dashboard_results_basic.csv")
+demogr <- read_csv("../data_deidentified/subsets/demographics_results_basic.csv")
+```
+
+## Introductory questions
+```{r, connected, fig.width = 7, fig.height = 3, echo = FALSE}
+ggplot(intro %>% 
+         filter(str_detect(qname, "D-1")), 
+       aes(y = fct_rev(fct_infreq(q_text)), fill = q_text))+
+  geom_bar() +
+  labs(y = "", x = "", title = "How are you connected to the GTM?") +
+  scale_fill_viridis_d(option = "mako")+
+  theme_bw()+
+  theme(legend.position = "none")
+```
+
+```{r, engage, fig.width = 4, fig.height = 3, echo = FALSE}
+ggplot(intro %>% 
+         filter(qname == "D-2"), 
+       aes(y = fct_rev(factor(q_text, levels = c("Daily", "At least once a week",
+                                                 "2-3 times a month", "Once a month",
+                                                 "Once every 6 months", "Once every year",
+                                                 "Less than once a year"))),
+           fill = q_text))+
+  geom_bar() +
+  labs(x = "", y = "", title = "How often do you engage with the GTM?") +
+  scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
+  scale_fill_viridis_d()+
+  theme_bw()+
+  theme(legend.position = "none")
+```
+
+```{r, what_data, fig.width = 4, fig.height = 3, echo = FALSE}
+ggplot(intro %>% 
+         filter(str_detect(qname, "D-3")),
+       aes(y = fct_rev(fct_infreq(q_text)), fill = factor(order)))+
+  geom_bar() +
+  labs(y = "", x = "", title = "What datasets are you interested in?") +
+  scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
+  scale_fill_viridis_d(option = "plasma", name = "Rank")+
+  theme_bw()+
+  theme(axis.text.y = element_text(size=15))
+
+ggplot(intro %>% 
+         filter(str_detect(qname, "D-3")) %>% 
+         group_by(q_text) %>% summarize(ave_rank = mean(order, na.rm = TRUE)) %>% 
+         mutate(q_text = fct_reorder(q_text, ave_rank)),
+       aes(x = ave_rank, y = fct_rev(q_text))) +
+  geom_col(fill = "royalblue")+
+  labs(y = "", x = "", title = "What datasets are you interested in?\nAverage ranking (1 = most interested in)")+
+  theme_bw()+
+  theme(axis.text.y = element_text(size=15))
+```
+
+```{r, accessed_data, fig.width = 4, fig.height = 3, echo = FALSE}
+ggplot(intro %>% 
+         filter(qname == "D-4"),
+       aes(x = q_text, fill = q_text))+
+  geom_bar() +
+  labs(x = "", y = "", title = "Have you accessed data before?") +
+  scale_fill_manual(values = c("chocolate1", "darkorchid2"))+
+  theme_bw()+
+  theme(legend.position = "none")
+```
+
+## Those that have not accessed data
+```{r, no_access_howoften, fig.width = 4, fig.height = 3, echo = FALSE}
+ggplot(no_access %>% 
+         filter(str_detect(qname, "ND-1")) %>% 
+         mutate(q_text = factor(q_text, levels = c("Daily", "At least once a week",
+                                                   "2-3 times a month", "Once a month",
+                                                   "Once every 6 months", "Once every year",
+                                                   "Less than once a year",
+                                                   "Never (not interested in accessing data)"))),
+       aes(y = fct_rev(q_text)))+
+  geom_bar(fill = "cyan4") +
+  labs(y = "", x = "", title = "If you had the opportunity to access data in the future, how often would you access or obtain these data?") +
+  scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
+  theme_bw()+
+  theme(axis.text.y = element_text(size=15))
+```
+
+```{r, no_access_what, fig.width = 4, fig.height = 3, echo = FALSE}
+ggplot(no_access %>% 
+         filter(str_detect(qname, "ND-2")),
+       aes(y = fct_rev(fct_infreq(q_text))))+
+  geom_bar(fill = "coral2") +
+  labs(y = "", x = "", title = "If you had the opportunity to access data in the future,\nwhat would you use these data for?") +
+  scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
+  theme_bw()+
+  theme(axis.text.y = element_text(size=15))
+```
+
+## Those that have access data
+```{r, access_what, fig.width = 4, fig.height = 3, echo = FALSE}
+ggplot(yes_data %>% 
+         filter(qname_main == "YD-1"),
+       aes(y = fct_rev(fct_infreq(q_text)), fill = q_text))+
+  geom_bar() +
+  #scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
+  labs(x = "", y = "", title = "What Guana Estuary data do you currently use,\nor have you used in the past?") +
+  theme_bw()+
+  theme(legend.position = "none")
+```
+
+```{r, all_q_per_dataset, fig.width = 7, fig.height = 15, echo = FALSE}
+# There are 8 dataset options to choose, for data accessed. Loop over all of them.
+
+for (i in 1:8){
+  
+  data_name <- yes_data %>% 
+    filter(field_no == i) %>% 
+    pull(field_name) 
+  data_name <- data_name[1]
+  
+  obtain <- ggplot(yes_data %>% 
+                     filter(field_no == i, qname_main == "YD-2") %>%
+                     group_by(q_text) %>% 
+                     summarize(cnt = n()) %>%
+                     mutate(percentage = round(cnt/sum(cnt)*100, 1)),
+         aes(y = reorder(q_text, percentage), x = percentage, fill = q_text))+
+    geom_col() +
+    labs(x = "", y = "", 
+         title = data_name,
+         subtitle = "How do you most frequently obtain or access these data?") +
+    scale_fill_viridis_d(option = "viridis")+
+    theme_bw()+
+    theme(legend.position = "none",
+          plot.title.position = "plot",
+          plot.title = element_text(face="bold"))
+  
+  adv <- ggplot(yes_data %>% 
+                  filter(field_no == i, qname_main == "YD-3") %>% 
+                  group_by(q_text) %>% 
+                  summarize(cnt = n()) %>%
+                  mutate(percentage = round(cnt/sum(cnt)*100, 1)),
+                aes(y = reorder(q_text, percentage), x = percentage, fill = q_text))+
+    geom_col() +
+    labs(x = "", y = "", subtitle = "What are the advantages of this primary method of accessing or obtaining these data?") +
+    scale_fill_viridis_d(option = "mako")+
+    theme_bw()+
+    theme(legend.position = "none",
+          plot.title.position = "plot")
+  
+  disadv <- ggplot(yes_data %>% 
+                     filter(field_no == i, qname_main == "YD-4") %>% 
+                     group_by(q_text) %>% 
+                     summarize(cnt = n()) %>%
+                     mutate(percentage = round(cnt/sum(cnt)*100, 1)),
+                   aes(y = reorder(q_text, percentage), x = percentage, fill = q_text))+
+    geom_col() +
+    labs(x = "", y = "", subtitle = "What are the disadvantages of this primary method of accessing or obtaining these data?") +
+    scale_fill_viridis_d(option = "rocket")+
+    theme_bw()+
+    theme(legend.position = "none",
+          plot.title.position = "plot")
+  
+  howoften <- ggplot(yes_data %>% 
+                       filter(field_no == i, qname_main == "YD-5") %>% 
+                       group_by(q_text) %>% 
+                       summarize(cnt = n()) %>%
+                       mutate(percentage = round(cnt/sum(cnt)*100, 1)),
+                     aes(y = factor(q_text, levels = c("Daily", "At least once a week",
+                                                       "2-3 times a month", "Once a month",
+                                                       "Once every 6 months", "Once every year",
+                                                       "Less than once a year")), # Create levels so they stay in the correct order
+                         x = percentage))+
+    geom_col(fill = "green3") +
+    labs(x = "", y = "", subtitle = "How often do/did you access or obtain these data?") +
+    theme_bw()+
+    theme(legend.position = "none",
+          plot.title.position = "plot")
+  
+  use <- ggplot(yes_data %>% 
+                  filter(field_no == i, qname_main == "YD-6") %>% 
+                  group_by(q_text) %>% 
+                  summarize(cnt = n()) %>%
+                  mutate(percentage = round(cnt/sum(cnt)*100, 1)),
+                aes(y = reorder(q_text, percentage),
+                x = percentage,
+                fill = q_text))+
+    geom_col() +
+    labs(x = "", y = "", subtitle = "What do you typically use these data for?") +
+    scale_fill_viridis_d(option = "plasma")+
+    theme_bw()+
+    theme(legend.position = "none",
+          plot.title.position = "plot")
+  
+  satisf <- ggplot(yes_data %>% 
+                     filter(field_no == i, qname_main == "YD-7") %>% 
+                     group_by(q_text) %>% 
+                     summarize(cnt = n()) %>%
+                     mutate(percentage = round(cnt/sum(cnt)*100, 1)),
+                   aes(y = factor(q_text,levels = c("Extremely well", "Very well",
+                                                    "Moderately well", "Slightly well",
+                                                    "Not well at all")),
+                       x = percentage))+
+    geom_col(fill = "skyblue2") +
+    labs(x = "", y = "", subtitle = "How well do these data generally satisfy your need(s)?") +
+    theme_bw()+
+    theme(legend.position = "none",
+          plot.title.position = "plot")
+  
+  all <- plot_grid(obtain, adv, disadv, howoften, use, satisf, ncol = 1, align = "v")
+  print(all)
+}
+```
+
+
+## Dashboard preferences
+
+```{r, dash_how, fig.width = 4, fig.height = 3, echo = FALSE}
+ggplot(dashboard %>% 
+         filter(qname_main == "T-1"),
+       aes(y = fct_rev(fct_infreq(q_text)), fill = q_text))+
+  geom_bar() +
+  labs(y = "", x = "", title = "How would you prefer to access data?") +
+  #scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
+  scale_fill_viridis_d()+
+  theme_bw()+
+  theme(legend.position = "none", axis.text.y = element_text(size=12))
+```
+
+```{r, dash_type, fig.width = 4, fig.height = 3, echo = FALSE}
+ggplot(dashboard %>% 
+         filter(qname_main == "T-2"),
+       aes(y = fct_rev(fct_infreq(q_text)), fill = q_text))+
+  geom_bar() +
+  labs(y = "", x = "", title = "What type of information do you prefer?") +
+  #scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
+  scale_fill_viridis_d(option = "plasma")+
+  theme_bw()+
+  theme(legend.position = "none", axis.text.y = element_text(size=12))
+```
+
+```{r, dash_form, fig.width = 4, fig.height = 3, echo = FALSE}
+ggplot(dashboard %>% 
+         filter(qname_main == "T-3"),
+       aes(y = fct_rev(fct_infreq(q_text)), fill = factor(order)))+
+  geom_bar() +
+  labs(y = "", x = "", title = "What form of information do you prefer?") +
+  #scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
+  scale_fill_viridis_d(option = "rocket", name = "Rank")+
+  theme_bw()+
+  theme(axis.text.y = element_text(size=12))
+
+ggplot(dashboard %>% 
+         filter(qname_main == "T-3") %>% 
+         group_by(q_text) %>% summarize(ave_rank = mean(order, na.rm = TRUE)) %>% 
+         mutate(q_text = fct_reorder(q_text, ave_rank)),
+       aes(x = ave_rank, y = fct_rev(q_text))) +
+  geom_col(fill = "royalblue")+
+  labs(y = "", x = "", title = "What format of data delivery would suit your needs best?\nAverage ranking (1 = most interested in)")+
+  theme_bw()+
+  theme(axis.text.y = element_text(size=15))
+```
+
+```{r, dash_delivery, fig.width = 4, fig.height = 3, echo = FALSE}
+ggplot(dashboard %>% 
+         filter(qname_main == "T-4"),
+       aes(y = fct_rev(fct_infreq(q_text)), fill = factor(order)))+
+  geom_bar() +
+  labs(y = "", x = "", title = "What format of data delivery would suit your needs best?") +
+  #scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
+  scale_fill_viridis_d(option = "rocket", name = "Rank")+
+  theme_bw()+
+  theme(axis.text.y = element_text(size=12))
+
+ggplot(dashboard %>% 
+         filter(qname_main == "T-4") %>% 
+         group_by(q_text) %>% summarize(ave_rank = mean(order, na.rm = TRUE)) %>% 
+         mutate(q_text = fct_reorder(q_text, ave_rank)),
+       aes(x = ave_rank, y = fct_rev(q_text))) +
+  geom_col(fill = "royalblue")+
+  labs(y = "", x = "", title = "What format of data delivery would suit your needs best?\nAverage ranking (1 = most interested in)")+
+  theme_bw()+
+  theme(axis.text.y = element_text(size=15))
+```
+
+## Characteristics of respondents
+
+```{r age, fig.width = 4, fig.height = 3, echo = FALSE}
+ggplot(demogr %>% 
+         filter(qname == "DE-2"),
+       aes(y = fct_rev(factor(q_text))))+
+  geom_bar(fill = "seagreen3") +
+  scale_x_continuous(breaks = function(x) seq(0, floor(x[2]), by = 2))+
+  labs(x = "", y = "", title = "What is your age group?") +
+  theme_bw()
+```
+
+```{r gender, fig.width = 4, fig.height = 3, echo = FALSE}
+DE3 <- demogr %>% 
+  filter(qname == "DE-3") %>% 
+  group_by(q_text) %>% 
+  summarize(cnt = n()) %>%
+  mutate(percentage = round(cnt/sum(cnt)*100, 1)) 
+
+DE3 %>% kable(col.names = c("What is your gender?", "Count", "Percentage")) %>% 
+  kable_paper(bootstrap_options = "striped", full_width = FALSE)
+
+ggplot(DE3,
+       aes(x = factor(q_text), y = percentage, fill = factor(q_text)))+
+  geom_col() +
+  labs(x = "", y = "Percentage", title = "What is your gender?") +
+  scale_fill_manual(values = c("purple", "darkgreen"))+
+  theme_bw()+
+  theme(legend.position = "none")
+```
+
+``` {r, distance, fig.width = 4, fig.height = 3, echo = FALSE}
+ggplot(demogr %>% 
+         filter(qname == "DE-4"),
+       aes(y = q_text))+
+  geom_bar(fill = "royalblue") +
+  labs(x = "", y = "", title = "How far are you from the GTM?") +
+  theme_bw()
+```
+
+## Trust
+
+Decide if to keep in
