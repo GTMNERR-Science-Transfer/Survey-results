@@ -1,16 +1,12 @@
 ---
-title: "survey_results_Aug2023"
+title: "Using collaborative open science tools to improve engagement with the ecology of the Guana River Estuary"
 author: "Geraldine Klarenberg"
 date: "2023-08-14"
-#output: html_document
-output: pdf_document
+output: html_document
+#output: pdf_document
 ---
 
-# Using collaborative open science tools to improve engagement with the ecology of the Guana River Estuary
-
-### August 2023
-
-#### *Geraldine Klarenberg, Kristie Perez, Nikki Dix, Nia Morales, and Shirley Baker*
+##### *Project team: Geraldine Klarenberg, Kristie Perez, Nikki Dix, Nia Morales, and Shirley Baker*
 
 The University of Florida and Guana Tolomato Matanzas National Estuarine Research Reserve (GTMNERR) are partnering with the local community and broader science community to develop a web-based, public-facing, interactive dashboard to provide access to Guana River Estuary (GRE) datasets. The aim of this work is to support open science and to increase diverse engagement with GRE within the GTMNERR by making the data available interactively, using visualization tools.
 
@@ -20,6 +16,7 @@ To this end, the project team sought feedback from those who have been involved 
 library(tidyverse)
 library(kableExtra)
 library(cowplot)
+library(formattable)
 
 intro <- read_csv("../data_deidentified/subsets/intro_results_basic.csv")
 no_access <- read_csv("../data_deidentified/subsets/data_no_results_basic.csv")
@@ -28,106 +25,366 @@ dashboard <- read_csv("../data_deidentified/subsets/dashboard_results_basic.csv"
 demogr <- read_csv("../data_deidentified/subsets/demographics_results_basic.csv")
 ```
 
-## Introductory questions
-```{r, connected, fig.width = 7, fig.height = 3, echo = FALSE}
+### 1. Response rate
+We received responses from 53 individuals. Out of these, .. were unfinished. For the purposes of this report, we also took the unfinished surveys into account.
+
+.. respondents filled in the survey based on a link received via email, .. via social media, .. via a QR code available at the GTMNERR Welcome Center, and .. via a QR code available at the kiosk at the .. Dam.
+
+### 2. Introductory questions
+
+The survey started with asking respondents about their connection to the GTMNERR, how often they engage with the GTMNERR, what data they would be interested in, and whether or not they ever accessed data associated with the GTMNERR.
+
+#### 2.1 GTMNERR connection
+```{r, connected, fig.width = 7, fig.height = 3, echo = FALSE, message = FALSE}
 ggplot(intro %>% 
-         filter(str_detect(qname, "D-1")), 
-       aes(y = fct_rev(fct_infreq(q_text)), fill = q_text))+
-  geom_bar() +
-  labs(y = "", x = "", title = "How are you connected to the GTM?") +
+         filter(str_detect(qname, "D-1")) %>% 
+         group_by(q_text) %>%
+         summarize(cnt = n()) %>%
+         mutate(percentage = round(cnt/sum(cnt)*100, 1)), 
+       aes(y = reorder(q_text, percentage), x = percentage, fill = q_text))+
+  geom_col() +
+  labs(y = "", x = "Percentage of all responses", 
+       title = "How are you connected to the GTM?",
+       caption  = "NOTE: Respondents could pick more than 1 response") +
   scale_fill_viridis_d(option = "mako")+
+  scale_y_discrete(labels = function(x) str_wrap(x, width = 50))+
   theme_bw()+
-  theme(legend.position = "none")
+  theme(legend.position = "none",
+        plot.title.position = "plot",
+        plot.caption.position =  "plot",
+        plot.caption = element_text(hjust = 0, face = "italic"))
 ```
 
-```{r, engage, fig.width = 4, fig.height = 3, echo = FALSE}
+#### 2.2 Level of engagement
+```{r, engage, fig.width = 4, fig.height = 3, echo = FALSE, warning = FALSE, message = FALSE}
 ggplot(intro %>% 
-         filter(qname == "D-2"), 
-       aes(y = fct_rev(factor(q_text, levels = c("Daily", "At least once a week",
+         filter(qname == "D-2") %>% 
+         mutate(q_text = fct_rev(factor(q_text, levels = c("Daily", "At least once a week",
                                                  "2-3 times a month", "Once a month",
                                                  "Once every 6 months", "Once every year",
-                                                 "Less than once a year"))),
+                                                 "Less than once a year")))) %>% 
+         group_by(q_text) %>%
+         summarize(cnt = n()) %>%
+         mutate(percentage = round(cnt/sum(cnt)*100, 1)), 
+       aes(y = q_text,
+           x = percentage,
            fill = q_text))+
-  geom_bar() +
-  labs(x = "", y = "", title = "How often do you engage with the GTM?") +
-  scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
-  scale_fill_viridis_d()+
+  geom_col() +
+  labs(x = "Percentage of respondents", y = "", title = "How often do you engage with the GTM?") +
+  scale_fill_brewer(palette = "Purples", )+
   theme_bw()+
-  theme(legend.position = "none")
+  theme(legend.position = "none",
+        plot.title.position = "plot")
 ```
 
-```{r, what_data, fig.width = 4, fig.height = 3, echo = FALSE}
-ggplot(intro %>% 
-         filter(str_detect(qname, "D-3")),
-       aes(y = fct_rev(fct_infreq(q_text)), fill = factor(order)))+
-  geom_bar() +
-  labs(y = "", x = "", title = "What datasets are you interested in?") +
-  scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
-  scale_fill_viridis_d(option = "plasma", name = "Rank")+
-  theme_bw()+
-  theme(axis.text.y = element_text(size=15))
+#### 2.3 Data of interest (in general)
+```{r, what_data, fig.width = 7, fig.height = 6, echo = FALSE, warning = FALSE, message = FALSE}
+
+num_resp <- length(unique(intro$ID))
 
 ggplot(intro %>% 
          filter(str_detect(qname, "D-3")) %>% 
-         group_by(q_text) %>% summarize(ave_rank = mean(order, na.rm = TRUE)) %>% 
-         mutate(q_text = fct_reorder(q_text, ave_rank)),
-       aes(x = ave_rank, y = fct_rev(q_text))) +
-  geom_col(fill = "royalblue")+
-  labs(y = "", x = "", title = "What datasets are you interested in?\nAverage ranking (1 = most interested in)")+
+         group_by(q_text, order) %>%
+         summarize(cnt = n()) %>%
+         mutate(percentage = round(cnt/num_resp*100, 1)),
+       aes(y = reorder(q_text, percentage), x = percentage, fill = fct_rev(factor(order))))+
+  geom_col() +
+  labs(y = "", x = paste0("Percentage of respondents (N = ", num_resp, ")"), title = "What datasets are you interested in?") +
+  scale_fill_viridis_d(option = "plasma", name = "Rank", direction = -1)+
+  scale_y_discrete(labels = function(x) str_wrap(x, width = 50))+
   theme_bw()+
-  theme(axis.text.y = element_text(size=15))
+  theme(plot.title.position = "plot",
+        legend.position = "top",
+        legend.spacing.x = unit(0.5, 'cm'))+
+  guides(fill = guide_legend(title = "Rank",
+                             nrow = 1,
+                             label.position = "bottom",
+                             title.position = "left", title.vjust = 1,
+                             reverse = TRUE))
+
+# ggplot(intro %>% 
+#          filter(str_detect(qname, "D-3")) %>% 
+#          group_by(q_text) %>% summarize(ave_rank = mean(order, na.rm = TRUE)) %>% 
+#          mutate(q_text = fct_reorder(q_text, ave_rank)),
+#        aes(x = ave_rank, y = fct_rev(q_text))) +
+#   geom_col(fill = "royalblue")+
+#   scale_y_discrete(labels = function(x) str_wrap(x, width = 50))+
+#   labs(y = "", x = "", subtitle = "What datasets are you interested in? (Average ranking: 1 = most interested in)")+
+#   theme_bw()+
+#   theme(plot.title.position = "plot")
 ```
 
-```{r, accessed_data, fig.width = 4, fig.height = 3, echo = FALSE}
+Under "Other", the three types of data mentioned were: historical maps, water fowl, and dam operations.
+
+#### 2.4 Previous experience with accessing data associated with GTMNERR
+```{r, accessed_data, fig.width = 4, fig.height = 3, echo = FALSE, message = FALSE}
 ggplot(intro %>% 
-         filter(qname == "D-4"),
-       aes(x = q_text, fill = q_text))+
-  geom_bar() +
-  labs(x = "", y = "", title = "Have you accessed data before?") +
+         filter(qname == "D-4") %>% 
+         group_by(q_text) %>%
+         summarize(cnt = n()) %>%
+         mutate(percentage = round(cnt/sum(cnt)*100, 1)),
+       aes(x = q_text, y = percentage, fill = q_text))+
+  geom_col() +
+  labs(x = "", y = "Percentage of respondents", title = "Have you accessed data before?") +
   scale_fill_manual(values = c("chocolate1", "darkorchid2"))+
   theme_bw()+
   theme(legend.position = "none")
 ```
 
-## Those that have not accessed data
-```{r, no_access_howoften, fig.width = 4, fig.height = 3, echo = FALSE}
+Based on their response whether or not they had accessed data, respondents answered different sets of questions. The results are summarized in the next two sections.
+
+### 3. Feedback from respondents that have not accessed data before
+
+Respondents that had not (yet) accessed data, the survey asked broad questions on how often they would access these data, and what they would use them for.
+* These responses will still be linked to the answers in 2.3 *
+
+```{r, no_access_howoften, fig.width = 5, fig.height = 3, echo = FALSE, message = FALSE}
 ggplot(no_access %>% 
          filter(str_detect(qname, "ND-1")) %>% 
          mutate(q_text = factor(q_text, levels = c("Daily", "At least once a week",
                                                    "2-3 times a month", "Once a month",
                                                    "Once every 6 months", "Once every year",
                                                    "Less than once a year",
-                                                   "Never (not interested in accessing data)"))),
-       aes(y = fct_rev(q_text)))+
-  geom_bar(fill = "cyan4") +
-  labs(y = "", x = "", title = "If you had the opportunity to access data in the future, how often would you access or obtain these data?") +
-  scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
+                                                   "Never (not interested in accessing data)"))) %>% 
+         group_by(q_text) %>%
+         summarize(cnt = n()) %>%
+         mutate(percentage = round(cnt/sum(cnt)*100, 1)),
+       aes(y = fct_rev(q_text), x = percentage))+
+  geom_col(fill = "cyan4") +
+  labs(y = "", x = "Percentage of respondents", title = "If you had the opportunity to access data in the future, how often would you access or obtain these data?") +
   theme_bw()+
-  theme(axis.text.y = element_text(size=15))
+  theme(plot.title.position = "plot")
 ```
 
-```{r, no_access_what, fig.width = 4, fig.height = 3, echo = FALSE}
+```{r, no_access_what, fig.width = 5, fig.height = 4, echo = FALSE, message = FALSE}
 ggplot(no_access %>% 
-         filter(str_detect(qname, "ND-2")),
-       aes(y = fct_rev(fct_infreq(q_text))))+
-  geom_bar(fill = "coral2") +
+         filter(str_detect(qname, "ND-2")) %>% 
+         group_by(q_text) %>%
+         summarize(cnt = n()) %>%
+         mutate(percentage = round(cnt/sum(cnt)*100, 1)),
+       aes(y = reorder(q_text, percentage), x = percentage))+
+  geom_col(fill = "coral2") +
   labs(y = "", x = "", title = "If you had the opportunity to access data in the future,\nwhat would you use these data for?") +
-  scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
+  scale_y_discrete(labels = function(x) str_wrap(x, width = 30))+
   theme_bw()+
-  theme(axis.text.y = element_text(size=15))
+  theme(plot.title.position = "plot")
 ```
 
-## Those that have access data
-```{r, access_what, fig.width = 4, fig.height = 3, echo = FALSE}
+Under "Other", respondents listed:
+- environmental impacts, and
+- resilience planning
+
+### 4. Feedback from respondents that have accessed data before
+```{r, access_what, fig.width = 6, fig.height = 5, echo = FALSE, message = FALSE}
 ggplot(yes_data %>% 
-         filter(qname_main == "YD-1"),
-       aes(y = fct_rev(fct_infreq(q_text)), fill = q_text))+
-  geom_bar() +
-  #scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
-  labs(x = "", y = "", title = "What Guana Estuary data do you currently use,\nor have you used in the past?") +
+         filter(qname_main == "YD-1") %>% 
+         group_by(q_text) %>%
+         summarize(cnt = n()) %>%
+         mutate(percentage = round(cnt/sum(cnt)*100, 1)),
+       aes(y = reorder(q_text, percentage), x = percentage, fill = q_text))+
+  geom_col() +
+  labs(x = "Percentage of respondents", y = "", 
+       title = "What Guana Estuary data do you currently use,\nor have you used in the past?") +
+  scale_y_discrete(labels = function(x) str_wrap(x, width = 40))+
+  theme_bw()+
+  theme(legend.position = "none",
+        plot.title.position = "plot")
+```
+
+```{r, access_detail_table, echo = FALSE, warning = FALSE, message = FALSE}
+yes_data_table <- yes_data %>% 
+  filter(qname_main != "YD-1") %>% 
+  group_by(field_name, main, q_text) %>% 
+  summarize(cnt = n()) %>%
+  mutate(percentage = round(cnt/sum(cnt)*100)) %>% 
+  select(-cnt) %>% 
+  ungroup() %>% 
+  group_by(field_name, main) %>% 
+  pivot_wider(names_from = field_name, values_from = percentage, values_fill = 0) %>% 
+  left_join(select(yes_data, main, qname_main)) %>% 
+  distinct() %>% 
+  arrange(qname_main) %>% 
+  ungroup() %>% 
+  select(-qname_main, -`Other (please specify)`)
+
+yes_data_table$`Information on fish, shellfish or other aquatic organisms` <- color_tile("white", "chartreuse4")(yes_data_table$`Information on fish, shellfish or other aquatic organisms`)
+yes_data_table$`Information on terrestrial animals` <- color_tile("white", "chartreuse4")(yes_data_table$`Information on terrestrial animals`)
+yes_data_table$`Information on vegetation (salt marsh or uplands)` <- color_tile("white", "chartreuse4")(yes_data_table$`Information on vegetation (salt marsh or uplands)`)
+yes_data_table$`Reserve or trail closures` <- color_tile("white", "chartreuse4")(yes_data_table$`Reserve or trail closures`)
+yes_data_table$`Water level information (tides, Guana lake, river)` <- color_tile("white", "chartreuse4")(yes_data_table$`Water level information (tides, Guana lake, river)`)
+yes_data_table$`Water quality information (including nutrients and algae)` <- color_tile("white", "chartreuse4")(yes_data_table$`Water quality information (including nutrients and algae)`)
+yes_data_table$`Weather information` <- color_tile("white", "chartreuse4")(yes_data_table$`Weather information`)
+
+yes_data_table %>% 
+  select(-main) %>% 
+  kbl(escape = FALSE) %>% 
+  kable_minimal("striped") %>%
+  #collapse_rows(columns = 1, valign = "top")
+  pack_rows("How do you most frequently obtain or access these data?", 1, 4) %>%
+  pack_rows("What are the advantages of this primary method of accessing or obtaining these data?", 5, 10) %>% 
+  pack_rows("What are the disadvantages of the primary method of accessing or obtaining these data?", 11, 16) %>%
+  pack_rows("How often do/did you access or obtain these data?", 17, 23) %>% 
+  pack_rows("What do you typically use these data for?", 24, 29) %>% 
+  pack_rows("How well do these data generally satisfy your need(s)?", 30, 33)
+```
+Add info on Other
+
+### 5. Dashboard preferences
+
+The survey asked respondents about their preferences regarding dashboard features (type and format of information, data delivery mode) and how they would access the dashboard.
+
+```{r, dash_how, fig.width = 5, fig.height = 2, echo = FALSE, message = FALSE}
+ggplot(dashboard %>% 
+         filter(qname_main == "T-1") %>% 
+         group_by(q_text) %>%
+         summarize(cnt = n()) %>%
+         mutate(percentage = round(cnt/sum(cnt)*100, 1)),
+       aes(y = reorder(q_text, percentage), x = percentage, fill = q_text))+
+  geom_col() +
+  labs(y = "", x = "Percentage of respondents", title = "How would you prefer to access data?") +
+  scale_fill_viridis_d()+
+  theme_bw()+
+  theme(legend.position = "none",
+        plot.title.position = "plot")
+```
+
+--------------------------------------------------------
+
+```{r, dash_type, fig.width = 7, fig.height = 4, echo = FALSE, message = FALSE}
+ggplot(dashboard %>% 
+         filter(qname_main == "T-2") %>% 
+         group_by(q_text) %>%
+         summarize(cnt = n()) %>%
+         mutate(percentage = round(cnt/sum(cnt)*100, 1)),
+       aes(y = reorder(q_text, percentage), x = percentage, fill = q_text))+
+  geom_col() +
+  labs(y = "", x = "Percentage of responses", title = "What type of information do you prefer?") +
+  scale_fill_viridis_d(option = "plasma")+
+  scale_y_discrete(labels = function(x) str_wrap(x, width = 20))+
+  theme_bw()+
+  theme(legend.position = "none",
+        plot.title.position = "plot")
+```
+
+```{r, dash_form, fig.width = 7, fig.height = 4, echo = FALSE, warning = FALSE, message = FALSE}
+ggplot(dashboard %>% 
+         filter(qname_main == "T-3") %>% 
+         group_by(q_text, order) %>%
+         summarize(cnt = n()) %>%
+         mutate(percentage = round(cnt/num_resp*100, 1)),
+       aes(y = reorder(q_text, percentage), x = percentage, fill = fct_rev(factor(order))))+
+  geom_col() +
+  labs(y = "", x = "Percentage of responses", title = "What form of information do you prefer?") +
+  scale_fill_viridis_d(option = "rocket", name = "Rank", direction = -1)+
+  scale_y_discrete(labels = function(x) str_wrap(x, width = 30))+
+  theme_bw()+
+  theme(plot.title.position = "plot",
+        legend.position = "top",
+        legend.spacing.x = unit(0.5, 'cm'))+
+  guides(fill = guide_legend(title = "Rank",
+                             nrow = 1,
+                             label.position = "bottom",
+                             title.position = "left", title.vjust = 1,
+                             reverse = TRUE))
+
+# ggplot(dashboard %>% 
+#          filter(qname_main == "T-3") %>% 
+#          group_by(q_text) %>% summarize(ave_rank = mean(order, na.rm = TRUE)) %>% 
+#          mutate(q_text = fct_reorder(q_text, ave_rank)),
+#        aes(x = ave_rank, y = fct_rev(q_text))) +
+#   geom_col(fill = "royalblue")+
+#   labs(y = "", x = "", title = "What format of data delivery would suit your needs best?\nAverage ranking (1 = most interested in)")+
+#   theme_bw()+
+#   theme(axis.text.y = element_text(size=15))
+```
+
+```{r, dash_delivery, fig.width = 7, fig.height = 5, echo = FALSE, warning = FALSE, message = FALSE}
+ggplot(dashboard %>% 
+         filter(qname_main == "T-4") %>% 
+         group_by(q_text, order) %>%
+         summarize(cnt = n()) %>%
+         mutate(percentage = round(cnt/num_resp*100, 1)),
+       aes(y = reorder(q_text, percentage), x = percentage, fill = fct_rev(factor(order))))+
+  geom_col() +
+  labs(y = "", x = "Percentage of responses", title = "What format of data delivery would suit your needs best?") +
+  scale_fill_viridis_d(option = "rocket", name = "Rank", direction = -1)+
+  scale_y_discrete(labels = function(x) str_wrap(x, width = 30))+
+  theme_bw()+
+  theme(plot.title.position = "plot",
+        legend.position = "top",
+        legend.spacing.x = unit(0.5, 'cm'))+
+  guides(fill = guide_legend(title = "Rank",
+                             nrow = 1,
+                             label.position = "bottom",
+                             title.position = "left", title.vjust = 1,
+                             reverse = TRUE))
+
+# ggplot(dashboard %>% 
+#          filter(qname_main == "T-4") %>% 
+#          group_by(q_text) %>% summarize(ave_rank = mean(order, na.rm = TRUE)) %>% 
+#          mutate(q_text = fct_reorder(q_text, ave_rank)),
+#        aes(x = ave_rank, y = fct_rev(q_text))) +
+#   geom_col(fill = "royalblue")+
+#   labs(y = "", x = "", title = "What format of data delivery would suit your needs best?\nAverage ranking (1 = most interested in)")+
+#   theme_bw()+
+#   theme()
+```
+
+### 6. Characteristics of respondents
+
+Finally, the survey requested demographic information from respondents. This helps the project team get a better understanding of the dashboard's target audience.
+
+#### 6.1 Age and gender
+```{r age, fig.width = 12, fig.height = 4, echo = FALSE, message = FALSE}
+age <- ggplot(demogr %>% 
+         filter(qname == "DE-2") %>% 
+         group_by(q_text) %>%
+         summarize(cnt = n()) %>%
+         mutate(percentage = round(cnt/sum(cnt)*100, 1)),
+       aes(y = fct_rev(factor(q_text)), x = percentage))+
+  geom_col(fill = "seagreen3") +
+  labs(x = "Percentage of respondents", y = "", title = "What is your age group?") +
+  theme_bw()
+
+gender <- ggplot(demogr %>% 
+  filter(qname == "DE-3") %>% 
+  group_by(q_text) %>% 
+  summarize(cnt = n()) %>%
+  mutate(percentage = round(cnt/sum(cnt)*100, 1)),
+       aes(x = factor(q_text), y = percentage, fill = factor(q_text)))+
+  geom_col() +
+  labs(x = "", y = "Percentage of respondents", title = "What is your gender?") +
+  scale_fill_manual(values = c("purple", "darkgreen"))+
   theme_bw()+
   theme(legend.position = "none")
+
+plot_grid(age, gender, ncol = 2, align = "v")
 ```
+
+#### 6.2 Distance from the GTM
+``` {r, distance, fig.width = 5, fig.height = 4, echo = FALSE, message = FALSE}
+ggplot(demogr %>% 
+         filter(qname == "DE-4") %>% 
+         group_by(q_text) %>% 
+         summarize(cnt = n()) %>%
+         mutate(percentage = round(cnt/sum(cnt)*100, 1)),
+       aes(y = q_text, x = percentage))+
+  geom_col(fill = "royalblue") +
+  labs(x = "Percentage of respondents", y = "Driving distance (minutes)", title = "How far are you from the GTM?") +
+  theme_bw()+
+  theme(plot.title.position = "plot")
+```
+
+Add professions
+
+## Next steps
+The project team will still refine details in this report, and distribute/publish the final version by the end of August 2023. This final report will also include dashboard design considerations and recommendations based on the survey results.
+
+If you have suggestions, comments or requests, please email Dr. Geraldine Klarenberg at gklarenberg@gmail.com.
+
+## Appendix: Visualizations accompanying section 6
+
+The figures below provide visual interpretations of the table in section 6, on the datasets that respondents have accessed.
 
 ```{r, all_q_per_dataset, fig.width = 7, fig.height = 15, echo = FALSE}
 # There are 8 dataset options to choose, for data accessed. Loop over all of them.
@@ -231,118 +488,3 @@ for (i in 1:8){
   print(all)
 }
 ```
-
-
-## Dashboard preferences
-
-```{r, dash_how, fig.width = 4, fig.height = 3, echo = FALSE}
-ggplot(dashboard %>% 
-         filter(qname_main == "T-1"),
-       aes(y = fct_rev(fct_infreq(q_text)), fill = q_text))+
-  geom_bar() +
-  labs(y = "", x = "", title = "How would you prefer to access data?") +
-  #scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
-  scale_fill_viridis_d()+
-  theme_bw()+
-  theme(legend.position = "none", axis.text.y = element_text(size=12))
-```
-
-```{r, dash_type, fig.width = 4, fig.height = 3, echo = FALSE}
-ggplot(dashboard %>% 
-         filter(qname_main == "T-2"),
-       aes(y = fct_rev(fct_infreq(q_text)), fill = q_text))+
-  geom_bar() +
-  labs(y = "", x = "", title = "What type of information do you prefer?") +
-  #scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
-  scale_fill_viridis_d(option = "plasma")+
-  theme_bw()+
-  theme(legend.position = "none", axis.text.y = element_text(size=12))
-```
-
-```{r, dash_form, fig.width = 4, fig.height = 3, echo = FALSE}
-ggplot(dashboard %>% 
-         filter(qname_main == "T-3"),
-       aes(y = fct_rev(fct_infreq(q_text)), fill = factor(order)))+
-  geom_bar() +
-  labs(y = "", x = "", title = "What form of information do you prefer?") +
-  #scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
-  scale_fill_viridis_d(option = "rocket", name = "Rank")+
-  theme_bw()+
-  theme(axis.text.y = element_text(size=12))
-
-ggplot(dashboard %>% 
-         filter(qname_main == "T-3") %>% 
-         group_by(q_text) %>% summarize(ave_rank = mean(order, na.rm = TRUE)) %>% 
-         mutate(q_text = fct_reorder(q_text, ave_rank)),
-       aes(x = ave_rank, y = fct_rev(q_text))) +
-  geom_col(fill = "royalblue")+
-  labs(y = "", x = "", title = "What format of data delivery would suit your needs best?\nAverage ranking (1 = most interested in)")+
-  theme_bw()+
-  theme(axis.text.y = element_text(size=15))
-```
-
-```{r, dash_delivery, fig.width = 4, fig.height = 3, echo = FALSE}
-ggplot(dashboard %>% 
-         filter(qname_main == "T-4"),
-       aes(y = fct_rev(fct_infreq(q_text)), fill = factor(order)))+
-  geom_bar() +
-  labs(y = "", x = "", title = "What format of data delivery would suit your needs best?") +
-  #scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
-  scale_fill_viridis_d(option = "rocket", name = "Rank")+
-  theme_bw()+
-  theme(axis.text.y = element_text(size=12))
-
-ggplot(dashboard %>% 
-         filter(qname_main == "T-4") %>% 
-         group_by(q_text) %>% summarize(ave_rank = mean(order, na.rm = TRUE)) %>% 
-         mutate(q_text = fct_reorder(q_text, ave_rank)),
-       aes(x = ave_rank, y = fct_rev(q_text))) +
-  geom_col(fill = "royalblue")+
-  labs(y = "", x = "", title = "What format of data delivery would suit your needs best?\nAverage ranking (1 = most interested in)")+
-  theme_bw()+
-  theme(axis.text.y = element_text(size=15))
-```
-
-## Characteristics of respondents
-
-```{r age, fig.width = 4, fig.height = 3, echo = FALSE}
-ggplot(demogr %>% 
-         filter(qname == "DE-2"),
-       aes(y = fct_rev(factor(q_text))))+
-  geom_bar(fill = "seagreen3") +
-  scale_x_continuous(breaks = function(x) seq(0, floor(x[2]), by = 2))+
-  labs(x = "", y = "", title = "What is your age group?") +
-  theme_bw()
-```
-
-```{r gender, fig.width = 4, fig.height = 3, echo = FALSE}
-DE3 <- demogr %>% 
-  filter(qname == "DE-3") %>% 
-  group_by(q_text) %>% 
-  summarize(cnt = n()) %>%
-  mutate(percentage = round(cnt/sum(cnt)*100, 1)) 
-
-DE3 %>% kable(col.names = c("What is your gender?", "Count", "Percentage")) %>% 
-  kable_paper(bootstrap_options = "striped", full_width = FALSE)
-
-ggplot(DE3,
-       aes(x = factor(q_text), y = percentage, fill = factor(q_text)))+
-  geom_col() +
-  labs(x = "", y = "Percentage", title = "What is your gender?") +
-  scale_fill_manual(values = c("purple", "darkgreen"))+
-  theme_bw()+
-  theme(legend.position = "none")
-```
-
-``` {r, distance, fig.width = 4, fig.height = 3, echo = FALSE}
-ggplot(demogr %>% 
-         filter(qname == "DE-4"),
-       aes(y = q_text))+
-  geom_bar(fill = "royalblue") +
-  labs(x = "", y = "", title = "How far are you from the GTM?") +
-  theme_bw()
-```
-
-## Trust
-
-Decide if to keep in
