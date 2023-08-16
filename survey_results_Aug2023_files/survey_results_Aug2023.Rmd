@@ -1,5 +1,5 @@
 ---
-title: "GTMNERR Data Dashboard Needs Assessment: Survey Result"
+title: "GTMNERR Data Dashboard Needs Assessment: Survey Results"
 author: "Geraldine Klarenberg"
 date: "2023-08-14"
 output: html_document
@@ -215,7 +215,7 @@ ggplot(yes_data %>%
          mutate(percentage = round(cnt/sum(cnt)*100, 1)),
        aes(y = reorder(q_text, percentage), x = percentage, fill = q_text))+
   geom_col() +
-  labs(x = "Percentage of respondents", y = "", 
+  labs(x = "Percentage of responses", y = "", 
        title = "What Guana Estuary data do you currently use, or have you used in the past?") +
   scale_y_discrete(labels = function(x) str_wrap(x, width = 40))+
   theme_bw()+
@@ -224,6 +224,7 @@ ggplot(yes_data %>%
 ```
 
 The following table summarizes the detailed questions per dataset. The numbers represent percentages of respondents, or, in the case of multiple possible answers, percentages of all responses (indicated with an asterisk, *).
+*This table still needs some reorganizing and reordering.*
 
 There was an option "Other", to which there was one response: LiDAR data. *This information will be added to this table*.
 
@@ -357,7 +358,7 @@ ggplot(dashboard %>%
          mutate(percentage = round(cnt/sum(cnt)*100, 1)),
        aes(y = reorder(q_text, percentage), x = percentage, fill = q_text))+
   geom_col() +
-  labs(y = "", x = "Percentage of respondents", title = "How would you prefer to access data?") +
+  labs(y = "", x = "Percentage of responses", title = "How would you prefer to access data?") +
   scale_fill_viridis_d()+
   theme_bw()+
   theme(legend.position = "none",
@@ -499,18 +500,20 @@ ggplot(demogr %>%
   theme(plot.title.position = "plot")
 ```
 
-Add professions
-
 ____________________________________________________
 
 ## Next steps
-The project team will still refine details in this report, and distribute/publish the final version by the end of August 2023. This final report will also include dashboard design considerations and recommendations based on the survey results.
+The project team will still refine details in this report, and distribute/publish the final version by the end of August 2023. The final report will also include dashboard design recommendations and considerations based on the survey results (and previous workshops).
 
-Suggestions, comments or requests are very welcome; please email Dr. Geraldine Klarenberg at gklarenberg@ufl.edu.
+To access the code that created this document, the survey result data, or jpg versions of the figures, go to https://github.com/GTMNERR-Science-Transfer/Survey-results. 
+
+The project team has also started drafting a basic dashboard; we will be in touch soon about further steps on this, and to inform you of upcoming participation and discussion opportunities.
+
+Suggestions and comments on this draft report are very welcome; please email Dr. Geraldine Klarenberg at gklarenberg@ufl.edu, or leave an "Issue" on the above linked GitHub repository.
 
 _____________________________________________________
 
-## Appendix: Visualizations accompanying section 6
+### Appendix: Visualizations accompanying section 6
 
 The figures below provide visual interpretations of the table in section 6, on the datasets that respondents have accessed.
 
