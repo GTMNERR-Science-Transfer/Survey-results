@@ -27,12 +27,17 @@ yes_data <- read_csv("data_deidentified/subsets/data_yes_results_basic.csv")
 # YD-7 - How well do Guana Estuary data on [Field-1] generally satisfy your need(s)?
 
 yes_data_table <- yes_data %>% 
+  filter(qname_main != "YD-1") %>% 
   group_by(field_name, main, q_text) %>% 
   summarize(cnt = n()) %>%
   mutate(percentage = round(cnt/sum(cnt)*100)) %>% 
   select(-cnt) %>% 
   ungroup() %>% 
   group_by(field_name, main) %>% 
-  pivot_wider(names_from = field_name, values_from = percentage)
+  pivot_wider(names_from = field_name, values_from = percentage) %>% 
+  left_join(select(yes_data, main, qname_main)) %>% 
+  distinct() %>% 
+  arrange(qname_main) %>% 
+  select(-qname_main)
 
 write_csv(yes_data_table, "results/yes_access_summary_table.csv")
