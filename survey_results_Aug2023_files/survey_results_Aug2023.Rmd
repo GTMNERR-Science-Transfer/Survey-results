@@ -1,18 +1,21 @@
 ---
-title: "Using collaborative open science tools to improve engagement with the ecology of the Guana River Estuary"
+title: "GTMNERR Data Dashboard Needs Assessment: Survey Result"
 author: "Geraldine Klarenberg"
 date: "2023-08-14"
 output: html_document
 #output: pdf_document
 ---
 
-##### *Project team: Geraldine Klarenberg, Kristie Perez, Nikki Dix, Nia Morales, and Shirley Baker*
+#### DRAFT v1
+
+##### Project: Using collaborative open science tools to improve engagement with the ecology of the Guana River Estuary
+###### *Project team: Geraldine Klarenberg, Kristie Perez, Nikki Dix, Nia Morales, and Shirley Baker*
 
 The University of Florida and Guana Tolomato Matanzas National Estuarine Research Reserve (GTMNERR) are partnering with the local community and broader science community to develop a web-based, public-facing, interactive dashboard to provide access to Guana River Estuary (GRE) datasets. The aim of this work is to support open science and to increase diverse engagement with GRE within the GTMNERR by making the data available interactively, using visualization tools.
 
 To this end, the project team sought feedback from those who have been involved with the GTMNERR to help them to better understand their needs. This document summarizes the results of an online survey that was made available via email, social media, and QR code.
 
-```{r, load_package_data, echo = FALSE, message = FALSE}
+```{r load_package_data, echo = FALSE, message = FALSE}
 library(tidyverse)
 library(kableExtra)
 library(cowplot)
@@ -26,16 +29,18 @@ demogr <- read_csv("../data_deidentified/subsets/demographics_results_basic.csv"
 ```
 
 ### 1. Response rate
-We received responses from 53 individuals. Out of these, .. were unfinished. For the purposes of this report, we also took the unfinished surveys into account.
+We received responses from 51 individuals. Out of these, 14 surveys were unfinished. For the purposes of this report, we also took the unfinished surveys into account.
 
-.. respondents filled in the survey based on a link received via email, .. via social media, .. via a QR code available at the GTMNERR Welcome Center, and .. via a QR code available at the kiosk at the .. Dam.
+47 respondents filled in the survey based on a link received via email, 3 via social media, 0 via the QR code available at the GTMNERR Welcome Center, and 1 via the QR code available at the kiosk at the dam.
+
+_____________________________________________________________
 
 ### 2. Introductory questions
 
 The survey started with asking respondents about their connection to the GTMNERR, how often they engage with the GTMNERR, what data they would be interested in, and whether or not they ever accessed data associated with the GTMNERR.
 
 #### 2.1 GTMNERR connection
-```{r, connected, fig.width = 7, fig.height = 3, echo = FALSE, message = FALSE}
+```{r connected, fig.width = 7, fig.height = 3, echo = FALSE, message = FALSE, fig.align = 'center'}
 ggplot(intro %>% 
          filter(str_detect(qname, "D-1")) %>% 
          group_by(q_text) %>%
@@ -55,8 +60,17 @@ ggplot(intro %>%
         plot.caption = element_text(hjust = 0, face = "italic"))
 ```
 
+Under "Other", respondents answered:
+
+* Lake management - FWC
+* Health
+* GTM-NERR MAG member
+* Sometimes bring international visitors for professional conversations (am retired now).
+
+--------------------------------------------------------
+
 #### 2.2 Level of engagement
-```{r, engage, fig.width = 4, fig.height = 3, echo = FALSE, warning = FALSE, message = FALSE}
+```{r engage, fig.width = 4, fig.height = 3, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center'}
 ggplot(intro %>% 
          filter(qname == "D-2") %>% 
          mutate(q_text = fct_rev(factor(q_text, levels = c("Daily", "At least once a week",
@@ -77,8 +91,10 @@ ggplot(intro %>%
         plot.title.position = "plot")
 ```
 
+--------------------------------------------------------
+
 #### 2.3 Data of interest (in general)
-```{r, what_data, fig.width = 7, fig.height = 6, echo = FALSE, warning = FALSE, message = FALSE}
+```{r what_data, fig.width = 7, fig.height = 6, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center'}
 
 num_resp <- length(unique(intro$ID))
 
@@ -114,10 +130,15 @@ ggplot(intro %>%
 #   theme(plot.title.position = "plot")
 ```
 
-Under "Other", the three types of data mentioned were: historical maps, water fowl, and dam operations.
+Under "Other", the three types of datasets mentioned were: historical maps, water fowl, dam operations, natural resource management practices/techniques/results.
+
+--------------------------------------------------------
 
 #### 2.4 Previous experience with accessing data associated with GTMNERR
-```{r, accessed_data, fig.width = 4, fig.height = 3, echo = FALSE, message = FALSE}
+
+The survey asked respondents whether they had accessed data before, and by "data", we meant "information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer" for instance spreadsheets, databases, graphs, and maps." 
+
+```{r accessed_data, fig.width = 4, fig.height = 3, echo = FALSE, message = FALSE, fig.align = 'center'}
 ggplot(intro %>% 
          filter(qname == "D-4") %>% 
          group_by(q_text) %>%
@@ -133,12 +154,15 @@ ggplot(intro %>%
 
 Based on their response whether or not they had accessed data, respondents answered different sets of questions. The results are summarized in the next two sections.
 
-### 3. Feedback from respondents that have not accessed data before
+___________________________________________________________
 
-Respondents that had not (yet) accessed data, the survey asked broad questions on how often they would access these data, and what they would use them for.
-* These responses will still be linked to the answers in 2.3 *
+### 3. Feedback from respondents that had not accessed data before
 
-```{r, no_access_howoften, fig.width = 5, fig.height = 3, echo = FALSE, message = FALSE}
+For respondents that had not (yet) accessed data (N = 8), the survey asked broad questions on how often they would access these data, and what they would use them for.
+
+*These responses will still be linked to the answers in 2.3*
+
+```{r no_access_howoften, fig.width = 8, fig.height = 3, echo = FALSE, message = FALSE, fig.align = 'center'}
 ggplot(no_access %>% 
          filter(str_detect(qname, "ND-1")) %>% 
          mutate(q_text = factor(q_text, levels = c("Daily", "At least once a week",
@@ -151,12 +175,14 @@ ggplot(no_access %>%
          mutate(percentage = round(cnt/sum(cnt)*100, 1)),
        aes(y = fct_rev(q_text), x = percentage))+
   geom_col(fill = "cyan4") +
-  labs(y = "", x = "Percentage of respondents", title = "If you had the opportunity to access data in the future, how often would you access or obtain these data?") +
+  labs(y = "", x = "Percentage of respondents", title = "If you had the opportunity to access data in the future, how often would you\naccess or obtain these data?") +
   theme_bw()+
   theme(plot.title.position = "plot")
 ```
 
-```{r, no_access_what, fig.width = 5, fig.height = 4, echo = FALSE, message = FALSE}
+--------------------------------------------------------
+
+```{r no_access_what, fig.width = 8, fig.height = 3, echo = FALSE, message = FALSE, fig.align = 'center'}
 ggplot(no_access %>% 
          filter(str_detect(qname, "ND-2")) %>% 
          group_by(q_text) %>%
@@ -164,18 +190,24 @@ ggplot(no_access %>%
          mutate(percentage = round(cnt/sum(cnt)*100, 1)),
        aes(y = reorder(q_text, percentage), x = percentage))+
   geom_col(fill = "coral2") +
-  labs(y = "", x = "", title = "If you had the opportunity to access data in the future,\nwhat would you use these data for?") +
+  labs(y = "", x = "Percentage of all responses", title = "If you had the opportunity to access data in the future, what would you use these data for?") +
   scale_y_discrete(labels = function(x) str_wrap(x, width = 30))+
   theme_bw()+
   theme(plot.title.position = "plot")
 ```
 
 Under "Other", respondents listed:
-- environmental impacts, and
-- resilience planning
+
+* environmental impacts, and
+* resilience planning
+
+____________________________________________________
 
 ### 4. Feedback from respondents that have accessed data before
-```{r, access_what, fig.width = 6, fig.height = 5, echo = FALSE, message = FALSE}
+
+For respondents that have/had accessed data before, the survey asked which datasets they had accessed, and a number of detailed questions about their experiences related to how they accessed these data, the advantages and disadvantages of this access, the frequency of access, the usage of the data, and respondents' satisfaction with these data (for their needs).
+
+```{r access_what, fig.width = 8, fig.height = 4, echo = FALSE, message = FALSE, fig.align = 'center'}
 ggplot(yes_data %>% 
          filter(qname_main == "YD-1") %>% 
          group_by(q_text) %>%
@@ -184,14 +216,18 @@ ggplot(yes_data %>%
        aes(y = reorder(q_text, percentage), x = percentage, fill = q_text))+
   geom_col() +
   labs(x = "Percentage of respondents", y = "", 
-       title = "What Guana Estuary data do you currently use,\nor have you used in the past?") +
+       title = "What Guana Estuary data do you currently use, or have you used in the past?") +
   scale_y_discrete(labels = function(x) str_wrap(x, width = 40))+
   theme_bw()+
   theme(legend.position = "none",
         plot.title.position = "plot")
 ```
 
-```{r, access_detail_table, echo = FALSE, warning = FALSE, message = FALSE}
+The following table summarizes the detailed questions per dataset. The numbers represent percentages of respondents, or, in the case of multiple possible answers, percentages of all responses (indicated with an asterisk, *).
+
+There was an option "Other", to which there was one response: LiDAR data. *This information will be added to this table*.
+
+```{r access_detail_table, echo = FALSE, warning = FALSE, message = FALSE}
 yes_data_table <- yes_data %>% 
   filter(qname_main != "YD-1") %>% 
   group_by(field_name, main, q_text) %>% 
@@ -221,19 +257,99 @@ yes_data_table %>%
   kable_minimal("striped") %>%
   #collapse_rows(columns = 1, valign = "top")
   pack_rows("How do you most frequently obtain or access these data?", 1, 4) %>%
-  pack_rows("What are the advantages of this primary method of accessing or obtaining these data?", 5, 10) %>% 
-  pack_rows("What are the disadvantages of the primary method of accessing or obtaining these data?", 11, 16) %>%
+  pack_rows("What are the advantages of this primary method of accessing or obtaining these data?*", 5, 10) %>% 
+  pack_rows("What are the disadvantages of the primary method of accessing or obtaining these data?*", 11, 16) %>%
   pack_rows("How often do/did you access or obtain these data?", 17, 23) %>% 
-  pack_rows("What do you typically use these data for?", 24, 29) %>% 
+  pack_rows("What do you typically use these data for?*", 24, 29) %>% 
   pack_rows("How well do these data generally satisfy your need(s)?", 30, 33)
 ```
-Add info on Other
+
+--------------------------------------------------------
+
+**The websites that respondents used to obtain data were:**
+
+* GTM website (gtmnerr.org)
+    + https://gtmnerr.org/visit/
+* SEACAR
+* Johnson County weather stations
+* SWMP
+* National Weather Service Tide Data
+* CDMO (https://cdmo.baruch.sc.edu//)
+* https://www.weather.gov/jax/fire
+* https://www.windfinder.com/tide/south_ponte_vedra_beach
+* UF IFAS
+* Florida DEP
+* NOAA Digital Coast
+* weather.gov
+* https://www.surf-forecast.com/breaks/South-Ponte-Vedra-Beach/tides/latest
+* iNaturalist (inaturalist.org)
+
+**"Other" avenues for accessing data were:**
+
+* From GTM files (employees)
+* Weather Channel App
+* FieldMaps, Survey123 apps using GTM Staff Access
+* View on website (no download)
+* Attending GTM info sessions or obtaining info from newsletter
+* Newsletter info
+* Directly ask staff
+* Attending state of the reserve presentations.
+* FWC data
+* State sites
+* Spot monitoring of salinity each week
+* Google
+* Call the Visitor center
+* Email
+* NOAA
+
+**Disadvantages listed by respondents under "Other" were:**
+
+  * Various formats
+  * Login required
+  * Not current; hard to find on website (although once found, easy to access)
+  * Somewhat haphazard, almost anecdotal
+  * The info might not always be up to date
+  * Only available when presented by the staff.
+  * Not easy to view on mobile devices.
+  * Being a pain to the researchers
+  * SPOT weather forecast not available to general public
+  * Not as accurate as other salinity measuring techniques
+  * Not directly representative of the Guana System
+  * Website to download/access is cumbersome otherwise I'd do it myself. Want to make sure I am getting the latest data and I trust staff
+  * Not familiar with how to access it on my own
+  * Would be easier if online
+  * Sometimes inaccurate
+  * Lots of data, lots out of date, doesn't address current situation
+  * Need to call during hours of operation
+  * May have a plan on visit but then can't do what you planned
+  * Have to go to multiple places to get data
+  * Multiple sources required to find info
+  * Some information available in all trails from a user perspective not from the actual reserve
+  * Not all (Guana) data is available in SWMP CDMO
+  * Would be nice to have a public database
+*These are linked to specific datasets, this will be clarified in the final version of the report*
+
+**In terms of usage of data, respondents added the following under "Other":**
+
+* Monitoring of invasive plant species sites for re-ocurrence / growth
+* Leisure
+* Personal interest
+* Helpful/useful during some of the volunteer programs
+* Recreation
+* Prescribed fire weather forecasts
+* Vegetation management on lake
+* Guana Dam management
+* I would access it more if I knew how to get to the data
+
+_______________________________________________________________
 
 ### 5. Dashboard preferences
 
 The survey asked respondents about their preferences regarding dashboard features (type and format of information, data delivery mode) and how they would access the dashboard.
 
-```{r, dash_how, fig.width = 5, fig.height = 2, echo = FALSE, message = FALSE}
+By "dashboard" we meant a user interface on a computer display that presents (up-to-date) information with visualization tools such as graphs, charts, and tables - in a dynamic and interactive way.
+
+```{r dash_how, fig.width = 5, fig.height = 2, echo = FALSE, message = FALSE, fig.align = 'center'}
 ggplot(dashboard %>% 
          filter(qname_main == "T-1") %>% 
          group_by(q_text) %>%
@@ -250,7 +366,7 @@ ggplot(dashboard %>%
 
 --------------------------------------------------------
 
-```{r, dash_type, fig.width = 7, fig.height = 4, echo = FALSE, message = FALSE}
+```{r dash_type, fig.width = 7, fig.height = 4, echo = FALSE, message = FALSE, fig.align = 'center'}
 ggplot(dashboard %>% 
          filter(qname_main == "T-2") %>% 
          group_by(q_text) %>%
@@ -266,7 +382,9 @@ ggplot(dashboard %>%
         plot.title.position = "plot")
 ```
 
-```{r, dash_form, fig.width = 7, fig.height = 4, echo = FALSE, warning = FALSE, message = FALSE}
+--------------------------------------------------------
+
+```{r dash_form, fig.width = 7, fig.height = 4, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center'}
 ggplot(dashboard %>% 
          filter(qname_main == "T-3") %>% 
          group_by(q_text, order) %>%
@@ -298,7 +416,9 @@ ggplot(dashboard %>%
 #   theme(axis.text.y = element_text(size=15))
 ```
 
-```{r, dash_delivery, fig.width = 7, fig.height = 5, echo = FALSE, warning = FALSE, message = FALSE}
+--------------------------------------------------------
+
+```{r dash_delivery, fig.width = 7, fig.height = 5, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center'}
 ggplot(dashboard %>% 
          filter(qname_main == "T-4") %>% 
          group_by(q_text, order) %>%
@@ -330,12 +450,14 @@ ggplot(dashboard %>%
 #   theme()
 ```
 
+___________________________________________________________
+
 ### 6. Characteristics of respondents
 
 Finally, the survey requested demographic information from respondents. This helps the project team get a better understanding of the dashboard's target audience.
 
 #### 6.1 Age and gender
-```{r age, fig.width = 12, fig.height = 4, echo = FALSE, message = FALSE}
+```{r age, fig.width = 12, fig.height = 4, echo = FALSE, message = FALSE, fig.align = 'center'}
 age <- ggplot(demogr %>% 
          filter(qname == "DE-2") %>% 
          group_by(q_text) %>%
@@ -361,8 +483,10 @@ gender <- ggplot(demogr %>%
 plot_grid(age, gender, ncol = 2, align = "v")
 ```
 
+----------------------------------------------------
+
 #### 6.2 Distance from the GTM
-``` {r, distance, fig.width = 5, fig.height = 4, echo = FALSE, message = FALSE}
+``` {r distance, fig.width = 5, fig.height = 4, echo = FALSE, message = FALSE, fig.align = 'center'}
 ggplot(demogr %>% 
          filter(qname == "DE-4") %>% 
          group_by(q_text) %>% 
@@ -377,16 +501,20 @@ ggplot(demogr %>%
 
 Add professions
 
+____________________________________________________
+
 ## Next steps
 The project team will still refine details in this report, and distribute/publish the final version by the end of August 2023. This final report will also include dashboard design considerations and recommendations based on the survey results.
 
-If you have suggestions, comments or requests, please email Dr. Geraldine Klarenberg at gklarenberg@gmail.com.
+Suggestions, comments or requests are very welcome; please email Dr. Geraldine Klarenberg at gklarenberg@ufl.edu.
+
+_____________________________________________________
 
 ## Appendix: Visualizations accompanying section 6
 
 The figures below provide visual interpretations of the table in section 6, on the datasets that respondents have accessed.
 
-```{r, all_q_per_dataset, fig.width = 7, fig.height = 15, echo = FALSE}
+```{r all_q_per_dataset, fig.width = 7, fig.height = 15, echo = FALSE, fig.align = 'center'}
 # There are 8 dataset options to choose, for data accessed. Loop over all of them.
 
 for (i in 1:8){

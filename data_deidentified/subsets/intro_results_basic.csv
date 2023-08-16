@@ -1,4 +1,8 @@
 ID,source,qname,qname_main,main,q_code,q_text,order
+42,kiosk,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+42,kiosk,D-1_2,D-1,How are you connected to the Guana Estuary? (check all that apply),2,"Educational (I use the Guana Estuary for educational workshops, field trips, classroom activities, etc.)",NA
+42,kiosk,D-1_4,D-1,How are you connected to the Guana Estuary? (check all that apply),4,GTMNERR volunteer,NA
+42,kiosk,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",2,At least once a week,NA
 19,socialmedia,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
 19,socialmedia,D-1_2,D-1,How are you connected to the Guana Estuary? (check all that apply),2,"Educational (I use the Guana Estuary for educational workshops, field trips, classroom activities, etc.)",NA
 19,socialmedia,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
@@ -70,26 +74,69 @@ Pick only those that apply, and please rank your selection in order of interest:
 
 
 *by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-28,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
-28,email,D-1_4,D-1,How are you connected to the Guana Estuary? (check all that apply),4,GTMNERR volunteer,NA
-28,email,D-1_7,D-1,How are you connected to the Guana Estuary? (check all that apply),7,"“Friends of GTM"" member",NA
-28,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",3,2-3 times a month,NA
-28,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+28,socialmedia,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+28,socialmedia,D-1_2,D-1,How are you connected to the Guana Estuary? (check all that apply),2,"Educational (I use the Guana Estuary for educational workshops, field trips, classroom activities, etc.)",NA
+28,socialmedia,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",1,Daily,NA
+28,socialmedia,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,3
+28,socialmedia,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),4
+28,socialmedia,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",2
+28,socialmedia,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,1
+28,socialmedia,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),6
+28,socialmedia,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",5
+28,socialmedia,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,7
+28,socialmedia,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+39,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+39,email,D-1_4,D-1,How are you connected to the Guana Estuary? (check all that apply),4,GTMNERR volunteer,NA
+39,email,D-1_7,D-1,How are you connected to the Guana Estuary? (check all that apply),7,"“Friends of GTM"" member",NA
+39,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",3,2-3 times a month,NA
+39,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
 Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),1
-28,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+39,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
 Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",3
-28,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+39,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
 Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,2
-28,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+39,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
 
 
 
@@ -172,259 +219,600 @@ Pick only those that apply, and please rank your selection in order of interest:
 
 
 *by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",2,No,NA
-26,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
-26,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
-26,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",1,Daily,NA
-26,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,4
-26,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",3
-26,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),2
-26,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",1
-26,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
-
-
-
-*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-22,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
-22,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",5,Once every 6 months,NA
-22,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,2
-22,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,1
-22,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),3
-22,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
-
-
-
-*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",2,No,NA
+8,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
 8,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
-8,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",4,Once a month,NA
+8,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",1,Daily,NA
 8,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,3
-8,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),2
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,4
 8,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",5
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",3
+8,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),2
 8,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
 Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",1
-8,email,D-3_9,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",9,Other (please specify),4
 8,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
 
 
 
 *by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-24,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
-24,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",5,Once every 6 months,NA
-24,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+3,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+3,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",5,Once every 6 months,NA
+3,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
-24,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",4
-24,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),2
-24,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",3
-24,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
-
-
-
-*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-3,email,D-1_4,D-1,How are you connected to the Guana Estuary? (check all that apply),4,GTMNERR volunteer,NA
-3,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",2,At least once a week,NA
-3,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),2
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,2
 3,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,5
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,1
 3,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
 Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),3
-3,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",4
-3,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,1
 3,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
 
 
 
-*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-29,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
-29,email,D-1_4,D-1,How are you connected to the Guana Estuary? (check all that apply),4,GTMNERR volunteer,NA
-29,email,D-1_7,D-1,How are you connected to the Guana Estuary? (check all that apply),7,"“Friends of GTM"" member",NA
-29,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",2,At least once a week,NA
-29,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",2,No,NA
+24,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
+24,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",4,Once a month,NA
+24,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
-29,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),2
-29,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",4
-29,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,3
-29,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
-
-
-
-*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-30,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
-30,email,D-1_4,D-1,How are you connected to the Guana Estuary? (check all that apply),4,GTMNERR volunteer,NA
-30,email,D-1_7,D-1,How are you connected to the Guana Estuary? (check all that apply),7,"“Friends of GTM"" member",NA
-30,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",4,Once a month,NA
-30,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,3
+24,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
 Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),2
-30,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+24,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",6
-30,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,3
-30,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),5
-30,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",5
+24,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
 Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",1
-30,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+24,email,D-3_9,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,4
-30,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",9,Other (please specify),4
+24,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
 
 
 
 *by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-36,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
-36,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",3,2-3 times a month,NA
-36,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+22,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
+22,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",5,Once every 6 months,NA
+22,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
 Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
-36,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+22,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
 Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",4
-36,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+22,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),2
+22,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",3
+22,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+48,email,D-1_4,D-1,How are you connected to the Guana Estuary? (check all that apply),4,GTMNERR volunteer,NA
+48,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",2,At least once a week,NA
+48,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),2
+48,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,5
+48,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
 Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),3
-36,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+48,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",4
+48,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,1
+48,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+49,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+49,email,D-1_4,D-1,How are you connected to the Guana Estuary? (check all that apply),4,GTMNERR volunteer,NA
+49,email,D-1_7,D-1,How are you connected to the Guana Estuary? (check all that apply),7,"“Friends of GTM"" member",NA
+49,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",2,At least once a week,NA
+49,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
+49,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),2
+49,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",4
+49,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,3
+49,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+12,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+12,email,D-1_4,D-1,How are you connected to the Guana Estuary? (check all that apply),4,GTMNERR volunteer,NA
+12,email,D-1_7,D-1,How are you connected to the Guana Estuary? (check all that apply),7,"“Friends of GTM"" member",NA
+12,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",4,Once a month,NA
+12,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),2
+12,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",6
+12,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,3
+12,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),5
+12,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",1
+12,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,4
+12,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+20,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
+20,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",3,2-3 times a month,NA
+20,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
+20,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",4
+20,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),3
+20,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
 Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",2
-36,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+20,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+54,email,D-1_6,D-1,How are you connected to the Guana Estuary? (check all that apply),6,Work-related (Not research or education),NA
+54,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",3,2-3 times a month,NA
+54,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,3
+54,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),4
+54,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",5
+54,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,1
+54,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,2
+54,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+50,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+50,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
+50,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",4,Once a month,NA
+50,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
+50,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,2
+50,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+6,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+6,email,D-1_4,D-1,How are you connected to the Guana Estuary? (check all that apply),4,GTMNERR volunteer,NA
+6,email,D-1_7,D-1,How are you connected to the Guana Estuary? (check all that apply),7,"“Friends of GTM"" member",NA
+6,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",3,2-3 times a month,NA
+6,email,D-3_8,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",8,None,1
+6,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",2,No,NA
+16,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+16,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",5,Once every 6 months,NA
+16,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,7
+16,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
+16,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",5
+16,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,6
+16,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),4
+16,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",2
+16,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,3
+16,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+44,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+44,email,D-1_6,D-1,How are you connected to the Guana Estuary? (check all that apply),6,Work-related (Not research or education),NA
+44,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",1,Daily,NA
+44,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,1
+44,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+21,email,D-1_2,D-1,How are you connected to the Guana Estuary? (check all that apply),2,"Educational (I use the Guana Estuary for educational workshops, field trips, classroom activities, etc.)",NA
+21,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
+21,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",5,Once every 6 months,NA
+21,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),2
+21,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",3
+21,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",1
+21,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+4,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+4,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
+4,email,D-1_6,D-1,How are you connected to the Guana Estuary? (check all that apply),6,Work-related (Not research or education),NA
+4,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",4,Once a month,NA
+4,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,6
+4,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),4
+4,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",5
+4,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,7
+4,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),2
+4,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",1
+4,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,3
+4,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+11,email,D-1_6,D-1,How are you connected to the Guana Estuary? (check all that apply),6,Work-related (Not research or education),NA
+11,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",4,Once a month,NA
+11,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),2
+11,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",1
+11,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),3
+11,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",4
+11,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+37,email,D-1_6,D-1,How are you connected to the Guana Estuary? (check all that apply),6,Work-related (Not research or education),NA
+37,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",7,Less than once a year,NA
+37,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,2
+37,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
+37,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",4
+37,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,3
+37,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),5
+37,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+56,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+56,email,D-1_2,D-1,How are you connected to the Guana Estuary? (check all that apply),2,"Educational (I use the Guana Estuary for educational workshops, field trips, classroom activities, etc.)",NA
+56,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
+56,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",4,Once a month,NA
+56,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,2
+56,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
+56,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",3
+56,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",4
+56,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+23,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+23,email,D-1_2,D-1,How are you connected to the Guana Estuary? (check all that apply),2,"Educational (I use the Guana Estuary for educational workshops, field trips, classroom activities, etc.)",NA
+23,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
+23,email,D-1_4,D-1,How are you connected to the Guana Estuary? (check all that apply),4,GTMNERR volunteer,NA
+23,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",2,At least once a week,NA
+23,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),4
+23,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",3
+23,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",1
+23,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,2
+23,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+51,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
+51,email,D-1_6,D-1,How are you connected to the Guana Estuary? (check all that apply),6,Work-related (Not research or education),NA
+51,email,D-1_5,D-1,How are you connected to the Guana Estuary? (check all that apply),5,Other (please specify):,NA
+51,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",1,Daily,NA
+51,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,3
+51,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
+51,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",2
+51,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),4
+51,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",5
+51,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
 
 
 
 *by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
 33,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
-33,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",5,Once every 6 months,NA
+33,email,D-1_2,D-1,How are you connected to the Guana Estuary? (check all that apply),2,"Educational (I use the Guana Estuary for educational workshops, field trips, classroom activities, etc.)",NA
+33,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
+33,email,D-1_6,D-1,How are you connected to the Guana Estuary? (check all that apply),6,Work-related (Not research or education),NA
+33,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",3,2-3 times a month,NA
 33,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,7
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,3
 33,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),2
 33,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",5
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",1
 33,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
@@ -439,20 +827,91 @@ Pick only those that apply, and please rank your selection in order of interest:
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",2
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",5
 33,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,3
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,7
 33,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
 
 
 
 *by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-32,email,D-1_2,D-1,How are you connected to the Guana Estuary? (check all that apply),2,"Educational (I use the Guana Estuary for educational workshops, field trips, classroom activities, etc.)",NA
+52,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
+52,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",5,Once every 6 months,NA
+52,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),4
+52,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",5
+52,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),1
+52,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",3
+52,email,D-3_9,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",9,Other (please specify),2
+52,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+46,email,D-1_2,D-1,How are you connected to the Guana Estuary? (check all that apply),2,"Educational (I use the Guana Estuary for educational workshops, field trips, classroom activities, etc.)",NA
+46,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
+46,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",4,Once a month,NA
+46,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,5
+46,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),2
+46,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",3
+46,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),4
+46,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",1
+46,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+32,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
 32,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
-32,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",5,Once every 6 months,NA
+32,email,D-1_6,D-1,How are you connected to the Guana Estuary? (check all that apply),6,Work-related (Not research or education),NA
+32,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",4,Once a month,NA
+32,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,1
 32,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
@@ -463,661 +922,205 @@ Pick only those that apply, and please rank your selection in order of interest:
 
 
 Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",3
+32,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,4
+32,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),6
 32,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",1
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",5
+32,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,7
 32,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
 
 
 
 *by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-12,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
-12,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
-12,email,D-1_6,D-1,How are you connected to the Guana Estuary? (check all that apply),6,Work-related (Not research or education),NA
-12,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",4,Once a month,NA
-12,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+43,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+43,email,D-1_2,D-1,How are you connected to the Guana Estuary? (check all that apply),2,"Educational (I use the Guana Estuary for educational workshops, field trips, classroom activities, etc.)",NA
+43,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",4,Once a month,NA
+43,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,6
-12,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),4
-12,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",5
-12,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,7
-12,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),2
-12,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",1
-12,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,3
-12,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
-
-
-
-*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-37,email,D-1_6,D-1,How are you connected to the Guana Estuary? (check all that apply),6,Work-related (Not research or education),NA
-37,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",4,Once a month,NA
-37,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,3
+43,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
 Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),2
-37,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",1
-37,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),3
-37,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",4
-37,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
-
-
-
-*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-20,email,D-1_6,D-1,How are you connected to the Guana Estuary? (check all that apply),6,Work-related (Not research or education),NA
-20,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",7,Less than once a year,NA
-20,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,2
-20,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
-20,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+43,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
 Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",4
-20,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,3
-20,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),5
-20,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
-
-
-
-*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-23,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
-23,email,D-1_2,D-1,How are you connected to the Guana Estuary? (check all that apply),2,"Educational (I use the Guana Estuary for educational workshops, field trips, classroom activities, etc.)",NA
-23,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
-23,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",4,Once a month,NA
-23,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,2
-23,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
-23,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",3
-23,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",4
-23,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
-
-
-
-*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-18,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
-18,email,D-1_2,D-1,How are you connected to the Guana Estuary? (check all that apply),2,"Educational (I use the Guana Estuary for educational workshops, field trips, classroom activities, etc.)",NA
-18,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
-18,email,D-1_4,D-1,How are you connected to the Guana Estuary? (check all that apply),4,GTMNERR volunteer,NA
-18,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",2,At least once a week,NA
-18,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),4
-18,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",3
-18,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",1
-18,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,2
-18,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
-
-
-
-*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-27,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
-27,email,D-1_6,D-1,How are you connected to the Guana Estuary? (check all that apply),6,Work-related (Not research or education),NA
-27,email,D-1_5,D-1,How are you connected to the Guana Estuary? (check all that apply),5,Other (please specify):,NA
-27,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",1,Daily,NA
-27,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,3
-27,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
-27,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",2
-27,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),4
-27,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",5
-27,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
-
-
-
-*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-6,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
-6,email,D-1_2,D-1,How are you connected to the Guana Estuary? (check all that apply),2,"Educational (I use the Guana Estuary for educational workshops, field trips, classroom activities, etc.)",NA
-6,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
-6,email,D-1_6,D-1,How are you connected to the Guana Estuary? (check all that apply),6,Work-related (Not research or education),NA
-6,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",3,2-3 times a month,NA
-6,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,3
-6,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),2
-6,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",1
-6,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,6
-6,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),4
-6,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",5
-6,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,7
-6,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
-
-
-
-*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-16,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
-16,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",5,Once every 6 months,NA
-16,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),4
-16,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",5
-16,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),1
-16,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",3
-16,email,D-3_9,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",9,Other (please specify),2
-16,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
-
-
-
-*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-11,email,D-1_2,D-1,How are you connected to the Guana Estuary? (check all that apply),2,"Educational (I use the Guana Estuary for educational workshops, field trips, classroom activities, etc.)",NA
-11,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
-11,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",4,Once a month,NA
-11,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,5
-11,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),2
-11,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",3
-11,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),4
-11,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",1
-11,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
-
-
-
-*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-5,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
-5,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
-5,email,D-1_6,D-1,How are you connected to the Guana Estuary? (check all that apply),6,Work-related (Not research or education),NA
-5,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",4,Once a month,NA
-5,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,1
-5,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),2
-5,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",3
-5,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,4
-5,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),6
-5,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",5
-5,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,7
-5,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
-
-
-
-*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-4,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
-4,email,D-1_2,D-1,How are you connected to the Guana Estuary? (check all that apply),2,"Educational (I use the Guana Estuary for educational workshops, field trips, classroom activities, etc.)",NA
-4,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",4,Once a month,NA
-4,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,3
-4,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),2
-4,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",4
-4,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+43,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
 Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,1
-4,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+43,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
 Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),6
-4,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+43,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
 Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",5
-4,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+43,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
 Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,7
-4,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
-
-
-
-*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-14,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
-14,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",5,Once every 6 months,NA
-14,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,8
-14,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),2
-14,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",1
-14,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,5
-14,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),3
-14,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",6
-14,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,4
-14,email,D-3_9,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",9,Other (please specify),7
-14,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+43,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
 
 
 
 *by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
 17,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
-17,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",4,Once a month,NA
+17,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",5,Once every 6 months,NA
 17,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,3
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,8
 17,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),2
 17,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",2
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",1
+17,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,5
+17,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),3
 17,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",4
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",6
+17,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,4
+17,email,D-3_9,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",9,Other (please specify),7
 17,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
 
 
 
 *by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-7,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
-7,email,D-1_7,D-1,How are you connected to the Guana Estuary? (check all that apply),7,"“Friends of GTM"" member",NA
-7,email,D-1_5,D-1,How are you connected to the Guana Estuary? (check all that apply),5,Other (please specify):,NA
-7,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",2,At least once a week,NA
-7,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
-7,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",3
-7,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,2
-7,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
-
-
-
-*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",2,No,NA
-34,email,D-1_6,D-1,How are you connected to the Guana Estuary? (check all that apply),6,Work-related (Not research or education),NA
-34,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",5,Once every 6 months,NA
-34,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,2
-34,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),3
-34,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",1
-34,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),4
-34,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
-
-
-
-*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",2,No,NA
-25,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
-25,email,D-1_2,D-1,How are you connected to the Guana Estuary? (check all that apply),2,"Educational (I use the Guana Estuary for educational workshops, field trips, classroom activities, etc.)",NA
-25,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
-25,email,D-1_4,D-1,How are you connected to the Guana Estuary? (check all that apply),4,GTMNERR volunteer,NA
-25,email,D-1_7,D-1,How are you connected to the Guana Estuary? (check all that apply),7,"“Friends of GTM"" member",NA
-25,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",3,2-3 times a month,NA
-25,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+14,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
+14,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",4,Once a month,NA
+14,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
 Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,3
-25,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),4
-25,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",2
-25,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,5
-25,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),6
-25,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",1
-25,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,7
-25,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
-
-
-
-*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-10,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
-10,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",3,2-3 times a month,NA
-10,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+14,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
 Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
-10,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+14,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",2
-10,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",2
+14,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-35,email,D-1_6,D-1,How are you connected to the Guana Estuary? (check all that apply),6,Work-related (Not research or education),NA
-35,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",1,Daily,NA
-35,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",1
-35,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",4
+14,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
 
 
 
 *by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-9,email,D-1_2,D-1,How are you connected to the Guana Estuary? (check all that apply),2,"Educational (I use the Guana Estuary for educational workshops, field trips, classroom activities, etc.)",NA
-9,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",7,Less than once a year,NA
-9,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+27,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+27,email,D-1_7,D-1,How are you connected to the Guana Estuary? (check all that apply),7,"“Friends of GTM"" member",NA
+27,email,D-1_5,D-1,How are you connected to the Guana Estuary? (check all that apply),5,Other (please specify):,NA
+27,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",2,At least once a week,NA
+27,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),2
-9,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
+27,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",3
-9,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",3
+27,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),4
-9,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
-
-
-
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",1
-9,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,2
+27,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
 
 
 
 *by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",2,No,NA
-1,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
-1,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",5,Once every 6 months,NA
-1,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+47,email,D-1_6,D-1,How are you connected to the Guana Estuary? (check all that apply),6,Work-related (Not research or education),NA
+47,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",5,Once every 6 months,NA
+47,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),2
-1,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,2
+47,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),3
+47,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
 Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",1
-1,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+47,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),3
-1,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),4
+47,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
 
 
 
-*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",2,No,NA
 13,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+13,email,D-1_2,D-1,How are you connected to the Guana Estuary? (check all that apply),2,"Educational (I use the Guana Estuary for educational workshops, field trips, classroom activities, etc.)",NA
 13,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
-13,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",2,At least once a week,NA
+13,email,D-1_4,D-1,How are you connected to the Guana Estuary? (check all that apply),4,GTMNERR volunteer,NA
+13,email,D-1_7,D-1,How are you connected to the Guana Estuary? (check all that apply),7,"“Friends of GTM"" member",NA
+13,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",3,2-3 times a month,NA
 13,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
@@ -1127,62 +1130,444 @@ Pick only those that apply, and please rank your selection in order of interest:
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),4
 13,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
 Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",2
+13,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,5
+13,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),6
 13,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",4
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",1
+13,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,7
 13,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
 
 
 
 *by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
-21,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
-21,email,D-1_4,D-1,How are you connected to the Guana Estuary? (check all that apply),4,GTMNERR volunteer,NA
-21,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",2,At least once a week,NA
-21,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+9,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
+9,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",3,2-3 times a month,NA
+9,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,3
-21,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
+9,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),4
-21,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",2
+9,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+5,email,D-1_6,D-1,How are you connected to the Guana Estuary? (check all that apply),6,Work-related (Not research or education),NA
+5,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",1,Daily,NA
+5,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
 Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",1
-21,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+5,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,2
-21,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+30,email,D-1_2,D-1,How are you connected to the Guana Estuary? (check all that apply),2,"Educational (I use the Guana Estuary for educational workshops, field trips, classroom activities, etc.)",NA
+30,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",7,Less than once a year,NA
+30,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),5
-21,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),2
+30,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",6
-21,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",3
+30,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
 
 
 
-Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,7
-21,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),4
+30,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",1
+30,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
 
 
 
 *by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",2,No,NA
+29,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
+29,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",5,Once every 6 months,NA
+29,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),2
+29,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",1
+29,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),3
+29,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+18,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+18,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
+18,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",2,At least once a week,NA
+18,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,3
+18,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
+18,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",2
+18,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",4
+18,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+35,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+35,email,D-1_4,D-1,How are you connected to the Guana Estuary? (check all that apply),4,GTMNERR volunteer,NA
+35,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",2,At least once a week,NA
+35,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,3
+35,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),4
+35,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",1
+35,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,2
+35,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),5
+35,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",6
+35,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,7
+35,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",2,No,NA
+53,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+53,email,D-1_6,D-1,How are you connected to the Guana Estuary? (check all that apply),6,Work-related (Not research or education),NA
+53,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",1,Daily,NA
+53,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
+53,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",2
+53,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,4
+53,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",3
+53,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,5
+53,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",2,No,NA
+34,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+34,email,D-1_5,D-1,How are you connected to the Guana Estuary? (check all that apply),5,Other (please specify):,NA
+34,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",5,Once every 6 months,NA
+34,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,7
+34,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
+34,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",3
+34,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,4
+34,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),2
+34,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",5
+34,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,6
+34,email,D-3_9,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",9,Other (please specify),8
+34,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+25,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+25,email,D-1_5,D-1,How are you connected to the Guana Estuary? (check all that apply),5,Other (please specify):,NA
+25,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",6,Once every year,NA
+7,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+7,email,D-1_2,D-1,How are you connected to the Guana Estuary? (check all that apply),2,"Educational (I use the Guana Estuary for educational workshops, field trips, classroom activities, etc.)",NA
+7,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
+7,email,D-1_6,D-1,How are you connected to the Guana Estuary? (check all that apply),6,Work-related (Not research or education),NA
+7,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",2,At least once a week,NA
+7,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,2
+7,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),3
+7,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",4
+7,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,1
+7,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),7
+7,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",5
+7,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,6
+7,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+41,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+41,email,D-1_4,D-1,How are you connected to the Guana Estuary? (check all that apply),4,GTMNERR volunteer,NA
+41,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",6,Once every year,NA
+41,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
+41,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+45,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+45,email,D-1_2,D-1,How are you connected to the Guana Estuary? (check all that apply),2,"Educational (I use the Guana Estuary for educational workshops, field trips, classroom activities, etc.)",NA
+45,email,D-1_6,D-1,How are you connected to the Guana Estuary? (check all that apply),6,Work-related (Not research or education),NA
+45,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",2,At least once a week,NA
+45,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
+45,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),3
+45,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",2
+45,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,4
+45,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+55,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+55,email,D-1_2,D-1,How are you connected to the Guana Estuary? (check all that apply),2,"Educational (I use the Guana Estuary for educational workshops, field trips, classroom activities, etc.)",NA
+55,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
+55,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",1,Daily,NA
+55,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,3
+55,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),2
+55,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",4
+55,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,7
+55,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),5
+55,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",1
+55,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,6
+55,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA
+10,email,D-1_1,D-1,How are you connected to the Guana Estuary? (check all that apply),1,"Recreational (fishing, boating, hiking, birding, etc.)",NA
+10,email,D-1_2,D-1,How are you connected to the Guana Estuary? (check all that apply),2,"Educational (I use the Guana Estuary for educational workshops, field trips, classroom activities, etc.)",NA
+10,email,D-1_3,D-1,How are you connected to the Guana Estuary? (check all that apply),3,Scientific (I collect/use data about the Guana Estuary),NA
+10,email,D-1_6,D-1,How are you connected to the Guana Estuary? (check all that apply),6,Work-related (Not research or education),NA
+10,email,D-1_4,D-1,How are you connected to the Guana Estuary? (check all that apply),4,GTMNERR volunteer,NA
+10,email,D-2,D-2,"How often do you engage with the Guana Estuary, on average?",2,At least once a week,NA
+10,email,D-3_1,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",1,Weather information,4
+10,email,D-3_2,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",2,Water quality information (including nutrients and algae),1
+10,email,D-3_3,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",3,"Water level information (tides, Guana lake, river)",3
+10,email,D-3_4,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",4,Reserve or trail closures,7
+10,email,D-3_5,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",5,Information on vegetation (salt marsh or uplands),5
+10,email,D-3_6,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",6,"Information on fish, shellfish or other aquatic organisms",2
+10,email,D-3_7,D-3,"Regardless of whether you can currently access data, what kind of information would or are you generally interested in from the area?
+
+
+
+Pick only those that apply, and please rank your selection in order of interest: 1 = most interested in.",7,Information on terrestrial animals,6
+10,email,D-4,D-4,"Have you ever accessed data* about the Guana Estuary?
+
+
+
+*by ""data"", we mean ""information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer"" for instance spreadsheets, databases, graphs, and maps.",1,Yes,NA

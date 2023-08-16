@@ -3,19 +3,21 @@ ID,source,qname,qname_main,main,q_code,q_text,order
 15,email,ND-2_2,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",2,Educational purposes,NA
 15,email,ND-2_3,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",3,Work-related purposes (not research or education),NA
 15,email,ND-2_4,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",4,Decision making (recreational/educational/scientific visits),NA
-22,email,ND-1,ND-1,"If you had the opportunity to access data in the future, how often would you access or obtain these data?",4,Once a month,NA
-22,email,ND-2_3,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",3,Work-related purposes (not research or education),NA
-7,email,ND-1,ND-1,"If you had the opportunity to access data in the future, how often would you access or obtain these data?",4,Once a month,NA
-7,email,ND-2_4,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",4,Decision making (recreational/educational/scientific visits),NA
-7,email,ND-2_5,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",5,Monitoring,NA
-7,email,ND-2_7,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",7,Other (please specify),NA
-34,email,ND-1,ND-1,"If you had the opportunity to access data in the future, how often would you access or obtain these data?",6,Once every year,NA
-34,email,ND-2_3,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",3,Work-related purposes (not research or education),NA
-34,email,ND-2_7,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",7,Other (please specify),NA
-9,email,ND-1,ND-1,"If you had the opportunity to access data in the future, how often would you access or obtain these data?",5,Once every 6 months,NA
-9,email,ND-2_1,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",1,Research,NA
-9,email,ND-2_2,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",2,Educational purposes,NA
-9,email,ND-2_5,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",5,Monitoring,NA
-21,email,ND-1,ND-1,"If you had the opportunity to access data in the future, how often would you access or obtain these data?",2,At least once a week,NA
-21,email,ND-2_1,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",1,Research,NA
-21,email,ND-2_4,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",4,Decision making (recreational/educational/scientific visits),NA
+3,email,ND-1,ND-1,"If you had the opportunity to access data in the future, how often would you access or obtain these data?",4,Once a month,NA
+3,email,ND-2_3,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",3,Work-related purposes (not research or education),NA
+6,email,ND-1,ND-1,"If you had the opportunity to access data in the future, how often would you access or obtain these data?",8,Never (not interested in accessing data),NA
+27,email,ND-1,ND-1,"If you had the opportunity to access data in the future, how often would you access or obtain these data?",4,Once a month,NA
+27,email,ND-2_4,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",4,Decision making (recreational/educational/scientific visits),NA
+27,email,ND-2_5,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",5,Monitoring,NA
+27,email,ND-2_7,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",7,Other (please specify),NA
+47,email,ND-1,ND-1,"If you had the opportunity to access data in the future, how often would you access or obtain these data?",6,Once every year,NA
+47,email,ND-2_3,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",3,Work-related purposes (not research or education),NA
+47,email,ND-2_7,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",7,Other (please specify),NA
+30,email,ND-1,ND-1,"If you had the opportunity to access data in the future, how often would you access or obtain these data?",5,Once every 6 months,NA
+30,email,ND-2_1,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",1,Research,NA
+30,email,ND-2_2,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",2,Educational purposes,NA
+30,email,ND-2_5,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",5,Monitoring,NA
+35,email,ND-1,ND-1,"If you had the opportunity to access data in the future, how often would you access or obtain these data?",2,At least once a week,NA
+35,email,ND-2_1,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",1,Research,NA
+35,email,ND-2_4,ND-2,"If you had the opportunity to access data in the future, what would you use these data for? (check all that apply)",4,Decision making (recreational/educational/scientific visits),NA
+53,email,ND-1,ND-1,"If you had the opportunity to access data in the future, how often would you access or obtain these data?",8,Never (not interested in accessing data),NA

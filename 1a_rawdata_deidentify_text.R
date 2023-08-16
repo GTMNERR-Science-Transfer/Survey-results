@@ -89,8 +89,9 @@ write_csv(survey_data_unfinished, "survey_downloads_confidential/survey_data_unf
 
 # Filter for those who agreed and for those who finalized the survey
 survey_data <- survey_data %>% 
+  mutate(`F-4` = replace_na(`F-4`, "no email")) %>% 
   filter(`Informed Consent` == "I agree",
-         Finished == TRUE,
+         # Finished == TRUE, # 15 August 2023: use all surveys for report
          `F-4` != "Sbaker25@ufl.edu") # Remove test survey Shirley did
 
 # Save email addresses of people that want to stay involved in a separate file

@@ -17,29 +17,10 @@ ID,source,qname,qname_main,main,q_code,q_text,order
 19,socialmedia,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",10,Poorly,NA
 19,socialmedia,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,12,Well,NA
 31,socialmedia,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
-28,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
+39,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
 2,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
 15,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
-26,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
-22,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
-22,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,3,Somewhat,NA
-22,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,3,Somewhat capable,NA
-22,email,TR-3_1,TR-3,NA,1,NA,NA
-22,email,TR-3_2,TR-3,NA,2,NA,NA
-22,email,TR-3_3,TR-3,NA,3,NA,NA
-22,email,TR-3_4,TR-3,NA,4,NA,NA
-22,email,TR-3_5,TR-3,NA,5,NA,NA
-22,email,TR-4_1,TR-4,NA,1,NA,NA
-22,email,TR-4_2,TR-4,NA,2,NA,NA
-22,email,TR-4_3,TR-4,NA,3,NA,NA
-22,email,TR-4_4,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,4,Strongly disagree,NA
-22,email,TR-4_5,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,5,Somewhat disagree,NA
-22,email,TR-4_6,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,6,Neither agree nor disagree,NA
-22,email,TR-4_7,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,7,Somewhat agree,NA
-22,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",10,Poorly,NA
-22,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,10,Poorly,NA
 8,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
-24,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
 3,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
 3,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,3,Somewhat,NA
 3,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,3,Somewhat capable,NA
@@ -55,109 +36,79 @@ ID,source,qname,qname_main,main,q_code,q_text,order
 3,email,TR-4_5,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,5,Somewhat disagree,NA
 3,email,TR-4_6,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,6,Neither agree nor disagree,NA
 3,email,TR-4_7,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,7,Somewhat agree,NA
-3,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",12,Well,NA
-3,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,11,Average,NA
-29,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
-29,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,3,Somewhat,NA
-29,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,3,Somewhat capable,NA
-29,email,TR-3_1,TR-3,NA,1,NA,NA
-29,email,TR-3_2,TR-3,NA,2,NA,NA
-29,email,TR-3_3,TR-3,NA,3,NA,NA
-29,email,TR-3_4,TR-3,NA,4,NA,NA
-29,email,TR-3_5,TR-3,NA,5,NA,NA
-29,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",10,Poorly,NA
-29,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,12,Well,NA
-30,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
-30,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,4,Very much,NA
-30,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,4,Very capable,NA
-30,email,TR-3_1,TR-3,NA,1,NA,NA
-30,email,TR-3_2,TR-3,NA,2,NA,NA
-30,email,TR-3_3,TR-3,NA,3,NA,NA
-30,email,TR-3_4,TR-3,NA,4,NA,NA
-30,email,TR-3_5,TR-3,NA,5,NA,NA
-30,email,TR-4_1,TR-4,NA,1,NA,NA
-30,email,TR-4_2,TR-4,NA,2,NA,NA
-30,email,TR-4_3,TR-4,NA,3,NA,NA
-30,email,TR-4_4,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,4,Strongly disagree,NA
-30,email,TR-4_5,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,5,Somewhat disagree,NA
-30,email,TR-4_6,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,6,Neither agree nor disagree,NA
-30,email,TR-4_7,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,7,Somewhat agree,NA
-30,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",10,Poorly,NA
-30,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,12,Well,NA
-36,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
-36,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,4,Very much,NA
-36,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,3,Somewhat capable,NA
-36,email,TR-3_1,TR-3,NA,1,NA,NA
-36,email,TR-3_2,TR-3,NA,2,NA,NA
-36,email,TR-3_3,TR-3,NA,3,NA,NA
-36,email,TR-3_4,TR-3,NA,4,NA,NA
-36,email,TR-3_5,TR-3,NA,5,NA,NA
-36,email,TR-4_1,TR-4,NA,1,NA,NA
-36,email,TR-4_2,TR-4,NA,2,NA,NA
-36,email,TR-4_3,TR-4,NA,3,NA,NA
-36,email,TR-4_4,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,4,Strongly disagree,NA
-36,email,TR-4_5,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,5,Somewhat disagree,NA
-36,email,TR-4_6,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,6,Neither agree nor disagree,NA
-36,email,TR-4_7,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,7,Somewhat agree,NA
-36,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",10,Poorly,NA
-36,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,11,Average,NA
-33,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
-33,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,4,Very much,NA
-33,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,4,Very capable,NA
-33,email,TR-3_1,TR-3,NA,1,NA,NA
-33,email,TR-3_2,TR-3,NA,2,NA,NA
-33,email,TR-3_3,TR-3,NA,3,NA,NA
-33,email,TR-3_4,TR-3,NA,4,NA,NA
-33,email,TR-3_5,TR-3,NA,5,NA,NA
-33,email,TR-4_1,TR-4,NA,1,NA,NA
-33,email,TR-4_2,TR-4,NA,2,NA,NA
-33,email,TR-4_3,TR-4,NA,3,NA,NA
-33,email,TR-4_4,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,4,Strongly disagree,NA
-33,email,TR-4_5,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,5,Somewhat disagree,NA
-33,email,TR-4_6,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,6,Neither agree nor disagree,NA
-33,email,TR-4_7,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,7,Somewhat agree,NA
-33,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",12,Well,NA
-33,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,12,Well,NA
-32,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
-12,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
-37,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
-20,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
-23,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
-18,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
-18,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,4,Very much,NA
-18,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,4,Very capable,NA
-18,email,TR-3_1,TR-3,NA,1,NA,NA
-18,email,TR-3_2,TR-3,NA,2,NA,NA
-18,email,TR-3_3,TR-3,NA,3,NA,NA
-18,email,TR-3_4,TR-3,NA,4,NA,NA
-18,email,TR-3_5,TR-3,NA,5,NA,NA
-18,email,TR-4_1,TR-4,NA,1,NA,NA
-18,email,TR-4_2,TR-4,NA,2,NA,NA
-18,email,TR-4_3,TR-4,NA,3,NA,NA
-18,email,TR-4_4,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,4,Strongly disagree,NA
-18,email,TR-4_5,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,5,Somewhat disagree,NA
-18,email,TR-4_6,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,6,Neither agree nor disagree,NA
-18,email,TR-4_7,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,7,Somewhat agree,NA
-18,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",12,Well,NA
-18,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,13,Very well,NA
-27,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
-6,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
-6,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,4,Very much,NA
-6,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,4,Very capable,NA
-6,email,TR-3_1,TR-3,NA,1,NA,NA
-6,email,TR-3_2,TR-3,NA,2,NA,NA
-6,email,TR-3_3,TR-3,NA,3,NA,NA
-6,email,TR-3_4,TR-3,NA,4,NA,NA
-6,email,TR-3_5,TR-3,NA,5,NA,NA
-6,email,TR-4_1,TR-4,NA,1,NA,NA
-6,email,TR-4_2,TR-4,NA,2,NA,NA
-6,email,TR-4_3,TR-4,NA,3,NA,NA
-6,email,TR-4_4,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,4,Strongly disagree,NA
-6,email,TR-4_5,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,5,Somewhat disagree,NA
-6,email,TR-4_6,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,6,Neither agree nor disagree,NA
-6,email,TR-4_7,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,7,Somewhat agree,NA
-6,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",10,Poorly,NA
-6,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,11,Average,NA
+3,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",10,Poorly,NA
+3,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,10,Poorly,NA
+24,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
+22,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
+48,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
+48,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,3,Somewhat,NA
+48,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,3,Somewhat capable,NA
+48,email,TR-3_1,TR-3,NA,1,NA,NA
+48,email,TR-3_2,TR-3,NA,2,NA,NA
+48,email,TR-3_3,TR-3,NA,3,NA,NA
+48,email,TR-3_4,TR-3,NA,4,NA,NA
+48,email,TR-3_5,TR-3,NA,5,NA,NA
+48,email,TR-4_1,TR-4,NA,1,NA,NA
+48,email,TR-4_2,TR-4,NA,2,NA,NA
+48,email,TR-4_3,TR-4,NA,3,NA,NA
+48,email,TR-4_4,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,4,Strongly disagree,NA
+48,email,TR-4_5,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,5,Somewhat disagree,NA
+48,email,TR-4_6,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,6,Neither agree nor disagree,NA
+48,email,TR-4_7,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,7,Somewhat agree,NA
+48,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",12,Well,NA
+48,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,11,Average,NA
+49,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
+49,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,3,Somewhat,NA
+49,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,3,Somewhat capable,NA
+49,email,TR-3_1,TR-3,NA,1,NA,NA
+49,email,TR-3_2,TR-3,NA,2,NA,NA
+49,email,TR-3_3,TR-3,NA,3,NA,NA
+49,email,TR-3_4,TR-3,NA,4,NA,NA
+49,email,TR-3_5,TR-3,NA,5,NA,NA
+49,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",10,Poorly,NA
+49,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,12,Well,NA
+12,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
+12,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,4,Very much,NA
+12,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,4,Very capable,NA
+12,email,TR-3_1,TR-3,NA,1,NA,NA
+12,email,TR-3_2,TR-3,NA,2,NA,NA
+12,email,TR-3_3,TR-3,NA,3,NA,NA
+12,email,TR-3_4,TR-3,NA,4,NA,NA
+12,email,TR-3_5,TR-3,NA,5,NA,NA
+12,email,TR-4_1,TR-4,NA,1,NA,NA
+12,email,TR-4_2,TR-4,NA,2,NA,NA
+12,email,TR-4_3,TR-4,NA,3,NA,NA
+12,email,TR-4_4,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,4,Strongly disagree,NA
+12,email,TR-4_5,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,5,Somewhat disagree,NA
+12,email,TR-4_6,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,6,Neither agree nor disagree,NA
+12,email,TR-4_7,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,7,Somewhat agree,NA
+12,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",10,Poorly,NA
+12,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,12,Well,NA
+20,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
+20,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,4,Very much,NA
+20,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,3,Somewhat capable,NA
+20,email,TR-3_1,TR-3,NA,1,NA,NA
+20,email,TR-3_2,TR-3,NA,2,NA,NA
+20,email,TR-3_3,TR-3,NA,3,NA,NA
+20,email,TR-3_4,TR-3,NA,4,NA,NA
+20,email,TR-3_5,TR-3,NA,5,NA,NA
+20,email,TR-4_1,TR-4,NA,1,NA,NA
+20,email,TR-4_2,TR-4,NA,2,NA,NA
+20,email,TR-4_3,TR-4,NA,3,NA,NA
+20,email,TR-4_4,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,4,Strongly disagree,NA
+20,email,TR-4_5,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,5,Somewhat disagree,NA
+20,email,TR-4_6,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,6,Neither agree nor disagree,NA
+20,email,TR-4_7,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,7,Somewhat agree,NA
+20,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",10,Poorly,NA
+20,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,11,Average,NA
+50,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
+50,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,4,Very much,NA
+50,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,4,Very capable,NA
+50,email,TR-3_1,TR-3,NA,1,NA,NA
+50,email,TR-3_2,TR-3,NA,2,NA,NA
+50,email,TR-3_3,TR-3,NA,3,NA,NA
+50,email,TR-3_4,TR-3,NA,4,NA,NA
+50,email,TR-3_5,TR-3,NA,5,NA,NA
 16,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
 16,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,4,Very much,NA
 16,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,4,Very capable,NA
@@ -173,99 +124,157 @@ ID,source,qname,qname_main,main,q_code,q_text,order
 16,email,TR-4_5,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,5,Somewhat disagree,NA
 16,email,TR-4_6,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,6,Neither agree nor disagree,NA
 16,email,TR-4_7,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,7,Somewhat agree,NA
-16,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",11,Average,NA
+16,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",12,Well,NA
 16,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,12,Well,NA
-11,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
-11,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,3,Somewhat,NA
-11,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,4,Very capable,NA
-11,email,TR-3_1,TR-3,NA,1,NA,NA
-11,email,TR-3_2,TR-3,NA,2,NA,NA
-11,email,TR-3_3,TR-3,NA,3,NA,NA
-11,email,TR-3_4,TR-3,NA,4,NA,NA
-11,email,TR-3_5,TR-3,NA,5,NA,NA
-11,email,TR-4_1,TR-4,NA,1,NA,NA
-11,email,TR-4_2,TR-4,NA,2,NA,NA
-11,email,TR-4_3,TR-4,NA,3,NA,NA
-11,email,TR-4_4,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,4,Strongly disagree,NA
-11,email,TR-4_5,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,5,Somewhat disagree,NA
-11,email,TR-4_6,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,6,Neither agree nor disagree,NA
-11,email,TR-4_7,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,7,Somewhat agree,NA
-11,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",11,Average,NA
-11,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,12,Well,NA
-5,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
-4,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
-14,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
-17,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
-17,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,4,Very much,NA
-17,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,4,Very capable,NA
-17,email,TR-3_1,TR-3,NA,1,NA,NA
-17,email,TR-3_2,TR-3,NA,2,NA,NA
-17,email,TR-3_3,TR-3,NA,3,NA,NA
-17,email,TR-3_4,TR-3,NA,4,NA,NA
-17,email,TR-3_5,TR-3,NA,5,NA,NA
-17,email,TR-4_1,TR-4,NA,1,NA,NA
-17,email,TR-4_2,TR-4,NA,2,NA,NA
-17,email,TR-4_3,TR-4,NA,3,NA,NA
-17,email,TR-4_4,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,4,Strongly disagree,NA
-17,email,TR-4_5,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,5,Somewhat disagree,NA
-17,email,TR-4_6,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,6,Neither agree nor disagree,NA
-17,email,TR-4_7,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,7,Somewhat agree,NA
-17,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",10,Poorly,NA
-17,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,13,Very well,NA
-7,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
-34,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
-25,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
-10,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
-35,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
-35,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,3,Somewhat,NA
-35,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,3,Somewhat capable,NA
-35,email,TR-3_1,TR-3,NA,1,NA,NA
-35,email,TR-3_2,TR-3,NA,2,NA,NA
-35,email,TR-3_3,TR-3,NA,3,NA,NA
-35,email,TR-3_4,TR-3,NA,4,NA,NA
-35,email,TR-3_5,TR-3,NA,5,NA,NA
-35,email,TR-4_1,TR-4,NA,1,NA,NA
-35,email,TR-4_2,TR-4,NA,2,NA,NA
-35,email,TR-4_3,TR-4,NA,3,NA,NA
-35,email,TR-4_4,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,4,Strongly disagree,NA
-35,email,TR-4_5,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,5,Somewhat disagree,NA
-35,email,TR-4_6,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,6,Neither agree nor disagree,NA
-35,email,TR-4_7,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,7,Somewhat agree,NA
-35,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",11,Average,NA
-35,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,11,Average,NA
-9,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
-1,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
-1,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,4,Very much,NA
-1,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,4,Very capable,NA
-1,email,TR-3_1,TR-3,NA,1,NA,NA
-1,email,TR-3_2,TR-3,NA,2,NA,NA
-1,email,TR-3_3,TR-3,NA,3,NA,NA
-1,email,TR-3_4,TR-3,NA,4,NA,NA
-1,email,TR-3_5,TR-3,NA,5,NA,NA
-1,email,TR-4_1,TR-4,NA,1,NA,NA
-1,email,TR-4_2,TR-4,NA,2,NA,NA
-1,email,TR-4_3,TR-4,NA,3,NA,NA
-1,email,TR-4_4,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,4,Strongly disagree,NA
-1,email,TR-4_5,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,5,Somewhat disagree,NA
-1,email,TR-4_6,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,6,Neither agree nor disagree,NA
-1,email,TR-4_7,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,7,Somewhat agree,NA
-1,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",11,Average,NA
-1,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,11,Average,NA
-13,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
-13,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,3,Somewhat,NA
-13,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,3,Somewhat capable,NA
-13,email,TR-3_1,TR-3,NA,1,NA,NA
-13,email,TR-3_2,TR-3,NA,2,NA,NA
-13,email,TR-3_3,TR-3,NA,3,NA,NA
-13,email,TR-3_4,TR-3,NA,4,NA,NA
-13,email,TR-3_5,TR-3,NA,5,NA,NA
-13,email,TR-4_1,TR-4,NA,1,NA,NA
-13,email,TR-4_2,TR-4,NA,2,NA,NA
-13,email,TR-4_3,TR-4,NA,3,NA,NA
-13,email,TR-4_4,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,4,Strongly disagree,NA
-13,email,TR-4_5,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,5,Somewhat disagree,NA
-13,email,TR-4_6,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,6,Neither agree nor disagree,NA
-13,email,TR-4_7,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,7,Somewhat agree,NA
-13,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",11,Average,NA
-13,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,11,Average,NA
+44,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
 21,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
+4,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
+11,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
+37,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
+56,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
+23,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
+23,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,4,Very much,NA
+23,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,4,Very capable,NA
+23,email,TR-3_1,TR-3,NA,1,NA,NA
+23,email,TR-3_2,TR-3,NA,2,NA,NA
+23,email,TR-3_3,TR-3,NA,3,NA,NA
+23,email,TR-3_4,TR-3,NA,4,NA,NA
+23,email,TR-3_5,TR-3,NA,5,NA,NA
+23,email,TR-4_1,TR-4,NA,1,NA,NA
+23,email,TR-4_2,TR-4,NA,2,NA,NA
+23,email,TR-4_3,TR-4,NA,3,NA,NA
+23,email,TR-4_4,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,4,Strongly disagree,NA
+23,email,TR-4_5,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,5,Somewhat disagree,NA
+23,email,TR-4_6,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,6,Neither agree nor disagree,NA
+23,email,TR-4_7,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,7,Somewhat agree,NA
+23,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",12,Well,NA
+23,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,13,Very well,NA
+51,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
+33,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
+33,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,4,Very much,NA
+33,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,4,Very capable,NA
+33,email,TR-3_1,TR-3,NA,1,NA,NA
+33,email,TR-3_2,TR-3,NA,2,NA,NA
+33,email,TR-3_3,TR-3,NA,3,NA,NA
+33,email,TR-3_4,TR-3,NA,4,NA,NA
+33,email,TR-3_5,TR-3,NA,5,NA,NA
+33,email,TR-4_1,TR-4,NA,1,NA,NA
+33,email,TR-4_2,TR-4,NA,2,NA,NA
+33,email,TR-4_3,TR-4,NA,3,NA,NA
+33,email,TR-4_4,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,4,Strongly disagree,NA
+33,email,TR-4_5,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,5,Somewhat disagree,NA
+33,email,TR-4_6,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,6,Neither agree nor disagree,NA
+33,email,TR-4_7,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,7,Somewhat agree,NA
+33,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",10,Poorly,NA
+33,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,11,Average,NA
+52,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
+52,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,4,Very much,NA
+52,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,4,Very capable,NA
+52,email,TR-3_1,TR-3,NA,1,NA,NA
+52,email,TR-3_2,TR-3,NA,2,NA,NA
+52,email,TR-3_3,TR-3,NA,3,NA,NA
+52,email,TR-3_4,TR-3,NA,4,NA,NA
+52,email,TR-3_5,TR-3,NA,5,NA,NA
+52,email,TR-4_1,TR-4,NA,1,NA,NA
+52,email,TR-4_2,TR-4,NA,2,NA,NA
+52,email,TR-4_3,TR-4,NA,3,NA,NA
+52,email,TR-4_4,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,4,Strongly disagree,NA
+52,email,TR-4_5,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,5,Somewhat disagree,NA
+52,email,TR-4_6,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,6,Neither agree nor disagree,NA
+52,email,TR-4_7,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,7,Somewhat agree,NA
+52,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",11,Average,NA
+52,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,12,Well,NA
+46,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
+46,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,3,Somewhat,NA
+46,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,4,Very capable,NA
+46,email,TR-3_1,TR-3,NA,1,NA,NA
+46,email,TR-3_2,TR-3,NA,2,NA,NA
+46,email,TR-3_3,TR-3,NA,3,NA,NA
+46,email,TR-3_4,TR-3,NA,4,NA,NA
+46,email,TR-3_5,TR-3,NA,5,NA,NA
+46,email,TR-4_1,TR-4,NA,1,NA,NA
+46,email,TR-4_2,TR-4,NA,2,NA,NA
+46,email,TR-4_3,TR-4,NA,3,NA,NA
+46,email,TR-4_4,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,4,Strongly disagree,NA
+46,email,TR-4_5,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,5,Somewhat disagree,NA
+46,email,TR-4_6,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,6,Neither agree nor disagree,NA
+46,email,TR-4_7,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,7,Somewhat agree,NA
+46,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",11,Average,NA
+46,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,12,Well,NA
+32,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
+43,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
+17,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
+14,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
+14,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,4,Very much,NA
+14,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,4,Very capable,NA
+14,email,TR-3_1,TR-3,NA,1,NA,NA
+14,email,TR-3_2,TR-3,NA,2,NA,NA
+14,email,TR-3_3,TR-3,NA,3,NA,NA
+14,email,TR-3_4,TR-3,NA,4,NA,NA
+14,email,TR-3_5,TR-3,NA,5,NA,NA
+14,email,TR-4_1,TR-4,NA,1,NA,NA
+14,email,TR-4_2,TR-4,NA,2,NA,NA
+14,email,TR-4_3,TR-4,NA,3,NA,NA
+14,email,TR-4_4,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,4,Strongly disagree,NA
+14,email,TR-4_5,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,5,Somewhat disagree,NA
+14,email,TR-4_6,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,6,Neither agree nor disagree,NA
+14,email,TR-4_7,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,7,Somewhat agree,NA
+14,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",10,Poorly,NA
+14,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,13,Very well,NA
+27,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
+47,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
+13,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
+9,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
+5,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
+5,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,3,Somewhat,NA
+5,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,3,Somewhat capable,NA
+5,email,TR-3_1,TR-3,NA,1,NA,NA
+5,email,TR-3_2,TR-3,NA,2,NA,NA
+5,email,TR-3_3,TR-3,NA,3,NA,NA
+5,email,TR-3_4,TR-3,NA,4,NA,NA
+5,email,TR-3_5,TR-3,NA,5,NA,NA
+5,email,TR-4_1,TR-4,NA,1,NA,NA
+5,email,TR-4_2,TR-4,NA,2,NA,NA
+5,email,TR-4_3,TR-4,NA,3,NA,NA
+5,email,TR-4_4,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,4,Strongly disagree,NA
+5,email,TR-4_5,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,5,Somewhat disagree,NA
+5,email,TR-4_6,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,6,Neither agree nor disagree,NA
+5,email,TR-4_7,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,7,Somewhat agree,NA
+5,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",11,Average,NA
+5,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,11,Average,NA
+30,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
+29,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
+29,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,4,Very much,NA
+29,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,4,Very capable,NA
+29,email,TR-3_1,TR-3,NA,1,NA,NA
+29,email,TR-3_2,TR-3,NA,2,NA,NA
+29,email,TR-3_3,TR-3,NA,3,NA,NA
+29,email,TR-3_4,TR-3,NA,4,NA,NA
+29,email,TR-3_5,TR-3,NA,5,NA,NA
+29,email,TR-4_1,TR-4,NA,1,NA,NA
+29,email,TR-4_2,TR-4,NA,2,NA,NA
+29,email,TR-4_3,TR-4,NA,3,NA,NA
+29,email,TR-4_4,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,4,Strongly disagree,NA
+29,email,TR-4_5,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,5,Somewhat disagree,NA
+29,email,TR-4_6,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,6,Neither agree nor disagree,NA
+29,email,TR-4_7,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,7,Somewhat agree,NA
+29,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",11,Average,NA
+29,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,11,Average,NA
+18,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",1,Yes,NA
+18,email,TR-1,TR-1,How much do you trust the UF project team to build a dashboard that meets your needs?,3,Somewhat,NA
+18,email,TR-2,TR-2,To what extent do you believe that the abilities and technical expertise of the UF project team make them capable of building a dashboard that meets your needs?,3,Somewhat capable,NA
+18,email,TR-3_1,TR-3,NA,1,NA,NA
+18,email,TR-3_2,TR-3,NA,2,NA,NA
+18,email,TR-3_3,TR-3,NA,3,NA,NA
+18,email,TR-3_4,TR-3,NA,4,NA,NA
+18,email,TR-3_5,TR-3,NA,5,NA,NA
+18,email,TR-4_1,TR-4,NA,1,NA,NA
+18,email,TR-4_2,TR-4,NA,2,NA,NA
+18,email,TR-4_3,TR-4,NA,3,NA,NA
+18,email,TR-4_4,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,4,Strongly disagree,NA
+18,email,TR-4_5,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,5,Somewhat disagree,NA
+18,email,TR-4_6,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,6,Neither agree nor disagree,NA
+18,email,TR-4_7,TR-4,Please indicate the extent to which you agree or disagree with the following statements about the UF project team:,7,Somewhat agree,NA
+18,email,TR-5,TR-5,"In general, how well do you think the scientific community in general does in engaging with local communities?",11,Average,NA
+18,email,TR-6,TR-6,How well do you think this project has done in engaging with the local community?,11,Average,NA
+35,email,TR-0,TR-0,"Are you part of the stakeholder group that was invited to participate in the project kick-off meetings in November and December 2022 (If you are unsure, click ""No"". If you were invited but could not make it, click ""Yes"").",2,No,NA
