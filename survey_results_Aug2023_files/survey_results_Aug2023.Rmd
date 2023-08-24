@@ -1,19 +1,21 @@
 ---
-title: "GTMNERR Data Dashboard Needs Assessment: Survey Results"
+title: "Guana Estuary Data Dashboard Needs Assessment: Survey Results"
 author: "Geraldine Klarenberg"
 date: "2023-08-14"
-output: html_document
+output: 
+  html_document:
+    css: box_style.css
 #output: pdf_document
 ---
 
-#### DRAFT v1
+#### DRAFT v2
 
 ##### Project: Using collaborative open science tools to improve engagement with the ecology of the Guana River Estuary
 ###### *Project team: Geraldine Klarenberg, Kristie Perez, Nikki Dix, Nia Morales, and Shirley Baker*
 
-The University of Florida and Guana Tolomato Matanzas National Estuarine Research Reserve (GTMNERR) are partnering with the local community and broader science community to develop a web-based, public-facing, interactive dashboard to provide access to Guana River Estuary (GRE) datasets. The aim of this work is to support open science and to increase diverse engagement with GRE within the GTMNERR by making the data available interactively, using visualization tools.
+The University of Florida and Guana Tolomato Matanzas National Estuarine Research Reserve (GTMNERR) are partnering with the local community and broader science community to develop a web-based, public-facing, interactive dashboard to provide access to Guana Estuary datasets. The aim of this work is to support open science and to increase diverse engagement with the Guana Estuary within the GTMNERR by making the data available interactively, using visualization tools.
 
-To this end, the project team sought feedback from those who have been involved with the GTMNERR to help them to better understand their needs. This document summarizes the results of an online survey that was made available via email, social media, and QR code.
+To this end, the project team sought feedback from those who have been involved with the Guana Estuary to help them to better understand their needs. This document summarizes the results of an online survey that was made available via email, social media, and QR code.
 
 ```{r load_package_data, echo = FALSE, message = FALSE}
 library(tidyverse)
@@ -37,9 +39,11 @@ _____________________________________________________________
 
 ### 2. Introductory questions
 
-The survey started with asking respondents about their connection to the GTMNERR, how often they engage with the GTMNERR, what data they would be interested in, and whether or not they ever accessed data associated with the GTMNERR.
+The survey started with asking respondents about their connection to the Guana Estuary, how often they engage with the Guana Estuary, what data they would be interested in, and whether or not they ever accessed data associated with the Guana Estuary.
 
-#### 2.1 GTMNERR connection
+For the purposes of this project, and this survey, "Guana Estuary" refers to the Guana Lake and Guana River: the area north and south of the Guana Dam, from Micklers Road to the Tolomato River / intracoastal.
+
+#### 2.1 Guana Estuary connection
 ```{r connected, fig.width = 7, fig.height = 3, echo = FALSE, message = FALSE, fig.align = 'center'}
 ggplot(intro %>% 
          filter(str_detect(qname, "D-1")) %>% 
@@ -49,7 +53,7 @@ ggplot(intro %>%
        aes(y = reorder(q_text, percentage), x = percentage, fill = q_text))+
   geom_col() +
   labs(y = "", x = "Percentage of all responses", 
-       title = "How are you connected to the GTM?",
+       title = "How are you connected to the Guana Estuary?",
        caption  = "NOTE: Respondents could pick more than 1 response") +
   scale_fill_viridis_d(option = "mako")+
   scale_y_discrete(labels = function(x) str_wrap(x, width = 50))+
@@ -84,7 +88,7 @@ ggplot(intro %>%
            x = percentage,
            fill = q_text))+
   geom_col() +
-  labs(x = "Percentage of respondents", y = "", title = "How often do you engage with the GTM?") +
+  labs(x = "Percentage of respondents", y = "", title = "How often do you engage with the Guana Estuary?") +
   scale_fill_brewer(palette = "Purples", )+
   theme_bw()+
   theme(legend.position = "none",
@@ -134,7 +138,7 @@ Under "Other", the three types of datasets mentioned were: historical maps, wate
 
 --------------------------------------------------------
 
-#### 2.4 Previous experience with accessing data associated with GTMNERR
+#### 2.4 Previous experience with accessing data associated with Guana Estuary
 
 The survey asked respondents whether they had accessed data before, and by "data", we meant "information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer" for instance spreadsheets, databases, graphs, and maps." 
 
@@ -153,6 +157,13 @@ ggplot(intro %>%
 ```
 
 Based on their response whether or not they had accessed data, respondents answered different sets of questions. The results are summarized in the next two sections.
+
+:::: {.infobox .info data-latex="{info}"}
+**Take home message**
+
+This is where the take home messages of each section will go.
+
+::::
 
 ___________________________________________________________
 
@@ -486,7 +497,7 @@ plot_grid(age, gender, ncol = 2, align = "v")
 
 ----------------------------------------------------
 
-#### 6.2 Distance from the GTM
+#### 6.2 Distance from the Guana Estuary
 ``` {r distance, fig.width = 5, fig.height = 4, echo = FALSE, message = FALSE, fig.align = 'center'}
 ggplot(demogr %>% 
          filter(qname == "DE-4") %>% 
@@ -495,7 +506,7 @@ ggplot(demogr %>%
          mutate(percentage = round(cnt/sum(cnt)*100, 1)),
        aes(y = q_text, x = percentage))+
   geom_col(fill = "royalblue") +
-  labs(x = "Percentage of respondents", y = "Driving distance (minutes)", title = "How far are you from the GTM?") +
+  labs(x = "Percentage of respondents", y = "Driving distance (minutes)", title = "How far are you from the Guana Estuary?") +
   theme_bw()+
   theme(plot.title.position = "plot")
 ```
