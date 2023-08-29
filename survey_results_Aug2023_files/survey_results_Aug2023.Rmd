@@ -31,7 +31,7 @@ demogr <- read_csv("../data_deidentified/subsets/demographics_results_basic.csv"
 ```
 
 ### 1. Response rate
-We received responses from 51 individuals. Out of these, 14 surveys were unfinished. For the purposes of this report, we also took the unfinished surveys into account.
+We received responses from 51 individuals. Out of these, 14 surveys were unfinished. For this report, we also took the unfinished surveys into account.
 
 47 respondents filled in the survey based on a link received via email, 3 via social media, 0 via the QR code available at the GTMNERR Welcome Center, and 1 via the QR code available at the kiosk at the dam.
 
@@ -43,16 +43,32 @@ The survey started with asking respondents about their connection to the Guana E
 
 For the purposes of this project, and this survey, "Guana Estuary" refers to the Guana Lake and Guana River: the area north and south of the Guana Dam, from Micklers Road to the Tolomato River / intracoastal.
 
+```{r num_respondents, echo = FALSE}
+# Create variable with total number of respondents, to be used as annotation on plots
+num_resp <- length(unique(intro$ID))
+```
+
 #### 2.1 Guana Estuary connection
+
+We asked respondents about their connection with the Guana Estuary. The figure below summarizes the responses, but note that people could pick more than 1 option. This is why the sum of all percentages adds up to more than 100%. 
+
+In total there were 111 connections chosen. E.g. a little over 60% of respondents do recreational activities at the Guana Estuary, and almost 50% collect data or use data for scientific purposes - and these choices are not mutually exclusive! Someone could collect data and *also* enjoy the Guana Estuary recreationally. Or volunteer and *also* use the Guana Estuary for educational purposes.
+
 ```{r connected, fig.width = 7, fig.height = 3, echo = FALSE, message = FALSE, fig.align = 'center'}
+# count total number of answers
+num_answers <- intro %>%
+  filter(str_detect(qname, "D-1")) %>% 
+  summarize(num_answers = n()) %>% 
+  pull(num_answers)
+
 ggplot(intro %>% 
          filter(str_detect(qname, "D-1")) %>% 
          group_by(q_text) %>%
          summarize(cnt = n()) %>%
-         mutate(percentage = round(cnt/sum(cnt)*100, 1)), 
+         mutate(percentage = round(cnt/num_resp*100, 1)), #sum(cnt)
        aes(y = reorder(q_text, percentage), x = percentage, fill = q_text))+
   geom_col() +
-  labs(y = "", x = "Percentage of all responses", 
+  labs(y = "", x = paste0("Percentage of all respondents (N = ", num_resp, ")"), 
        title = "How are you connected to the Guana Estuary?",
        caption  = "NOTE: Respondents could pick more than 1 response") +
   scale_fill_viridis_d(option = "mako")+
@@ -86,10 +102,11 @@ ggplot(intro %>%
          mutate(percentage = round(cnt/sum(cnt)*100, 1)), 
        aes(y = q_text,
            x = percentage,
-           fill = q_text))+
+           fill = cnt))+
   geom_col() +
-  labs(x = "Percentage of respondents", y = "", title = "How often do you engage with the Guana Estuary?") +
-  scale_fill_brewer(palette = "Purples", )+
+  labs(x = paste0("Percentage of respondents (N = ", num_resp, ")"), 
+       y = "", title = "How often do you engage with the Guana Estuary?") +
+  scale_fill_distiller(palette = "GnBu", direction = 1)+
   theme_bw()+
   theme(legend.position = "none",
         plot.title.position = "plot")
@@ -98,16 +115,19 @@ ggplot(intro %>%
 --------------------------------------------------------
 
 #### 2.3 Data of interest (in general)
+We asked respondents what Guana Estuary data they would be interested in, regardless of whether or not they currently have access to these data. Respondents were also asked to rank these datasets, with 1 being the data they are most interested in. They could pick as many or few as they wanted.
+
+The figure below shows the percentage of respondents that picked a particular dataset being of interest to them. E.g. over 80% of respondents picked water quality data. The colors indicate how they ranked it: for instance, almost 40% of all respondents ranked water quality data as their number 1 dataset of interest.
+
 ```{r what_data, fig.width = 7, fig.height = 6, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center'}
-
-num_resp <- length(unique(intro$ID))
-
 ggplot(intro %>% 
          filter(str_detect(qname, "D-3")) %>% 
          group_by(q_text, order) %>%
          summarize(cnt = n()) %>%
-         mutate(percentage = round(cnt/num_resp*100, 1)),
-       aes(y = reorder(q_text, percentage), x = percentage, fill = fct_rev(factor(order))))+
+         mutate(percentage = round(cnt/num_resp*100, 1)) %>% 
+         group_by(q_text) %>% 
+         mutate(tot_perc = sum(percentage)),
+       aes(y = reorder(q_text, tot_perc), x = percentage, fill = fct_rev(factor(order))))+
   geom_col() +
   labs(y = "", x = paste0("Percentage of respondents (N = ", num_resp, ")"), title = "What datasets are you interested in?") +
   scale_fill_viridis_d(option = "plasma", name = "Rank", direction = -1)+
@@ -134,7 +154,8 @@ ggplot(intro %>%
 #   theme(plot.title.position = "plot")
 ```
 
-Under "Other", the three types of datasets mentioned were: historical maps, water fowl, dam operations, natural resource management practices/techniques/results.
+Under "Other", the 4 types of datasets mentioned were: historical maps, water fowl, dam operations, natural resource management practices/techniques/results.
+
 
 --------------------------------------------------------
 
@@ -150,7 +171,8 @@ ggplot(intro %>%
          mutate(percentage = round(cnt/sum(cnt)*100, 1)),
        aes(x = q_text, y = percentage, fill = q_text))+
   geom_col() +
-  labs(x = "", y = "Percentage of respondents", title = "Have you accessed data before?") +
+  labs(x = "", y = paste0("Percentage of respondents (N = ", num_resp, ")"),
+       title = "Have you accessed data before?") +
   scale_fill_manual(values = c("chocolate1", "darkorchid2"))+
   theme_bw()+
   theme(legend.position = "none")
@@ -161,7 +183,10 @@ Based on their response whether or not they had accessed data, respondents answe
 :::: {.infobox .info data-latex="{info}"}
 **Take home message**
 
-This is where the take home messages of each section will go.
+- The majority of respondents use the Guana Estuary recreationally (62.7%) and almost half (49%) collect or use data for scientific purposes. In third and fourth place are other work-related and educational connections (resp. 33.3% and 29.4%).
+- Engagement with the Guana Estuary is mostly once a month (21.6% of respondents), with a tie (19.6%) for once a week and once every 6 months. Daily engagement was indicated by 17.6% of respondents. 
+- The top 4 datasets of interest, chosen by more than 60% of the respondents, are: water quality information, information on shellfish, fish and other aquatic organisms, water level information, and information on vegetation. 
+- The majority of respondents (83.7%) has accessed data before.
 
 ::::
 
@@ -169,11 +194,40 @@ ___________________________________________________________
 
 ### 3. Feedback from respondents that had not accessed data before
 
-For respondents that had not (yet) accessed data (N = 8), the survey asked broad questions on how often they would access these data, and what they would use them for.
+For respondents that had not (yet) accessed data (N = 8), the figure below summarizes their answers from section 2.3 (datasets of interest). In this figure, the datasets are ordered according to their average ranking, once again 1 being the dataset of most interest.
+
+This paints an interesting picture, as, for instance, water quality data were picked by most respondents, but in terms of average ranking it comes in 4th (3rd) place. Only one person responded they were not interested in any data ("None"), hence this item ranks first, as the average of 1 is 1... We can essentially disregard this item. The 3 datasets that score less than an average ranking of 3 are water level information, reserve or trail closures, and water quality information. However, information on vegetation, and information on fish, shellfish and other aquatic organisms was also picked by more than 60% (5 respondents) - but it was ranked lower on average.  
 
 *These responses will still be linked to the answers in 2.3*
+```{r link, echo = FALSE, message = FALSE}
+# count total number of answers
+num_resp_no_data <- length(unique(no_access$ID))
+
+intro %>%
+         filter(ID %in% unique(no_access$ID),
+                str_detect(qname, "D-3")) %>%
+         group_by(q_text, order) %>%
+         summarize(cnt = n()) %>%
+         mutate(percentage = round(cnt/num_resp_no_data*100, 1)) %>% 
+         group_by(q_text) %>% 
+         mutate(tot_perc = sum(percentage), ave_score = mean(order)) %>% 
+  ggplot(aes(y = reorder(q_text, ave_score, decreasing = TRUE), x = percentage, fill = fct_rev(factor(order))))+
+  geom_col() +
+  labs(y = "", x = paste0("Percentage of respondents (N = ", num_resp_no_data, ")"), title = "What datasets are you interested in?") +
+  scale_fill_viridis_d(option = "plasma", name = "Rank", direction = -1)+
+  scale_y_discrete(labels = function(x) str_wrap(x, width = 50))+
+  geom_text(aes(x = 79, y = q_text, label = round(ave_score, 2)), check_overlap = TRUE)+
+  theme_bw()+
+  guides(fill = guide_legend(title = "Rank",
+                             reverse = TRUE))
+```
+
+The survey asked these respondents broad questions on how often they would access these data, and what they would use them for.
+
+This figure shows that 25% (2 respondents) were not interested in accessing data, and that about half of the respondents would either access data either once a month or once a year (25% each).
 
 ```{r no_access_howoften, fig.width = 8, fig.height = 3, echo = FALSE, message = FALSE, fig.align = 'center'}
+
 ggplot(no_access %>% 
          filter(str_detect(qname, "ND-1")) %>% 
          mutate(q_text = factor(q_text, levels = c("Daily", "At least once a week",
@@ -186,22 +240,32 @@ ggplot(no_access %>%
          mutate(percentage = round(cnt/sum(cnt)*100, 1)),
        aes(y = fct_rev(q_text), x = percentage))+
   geom_col(fill = "cyan4") +
-  labs(y = "", x = "Percentage of respondents", title = "If you had the opportunity to access data in the future, how often would you\naccess or obtain these data?") +
+  labs(y = "", x = paste0("Percentage of respondents (N = ", num_resp_no_data, ")"), 
+       title = "If you had the opportunity to access data in the future, how often would you\naccess or obtain these data?") +
   theme_bw()+
   theme(plot.title.position = "plot")
 ```
 
 --------------------------------------------------------
 
+In terms of what people would use data for, the majority would use it for (non-research / non-educational) work-related purposes and decision making, as per the figure below. Also here, respondents could pick more than one answer, so the sum of all percentages is more than 100%.
+
 ```{r no_access_what, fig.width = 8, fig.height = 3, echo = FALSE, message = FALSE, fig.align = 'center'}
+# count total number of answers
+num_answers <- no_access %>%
+  filter(str_detect(qname, "ND-2")) %>%
+  summarize(num_answers = n()) %>% 
+  pull(num_answers)
+
 ggplot(no_access %>% 
          filter(str_detect(qname, "ND-2")) %>% 
          group_by(q_text) %>%
          summarize(cnt = n()) %>%
-         mutate(percentage = round(cnt/sum(cnt)*100, 1)),
+         mutate(percentage = round(cnt/num_resp_no_data*100, 1)),
        aes(y = reorder(q_text, percentage), x = percentage))+
-  geom_col(fill = "coral2") +
-  labs(y = "", x = "Percentage of all responses", title = "If you had the opportunity to access data in the future, what would you use these data for?") +
+  geom_col(fill = "paleturquoise3") +
+  labs(y = "", x = paste0("Percentage of respondents (N = ", num_resp_no_data, ")"), 
+       title = "If you had the opportunity to access data in the future, what would you use these data for?") +
   scale_y_discrete(labels = function(x) str_wrap(x, width = 30))+
   theme_bw()+
   theme(plot.title.position = "plot")
@@ -211,6 +275,16 @@ Under "Other", respondents listed:
 
 * environmental impacts, and
 * resilience planning
+
+:::: {.infobox .info data-latex="{info}"}
+**Take home message**
+
+- For the (8) respondents that had not accessed data before, their main interest would be in data on water level information, reserve or trail closures, and water quality information.
+- If they could access data, 25% of respondents would access data once a month and 25% once a year.
+- 25% of respondents (2 people) are not interested in accessing data.
+- The majority of people would use it for (non-research / non-educational) work-related purposes and decision making - 3 people picked each of those options.
+
+::::
 
 ____________________________________________________
 
@@ -224,14 +298,31 @@ ggplot(yes_data %>%
          group_by(q_text) %>%
          summarize(cnt = n()) %>%
          mutate(percentage = round(cnt/sum(cnt)*100, 1)),
-       aes(y = reorder(q_text, percentage), x = percentage, fill = q_text))+
+       aes(y = reorder(q_text, percentage), x = percentage, fill = percentage))+
   geom_col() +
   labs(x = "Percentage of responses", y = "", 
        title = "What Guana Estuary data do you currently use, or have you used in the past?") +
   scale_y_discrete(labels = function(x) str_wrap(x, width = 40))+
+  scale_fill_distiller(palette = "GnBu", direction = 1)+
   theme_bw()+
   theme(legend.position = "none",
         plot.title.position = "plot")
+
+# Needed for the next question
+# Save the order 
+yes_data_order <- yes_data %>%
+  filter(qname_main == "YD-1") %>%
+  group_by(q_text) %>%
+  summarize(cnt = n()) %>%
+  mutate(percentage = round(cnt/sum(cnt)*100, 1)) %>% 
+  select(q_text, percentage) %>% 
+  mutate(q_text = fct_reorder(q_text, percentage, .desc = TRUE)) 
+
+q_text_order <- levels(yes_data_order$q_text)
+
+library(RColorBrewer)
+# Get the colors
+color_vector <- brewer.pal(n = 7, name = "GnBu")
 ```
 
 The following table summarizes the detailed questions per dataset. The numbers represent percentages of respondents, or, in the case of multiple possible answers, percentages of all responses (indicated with an asterisk, *).
@@ -240,6 +331,10 @@ The following table summarizes the detailed questions per dataset. The numbers r
 There was an option "Other", to which there was one response: LiDAR data. *This information will be added to this table*.
 
 ```{r access_detail_table, echo = FALSE, warning = FALSE, message = FALSE}
+
+# order datasets as per the previous ranking
+# order answers either by order (e.g. frequency) or percentages of votes?
+
 yes_data_table <- yes_data %>% 
   filter(qname_main != "YD-1") %>% 
   group_by(field_name, main, q_text) %>% 
@@ -248,20 +343,32 @@ yes_data_table <- yes_data %>%
   select(-cnt) %>% 
   ungroup() %>% 
   group_by(field_name, main) %>% 
-  pivot_wider(names_from = field_name, values_from = percentage, values_fill = 0) %>% 
+  pivot_wider(names_from = field_name, values_from = percentage, values_fill = 0) %>%
+  select(q_text_order) %>% 
   left_join(select(yes_data, main, qname_main)) %>% 
   distinct() %>% 
   arrange(qname_main) %>% 
   ungroup() %>% 
   select(-qname_main, -`Other (please specify)`)
 
-yes_data_table$`Information on fish, shellfish or other aquatic organisms` <- color_tile("white", "chartreuse4")(yes_data_table$`Information on fish, shellfish or other aquatic organisms`)
-yes_data_table$`Information on terrestrial animals` <- color_tile("white", "chartreuse4")(yes_data_table$`Information on terrestrial animals`)
-yes_data_table$`Information on vegetation (salt marsh or uplands)` <- color_tile("white", "chartreuse4")(yes_data_table$`Information on vegetation (salt marsh or uplands)`)
-yes_data_table$`Reserve or trail closures` <- color_tile("white", "chartreuse4")(yes_data_table$`Reserve or trail closures`)
-yes_data_table$`Water level information (tides, Guana lake, river)` <- color_tile("white", "chartreuse4")(yes_data_table$`Water level information (tides, Guana lake, river)`)
-yes_data_table$`Water quality information (including nutrients and algae)` <- color_tile("white", "chartreuse4")(yes_data_table$`Water quality information (including nutrients and algae)`)
-yes_data_table$`Weather information` <- color_tile("white", "chartreuse4")(yes_data_table$`Weather information`)
+for(i in names(yes_data_table)[2:8]){
+  yes_data_table$i <- color_tile("white", color_vector[i])(yes_data_table$i)
+  yes_data_table[,c(cols[i])] <- color_tile("white", color_vector[i])(yes_data_table[,c(cols[i])])
+
+}
+# Error in gradient(as.numeric(x), ...) : 
+#  'list' object cannot be coerced to type 'double'
+cols = names(yes_data_table)[2:8]
+yes_data_table[,c(cols[1],i)]
+
+yes_data_table[,1] <- color_tile("white", color_vector[1])(yes_data_table[,1])
+yes_data_table$`Information on fish, shellfish or other aquatic organisms` <- color_tile("white", "#F0F9E8")(yes_data_table$`Information on fish, shellfish or other aquatic organisms`)
+# yes_data_table$`Information on terrestrial animals` <- color_tile("white", "chartreuse4")(yes_data_table$`Information on terrestrial animals`)
+# yes_data_table$`Information on vegetation (salt marsh or uplands)` <- color_tile("white", "chartreuse4")(yes_data_table$`Information on vegetation (salt marsh or uplands)`)
+# yes_data_table$`Reserve or trail closures` <- color_tile("white", "chartreuse4")(yes_data_table$`Reserve or trail closures`)
+# yes_data_table$`Water level information (tides, Guana lake, river)` <- color_tile("white", "chartreuse4")(yes_data_table$`Water level information (tides, Guana lake, river)`)
+# yes_data_table$`Water quality information (including nutrients and algae)` <- color_tile("white", "chartreuse4")(yes_data_table$`Water quality information (including nutrients and algae)`)
+# yes_data_table$`Weather information` <- color_tile("white", "chartreuse4")(yes_data_table$`Weather information`)
 
 yes_data_table %>% 
   select(-main) %>% 
