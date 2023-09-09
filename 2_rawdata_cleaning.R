@@ -35,7 +35,7 @@ library(tidyverse)
 # and numeric data complicates things.
 all_surveys <- read_csv("data_deidentified/survey_data_safe_numeric_raw.csv")
 
-##### Create sub datasets #####
+##### Create sub datasets ------------------------------------
 # Make sure that each also has the ID, so we can match thins up if necessary
 # All datasets are transformed to long version so plotting and analysis is
 # easier (hopefully). In order to make them long, the numeric results need to
@@ -49,9 +49,9 @@ names(all_surveys)
 
 # Load question metadata
 questions_detail <- read_csv("metadata/mc_questions_options.csv")
-# Add on the actual questions and options picked (in text)
+# To add on the actual questions and options picked (in text)
 
-#### Save all text answers separately ####
+#### Save all text answers separately ------------------------------------
 # (as they prevent pivoting the data to a long format)
 text_only <- all_surveys %>% 
   select("ID", "source", ends_with("_TEXT")) %>% # select text questions
@@ -60,11 +60,10 @@ text_only <- all_surveys %>%
   separate(qname, c("field_no", "qname_main", "q_code", "type"), 
            sep = "_", remove = FALSE, convert = TRUE, fill = "left") %>% 
   select(-type)
-# OPTION: also add actual questions here? Not strictly necessary as we can use
-# question codes to link them
+
 write_csv(text_only, "data_deidentified/subsets/text_results_basic.csv")
 
-#### Make dataset with "intro" questions ####
+#### Make dataset with "intro" questions ------------------------------------
 
 intro <- all_surveys %>% 
   select("ID", "source", starts_with("D-")) %>% # Get section D questions
@@ -90,7 +89,7 @@ intro <- all_surveys %>%
 
 write_csv(intro, "data_deidentified/subsets/intro_results_basic.csv")
 
-#### Make "has accessed data" dataset ####
+#### Make "has accessed data" dataset ------------------------------------
 # Do in two parts, because the way the questions codes are created is different 
 # First only the question about which data
 # Then the part that refers to each data type that people picked
@@ -147,7 +146,7 @@ yes_data <- full_join(yes_data1, yes_data2)
 
 write_csv(yes_data, "data_deidentified/subsets/data_yes_results_basic.csv")
 
-#### Make "has NOT accessed data" dataset ####
+#### Make "has NOT accessed data" dataset ------------------------------------
 no_data <- all_surveys %>% 
   select("ID", "source", starts_with("ND-")) %>% 
   select(!ends_with("_TEXT")) %>% # Take out the text answers
@@ -172,7 +171,7 @@ no_data <- all_surveys %>%
 
 write_csv(no_data, "data_deidentified/subsets/data_no_results_basic.csv")
 
-#### Make "dashboard" dataset ####
+#### Make "dashboard" dataset ------------------------------------
 dashboard <- all_surveys %>% 
   select("ID", "source", starts_with("T-")) %>% 
   select(!ends_with("_TEXT")) %>% # Take out the text answers
@@ -197,7 +196,7 @@ dashboard <- all_surveys %>%
 
 write_csv(dashboard, "data_deidentified/subsets/dashboard_results_basic.csv")
 
-#### Make "trust" dataset ####
+#### Make "trust" dataset ------------------------------------
 trust <- all_surveys %>% 
   select("ID", "source", starts_with("TR-")) %>% 
   select(!ends_with("_TEXT")) %>% # Take out the text answers
@@ -222,8 +221,7 @@ trust <- all_surveys %>%
 
 write_csv(trust, "data_deidentified/subsets/trust_results_basic.csv")
 
-
-#### Make "demographics" dataset ####
+#### Make "demographics" dataset ------------------------------------
 demographics <- all_surveys %>% 
   select("ID", "source", starts_with("DE-")) %>% 
   select(!ends_with("_TEXT")) %>% # Take out the text answers
