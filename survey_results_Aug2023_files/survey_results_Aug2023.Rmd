@@ -15,7 +15,9 @@ output:
 
 The University of Florida and Guana Tolomato Matanzas National Estuarine Research Reserve (GTMNERR) are partnering with the local community and broader science community to develop a web-based, public-facing, interactive dashboard to provide access to Guana Estuary datasets. The aim of this work is to support open science and to increase diverse engagement with the Guana Estuary within the GTMNERR by making the data available interactively, using visualization tools.
 
-To this end, the project team sought feedback from those who have been involved with the Guana Estuary to help them to better understand their needs. This document summarizes the results of an online survey that was made available via email, social media, and QR code.
+To this end, the project team sought feedback from those who have been involved with the Guana Estuary to help them to better understand their needs. This document summarizes the results of an online survey that was made available via email, social media, and QR code. It was sent to the Technical Advisory Group and project-specific stakeholders (identified by the GTMNERR research coordinator).
+
+This survey was approved by the University of Florida's Institutional Review Board (IRB), IRB#202202509.
 
 ```{r load_package_data, echo = FALSE, message = FALSE}
 library(tidyverse)
@@ -170,7 +172,6 @@ ggplot(intro %>%
   theme(legend.position = "none")
 ```
 
-Based on their response whether or not they had accessed data, respondents answered different sets of questions. The results are summarized in the next two sections.
 
 :::: {.infobox .info data-latex="{info}"}
 **Take home messages**
@@ -181,6 +182,8 @@ Based on their response whether or not they had accessed data, respondents answe
 - The majority of respondents (83.7%) has accessed data before.
 
 ::::
+
+Based on their response whether or not they had accessed data, respondents answered different sets of questions. The results are summarized in the next two sections.
 
 ___________________________________________________________
 
@@ -218,7 +221,7 @@ intro %>%
 
 The survey asked these respondents broad questions on how often they would access these data, and what they would use them for.
 
-The figure below shows that 25% (2 respondents) were not interested in accessing data, and that about half of the respondents would either access data either once a month or once a year (25% each).
+The figure below shows that 25% (2 respondents) were not interested in accessing data, and that about half of the respondents would access data either once a month or once a year (25% each).
 
 ```{r no_access_howoften, fig.width = 8, fig.height = 3, echo = FALSE, message = FALSE, fig.align = 'center'}
 
@@ -809,7 +812,7 @@ ggplot(dashboard %>%
 :::: {.infobox .info data-latex="{info}"}
 **Take home messages**
 
-- The overwhelming majority of respondents prefers to access a data dashboard on their computer. Slightly less than 50% would (also) want to access it on a cellphone.
+- The overwhelming majority of respondents prefer to access a data dashboard on their computer. Slightly less than 50% would (also) want to access it on a cellphone.
 - The type of information respondents would like to access is firstly recent data (from the past year), chosen by almost 95% of respondents. In a shared second place (almost 90% each) came historical data and current data (from the past month). Data representing current conditions was also chosen by just over 70% of the respondents.
 - In terms of providing aggregated data through the dashboard, an equal number of respondents is interested in data aggregated by location as well as for time periods. Aggregation by location is ranked slightly higher by most respondents (1.7 vs 1.8 for time periods; again, lower values indicate higher preference/higher ranking).
 - A relatively large number of people are also interested in non-aggregated ("raw") data: almost 75%.
@@ -882,7 +885,7 @@ ggplot(demogr %>%
 
 - Slightly more respondents were female (55%) than male (45%).
 - Most respondents were 65 or over (32.5%), but the two age groups 35-44 and 45-54 combined made up 35% of the respondents: there is a balance between respondents that are retired and that are mid- to senior-level working professionals (we assume).
-- Most people live 31-60 minutes driving distance away from the Guana Estuary, which (together with the 11-30 minute driving distance option) probably corresponds to the nearest towns (Ponte Vedra, St Augustine). Those two categories made up 67.5% of the responses, meaning that the majority of the respondents has strong local connections to the area. 30% of respondents live further away (greater than 60 minutes driving distance), which most likely represents (visiting) scientists.
+- Most people live 31-60 minutes driving distance away from the Guana Estuary, which (together with the 11-30 minute driving distance option) probably corresponds to the nearest towns (Ponte Vedra, St Augustine). Those two categories made up 67.5% of the responses, meaning that the majority of the respondents have strong local connections to the area. 30% of respondents live further away (greater than 60 minutes driving distance), which most likely represents (visiting) scientists.
 
 ::::
 
