@@ -173,8 +173,10 @@ ggplot(intro %>%
 ```
 
 
-:::: {.infobox .info data-latex="{info}"}
-**Take home messages**
+:::: {.infobox .left data-latex=""}
+:::{.boxheader data-latex=""}
+![info icon](images/circle-info-solid.svg){#id .class width=50 height=50px} **Take home messages**
+:::
 
 - The majority of respondents use the Guana Estuary recreationally (62.7%) and almost half (49%) collect or use data for scientific purposes. In third and fourth place are other work-related and educational connections (resp. 33.3% and 29.4%).
 - Engagement with the Guana Estuary is mostly once a month (21.6% of respondents), with a tie (19.6%) for once a week and once every 6 months. Daily engagement was indicated by 17.6% of respondents. 
@@ -273,8 +275,10 @@ ggplot(no_access %>%
 
 Under "Other", respondents listed **environmental impacts** and **resilience planning**.
 
-:::: {.infobox .info data-latex="{info}"}
-**Take home messages**
+:::: {.infobox .left data-latex=""}
+:::{.boxheader data-latex=""}
+![info icon](images/circle-info-solid.svg){#id .class width=50 height=50px} **Take home messages**
+:::
 
 - For the (8) respondents that had not accessed data before, their main interest would be data on water level information, reserve or trail closures, and water quality information.
 - If they could access data, 25% of respondents would access data once a month and 25% once a year.
@@ -644,8 +648,11 @@ txt_data_yes_YD6 %>%
 
 Generally, the three usages mentioned here most are personal use, volunteer activities, and management purposes (vegetation / invasive plants, prescribed fire). 
 
-:::: {.infobox .info data-latex="{info}"}
-**Take home messages**
+:::: {.infobox .left data-latex=""}
+
+:::{.boxheader data-latex=""}
+![info icon](images/circle-info-solid.svg){#id .class width=50 height=50px} **Take home messages**
+:::
 
 - The majority of people that have accessed data before did so for **water quality information**: 85%.
 - **Water level information** and **information on fish, shellfish or other aquatic organisms** were accessed by 55% of the respondents, and 45% had accessed **information on vegetation**. All the other datasets were accessed by fewer than 40% of respondents.
@@ -809,9 +816,10 @@ ggplot(dashboard %>%
                              reverse = TRUE))
 ```
 
-:::: {.infobox .info data-latex="{info}"}
-**Take home messages**
-
+:::: {.infobox .left data-latex=""}
+:::{.boxheader data-latex=""}
+![info icon](images/circle-info-solid.svg){#id .class width=50 height=50px} **Take home messages**
+:::
 - The overwhelming majority of respondents prefer to access a data dashboard on their computer. Slightly less than 50% would (also) want to access it on a cellphone.
 - The type of information respondents would like to access is firstly recent data (from the past year), chosen by almost 95% of respondents. In a shared second place (almost 90% each) came historical data and current data (from the past month). Data representing current conditions was also chosen by just over 70% of the respondents.
 - In terms of providing aggregated data through the dashboard, an equal number of respondents is interested in data aggregated by location as well as for time periods. Aggregation by location is ranked slightly higher by most respondents (1.7 vs 1.8 for time periods; again, lower values indicate higher preference/higher ranking).
@@ -880,9 +888,10 @@ ggplot(demogr %>%
   theme(plot.title.position = "plot", legend.position = "none")
 ```
 
-:::: {.infobox .info data-latex="{info}"}
-**Take home messages**
-
+:::: {.infobox .left data-latex=""}
+:::{.boxheader data-latex=""}
+![info icon](images/circle-info-solid.svg){#id .class width=50 height=50px} **Take home messages**
+:::
 - Slightly more respondents were female (55%) than male (45%).
 - Most respondents were 65 or over (32.5%), but the two age groups 35-44 and 45-54 combined made up 35% of the respondents: there is a balance between respondents that are retired and that are mid- to senior-level working professionals (we assume).
 - Most people live 31-60 minutes driving distance away from the Guana Estuary, which (together with the 11-30 minute driving distance option) probably corresponds to the nearest towns (Ponte Vedra, St Augustine). Those two categories made up 67.5% of the responses, meaning that the majority of the respondents have strong local connections to the area. 30% of respondents live further away (greater than 60 minutes driving distance), which most likely represents (visiting) scientists.

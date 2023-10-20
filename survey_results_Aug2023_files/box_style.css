@@ -1,18 +1,25 @@
 .infobox {
-  padding: 1em 1em 1em 4em;
+  padding: 1em 1em 1em 2em;
   background: #9e9ac8 5px center/3em no-repeat;
   margin-bottom: 10px;
   color: white;
   border: 2px solid black;
   border-radius: 10px;
-  vertical-align: super;
 }
 
 .center {
   text-align: center;
 }
 
+.left {
+  text-align: left;
+}
+
 .info {
   background-image: url("images/circle-info-solid.svg");
-  vertical-align: super;
+}
+
+.boxheader {
+	font-size: 20pt;
+	color: black;
 }
