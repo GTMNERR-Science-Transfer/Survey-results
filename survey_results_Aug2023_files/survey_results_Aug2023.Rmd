@@ -336,8 +336,9 @@ In the section for respondents that have/had accessed data before, the survey as
 color_vector <- rev(brewer.pal(n = 9, name = "YlGnBu"))
 #"#081D58" "#253494" "#225EA8" "#1D91C0" "#41B6C4" "#7FCDBB" "#C7E9B4""#EDF8B1" "#FFFFD9"
 color_vector <- color_vector[-1]
-color_vector[1] <- "#3f51b5"
-#"#253494" "#3f51b5" "#225EA8" "#1D91C0" "#41B6C4" "#7FCDBB" "#C7E9B4""#EDF8B1" "#FFFFD9"
+color_vector[1] <- "#356389"
+color_vector[2] <- "#4682B4" 
+#"#356389" "#4682B4" "#1D91C0" "#41B6C4" "#7FCDBB" "#C7E9B4" "#EDF8B1" "#FFFFD9"
 
 ggplot(yes_data %>% 
          filter(qname_main == "YD-1") %>% 
@@ -828,7 +829,7 @@ ggplot(dashboard %>%
 - The overwhelming majority of respondents prefer to access a data dashboard on their computer. Slightly less than 50% would (also) want to access it on a cellphone.
 - The type of information respondents would like to access is firstly recent data (from the past year), chosen by almost 95% of respondents. In a shared second place (almost 90% each) came historical data and current data (from the past month). Data representing current conditions was also chosen by just over 70% of the respondents.
 - In terms of providing aggregated data through the dashboard, an equal number of respondents is interested in data aggregated by location as well as for time periods. Aggregation by location is ranked slightly higher by most respondents (1.7 vs 1.8 for time periods; again, lower values indicate higher preference/higher ranking).
-- A relatively large number of people are also interested in non-aggregated ("raw") data: almost 75%.
+- A relatively large number of people is also interested in non-aggregated ("raw") data: almost 75%.
 - All data delivery formats suggested in the survey were popular with the respondents. While data downloads did not get the most votes in absolute numbers, almost half of those who picked this format ranked it their number 1 format: it has the best (lowest) average ranking. Maps and figures were about equally popular, both in absolute numbers as well as rankings. And while online tables came in "last" place, more than 75% of people would like to see this data format. 
 
 ::::
