@@ -329,10 +329,15 @@ In the section for respondents that have/had accessed data before, the survey as
 
 ```{r access_what, fig.width = 8, fig.height = 4, echo = FALSE, message = FALSE, fig.align = 'center'}
 
-# Get the colors (order blue -> yellow, wq -> other). Create 9 colors and remove
-# the first one (darkest blue) because it's difficult to read in the table later
+# Get the colors (order blue -> yellow, wq -> other). 
+# Can only create max 9 colors and tried to remove the first one (darkest blue)
+# because it's difficult to read in the table later. However next blue also difficult
+# 
 color_vector <- rev(brewer.pal(n = 9, name = "YlGnBu"))
+#"#081D58" "#253494" "#225EA8" "#1D91C0" "#41B6C4" "#7FCDBB" "#C7E9B4""#EDF8B1" "#FFFFD9"
 color_vector <- color_vector[-1]
+color_vector[1] <- "#3f51b5"
+#"#253494" "#3f51b5" "#225EA8" "#1D91C0" "#41B6C4" "#7FCDBB" "#C7E9B4""#EDF8B1" "#FFFFD9"
 
 ggplot(yes_data %>% 
          filter(qname_main == "YD-1") %>% 
@@ -346,7 +351,7 @@ ggplot(yes_data %>%
        title = "What Guana Estuary data do you currently use, or have you used in the past?",
        caption  = "NOTE: Respondents could pick more than 1 response") +
   scale_y_discrete(labels = function(x) str_wrap(x, width = 40))+
-  #scale_fill_manual(values = color_vector)
+  #scale_fill_manual(values = color_vector)+
   scale_fill_distiller(palette = "YlGnBu", direction = 1)+
   theme_bw()+
   theme(legend.position = "none",
@@ -471,7 +476,7 @@ for (i in 3:10) {
   yes_data_table[[col_name]] <- color_tile("white", color)(yes_data_table[[col_name]])
 } 
 
-# # Add the number of observations as a first row
+# # Add the number of observations as a first row - taken out, but keeping code here for reference
 # yes_data2_summary <- yes_data2 %>% 
 #   select(field_name, tot_cnt) %>% 
 #   #filter(!duplicated(.), !is.na(field_name)) %>% 
