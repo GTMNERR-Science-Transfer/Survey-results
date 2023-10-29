@@ -15,7 +15,9 @@ output:
 
 The University of Florida and Guana Tolomato Matanzas National Estuarine Research Reserve (GTMNERR) are partnering with the local community and broader science community to develop a web-based, public-facing, interactive dashboard to provide access to Guana Estuary datasets. The aim of this work is to support open science and to increase diverse engagement with the Guana Estuary within the GTMNERR by making the data available interactively, using visualization tools.
 
-To this end, the project team sought feedback from those who have been involved with the Guana Estuary to help them to better understand their needs. This document summarizes the results of an online survey that was made available via email, social media, and QR code.
+To this end, the project team sought feedback from those who have been involved with the Guana Estuary to help them to better understand their needs. This document summarizes the results of an online survey that was made available via email, social media, and QR code. It was sent to the Technical Advisory Group and project-specific stakeholders (identified by the GTMNERR research coordinator).
+
+This survey was approved by the University of Florida's Institutional Review Board (IRB), IRB#202202509.
 
 ```{r load_package_data, echo = FALSE, message = FALSE}
 library(tidyverse)
@@ -24,11 +26,11 @@ library(cowplot)
 library(formattable)
 library(RColorBrewer)
 
-intro <- read_csv("../data_deidentified/subsets/intro_results_basic.csv")
-no_access <- read_csv("../data_deidentified/subsets/data_no_results_basic.csv")
-yes_data <- read_csv("../data_deidentified/subsets/data_yes_results_basic.csv")
-dashboard <- read_csv("../data_deidentified/subsets/dashboard_results_basic.csv")
-demogr <- read_csv("../data_deidentified/subsets/demographics_results_basic.csv")
+intro <- read_csv("../2_data_deidentified/subsets/intro_results_basic.csv")
+no_access <- read_csv("../2_data_deidentified/subsets/data_no_results_basic.csv")
+yes_data <- read_csv("../2_data_deidentified/subsets/data_yes_results_basic.csv")
+dashboard <- read_csv("../2_data_deidentified/subsets/dashboard_results_basic.csv")
+demogr <- read_csv("../2_data_deidentified/subsets/demographics_results_basic.csv")
 ```
 
 ### 1. Response rate
@@ -170,10 +172,11 @@ ggplot(intro %>%
   theme(legend.position = "none")
 ```
 
-Based on their response whether or not they had accessed data, respondents answered different sets of questions. The results are summarized in the next two sections.
 
-:::: {.infobox .info data-latex="{info}"}
-**Take home messages**
+:::: {.infobox .left data-latex=""}
+:::{.boxheader data-latex=""}
+![info icon](images/circle-info-solid.svg){#id .class width=50 height=50px} **Take home messages**
+:::
 
 - The majority of respondents use the Guana Estuary recreationally (62.7%) and almost half (49%) collect or use data for scientific purposes. In third and fourth place are other work-related and educational connections (resp. 33.3% and 29.4%).
 - Engagement with the Guana Estuary is mostly once a month (21.6% of respondents), with a tie (19.6%) for once a week and once every 6 months. Daily engagement was indicated by 17.6% of respondents. 
@@ -181,6 +184,8 @@ Based on their response whether or not they had accessed data, respondents answe
 - The majority of respondents (83.7%) has accessed data before.
 
 ::::
+
+Based on their response whether or not they had accessed data, respondents answered different sets of questions. The results are summarized in the next two sections.
 
 ___________________________________________________________
 
@@ -218,7 +223,7 @@ intro %>%
 
 The survey asked these respondents broad questions on how often they would access these data, and what they would use them for.
 
-The figure below shows that 25% (2 respondents) were not interested in accessing data, and that about half of the respondents would either access data either once a month or once a year (25% each).
+The figure below shows that 25% (2 respondents) were not interested in accessing data, and that about half of the respondents would access data either once a month or once a year (25% each).
 
 ```{r no_access_howoften, fig.width = 8, fig.height = 3, echo = FALSE, message = FALSE, fig.align = 'center'}
 
@@ -270,8 +275,10 @@ ggplot(no_access %>%
 
 Under "Other", respondents listed **environmental impacts** and **resilience planning**.
 
-:::: {.infobox .info data-latex="{info}"}
-**Take home messages**
+:::: {.infobox .left data-latex=""}
+:::{.boxheader data-latex=""}
+![info icon](images/circle-info-solid.svg){#id .class width=50 height=50px} **Take home messages**
+:::
 
 - For the (8) respondents that had not accessed data before, their main interest would be data on water level information, reserve or trail closures, and water quality information.
 - If they could access data, 25% of respondents would access data once a month and 25% once a year.
@@ -322,10 +329,16 @@ In the section for respondents that have/had accessed data before, the survey as
 
 ```{r access_what, fig.width = 8, fig.height = 4, echo = FALSE, message = FALSE, fig.align = 'center'}
 
-# Get the colors (order blue -> yellow, wq -> other). Create 9 colors and remove
-# the first one (darkest blue) because it's difficult to read in the table later
+# Get the colors (order blue -> yellow, wq -> other). 
+# Can only create max 9 colors and tried to remove the first one (darkest blue)
+# because it's difficult to read in the table later. However next blue also difficult
+# 
 color_vector <- rev(brewer.pal(n = 9, name = "YlGnBu"))
+#"#081D58" "#253494" "#225EA8" "#1D91C0" "#41B6C4" "#7FCDBB" "#C7E9B4""#EDF8B1" "#FFFFD9"
 color_vector <- color_vector[-1]
+color_vector[1] <- "#356389"
+color_vector[2] <- "#4682B4" 
+#"#356389" "#4682B4" "#1D91C0" "#41B6C4" "#7FCDBB" "#C7E9B4" "#EDF8B1" "#FFFFD9"
 
 ggplot(yes_data %>% 
          filter(qname_main == "YD-1") %>% 
@@ -339,7 +352,7 @@ ggplot(yes_data %>%
        title = "What Guana Estuary data do you currently use, or have you used in the past?",
        caption  = "NOTE: Respondents could pick more than 1 response") +
   scale_y_discrete(labels = function(x) str_wrap(x, width = 40))+
-  #scale_fill_manual(values = color_vector)
+  #scale_fill_manual(values = color_vector)+
   scale_fill_distiller(palette = "YlGnBu", direction = 1)+
   theme_bw()+
   theme(legend.position = "none",
@@ -402,9 +415,6 @@ While not mapped 1:1 for each respondent, from the figure it appears that for al
 
 The following table summarizes the detailed questions per dataset. The numbers represent the percentage of respondents that chose that answer. Questions that allowed multiple answers are indicated in the table with an asterisk, \* : these percentages can add up to more than 100%.
 
-***Re-assess colors? The black text on dark blue is not well-readable.***
-
-
 ```{r access_detail_table, echo = FALSE, warning = FALSE, message = FALSE}
 # Change 'other' to LiDAR
 levels(q_text_order)[which(q_text_order == "Other (please specify)")] <- "LiDAR"
@@ -464,7 +474,7 @@ for (i in 3:10) {
   yes_data_table[[col_name]] <- color_tile("white", color)(yes_data_table[[col_name]])
 } 
 
-# # Add the number of observations as a first row
+# # Add the number of observations as a first row - taken out, but keeping code here for reference
 # yes_data2_summary <- yes_data2 %>% 
 #   select(field_name, tot_cnt) %>% 
 #   #filter(!duplicated(.), !is.na(field_name)) %>% 
@@ -514,7 +524,7 @@ The tables below list the text answers that were provided by respondents to the 
 
 ``` {r websites_table, echo = FALSE, warning = FALSE, message = FALSE}
 # Read in text data results
-txt_data_yes <- read_csv("../data_deidentified/subsets/data_yes_results_text.csv")
+txt_data_yes <- read_csv("../2_data_deidentified/subsets/data_yes_results_text.csv")
 
 txt_data_yes_YD2_2 <- txt_data_yes %>% 
   filter(qname_main == "YD-2", q_code == 2) %>% 
@@ -641,8 +651,11 @@ txt_data_yes_YD6 %>%
 
 Generally, the three usages mentioned here most are personal use, volunteer activities, and management purposes (vegetation / invasive plants, prescribed fire). 
 
-:::: {.infobox .info data-latex="{info}"}
-**Take home messages**
+:::: {.infobox .left data-latex=""}
+
+:::{.boxheader data-latex=""}
+![info icon](images/circle-info-solid.svg){#id .class width=50 height=50px} **Take home messages**
+:::
 
 - The majority of people that have accessed data before did so for **water quality information**: 85%.
 - **Water level information** and **information on fish, shellfish or other aquatic organisms** were accessed by 55% of the respondents, and 45% had accessed **information on vegetation**. All the other datasets were accessed by fewer than 40% of respondents.
@@ -806,13 +819,14 @@ ggplot(dashboard %>%
                              reverse = TRUE))
 ```
 
-:::: {.infobox .info data-latex="{info}"}
-**Take home messages**
-
-- The overwhelming majority of respondents prefers to access a data dashboard on their computer. Slightly less than 50% would (also) want to access it on a cellphone.
+:::: {.infobox .left data-latex=""}
+:::{.boxheader data-latex=""}
+![info icon](images/circle-info-solid.svg){#id .class width=50 height=50px} **Take home messages**
+:::
+- The overwhelming majority of respondents prefer to access a data dashboard on their computer. Slightly less than 50% would (also) want to access it on a cellphone.
 - The type of information respondents would like to access is firstly recent data (from the past year), chosen by almost 95% of respondents. In a shared second place (almost 90% each) came historical data and current data (from the past month). Data representing current conditions was also chosen by just over 70% of the respondents.
 - In terms of providing aggregated data through the dashboard, an equal number of respondents is interested in data aggregated by location as well as for time periods. Aggregation by location is ranked slightly higher by most respondents (1.7 vs 1.8 for time periods; again, lower values indicate higher preference/higher ranking).
-- A relatively large number of people are also interested in non-aggregated ("raw") data: almost 75%.
+- A relatively large number of people is also interested in non-aggregated ("raw") data: almost 75%.
 - All data delivery formats suggested in the survey were popular with the respondents. While data downloads did not get the most votes in absolute numbers, almost half of those who picked this format ranked it their number 1 format: it has the best (lowest) average ranking. Maps and figures were about equally popular, both in absolute numbers as well as rankings. And while online tables came in "last" place, more than 75% of people would like to see this data format. 
 
 ::::
@@ -835,25 +849,39 @@ age <- ggplot(demogr %>%
          mutate(percentage = round(cnt/num_resp_dem*100, 1)),
        aes(y = fct_rev(factor(q_text)), x = percentage, fill = percentage))+
   geom_col(color = "darkgrey") +
-  scale_fill_distiller(palette = "GnBu", direction = 1)+
+  scale_fill_distiller(palette = "PuBu", direction = 1)+
   labs(x = paste0("Percentage of respondents (N = ", num_resp_dem, ")"), 
        y = "", title = "What is your age group?") +
   theme_bw()+
   theme(legend.position = "none")
 
 gender <- ggplot(demogr %>% 
-  filter(qname == "DE-3") %>% 
-  group_by(q_text) %>% 
-  summarize(cnt = n()) %>%
-  mutate(percentage = round(cnt/num_resp_dem*100, 1)),
-       aes(x = factor(q_text), y = percentage, fill = factor(q_text)))+
-  geom_col(color = "darkgrey", width = 0.5) +
-  labs(x = "", y = paste0("Percentage of respondents (N = ", num_resp_dem, ")"), 
-       title = "What is your gender?") +
-  scale_y_continuous(position = "right")+
-  scale_fill_manual(values = c("#7bccc4", "#43a2ca"))+
-  theme_bw()+
-  theme(legend.position = "none") 
+                   filter(qname == "DE-3") %>% 
+                   group_by(q_text) %>% 
+                   summarize(cnt = n()) %>%
+                   mutate(percentage = round(cnt/num_resp_dem*100, 1)),
+                 aes(x = "", y = percentage, fill = factor(q_text))) +
+  geom_bar(stat="identity", width=1) +
+  geom_text(aes(label = paste0(percentage, "%")), position = position_stack(vjust=0.5)) +
+  labs(title = paste0("What is your gender (N = ", num_resp_dem, ")?")) +
+  #scale_fill_manual(name = "", values = c("#7bccc4", "#43a2ca"))+
+  scale_fill_brewer(name = "", palette = "PuBu", direction = -1)+
+  coord_polar("y", start=0) +
+  theme_void()
+
+# gender <- ggplot(demogr %>% 
+#   filter(qname == "DE-3") %>% 
+#   group_by(q_text) %>% 
+#   summarize(cnt = n()) %>%
+#   mutate(percentage = round(cnt/num_resp_dem*100, 1)),
+#        aes(x = factor(q_text), y = percentage, fill = factor(q_text)))+
+#   geom_col(color = "darkgrey", width = 0.5) +
+#   labs(x = "", y = paste0("Percentage of respondents (N = ", num_resp_dem, ")"), 
+#        title = "What is your gender?") +
+#   scale_y_continuous(position = "right")+
+#   scale_fill_manual(values = c("#7bccc4", "#43a2ca"))+
+#   theme_bw()+
+#   theme(legend.position = "none") 
 
 plot_grid(age, gender, ncol = 2, align = "v")
 ```
@@ -872,17 +900,18 @@ ggplot(demogr %>%
   labs(x = paste0("Percentage of respondents (N = ", num_resp_dem, ")"), 
        y = "Driving distance (minutes)", 
        title = "How far are you from the Guana Estuary?") +
-  scale_fill_distiller(palette = "GnBu", direction = 1)+
+  scale_fill_distiller(palette = "PuBu", direction = 1)+
   theme_bw()+
   theme(plot.title.position = "plot", legend.position = "none")
 ```
 
-:::: {.infobox .info data-latex="{info}"}
-**Take home messages**
-
+:::: {.infobox .left data-latex=""}
+:::{.boxheader data-latex=""}
+![info icon](images/circle-info-solid.svg){#id .class width=50 height=50px} **Take home messages**
+:::
 - Slightly more respondents were female (55%) than male (45%).
 - Most respondents were 65 or over (32.5%), but the two age groups 35-44 and 45-54 combined made up 35% of the respondents: there is a balance between respondents that are retired and that are mid- to senior-level working professionals (we assume).
-- Most people live 31-60 minutes driving distance away from the Guana Estuary, which (together with the 11-30 minute driving distance option) probably corresponds to the nearest towns (Ponte Vedra, St Augustine). Those two categories made up 67.5% of the responses, meaning that the majority of the respondents has strong local connections to the area. 30% of respondents live further away (greater than 60 minutes driving distance), which most likely represents (visiting) scientists.
+- Most people live 31-60 minutes driving distance away from the Guana Estuary, which (together with the 11-30 minute driving distance option) probably corresponds to the nearest towns (Ponte Vedra, St Augustine). Those two categories made up 67.5% of the responses, meaning that the majority of the respondents have strong local connections to the area. 30% of respondents live further away (greater than 60 minutes driving distance), which most likely represents (visiting) scientists.
 
 ::::
 
