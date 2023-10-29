@@ -3,6 +3,6 @@
 .RData
 .Ruserdata
 .DS_Store
-/survey_downloads_confidential/
+/01_survey_downloads_confidential/
 0a_set_key_CONFIDENTIAL.R
-/data_deidentified/survey_data_contacts*
+/2_data_deidentified/survey_data_contacts*
