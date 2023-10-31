@@ -415,9 +415,6 @@ While not mapped 1:1 for each respondent, from the figure it appears that for al
 
 The following table summarizes the detailed questions per dataset. The numbers represent the percentage of respondents that chose that answer. Questions that allowed multiple answers are indicated in the table with an asterisk, \* : these percentages can add up to more than 100%.
 
-***Re-assess colors? The black text on dark blue is not well-readable.***
-
-
 ```{r access_detail_table, echo = FALSE, warning = FALSE, message = FALSE}
 # Change 'other' to LiDAR
 levels(q_text_order)[which(q_text_order == "Other (please specify)")] <- "LiDAR"
@@ -852,25 +849,39 @@ age <- ggplot(demogr %>%
          mutate(percentage = round(cnt/num_resp_dem*100, 1)),
        aes(y = fct_rev(factor(q_text)), x = percentage, fill = percentage))+
   geom_col(color = "darkgrey") +
-  scale_fill_distiller(palette = "GnBu", direction = 1)+
+  scale_fill_distiller(palette = "PuBu", direction = 1)+
   labs(x = paste0("Percentage of respondents (N = ", num_resp_dem, ")"), 
        y = "", title = "What is your age group?") +
   theme_bw()+
   theme(legend.position = "none")
 
 gender <- ggplot(demogr %>% 
-  filter(qname == "DE-3") %>% 
-  group_by(q_text) %>% 
-  summarize(cnt = n()) %>%
-  mutate(percentage = round(cnt/num_resp_dem*100, 1)),
-       aes(x = factor(q_text), y = percentage, fill = factor(q_text)))+
-  geom_col(color = "darkgrey", width = 0.5) +
-  labs(x = "", y = paste0("Percentage of respondents (N = ", num_resp_dem, ")"), 
-       title = "What is your gender?") +
-  scale_y_continuous(position = "right")+
-  scale_fill_manual(values = c("#7bccc4", "#43a2ca"))+
-  theme_bw()+
-  theme(legend.position = "none") 
+                   filter(qname == "DE-3") %>% 
+                   group_by(q_text) %>% 
+                   summarize(cnt = n()) %>%
+                   mutate(percentage = round(cnt/num_resp_dem*100, 1)),
+                 aes(x = "", y = percentage, fill = factor(q_text))) +
+  geom_bar(stat="identity", width=1) +
+  geom_text(aes(label = paste0(percentage, "%")), position = position_stack(vjust=0.5)) +
+  labs(title = paste0("What is your gender (N = ", num_resp_dem, ")?")) +
+  #scale_fill_manual(name = "", values = c("#7bccc4", "#43a2ca"))+
+  scale_fill_brewer(name = "", palette = "PuBu", direction = -1)+
+  coord_polar("y", start=0) +
+  theme_void()
+
+# gender <- ggplot(demogr %>% 
+#   filter(qname == "DE-3") %>% 
+#   group_by(q_text) %>% 
+#   summarize(cnt = n()) %>%
+#   mutate(percentage = round(cnt/num_resp_dem*100, 1)),
+#        aes(x = factor(q_text), y = percentage, fill = factor(q_text)))+
+#   geom_col(color = "darkgrey", width = 0.5) +
+#   labs(x = "", y = paste0("Percentage of respondents (N = ", num_resp_dem, ")"), 
+#        title = "What is your gender?") +
+#   scale_y_continuous(position = "right")+
+#   scale_fill_manual(values = c("#7bccc4", "#43a2ca"))+
+#   theme_bw()+
+#   theme(legend.position = "none") 
 
 plot_grid(age, gender, ncol = 2, align = "v")
 ```
@@ -889,7 +900,7 @@ ggplot(demogr %>%
   labs(x = paste0("Percentage of respondents (N = ", num_resp_dem, ")"), 
        y = "Driving distance (minutes)", 
        title = "How far are you from the Guana Estuary?") +
-  scale_fill_distiller(palette = "GnBu", direction = 1)+
+  scale_fill_distiller(palette = "PuBu", direction = 1)+
   theme_bw()+
   theme(plot.title.position = "plot", legend.position = "none")
 ```
