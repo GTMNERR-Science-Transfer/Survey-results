@@ -18,4 +18,6 @@ Eventually all this information was analyzed and consolidated into a final repor
 ### NOTE!
 This RProject uses `renv` to ensure a reproducible environment. If you are unfamiliar with this approach, please read https://rstudio.github.io/renv/articles/renv.html. Specifically note the following: *"Now when one of your collaborators opens this project, renv will automatically bootstrap itself, downloading and installing the appropriate version of renv. It will also ask them if they want to download and install all the packages it needs by running `renv::restore()`."*
 
+Make sure you access the code by opening the .Rproject file!
+
 **This code was written with R version 4.3.1**

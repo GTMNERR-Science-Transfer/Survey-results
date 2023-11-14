@@ -516,8 +516,6 @@ yes_data_table %>%
 
 --------------------------------------------------------
 
-***Maybe also add colors to the headers in the tables below? Haven't been able to figure out how yet.***
-
 The tables below list the text answers that were provided by respondents to the "free text" questions above. These text answers are the original, unaltered responses. 
 
 **The websites that respondents used to obtain data were:**
@@ -598,6 +596,16 @@ txt_data_yes_YD3 %>%
   kable_minimal("striped", font_size = 12, full_width = FALSE) %>%
   #add_header_above(c("Other advantages accessing data" = 1)) %>%
   pack_rows(index = index_table)
+```
+``` {r otheradvantages_table2, echo = FALSE, warning = FALSE, message = FALSE}
+# Try something else here: create separate tables for each dataset. Put methods of obtaining in first column, next columns are advantages and disadvantages, and maybe text for other? If this works, take advantages and disadvantages out of the main table.
+
+# yes_data2 has datasets and way of accessing (YD-2 in col qname_main) and advantages/disadvantages (YD-3 and YD-4)
+
+yes_data3 <- yes_data2 %>% 
+  filter(qname_main %in% c("YD-2", "YD-3", "YD-4")) %>% 
+  group_by(main, field_name, ID, )
+
 ```
 
 -------------------------------------------------------------------------------
@@ -838,7 +846,7 @@ ___________________________________________________________
 Finally, the survey requested demographic information from respondents. This helps the project team get a better understanding of the dashboard's target audience.
 
 #### 6.1 Age and gender
-```{r age, fig.width = 12, fig.height = 4, echo = FALSE, message = FALSE, fig.align = 'center'}
+```{r age, fig.width = 12, fig.height = 4, echo = FALSE, message = FALSE, warning = FALSE, fig.align = 'center'}
 
 num_resp_dem <- length(unique(demogr$ID))
 
