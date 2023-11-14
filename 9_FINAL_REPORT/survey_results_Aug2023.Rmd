@@ -5,6 +5,9 @@ date: "2023-09-08"
 output: 
   html_document:
     css: box_style.css
+    toc: true
+    toc_depth: 2
+    toc_float: true
 #output: pdf_document
 ---
 
@@ -33,14 +36,14 @@ dashboard <- read_csv("../2_data_deidentified/subsets/dashboard_results_basic.cs
 demogr <- read_csv("../2_data_deidentified/subsets/demographics_results_basic.csv")
 ```
 
-### 1. Response rate
+# 1. Response rate
 We received responses from 51 individuals. Out of these, 14 surveys were unfinished. For this report, we also took the unfinished surveys into account. Most results are shown as percentages of respondents picking certain options or answers. Since the total number of responses varies, due to those unfinished surveys, all results show the total number of people (*N*) that answered a question with *N =*.
 
 47 respondents filled in the survey based on a link received via email, 3 via social media, 0 via the QR code available at the GTMNERR Welcome Center, and 1 via the QR code available at the kiosk at the dam.
 
 _____________________________________________________________
 
-### 2. Introductory questions
+# 2. Introductory questions
 
 The survey started with asking respondents about their connection to the Guana Estuary, how often they engage with the Guana Estuary, what data they would be interested in, and whether or not they ever accessed data associated with the Guana Estuary.
 
@@ -51,7 +54,7 @@ For the purposes of this project, and this survey, "Guana Estuary" refers to the
 num_resp <- length(unique(intro$ID))
 ```
 
-#### 2.1 Guana Estuary connection
+## 2.1 Guana Estuary connection
 
 We asked respondents about their connection with the Guana Estuary. The figure below summarizes the responses, but note that people could pick more than 1 option. This is why the sum of all percentages adds up to more than 100%. 
 
@@ -92,7 +95,7 @@ Under "Other", respondents answered:
 
 --------------------------------------------------------
 
-#### 2.2 Level of engagement
+## 2.2 Level of engagement
 ```{r engage, fig.width = 6, fig.height = 3, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center'}
 ggplot(intro %>% 
          filter(qname == "D-2") %>% 
@@ -117,7 +120,7 @@ ggplot(intro %>%
 
 --------------------------------------------------------
 
-#### 2.3 Data of interest (in general)
+## 2.3 Data of interest (in general)
 We asked respondents what Guana Estuary data they would be interested in, regardless of whether or not they currently have access to these data. Respondents were also asked to rank these datasets, with 1 being the data they are most interested in. They could pick as many or few as they wanted.
 
 The figure below shows the percentage of respondents that picked a particular dataset being of interest to them. E.g. over 80% of respondents picked water quality data. The colors indicate how they ranked it: for instance, almost 40% of all respondents ranked water quality data as their number 1 dataset of interest.
@@ -153,7 +156,7 @@ Under "Other", the 4 types of datasets mentioned were: **historical maps**, **wa
 
 --------------------------------------------------------
 
-#### 2.4 Previous experience with accessing data associated with Guana Estuary
+## 2.4 Previous experience with accessing data associated with Guana Estuary
 
 The survey asked respondents whether they had accessed data before, and by "data", we meant "information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer" for instance spreadsheets, databases, graphs, and maps." 
 
@@ -189,7 +192,9 @@ Based on their response whether or not they had accessed data, respondents answe
 
 ___________________________________________________________
 
-### 3. Feedback from respondents that had not accessed data before
+# 3. Feedback from respondents that had not accessed data before
+
+## 3.1 Datasets of interest
 
 For respondents that had not (yet) accessed data (N = 8), the figure below summarizes their answers from section 2.3 (datasets of interest). In this figure, the datasets are ordered according to their average ranking, once again 1 being the dataset of most interest.
 
@@ -220,6 +225,8 @@ intro %>%
   guides(fill = guide_legend(title = "Rank",
                              reverse = TRUE))
 ```
+
+## 3.2 Frequency and usage of data, if accessed in the future
 
 The survey asked these respondents broad questions on how often they would access these data, and what they would use them for.
 
@@ -289,11 +296,13 @@ Under "Other", respondents listed **environmental impacts** and **resilience pla
 
 ____________________________________________________
 
-### 4. Feedback from respondents that have accessed data before
+# 4. Feedback from respondents that have accessed data before
 
 For respondents that have accessed data before (N = 40), the figure below summarizes their answers from section 2.3 (datasets of interest - regardless of whether respondents can or have accessed these data). In this figure, the datasets are ordered according to their average ranking, once again 1 being the dataset of most interest.
 
 The top 3 data of interest are water quality information, information on shellfish, fish and other aquatic organisms, and water level information: both in terms of average ranking and the percentage of respondents picking these. Interestingly, more than half the respondents chose weather information and vegetation information as data of interest, but their rankings are relatively low. 
+
+## 4.1 Datasets of interest
 
 ```{r link_to_23_yes_data, echo = FALSE, message = FALSE}
 # count total number of answers
@@ -324,6 +333,8 @@ intro %>%
 Under "Other", the 4 types of datasets mentioned were: **historical maps**, **water fowl**, **dam operations**, **natural resource management practices/techniques/results**.
 
 ---------------------------------------------------------------------------------
+
+## 4.2 Data used or accessed
 
 In the section for respondents that have/had accessed data before, the survey asked which datasets they had accessed, and a number of detailed questions about their experiences related to how they accessed these data, the advantages and disadvantages of this access, the frequency of access, the usage of the data, and respondents' satisfaction with these data (for their needs).
 
@@ -412,6 +423,8 @@ ggplot(access_summ, aes(x = diff, y = fct_rev(q_text), fill = q_text))+
 While not mapped 1:1 for each respondent, from the figure it appears that for almost all data (aside from water quality information, and "Other") 22.5 - 30% of respondents have not accessed or are not accessing data they would like to access.
 
 ---------------------------------------------------------------------------------
+
+## 4.3 Details on dataset usage, advantages, disadvantages, and satisfaction
 
 The following table summarizes the detailed questions per dataset. The numbers represent the percentage of respondents that chose that answer. Questions that allowed multiple answers are indicated in the table with an asterisk, \* : these percentages can add up to more than 100%.
 
@@ -698,11 +711,13 @@ Below are some highlights of the disadvantages of the current manner in which pe
 
 _______________________________________________________________
 
-### 5. Dashboard preferences
+# 5. Dashboard preferences
 
 The survey asked respondents about their preferences regarding dashboard features (type and format of information, data delivery mode) and how they would access the dashboard.
 
 By "dashboard" we meant a user interface on a computer display that presents (up-to-date) information with visualization tools such as graphs, charts, and tables - in a dynamic and interactive way.
+
+## 5.1 How to access data
 
 ```{r dash_how, fig.width = 5, fig.height = 3, echo = FALSE, message = FALSE, fig.align = 'center'}
 # Since not everyone finished the survey, check number of respondents
@@ -728,6 +743,8 @@ ggplot(dashboard %>%
 
 --------------------------------------------------------
 
+## 5.2 What type of information
+
 ```{r dash_type, fig.width = 7, fig.height = 4, echo = FALSE, message = FALSE, fig.align = 'center'}
 ggplot(dashboard %>% 
          filter(qname_main == "T-2") %>% 
@@ -751,6 +768,8 @@ ggplot(dashboard %>%
 The response in the category "Other" is **projections**.
 
 --------------------------------------------------------
+
+## 5.3 What form of information
 
 When asked about the form of information and the format of data delivery, respondents were also asked to rank their choices. They did not have to rank all options: only those they were interested in.
 
@@ -792,6 +811,8 @@ ggplot(dashboard %>%
 
 
 --------------------------------------------------------
+
+## 5.4 Format of data delivery
 
 ```{r dash_delivery, fig.width = 7, fig.height = 5, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center'}
 order_scores2 <- dashboard %>% 
@@ -841,11 +862,11 @@ ggplot(dashboard %>%
 
 ___________________________________________________________
 
-### 6. Characteristics of respondents
+# 6. Characteristics of respondents
 
 Finally, the survey requested demographic information from respondents. This helps the project team get a better understanding of the dashboard's target audience.
 
-#### 6.1 Age and gender
+## 6.1 Age and gender
 ```{r age, fig.width = 12, fig.height = 4, echo = FALSE, message = FALSE, warning = FALSE, fig.align = 'center'}
 
 num_resp_dem <- length(unique(demogr$ID))
@@ -896,7 +917,7 @@ plot_grid(age, gender, ncol = 2, align = "v")
 
 ----------------------------------------------------
 
-#### 6.2 Distance from the Guana Estuary
+## 6.2 Distance from the Guana Estuary
 ``` {r distance, fig.width = 5, fig.height = 4, echo = FALSE, message = FALSE, fig.align = 'center'}
 ggplot(demogr %>% 
          filter(qname == "DE-4") %>% 
@@ -925,7 +946,7 @@ ggplot(demogr %>%
 
 ____________________________________________________
 
-## Next steps
+# Next steps
 
 Based on this report (and previous workshops), the project team will develop dashboard design recommendations and considerations. Work is already underway on a draft dashboard, and the project team will be in touch before the end of September 2023 about further steps on these, and to inform you of upcoming participation and discussion opportunities.
 
