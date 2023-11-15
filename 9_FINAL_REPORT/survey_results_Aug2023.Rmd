@@ -615,9 +615,93 @@ txt_data_yes_YD3 %>%
 
 # yes_data2 has datasets and way of accessing (YD-2 in col qname_main) and advantages/disadvantages (YD-3 and YD-4)
 
-yes_data3 <- yes_data2 %>% 
-  filter(qname_main %in% c("YD-2", "YD-3", "YD-4")) %>% 
-  group_by(main, field_name, ID, )
+# The following gives the count of the way of accessing, and advantages and disadvantages per dataset
+yes_data3_access <- yes_data2 %>% 
+  ungroup() %>% 
+  filter(qname_main == "YD-2") %>% 
+  select(field_name, tot_cnt, ID, q_text)
+
+yes_data3_adv <- yes_data2 %>% 
+  ungroup() %>%
+  filter(qname_main == "YD-3") %>% 
+  select(field_name, tot_cnt, ID, q_text) %>%
+  rename("Advantage" = "q_text")
+
+yes_data3_disadv <- yes_data2 %>% 
+  ungroup() %>%
+  filter(qname_main == "YD-4") %>% 
+  select(field_name, tot_cnt, ID, q_text) %>% 
+  rename("Disadvantage" = "q_text")
+
+# Get the text answers with websites used
+# Use lookup table to standardize answers
+lookup_websites <- read_csv("../2_data_deidentified/lookup_websites.csv")
+txt_websites <- txt_data_yes %>% 
+  filter(qname_main == "YD-2", q_code == 2) %>% 
+  mutate(field_name = ifelse(field_name == "Other (please specify)", "LiDAR", field_name)) %>%
+  mutate(field_name = factor(field_name, levels = q_text_order)) %>% 
+  arrange(field_name) %>%
+  left_join(lookup_websites) %>% 
+  select(-main, -source, -qname, -field_no, -qname_main, -q_code, -text_answer) %>% 
+  rename("text_answer" = "text_answer_std")
+
+# Get the text answers with "Other sources"
+txt_sources <- txt_data_yes %>% 
+  filter(qname_main == "YD-2", q_code == 4) %>% 
+  mutate(field_name = ifelse(field_name == "Other (please specify)", "LiDAR", field_name)) %>%
+  mutate(field_name = factor(field_name, levels = q_text_order)) %>% 
+  filter(ID != 34) %>% # Manually: ID 34 has as answer that they don't know if they should answer this question
+  arrange(field_name) %>%
+  select(-main, -source, -qname, -field_no, -qname_main, -q_code)
+
+# Get the text answers linked to advantages: extract / join by ID
+txt_adv <- txt_data_yes %>% 
+  filter(qname_main == "YD-3") %>% 
+  mutate(field_name = ifelse(field_name == "Other (please specify)", "LiDAR", field_name)) %>%
+  mutate(field_name = factor(field_name, levels = q_text_order)) %>% 
+  rename("Advantage" = "q_text") %>% 
+  filter(!is.na(text_answer) & text_answer != "NA" & text_answer != "na") %>% 
+  arrange(field_name) %>%
+  select(-main, -source, -qname, -field_no, -qname_main, -q_code)
+
+###### Advantages ######
+# Join data - advantage or disadvantage will now be separate column
+yes_data_adv <- yes_data3_access %>% 
+  left_join(yes_data3_adv, by = c("field_name", "ID", "tot_cnt")) %>% 
+  # do joins for text answers:
+  left_join(txt_sources) %>% # Add info on other data sources, join is based on ID
+  mutate(q_text = ifelse(q_text == "Other (please specify)", paste0("Other: ", text_answer), q_text)) %>% # Replace "Other (please specify)" with actual answer for data sources
+  select(-text_answer) %>% # Remove col text_answer bc is also used next joins
+  left_join(txt_websites) %>% # Add info on websites, join is based on ID
+  mutate(q_text = ifelse(q_text == "Download from website (If so, what website?)", paste0("Download from website: ", text_answer), q_text)) %>% # this one might be problematic as the counts are only for the combination of category download from websites + advantage.  FIX THIS BY HAND SO THE WEBSITES ARE ALL STANDARDIZED!!!
+  select(-text_answer) %>% 
+  left_join(txt_adv) %>% 
+  mutate(Advantage = ifelse(Advantage == "Other (please specify)", paste0("Other: ", text_answer), Advantage)) %>% # Replace "Other (please specify)" with actual answer for advantages
+  ungroup() %>% 
+  select(-text_answer) %>% 
+  group_by(field_name, tot_cnt, q_text, Advantage) %>% 
+  count() %>%  # e.g. for wq there were 20 people who answered yes, but since they could pick 
+# more than 1 adv and disadv, these don't add up to 20. Decided to keep old table but without adv/disadv
+  mutate(percentage = round(n/tot_cnt*100, 1)) %>% 
+  select(-ID, -tot_cnt, -n)
+
+##### There are still a bunch of answers where website says NA (eg ID 46?? Just did not
+# fill anything in? Make it "unspecified"?)
+# Lidar instead of "other" also does not show up properly
+
+
+
+###### Disadvantages ######
+# In cases of "Other" - connect to text datasets
+yes_data_disadv <- yes_data3_access %>% 
+  left_join(yes_data3_disadv, by = c("field_name", "ID", "tot_cnt")) %>% 
+  group_by(field_name, tot_cnt, q_text, Disadvantage) %>% 
+  count() %>% 
+  mutate(percentage = round(n/tot_cnt*100, 1))
+
+# Reorder ad above
+# Set up formating with kable
+# Set up adding color?
 
 ```
 
