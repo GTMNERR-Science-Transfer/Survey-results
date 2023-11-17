@@ -615,6 +615,11 @@ txt_data_yes_YD3 %>%
 
 # yes_data2 has datasets and way of accessing (YD-2 in col qname_main) and advantages/disadvantages (YD-3 and YD-4)
 
+# Read in text data results
+txt_data_yes <- read_csv("../2_data_deidentified/subsets/data_yes_results_text.csv")
+# Note: some people answered "Other" for their preferred way of accessing data, but then filled in websites as an 
+# answer. These answers were manually re-classified in the file "data_yes_results_text.csv". See 
+
 # The following gives the count of the way of accessing, and advantages and disadvantages per dataset
 yes_data3_access <- yes_data2 %>% 
   ungroup() %>% 
@@ -638,7 +643,7 @@ yes_data3_disadv <- yes_data2 %>%
 lookup_websites <- read_csv("../2_data_deidentified/lookup_websites.csv")
 txt_websites <- txt_data_yes %>% 
   filter(qname_main == "YD-2", q_code == 2) %>% 
-  mutate(field_name = ifelse(field_name == "Other (please specify)", "LiDAR", field_name)) %>%
+  mutate(field_name = ifelse(field_name == "Other (please specify)", "Other: LiDAR", field_name)) %>%
   mutate(field_name = factor(field_name, levels = q_text_order)) %>% 
   arrange(field_name) %>%
   left_join(lookup_websites) %>% 
@@ -646,65 +651,143 @@ txt_websites <- txt_data_yes %>%
   rename("text_answer" = "text_answer_std")
 
 # Get the text answers with "Other sources"
+# Use lookup table to standardize answers
+lookup_sources <- read_csv("../2_data_deidentified/lookup_sources.csv")
 txt_sources <- txt_data_yes %>% 
   filter(qname_main == "YD-2", q_code == 4) %>% 
-  mutate(field_name = ifelse(field_name == "Other (please specify)", "LiDAR", field_name)) %>%
+  mutate(field_name = ifelse(field_name == "Other (please specify)", "Other: LiDAR", field_name)) %>%
   mutate(field_name = factor(field_name, levels = q_text_order)) %>% 
   filter(ID != 34) %>% # Manually: ID 34 has as answer that they don't know if they should answer this question
   arrange(field_name) %>%
-  select(-main, -source, -qname, -field_no, -qname_main, -q_code)
+  left_join(lookup_sources) %>% 
+  select(-main, -source, -qname, -field_no, -qname_main, -q_code, -text_answer) %>% 
+  rename("text_answer" = "text_answer_std")
 
-# Get the text answers linked to advantages: extract / join by ID
+# Get the text answers linked to "other" advantages
+lookup_adv <- read_csv("../2_data_deidentified/lookup_adv.csv")
 txt_adv <- txt_data_yes %>% 
   filter(qname_main == "YD-3") %>% 
-  mutate(field_name = ifelse(field_name == "Other (please specify)", "LiDAR", field_name)) %>%
+  mutate(field_name = ifelse(field_name == "Other (please specify)", "Other: LiDAR", field_name)) %>%
   mutate(field_name = factor(field_name, levels = q_text_order)) %>% 
   rename("Advantage" = "q_text") %>% 
   filter(!is.na(text_answer) & text_answer != "NA" & text_answer != "na") %>% 
   arrange(field_name) %>%
-  select(-main, -source, -qname, -field_no, -qname_main, -q_code)
+  left_join(lookup_adv) %>% 
+  select(-main, -source, -qname, -field_no, -qname_main, -q_code, -text_answer) %>% 
+  rename("text_answer" = "text_answer_std") %>% 
+  filter(!is.na(text_answer)) # Remove NA
 
-###### Advantages ######
-# Join data - advantage or disadvantage will now be separate column
+# Advantages
+# Join data - advantage will now be separate column
 yes_data_adv <- yes_data3_access %>% 
   left_join(yes_data3_adv, by = c("field_name", "ID", "tot_cnt")) %>% 
   # do joins for text answers:
   left_join(txt_sources) %>% # Add info on other data sources, join is based on ID
   mutate(q_text = ifelse(q_text == "Other (please specify)", paste0("Other: ", text_answer), q_text)) %>% # Replace "Other (please specify)" with actual answer for data sources
+  # Turns out not everyone filled in a source if they picked this answer. Make this look nicer than NA
+  mutate(q_text = ifelse(q_text == "Other: NA", paste0("Other: unspecified"), q_text)) %>%
   select(-text_answer) %>% # Remove col text_answer bc is also used next joins
   left_join(txt_websites) %>% # Add info on websites, join is based on ID
-  mutate(q_text = ifelse(q_text == "Download from website (If so, what website?)", paste0("Download from website: ", text_answer), q_text)) %>% # this one might be problematic as the counts are only for the combination of category download from websites + advantage.  FIX THIS BY HAND SO THE WEBSITES ARE ALL STANDARDIZED!!!
+  mutate(q_text = ifelse(q_text == "Download from website (If so, what website?)", paste0("Download from website: ", text_answer), q_text)) %>% 
+  # Turns out not everyone filled in a website if they picked this answer. Make this look nicer than NA
+  mutate(q_text = ifelse(q_text == "Download from website: NA", paste0("Download from website: unspecified"), q_text)) %>% 
   select(-text_answer) %>% 
   left_join(txt_adv) %>% 
   mutate(Advantage = ifelse(Advantage == "Other (please specify)", paste0("Other: ", text_answer), Advantage)) %>% # Replace "Other (please specify)" with actual answer for advantages
+  filter(Advantage != "Other: NA") %>% # Remove instances where there was no advantage added (this is related to
+  # the lookup table that removes text responses that are not really related to the question,
+  # but are more comments)
   ungroup() %>% 
-  select(-text_answer) %>% 
+  select(-text_answer) 
+
+adv_full_overview <- yes_data_adv %>% 
   group_by(field_name, tot_cnt, q_text, Advantage) %>% 
-  count() %>%  # e.g. for wq there were 20 people who answered yes, but since they could pick 
-# more than 1 adv and disadv, these don't add up to 20. Decided to keep old table but without adv/disadv
+  count() %>%  
   mutate(percentage = round(n/tot_cnt*100, 1)) %>% 
-  select(-ID, -tot_cnt, -n)
+  select(-tot_cnt, -n)
 
-##### There are still a bunch of answers where website says NA (eg ID 46?? Just did not
-# fill anything in? Make it "unspecified"?)
-# Lidar instead of "other" also does not show up properly
+# Create summary for only the way of accessing
+adv_bysource <- yes_data_adv %>% 
+  select(-tot_cnt) %>% 
+  add_count(q_text) %>% 
+  rename(tot_cnt = n) %>% 
+  group_by(q_text, tot_cnt, Advantage) %>% 
+  count() %>%  
+  mutate(percentage = round(n/tot_cnt*100, 1)) %>% 
+  ungroup() %>% 
+  select(-tot_cnt, -n)
+
+adv_bysource2 <- adv_bysource %>% 
+  pivot_wider(names_from = Advantage, values_from = percentage,
+              values_fill = 0)
 
 
-
-###### Disadvantages ######
-# In cases of "Other" - connect to text datasets
-yes_data_disadv <- yes_data3_access %>% 
-  left_join(yes_data3_disadv, by = c("field_name", "ID", "tot_cnt")) %>% 
-  group_by(field_name, tot_cnt, q_text, Disadvantage) %>% 
-  count() %>% 
-  mutate(percentage = round(n/tot_cnt*100, 1))
-
-# Reorder ad above
-# Set up formating with kable
-# Set up adding color?
 
 ```
 
+```{r otheradvantages_table2, echo = FALSE, warning = FALSE, message = FALSE}
+# Disadvantages
+
+# Get the text answers linked to "other" advantages
+lookup_disadv <- read_csv("../2_data_deidentified/lookup_disadv.csv")
+txt_disadv <- txt_data_yes %>% 
+  filter(qname_main == "YD-4") %>% 
+  mutate(field_name = ifelse(field_name == "Other (please specify)", "Other: LiDAR", field_name)) %>%
+  mutate(field_name = factor(field_name, levels = q_text_order)) %>% 
+  rename("Disadvantage" = "q_text") %>% 
+  filter(!is.na(text_answer) & text_answer != "NA" & text_answer != "na") %>% 
+  arrange(field_name) %>%
+  left_join(lookup_disadv) %>% 
+  select(-main, -source, -qname, -field_no, -qname_main, -q_code, -text_answer) %>% 
+  rename("text_answer" = "text_answer_std") %>% 
+  filter(!is.na(text_answer)) # Remove NA
+
+# Disadvantages
+# Join data - advantage will now be separate column
+yes_data_disadv <- yes_data3_access %>% 
+  left_join(yes_data3_disadv, by = c("field_name", "ID", "tot_cnt")) %>% 
+  # do joins for text answers:
+  left_join(txt_sources) %>% # Add info on other data sources, join is based on ID
+  mutate(q_text = ifelse(q_text == "Other (please specify)", paste0("Other: ", text_answer), q_text)) %>% # Replace "Other (please specify)" with actual answer for data sources
+  # Turns out not everyone filled in a source if they picked this answer. Make this look nicer than NA
+  mutate(q_text = ifelse(q_text == "Other: NA", paste0("Other: unspecified"), q_text)) %>%
+  select(-text_answer) %>% # Remove col text_answer bc is also used next joins
+  left_join(txt_websites) %>% # Add info on websites, join is based on ID
+  mutate(q_text = ifelse(q_text == "Download from website (If so, what website?)", paste0("Download from website: ", text_answer), q_text)) %>% 
+  # Turns out not everyone filled in a website if they picked this answer. Make this look nicer than NA
+  mutate(q_text = ifelse(q_text == "Download from website: NA", paste0("Download from website: unspecified"), q_text)) %>% 
+  select(-text_answer) %>% 
+  left_join(txt_disadv) %>% 
+  mutate(Disadvantage = ifelse(Disadvantage == "Other (please specify)", paste0("Other: ", text_answer), Disadvantage)) %>% # Replace "Other (please specify)" with actual answer for advantages
+  filter(Disadvantage != "Other: NA") %>% # Remove instances where there was no advantage added (this is related to
+  # the lookup table that removes text responses that are not really related to the question,
+  # but are more comments)
+  ungroup() %>% 
+  select(-text_answer)
+
+disadv_full_overview <- yes_data_disadv %>% 
+  group_by(field_name, tot_cnt, q_text, Disadvantage) %>% 
+  count() %>%  
+  mutate(percentage = round(n/tot_cnt*100, 1)) %>% 
+  select(-tot_cnt, -n)
+
+# Create summary for only the way of accessing
+disadv_bysource <- yes_data_disadv %>% 
+  select(-tot_cnt) %>% 
+  add_count(q_text) %>% 
+  rename(tot_cnt = n) %>% 
+  group_by(q_text, tot_cnt, Disadvantage) %>% 
+  count() %>%  
+  mutate(percentage = round(n/tot_cnt*100, 1)) %>% 
+  ungroup() %>% 
+  select(-tot_cnt, -n)
+
+disadv_bysource2 <- disadv_bysource %>% 
+  pivot_wider(names_from = Disadvantage, values_from = percentage,
+              values_fill = 0)
+
+
+```
 -------------------------------------------------------------------------------
 
 **Disdvantages listed by respondents under "Other" were:**
