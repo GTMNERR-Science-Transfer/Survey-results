@@ -1,0 +1,10 @@
+Manual changes to "data_yes_results_text.csv".
+Some people answered "Other" for their preferred way of accessing data, but then filled 
+in websites as an  answer. These answers were manually re-classified.
+
+Row 11: 
+* Under q_text, changed "Other (please specify)" to "Download from website (If so what website?)"
+* Changed q_code from 4 to 2
+* Changed qname from 1_YD-2_4_TEXT to 1_YD-2_2_TEXT
+
+Same for row 12, 13, 21, 25, 34, 56

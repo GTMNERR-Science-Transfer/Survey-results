@@ -1,6 +1,6 @@
 ﻿text_answer,text_answer_std
-CDMO,CDMO
-https://cdmo.baruch.sc.edu//,CDMO
+CDMO,CDMO / SWMP
+https://cdmo.baruch.sc.edu//,CDMO / SWMP
 Florida DEP,FL DEP
 GTM error,GTMNERR
 GTM website,GTMNERR
@@ -11,18 +11,24 @@ https://gtmnerr.org/visit/,GTMNERR
 "Park website, white papers/presentations and state of the reserve reporting",GTMNERR
 Research Reserve Website,GTMNERR
 inaturalist.org,iNaturalist
-https://www.surf-forecast.com/breaks/South-Ponte-Vedra-Beach/tides/latest,"Miscellaneous websites (surf-forecast.com, weather.com, windfinder.com, weatherSTEM)"
-https://www.windfinder.com/tide/south_ponte_vedra_beach,"Miscellaneous websites (surf-forecast.com, weather.com, windfinder.com, weatherSTEM)"
-johnson county weather stations,"Miscellaneous websites (surf-forecast.com, weather.com, windfinder.com, weatherSTEM)"
-weather.com,"Miscellaneous websites (surf-forecast.com, weather.com, windfinder.com, weatherSTEM)"
+https://www.surf-forecast.com/breaks/South-Ponte-Vedra-Beach/tides/latest,"Miscellaneous websites or apps (surf-forecast.com, weather.com, windfinder.com, weatherSTEM)"
+https://www.windfinder.com/tide/south_ponte_vedra_beach,"Miscellaneous websites or apps (surf-forecast.com, weather.com, windfinder.com, weatherSTEM)"
+johnson county weather stations,"Miscellaneous websites or apps (surf-forecast.com, weather.com, windfinder.com, weatherSTEM)"
+weather.com,"Miscellaneous websites or apps (surf-forecast.com, weather.com, windfinder.com, weatherSTEM)"
 https://www.weather.gov/jax/fire,National Weather Service (weather.gov)
 National Weather Service Tide Data,National Weather Service (weather.gov)
 weather.gov,National Weather Service (weather.gov)
 https://www.st.nmfs.noaa.gov/copepod/time-series/us-60109-001/,"NOAA (COPEPOD, Digital Coast)"
 NOAA Digital Coast,"NOAA (COPEPOD, Digital Coast)"
 SEACAR,SEACAR
-swmp,SWMP
-swmp; seacar,"SWMP, SEACAR"
+swmp,CDMO / SWMP
+swmp; seacar,"CDMO / SWMP, SEACAR"
 UF IFAS and FL DEP,"UF IFAS, FL DEP"
 UF IFAS and FL DEP,"UF IFAS, FL DEP"
 UF IFAS and Florida DEP,"UF IFAS, FL DEP"
+View on website (no download),unspecified
+SWMP CDMO or email,CDMO / SWMP
+Weather Channel App,"Miscellaneous websites or apps (surf-forecast.com, weather.com, windfinder.com, weatherSTEM)"
+State sites,unspecified
+NOAA,"NOAA (COPEPOD, Digital Coast)"
+Google,unspecified
