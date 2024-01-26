@@ -25,6 +25,7 @@ This survey was approved by the University of Florida's Institutional Review Boa
 ```{r load_package_data, echo = FALSE, message = FALSE}
 library(tidyverse)
 library(kableExtra)
+options(knitr.kable.NA = '')
 library(cowplot)
 library(formattable)
 library(RColorBrewer)
@@ -424,13 +425,13 @@ While not mapped 1:1 for each respondent, from the figure it appears that for al
 
 ---------------------------------------------------------------------------------
 
-## 4.3 Details on dataset usage, advantages, disadvantages, and satisfaction
+## 4.3 Details on dataset access and satisfaction
 
 The following table summarizes the detailed questions per dataset. The numbers represent the percentage of respondents that chose that answer. Questions that allowed multiple answers are indicated in the table with an asterisk, \* : these percentages can add up to more than 100%.
 
 ```{r access_detail_table, echo = FALSE, warning = FALSE, message = FALSE}
 # Change 'other' to LiDAR
-levels(q_text_order)[which(q_text_order == "Other (please specify)")] <- "LiDAR"
+levels(q_text_order)[which(q_text_order == "Other (please specify)")] <- "Other: LiDAR"
 
 # Get number of respondents for each dataset and each question (because some people
 # stopped answering questions halfway in!)
@@ -438,15 +439,13 @@ yes_data2 <- yes_data %>%
   filter(qname_main != "YD-1") %>%
   group_by(main, field_name) %>%
   summarize(tot_cnt = length(unique(ID))) %>% 
-  #summarize(tot_cnt = n()) %>% 
-  #rename(field_name = q_text) %>% 
-  right_join(yes_data)
+  right_join(yes_data %>% filter(qname_main != "YD-1")) # join because we still need q_text in the rest of the code
 
 # Reorganize data for kable table
 
 yes_data_table <- yes_data2 %>% 
   # Create summary (percentages) based on the dataset (field_name), question and answer
-  filter(qname_main != "YD-1") %>% 
+  filter(!qname_main %in% c("YD-3", "YD-4")) %>% # take out advantages and disadvantages, will go in separate tables
   group_by(field_name, main, q_text, tot_cnt) %>% # tot_cnt
   summarize(cnt = n()) %>%
   mutate(percentage = round(cnt/tot_cnt*100, 1)) %>% 
@@ -454,7 +453,7 @@ yes_data_table <- yes_data2 %>%
   ungroup() %>% 
   group_by(field_name, main) %>% 
   pivot_wider(names_from = field_name, values_from = percentage, values_fill = 0) %>%
-  rename(LiDAR = `Other (please specify)`) %>%
+  rename(`Other: LiDAR` = `Other (please specify)`) %>%
   select(q_text, q_text_order) %>% # order datasets (columns) as per the previous ranking
   left_join(select(yes_data, main, qname_main)) %>% 
   distinct() %>% 
@@ -476,8 +475,8 @@ yes_data_table <- yes_data_table %>%
 yes_data_table$q_text <- fct_inorder(yes_data_table$q_text)
 # Check:
 # levels(yes_data_table$q_text)
-levels(yes_data_table$q_text)[15:21] <- c("Daily", "At least once a week", "2-3 times a month", "Once a month", "Once every 6 months", "Once every year", "Less than once a year")
-levels(yes_data_table$q_text)[27:30] <- c("Slightly well", "Moderately well", "Very well", "Extremely well")
+levels(yes_data_table$q_text)[5:11] <- c("Daily", "At least once a week", "2-3 times a month", "Once a month", "Once every 6 months", "Once every year", "Less than once a year")
+levels(yes_data_table$q_text)[18:20] <- c("Slightly well", "Moderately well", "Very well", "Extremely well")
 
 # Loop through columns and apply colors to be used in the kable table
 for (i in 3:10) {
@@ -511,8 +510,6 @@ for (i in 3:10) {
 # Create table to pack rows dynamically
 tbl_headers <- table(fct_inorder(yes_data_table$main))
 names(tbl_headers) <- c("How do you most frequently obtain or access these data?",
-                        "What are the advantages of this primary method of accessing or obtaining these data?*",
-                        "What are the disadvantages of the primary method of accessing or obtaining these data?*",
                         "How often do/did you access or obtain these data?",
                         "What do you typically use these data for?*",
                         "How well do these data generally satisfy your need(s)?")
@@ -528,91 +525,44 @@ yes_data_table %>%
 ```
 
 --------------------------------------------------------
+**In terms of usage of data, respondents added the following under "Other":**
 
-The tables below list the text answers that were provided by respondents to the "free text" questions above. These text answers are the original, unaltered responses. 
-
-**The websites that respondents used to obtain data were:**
-
-``` {r websites_table, echo = FALSE, warning = FALSE, message = FALSE}
-# Read in text data results
+``` {r otherusage_table, echo = FALSE, warning = FALSE, message = FALSE}
 txt_data_yes <- read_csv("../2_data_deidentified/subsets/data_yes_results_text.csv")
-
-txt_data_yes_YD2_2 <- txt_data_yes %>% 
-  filter(qname_main == "YD-2", q_code == 2) %>% 
-  mutate(field_name = ifelse(field_name == "Other (please specify)", "LiDAR", field_name)) %>%
-  mutate(field_name = factor(field_name, levels = q_text_order)) %>% 
-  arrange(field_name) %>% 
-  select(-main, -ID, -source, -qname, - field_no, -qname_main, -q_code, -q_text)
-
-# Add colors to the headers? Maybe I have to do pack_rows manually, so I can
-# set the colors for each...
-  
-txt_data_yes_YD2_2 %>% 
-  kbl(col.names = c("", ""), escape = FALSE) %>% 
-  remove_column(2) %>% 
-  kable_minimal("striped", font_size = 12, full_width = FALSE) %>%
-  #add_header_above(c("Websites accessed" = 1)) %>%
-  pack_rows(index = table(fct_inorder(txt_data_yes_YD2_2$field_name))) 
-
-```
-The answers "CDMO" refer to the National Estuarine Research Reserve System Centralized Data Management Office: https://cdmo.baruch.sc.edu/
-
-"SEACAR" is the Statewide Ecosystem Assessment of Coastal and Aquatic Resources by the Florida Department of Environmental Protection: https://data.florida-seacar.org/
-
-"SWMP" is the NERR System-Wide Monitoring Program: https://coast.noaa.gov/digitalcoast/data/nerr.html
-
--------------------------------------------------------------------------------
-
-**"Other" avenues for accessing data were:**
-
-``` {r othersources_table, echo = FALSE, warning = FALSE, message = FALSE}
-txt_data_yes_YD2_4 <- txt_data_yes %>% 
-  filter(qname_main == "YD-2", q_code == 4) %>% 
-  mutate(field_name = ifelse(field_name == "Other (please specify)", "LiDAR", field_name)) %>%
-  mutate(field_name = factor(field_name, levels = q_text_order)) %>% 
-  arrange(field_name) %>% 
-  select(-main, -ID, -source, -qname, - field_no, -qname_main, -q_code, -q_text)
-
-index_table <- table(fct_inorder(txt_data_yes_YD2_4$field_name))
-index_table <- index_table[-which(index_table == 0)]
-
-txt_data_yes_YD2_4 %>% 
-  kbl(col.names = c("", ""), escape = FALSE) %>% 
-  remove_column(2) %>% 
-  kable_minimal("striped", font_size = 12, full_width = FALSE) %>%
-  #add_header_above(c("Other ways of accessing data" = 1)) %>%
-  pack_rows(index = index_table)
-
-```
-
-Some of these answers could fall under the option "Websites", but without downloading. Some notable options for people to access data are: state of the preserve presentations, internal databases (for employees), FWC (data has to be requested from FWC, it is generally not available on websites), calling the Visitor Center, personal observations, and the newsletter.
-
--------------------------------------------------------------------------------
-
-**Advantages listed by respondents under "Other" were:**
-(link to main way of getting data?)
-
-``` {r otheradvantages_table, echo = FALSE, warning = FALSE, message = FALSE}
-txt_data_yes_YD3 <- txt_data_yes %>% 
-  filter(qname_main == "YD-3") %>% 
-  mutate(field_name = ifelse(field_name == "Other (please specify)", "LiDAR", field_name)) %>%
+txt_data_yes_YD6 <- txt_data_yes %>% 
+  filter(qname_main == "YD-6") %>% 
+  mutate(field_name = ifelse(field_name == "Other (please specify)", "Other: LiDAR", field_name)) %>%
   mutate(field_name = factor(field_name, levels = q_text_order)) %>% 
   arrange(field_name) %>%
   select(-main, -ID, -source, -qname, - field_no, -qname_main, -q_code, -q_text)
 
-index_table <- table(fct_inorder(txt_data_yes_YD3$field_name))
+index_table <- table(fct_inorder(txt_data_yes_YD6$field_name))
 index_table <- index_table[-which(index_table == 0)]
 
-txt_data_yes_YD3 %>% 
+txt_data_yes_YD6 %>% 
   kbl(col.names = c("", ""), escape = FALSE) %>% 
   remove_column(2) %>% 
   kable_minimal("striped", font_size = 12, full_width = FALSE) %>%
-  #add_header_above(c("Other advantages accessing data" = 1)) %>%
+  #add_header_above(c("Other data usage" = 1)) %>%
   pack_rows(index = index_table)
 ```
-``` {r otheradvantages_table2, echo = FALSE, warning = FALSE, message = FALSE}
-# Try something else here: create separate tables for each dataset. Put methods of obtaining in first column, next columns are advantages and disadvantages, and maybe text for other? If this works, take advantages and disadvantages out of the main table.
 
+Essentially, the three usages mentioned here most are personal use, volunteer activities, and management purposes (vegetation / invasive plants, prescribed fire). 
+
+-----------------------------------------------------------------------------
+
+## 4.4 Details on advantages of dataset access
+
+The tables below summarize the advantages and disadvantages that respondents listed per acquire method (with more detail on "other" methods of accessing data that respondents listed).
+
+There is also an overview of the advantages listed per acquire method *for each dataset* but since this is an extremely dense overview, it is available upon.
+
+The answers "CDMO" refer to the National Estuarine Research Reserve System Centralized Data Management Office: https://cdmo.baruch.sc.edu/. "SWMP" is the NERR System-Wide Monitoring Program: https://coast.noaa.gov/digitalcoast/data/nerr.html
+
+"SEACAR" is the Statewide Ecosystem Assessment of Coastal and Aquatic Resources by the Florida Department of Environmental Protection: https://data.florida-seacar.org/
+
+
+``` {r otheradvantages_table, fig.width = 8, fig.height = 8, fig.align = 'center', echo = FALSE, warning = FALSE, message = FALSE}
 # yes_data2 has datasets and way of accessing (YD-2 in col qname_main) and advantages/disadvantages (YD-3 and YD-4)
 
 # Read in text data results
@@ -700,12 +650,55 @@ yes_data_adv <- yes_data3_access %>%
   ungroup() %>% 
   select(-text_answer) 
 
-adv_full_overview <- yes_data_adv %>% 
+
+adv_full_overview <- yes_data_adv %>% # order, add LiDAR as other
   group_by(field_name, tot_cnt, q_text, Advantage) %>% 
   count() %>%  
   mutate(percentage = round(n/tot_cnt*100, 1)) %>% 
-  select(-tot_cnt, -n)
+  ungroup() %>% 
+  select(-tot_cnt, -n) %>% 
+  pivot_wider(names_from = field_name, values_from = percentage) %>% 
+  rename(`Other: LiDAR` = `Other (please specify)`) %>%
+  select(Advantage, q_text, q_text_order) %>% # order datasets (columns) as per the previous ranking
+  arrange(Advantage, q_text) # order/group by advantage, then type of access
+#### MAYBE ACTUALLY MAKE THIS A PLOT??? Or save as appendix
 
+# Turn this into a stacked (horizontal) bar chart
+
+
+# # Make sure NAs do not show up:
+# # https://stackoverflow.com/questions/44347734/printing-blanks-instead-of-nas-when-using-formattable-in-r#44348232
+# # Function to convert numeric values to strings with a given number of 
+# #  decimal places, and convert NA to empty string
+# fnc = function(var, decimal.places) {
+#   var = sprintf(paste0("%1.",decimal.places,"f"), var)
+#   var[var=="NA"] = ""
+#   var
+# }
+# # Apply the function to the desired columns with the desired number of decimal places
+# adv_full_overview[ ,3:10] = mapply(fnc, adv_full_overview[ ,3:10], 1)
+# 
+# # Loop through columns and apply colors to be used in the kable table
+# for (i in 3:10) {
+#   col_name <- names(adv_full_overview)[i]
+#   col_index <- which(names(adv_full_overview) == col_name)
+#   color <- color_vector[col_index-1]
+#   adv_full_overview[[col_name]] <- color_tile("white", color)(adv_full_overview[[col_name]])
+# } 
+# #### Turn into kable table
+# # Create table to pack rows dynamically
+# tbl_headers <- table(fct_inorder(adv_full_overview$Advantage))
+# 
+# # Create kable table
+# adv_full_overview %>% 
+#   rename(`Main source of data` = q_text) %>% 
+#   ungroup() %>% 
+#   select(-Advantage) %>% 
+#   kbl(escape = FALSE) %>% #col.names = c("", "")
+#   kable_minimal("striped") %>%
+#   pack_rows(index = tbl_headers)
+
+####### Shorter table
 # Create summary for only the way of accessing
 adv_bysource <- yes_data_adv %>% 
   select(-tot_cnt) %>% 
@@ -715,17 +708,63 @@ adv_bysource <- yes_data_adv %>%
   count() %>%  
   mutate(percentage = round(n/tot_cnt*100, 1)) %>% 
   ungroup() %>% 
-  select(-tot_cnt, -n)
+  select(-tot_cnt, -n) %>% 
+  mutate(Advantage = factor(Advantage, levels = c("Easy/convenient to access" ,
+                                                  "Requesting the data is quick",
+                                                  "Data is received quickly after request",
+                                                  "The format the data are delivered / accessed in is useful",
+                                                  "There are no advantages",
+                                                  "Other: N/A (already have the data / collect data myself)")))
 
-adv_bysource2 <- adv_bysource %>% 
-  pivot_wider(names_from = Advantage, values_from = percentage,
-              values_fill = 0)
+###### Put in the same order as table above: request from staff, download, other, pick up in person
 
+# Turn this into a stacked (horizontal) bar chart
+ggplot(adv_bysource, aes(x = percentage, y = fct_rev(q_text), fill = Advantage)) +
+  geom_col(position = "stack", color = "darkgrey")+ 
+  scale_y_discrete(labels = function(x) str_wrap(x, width = 70),drop = FALSE)+
+  # the following color are from colorbrewer, reordered them so "no advantages" is red
+  scale_fill_manual(labels = function(x) str_wrap(x, width = 40),
+                      values = c("#8dd3c7", "#ffffb3", "#bebada", "#80b1d3", "#fb8072", "#fdb462"))+
+  labs(x = "Percentage", y = "")+
+  theme_bw()+
+  theme(legend.position = "top", legend.justification = 1)
+
+# THE FOLLOWING CODE IS TO MAKE A TABLE. DIDN'T LOOK GREAT THOUGH
+# adv_bysource2 <- adv_bysource %>% 
+#  pivot_wider(names_from = Advantage, values_from = percentage)
+# # Apply the function to remove NAs
+# adv_bysource2[ ,2:7] = mapply(fnc, adv_bysource2[ ,2:7], 1)
+# 
+# # Loop through columns and apply colors to be used in the kable table
+# #colorbrewer_greens <- c("#f7fcf5", "#e5f5e0", "#c7e9c0","#a1d99b","#74c476","#41ab5d","#238b45","#006d2c","#00441b")
+# for (i in 2:7) {
+#   col_name <- names(adv_bysource2)[i]
+#   col_index <- which(names(adv_bysource2) == col_name)
+#   adv_bysource2[[col_name]] <- color_tile("#f7fcf5", "#41ab5d")(adv_bysource2[[col_name]])
+#   # not scaled properly though, from 0-100. scaled per column now
+# } 
+# 
+# # Create kable table
+# adv_bysource2 %>% 
+#   rename(`Main source of data` = q_text) %>% 
+#   ungroup() %>% 
+#   #select(-Advantage) %>% 
+#   kbl(escape = FALSE) %>% #col.names = c("", "")
+#   kable_minimal("striped") #%>%
+#   #pack_rows(index = tbl_headers)
 
 
 ```
 
-```{r otheradvantages_table2, echo = FALSE, warning = FALSE, message = FALSE}
+-----------------------------------------------------------------
+
+## 4.5 Details on disadvantages of dataset access
+
+The tables below summarize the advantages and disadvantages that respondents listed per acquire method (with more detail on "other" methods of accessing data that respondents listed).
+
+There is also an overview of the advantages listed per acquire method *for each dataset* but since this is an extremely dense overview, it is available in the Appendix.
+
+```{r otherdisadvantages_table2, fig.width = 8, fig.height = 8, fig.align = 'center', echo = FALSE, warning = FALSE, message = FALSE}
 # Disadvantages
 
 # Get the text answers linked to "other" advantages
@@ -780,64 +819,101 @@ disadv_bysource <- yes_data_disadv %>%
   count() %>%  
   mutate(percentage = round(n/tot_cnt*100, 1)) %>% 
   ungroup() %>% 
-  select(-tot_cnt, -n)
+  select(-tot_cnt, -n) %>% 
+  mutate(Disadvantage = factor(Disadvantage, levels = c("There are no disadvantages",
+                                                     "The format the data are delivered / accessed in is not user-friendly" ,
+                                                     "Difficult/Complicated to access",
+                                                     "Data is received quickly after request",
+                                                     "Time consuming to request",
+                                                     "Slow to receive",
+                                                     "Other: Various formats / data sources",
+                                                     "Other: Not up to date",
+                                                     "Other: Not complete / not applicable to Guana System",
+                                                     "Other: Not easy to use / view on mobile devices",
+                                                     "Other: Login required",
+                                                     "Other: Not accurate (enough)",
+                                                     "Other: Not online",
+                                                     "Other: Being a pain to the researchers",
+                                                     "Other: Do not know how to access data")))
 
-disadv_bysource2 <- disadv_bysource %>% 
-  pivot_wider(names_from = Disadvantage, values_from = percentage,
-              values_fill = 0)
+# Reorder so the access methods are in the same order as the first table
+disadv_bysource$q_text <- factor(disadv_bysource$q_text)
+disadv_bysource$q_text <- fct_relevel(disadv_bysource$q_text, "Request from a GTMNERR staff member by email", after = 0)
+disadv_bysource$q_text <- fct_relevel(disadv_bysource$q_text, "Pick-up paper copy in person", after = Inf)
 
+# ggplot(disadv_bysource, aes(x = percentage, y = fct_rev(q_text), fill = Disadvantage)) +
+#   geom_col(position = "stack", color = "darkgrey")+
+#   scale_y_discrete(labels = function(x) str_wrap(x, width = 70),drop = FALSE)+
+#   # the following color are from colorbrewer, reordered them so "no advantages" is red
+#   scale_fill_manual(labels = function(x) str_wrap(x, width = 40),
+#                       values = c("#7fc97f", "#beaed4", "#fdc086", "#ffff99", "#f0027f", # 5 colors for main disadvantages (with green being no disadvantages)
+#                                  "#f7fbff", "#deebf7", "#c6dbef", "#9ecae1", "#6baed6", "#4292c6", "#2171b5", "#08519c", "#08306b") # 9 shades of the same color for other
+#                     )+
+#   labs(x = "Percentage", y = "")+
+#   theme_bw()+
+#   theme(legend.position = "top", legend.justification = 1)
+
+library(treemap)
+#devtools::install_github("d3treeR/d3treeR")
+library(d3treeR)
+library(htmltools)
+ 
+# basic treemap
+# p <- treemap(disadv_bysource,
+#             index=c("Disadvantage","q_text"), #index=c("q_text","Disadvantage"), 
+#             vSize="percentage",
+#             type="index",
+#             palette = "Set2",
+#             #bg.labels=c("white"),
+#             align.labels=list(
+#               c("left", "top"), 
+#               c("right", "bottom")
+#             )  
+#           )
+
+ln_break <- function (x, nlen = 11) {
+  require("stringi")
+  x <- gsub(paste0("(.{1,", nlen, "})(\\s|$)"), "\\1\n", x)
+  x <- stringi::stri_replace_last_fixed(x, "\n", "")
+  return(x)
+}
+
+# Add a new column that has both the label and the percentage, to use for plotting
+disadv_bysource<- disadv_bysource %>% 
+  mutate(q_text_num = paste0(q_text, " (", percentage, "%)"))
+
+# make it interactive using d3tree ("rootname" becomes the title of the plot)
+# wrapped inside browsable etc (htmltools package) to change the font type to Arial
+browsable(
+  tagList(
+    tags$head(
+      #tags$style('text.label{font-size: 20px !important}')
+      tags$style("text.label{font-family: 'Arial'; font-size: 20px}")
+    ), 
+    d3tree2(treemap(disadv_bysource,
+            index=c("Disadvantage",ln_break("q_text_num")), 
+            vSize="percentage",
+            type="index",
+            palette = "Set2",
+            #fontsize.labels=c(15,12),
+            #bg.labels=c("transparent"),
+            #align.labels=list(
+            #  c("left", "top"), 
+            #  c("right", "bottom")
+            #),
+            #border.col=c("black","white"), # Color of borders of groups, and of subgroups
+            #border.lwds=c(7,2),
+            #fontsize.title=12,
+          ),
+    rootname = "Disadvantage")
+  )
+)
 
 ```
+
+While a large number of people indicated there were no disadvantages to certain acquire or access methods, the "free text" answers under "Other" provide insight in some drawbacks people identified. 
+
 -------------------------------------------------------------------------------
-
-**Disdvantages listed by respondents under "Other" were:**
- (link to main way of getting data?)
-
-``` {r otherdisadvantages_table, echo = FALSE, warning = FALSE, message = FALSE}
-txt_data_yes_YD4 <- txt_data_yes %>% 
-  filter(qname_main == "YD-4") %>% 
-  mutate(field_name = ifelse(field_name == "Other (please specify)", "LiDAR", field_name)) %>%
-  mutate(field_name = factor(field_name, levels = q_text_order)) %>% 
-  arrange(field_name) %>%
-  select(-main, -ID, -source, -qname, - field_no, -qname_main, -q_code, -q_text)
-
-index_table <- table(fct_inorder(txt_data_yes_YD4$field_name))
-index_table <- index_table[-which(index_table == 0)]
-
-txt_data_yes_YD4 %>% 
-  kbl(col.names = c("", ""), escape = FALSE) %>% 
-  remove_column(2) %>% 
-  kable_minimal("striped", font_size = 12, full_width = FALSE) %>%
-  #add_header_above(c("Other disadvantages accessing data" = 1)) %>%
-  pack_rows(index = index_table)
-```
-
-While a large number of people indicated there were no disadvantages, the "free text" answers provide insight in some drawbacks people identified. The "Take home messages" box at the end of this section summarizes these.
-
--------------------------------------------------------------------------------
-
-**In terms of usage of data, respondents added the following under "Other":**
-
-``` {r otherusage_table, echo = FALSE, warning = FALSE, message = FALSE}
-txt_data_yes_YD6 <- txt_data_yes %>% 
-  filter(qname_main == "YD-6") %>% 
-  mutate(field_name = ifelse(field_name == "Other (please specify)", "LiDAR", field_name)) %>%
-  mutate(field_name = factor(field_name, levels = q_text_order)) %>% 
-  arrange(field_name) %>%
-  select(-main, -ID, -source, -qname, - field_no, -qname_main, -q_code, -q_text)
-
-index_table <- table(fct_inorder(txt_data_yes_YD6$field_name))
-index_table <- index_table[-which(index_table == 0)]
-
-txt_data_yes_YD6 %>% 
-  kbl(col.names = c("", ""), escape = FALSE) %>% 
-  remove_column(2) %>% 
-  kable_minimal("striped", font_size = 12, full_width = FALSE) %>%
-  #add_header_above(c("Other data usage" = 1)) %>%
-  pack_rows(index = index_table)
-```
-
-Generally, the three usages mentioned here most are personal use, volunteer activities, and management purposes (vegetation / invasive plants, prescribed fire). 
 
 :::: {.infobox .left data-latex=""}
 
@@ -862,17 +938,6 @@ Generally, the three usages mentioned here most are personal use, volunteer acti
 - Also for these data, respondents feel that there are not many disadvantages, though they did highlight difficulty in accessing weather data (25%) and the time it takes to request information on terrestrial animals (42.9%).
 - In terms frequency of accessing these data, most people either access these data once month (weather, and terrestrial animals) or daily (reserve and trail closures, and terrestrial animals).
 - The usage of these data fairly evenly distributed across the options that were provided - as well as how well the data satisfied people's needs. 
-
-------------------------------------------------------------------------------
-
-Below are some highlights of the disadvantages of the current manner in which people access data:
-
-- It would be easier if data was accessible online (not having to bother researchers or having to make phone calls) - but then for some data that *is* available online, they are hard to find and/or cumbersome to access or download;
-- Data are not always up-to-date;
-- Data are supplied in various formats;
-- Not all datasets that people are interested in are available online;
-- People have to go to various / multiple places (online) to gather data;
-- Some data is not specifically for the Guana Estuary (e.g. water level and weather information).
 
 ::::
 
