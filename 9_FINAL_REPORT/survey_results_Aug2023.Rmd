@@ -357,15 +357,15 @@ ggplot(yes_data %>%
          group_by(q_text) %>%
          summarize(cnt = n()) %>%
          mutate(percentage = round(cnt/num_resp_yes_data*100, 1)),
-       aes(y = reorder(q_text, percentage), x = percentage, fill = percentage))+
+       aes(y = reorder(q_text, percentage), x = percentage, fill = factor(percentage)))+
   geom_col(color = "darkgrey") +
   labs(x = paste0("Percentage of respondents (N = ", num_resp_yes_data, ")"), 
        y = "", 
        title = "What Guana Estuary data do you currently use, or have you used in the past?",
        caption  = "NOTE: Respondents could pick more than 1 response") +
   scale_y_discrete(labels = function(x) str_wrap(x, width = 40))+
-  #scale_fill_manual(values = color_vector)+
-  scale_fill_distiller(palette = "YlGnBu", direction = 1)+
+  scale_fill_manual(values = rev(color_vector))+
+  #scale_fill_distiller(palette = "YlGnBu", direction = 1)+
   theme_bw()+
   theme(legend.position = "none",
         plot.title.position = "plot")
@@ -427,7 +427,9 @@ While not mapped 1:1 for each respondent, from the figure it appears that for al
 
 ## 4.3 Details on dataset access and satisfaction
 
-The following table summarizes the detailed questions per dataset. The numbers represent the percentage of respondents that chose that answer. Questions that allowed multiple answers are indicated in the table with an asterisk, \* : these percentages can add up to more than 100%.
+The following table summarizes the detailed questions per dataset. The numbers represent the percentage of respondents that chose that answer. Questions that allowed multiple answers are indicated in the table with an asterisk, \* : so these percentages can add up to more than 100%.
+
+The column colors correspond to the colors in the table above. The darker the color, the higher the percentage in the cell.
 
 ```{r access_detail_table, echo = FALSE, warning = FALSE, message = FALSE}
 # Change 'other' to LiDAR
@@ -524,6 +526,7 @@ yes_data_table %>%
   pack_rows(index = tbl_headers) #%>% 
 ```
 
+
 --------------------------------------------------------
 **In terms of usage of data, respondents added the following under "Other":**
 
@@ -539,21 +542,21 @@ txt_data_yes_YD6 <- txt_data_yes %>%
 index_table <- table(fct_inorder(txt_data_yes_YD6$field_name))
 index_table <- index_table[-which(index_table == 0)]
 
-txt_data_yes_YD6 %>% 
-  kbl(col.names = c("", ""), escape = FALSE) %>% 
-  remove_column(2) %>% 
+txt_data_yes_YD6 %>%
+  kbl(col.names = c("", ""), escape = FALSE) %>%
+  remove_column(2) %>%
   kable_minimal("striped", font_size = 12, full_width = FALSE) %>%
   #add_header_above(c("Other data usage" = 1)) %>%
   pack_rows(index = index_table)
 ```
 
-Essentially, the three usages mentioned here most are personal use, volunteer activities, and management purposes (vegetation / invasive plants, prescribed fire). 
+In summary, the three usages mentioned here most are personal use, volunteer activities, and management purposes (vegetation / invasive plants, prescribed fire). 
 
 -----------------------------------------------------------------------------
 
 ## 4.4 Details on advantages of dataset access
 
-The tables below summarize the advantages and disadvantages that respondents listed per acquire method (with more detail on "other" methods of accessing data that respondents listed).
+The figures below summarize the advantages and disadvantages that respondents listed per acquire method (with more detail on "other" methods of accessing data that respondents listed).
 
 There is also an overview of the advantages listed per acquire method *for each dataset* but since this is an extremely dense overview, it is available upon.
 
@@ -661,7 +664,6 @@ adv_full_overview <- yes_data_adv %>% # order, add LiDAR as other
   rename(`Other: LiDAR` = `Other (please specify)`) %>%
   select(Advantage, q_text, q_text_order) %>% # order datasets (columns) as per the previous ranking
   arrange(Advantage, q_text) # order/group by advantage, then type of access
-#### MAYBE ACTUALLY MAKE THIS A PLOT??? Or save as appendix
 
 # Turn this into a stacked (horizontal) bar chart
 
