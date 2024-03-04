@@ -530,7 +530,7 @@ yes_data_table %>%
 --------------------------------------------------------
 **In terms of usage of data, respondents added the following under "Other":**
 
-``` {r otherusage_table, echo = FALSE, warning = FALSE, message = FALSE}
+``` {r otherusage_table, echo = FALSE, results = "asis", warning = FALSE, message = FALSE}
 txt_data_yes <- read_csv("../2_data_deidentified/subsets/data_yes_results_text.csv")
 txt_data_yes_YD6 <- txt_data_yes %>% 
   filter(qname_main == "YD-6") %>% 
@@ -542,12 +542,17 @@ txt_data_yes_YD6 <- txt_data_yes %>%
 index_table <- table(fct_inorder(txt_data_yes_YD6$field_name))
 index_table <- index_table[-which(index_table == 0)]
 
-txt_data_yes_YD6 %>%
-  kbl(col.names = c("", ""), escape = FALSE) %>%
-  remove_column(2) %>%
-  kable_minimal("striped", font_size = 12, full_width = FALSE) %>%
-  #add_header_above(c("Other data usage" = 1)) %>%
-  pack_rows(index = index_table)
+kable_styling(kable(txt_data_yes_YD6))
+
+
+#test_table <- 
+# txt_data_yes_YD6 %>%
+#   kbl(col.names = c("", ""), escape = FALSE) %>%
+#   remove_column(2) %>%
+#   kable_minimal("striped", font_size = 12, full_width = FALSE) %>%
+#   #add_header_above(c("Other data usage" = 1)) %>%
+#   pack_rows(index = index_table)
+#print(test_table)
 ```
 
 In summary, the three usages mentioned here most are personal use, volunteer activities, and management purposes (vegetation / invasive plants, prescribed fire). 
@@ -860,19 +865,6 @@ library(treemap)
 library(d3treeR)
 library(htmltools)
  
-# basic treemap
-# p <- treemap(disadv_bysource,
-#             index=c("Disadvantage","q_text"), #index=c("q_text","Disadvantage"), 
-#             vSize="percentage",
-#             type="index",
-#             palette = "Set2",
-#             #bg.labels=c("white"),
-#             align.labels=list(
-#               c("left", "top"), 
-#               c("right", "bottom")
-#             )  
-#           )
-
 ln_break <- function (x, nlen = 11) {
   require("stringi")
   x <- gsub(paste0("(.{1,", nlen, "})(\\s|$)"), "\\1\n", x)
@@ -884,32 +876,61 @@ ln_break <- function (x, nlen = 11) {
 disadv_bysource<- disadv_bysource %>% 
   mutate(q_text_num = paste0(q_text, " (", percentage, "%)"))
 
-# make it interactive using d3tree ("rootname" becomes the title of the plot)
-# wrapped inside browsable etc (htmltools package) to change the font type to Arial
-browsable(
-  tagList(
-    tags$head(
-      #tags$style('text.label{font-size: 20px !important}')
-      tags$style("text.label{font-family: 'Arial'; font-size: 20px}")
-    ), 
-    d3tree2(treemap(disadv_bysource,
-            index=c("Disadvantage",ln_break("q_text_num")), 
+#basic treemap
+p <- treemap(disadv_bysource,
+            index=c("Disadvantage","q_text_num"), #index=c("q_text","Disadvantage"),
             vSize="percentage",
             type="index",
+            title = "",
             palette = "Set2",
-            #fontsize.labels=c(15,12),
-            #bg.labels=c("transparent"),
-            #align.labels=list(
-            #  c("left", "top"), 
-            #  c("right", "bottom")
-            #),
-            #border.col=c("black","white"), # Color of borders of groups, and of subgroups
-            #border.lwds=c(7,2),
-            #fontsize.title=12,
-          ),
-    rootname = "Disadvantage")
-  )
-)
+            fontsize.labels=c(15,12),                # size of labels. Give the size per level of aggregation: size for group, size for subgroup, sub-subgroups...
+            fontcolor.labels=c("white","black"),    # Color of labels
+            fontface.labels=c(2,1),                  # Font of labels: 1,2,3,4 for normal, bold, italic, bold-italic...
+            bg.labels=c("transparent"), # Background color of labels
+            align.labels=list(
+              c("left", "top"),
+              c("right", "bottom")
+            ),
+            overlap.labels=0,
+            inflate.labels=FALSE
+          )
+
+# THE CODE BELOW IS SUPERCOOL BUT THE PROBLEM IS THAT IT SHOWS THE NON-INTERACTIVE
+# AND INTERACTIVE TREEMAP BOTH. And I have not been able to resolve that.
+# # make it interactive using d3tree ("rootname" becomes the title of the plot)
+# # wrapped inside browsable etc (htmltools package) to change the font type to Arial
+# browsable(
+#   tagList(
+#     tags$head(
+#       #tags$style('text.label{font-size: 20px !important}')
+#       #tags$style("text.label{font-family: 'Arial'; font-size: 20px}"),
+#       tags$script(src="https://d3js.org/d3.v5.min.js"),
+#       tags$style(HTML("
+#         text.label {
+#           font-family: 'Arial';
+#           font-size: 20px;
+#           white-space: pre-wrap; /* Allow text wrapping */
+#         }
+#       ")
+#     )), 
+#     d3tree2(treemap(disadv_bysource,
+#                     index=c("Disadvantage",
+#                             ln_break("q_text_num")),
+#                     vSize="percentage",
+#                     type="index",
+#                     palette = "Set2",
+#                     fontsize.labels=c(15,12),
+#                     #bg.labels=c("transparent"),
+#                     #align.labels=list(
+#                     #  c("left", "top"),
+#                     #  c("right", "bottom")
+#                     #),
+#                     border.col=c("black","white"), # Color of borders of groups, and of subgroups
+#                     #border.lwds=c(7,2),
+#                     fontsize.title=12),
+#             rootname = "Disadvantage")
+#   )
+# )
 
 ```
 
