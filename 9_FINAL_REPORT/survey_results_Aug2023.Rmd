@@ -26,6 +26,7 @@ This survey was approved by the University of Florida's Institutional Review Boa
 library(tidyverse)
 library(kableExtra)
 options(knitr.kable.NA = '')
+options(kableExtra.auto_format = FALSE)
 library(cowplot)
 library(formattable)
 library(RColorBrewer)
@@ -35,6 +36,10 @@ no_access <- read_csv("../2_data_deidentified/subsets/data_no_results_basic.csv"
 yes_data <- read_csv("../2_data_deidentified/subsets/data_yes_results_basic.csv")
 dashboard <- read_csv("../2_data_deidentified/subsets/dashboard_results_basic.csv")
 demogr <- read_csv("../2_data_deidentified/subsets/demographics_results_basic.csv")
+```
+
+```{r checkpackage}
+print(paste0("kableExtra version ", packageVersion("kableExtra")))
 ```
 
 # 1. Response rate
@@ -425,9 +430,33 @@ While not mapped 1:1 for each respondent, from the figure it appears that for al
 
 ---------------------------------------------------------------------------------
 
+``` {r otherusage_table2, echo = FALSE, warning = FALSE, message = FALSE}
+txt_data_yes <- read_csv("../2_data_deidentified/subsets/data_yes_results_text.csv")
+txt_data_yes_YD6 <- txt_data_yes %>% 
+  filter(qname_main == "YD-6") %>% 
+  mutate(field_name = ifelse(field_name == "Other (please specify)", "Other: LiDAR", field_name)) %>%
+  mutate(field_name = factor(field_name, levels = q_text_order)) %>% 
+  arrange(field_name) %>%
+  select(-main, -ID, -source, -qname, - field_no, -qname_main, -q_code, -q_text)
+
+index_table <- table(fct_inorder(txt_data_yes_YD6$field_name))
+index_table <- index_table[-which(index_table == 0)]
+
+#kable_styling(kable(txt_data_yes_YD6))
+
+
+txt_data_yes_YD6 %>%
+  kbl(col.names = c("", ""), escape = FALSE) %>%
+  remove_column(2) %>%
+  kable_minimal("striped", font_size = 12, full_width = FALSE) %>%
+  #add_header_above(c("Other data usage" = 1)) %>%
+  pack_rows(index = index_table)
+```
+
+
 ## 4.3 Details on dataset access and satisfaction
 
-The following table summarizes the detailed questions per dataset. The numbers represent the percentage of respondents that chose that answer. Questions that allowed multiple answers are indicated in the table with an asterisk, \* : so these percentages can add up to more than 100%.
+The following table summarizes the detailed questions per dataset. The numbers represent the percentage of respondents that chose that answer. Questions that allowed multiple answers are indicated in the table with an asterisk: so these percentages can add up to more than 100%.
 
 The column colors correspond to the colors in the table above. The darker the color, the higher the percentage in the cell.
 
@@ -456,7 +485,7 @@ yes_data_table <- yes_data2 %>%
   group_by(field_name, main) %>% 
   pivot_wider(names_from = field_name, values_from = percentage, values_fill = 0) %>%
   rename(`Other: LiDAR` = `Other (please specify)`) %>%
-  select(q_text, q_text_order) %>% # order datasets (columns) as per the previous ranking
+  select(q_text, all_of(q_text_order)) %>% # order datasets (columns) as per the previous ranking
   left_join(select(yes_data, main, qname_main)) %>% 
   distinct() %>% 
   arrange(qname_main) %>% 
@@ -517,20 +546,22 @@ names(tbl_headers) <- c("How do you most frequently obtain or access these data?
                         "How well do these data generally satisfy your need(s)?")
 
 # Create kable table
-yes_data_table %>% 
-  rename(Question = q_text) %>% 
-  ungroup() %>% 
-  select(-main) %>% 
+yes_data_table %>%
+  rename(Question = q_text) %>%
+  ungroup() %>%
+  select(-main) %>%
   kbl(escape = FALSE) %>% #col.names = c("", "")
   kable_minimal("striped") %>%
-  pack_rows(index = tbl_headers) #%>% 
+  pack_rows(index = tbl_headers) #%>%
+
 ```
 
 
 --------------------------------------------------------
 **In terms of usage of data, respondents added the following under "Other":**
 
-``` {r otherusage_table, echo = FALSE, results = "asis", warning = FALSE, message = FALSE}
+``` {r otherusage_table, echo = FALSE, warning = FALSE, message = FALSE}
+
 txt_data_yes <- read_csv("../2_data_deidentified/subsets/data_yes_results_text.csv")
 txt_data_yes_YD6 <- txt_data_yes %>% 
   filter(qname_main == "YD-6") %>% 
@@ -542,17 +573,14 @@ txt_data_yes_YD6 <- txt_data_yes %>%
 index_table <- table(fct_inorder(txt_data_yes_YD6$field_name))
 index_table <- index_table[-which(index_table == 0)]
 
-kable_styling(kable(txt_data_yes_YD6))
+#kable_styling(kable(txt_data_yes_YD6, format = "html"))
 
-
-#test_table <- 
-# txt_data_yes_YD6 %>%
-#   kbl(col.names = c("", ""), escape = FALSE) %>%
-#   remove_column(2) %>%
-#   kable_minimal("striped", font_size = 12, full_width = FALSE) %>%
-#   #add_header_above(c("Other data usage" = 1)) %>%
-#   pack_rows(index = index_table)
-#print(test_table)
+txt_data_yes_YD6 %>%
+  kbl(col.names = c("", ""), escape = FALSE, format = "html") %>%
+  remove_column(2) %>%
+  kable_minimal("striped", font_size = 12, full_width = FALSE) %>%
+  #add_header_above(c("Other data usage" = 1)) %>%
+  pack_rows(index = index_table)
 ```
 
 In summary, the three usages mentioned here most are personal use, volunteer activities, and management purposes (vegetation / invasive plants, prescribed fire). 
@@ -560,6 +588,8 @@ In summary, the three usages mentioned here most are personal use, volunteer act
 -----------------------------------------------------------------------------
 
 ## 4.4 Details on advantages of dataset access
+
+--------------------------------------------------------
 
 The figures below summarize the advantages and disadvantages that respondents listed per acquire method (with more detail on "other" methods of accessing data that respondents listed).
 
@@ -865,12 +895,12 @@ library(treemap)
 library(d3treeR)
 library(htmltools)
  
-ln_break <- function (x, nlen = 11) {
-  require("stringi")
-  x <- gsub(paste0("(.{1,", nlen, "})(\\s|$)"), "\\1\n", x)
-  x <- stringi::stri_replace_last_fixed(x, "\n", "")
-  return(x)
-}
+# ln_break <- function (x, nlen = 11) {
+#   require("stringi")
+#   x <- gsub(paste0("(.{1,", nlen, "})(\\s|$)"), "\\1\n", x)
+#   x <- stringi::stri_replace_last_fixed(x, "\n", "")
+#   return(x)
+# }
 
 # Add a new column that has both the label and the percentage, to use for plotting
 disadv_bysource<- disadv_bysource %>% 
