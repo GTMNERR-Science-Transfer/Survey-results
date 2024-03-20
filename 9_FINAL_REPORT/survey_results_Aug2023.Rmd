@@ -1,7 +1,7 @@
 ---
 title: "Guana Estuary Data Dashboard Needs Assessment: Survey Results"
 author: "Geraldine Klarenberg"
-date: "2023-09-08"
+date: "2024-03-20"
 output: 
   html_document:
     css: box_style.css
@@ -36,10 +36,6 @@ no_access <- read_csv("../2_data_deidentified/subsets/data_no_results_basic.csv"
 yes_data <- read_csv("../2_data_deidentified/subsets/data_yes_results_basic.csv")
 dashboard <- read_csv("../2_data_deidentified/subsets/dashboard_results_basic.csv")
 demogr <- read_csv("../2_data_deidentified/subsets/demographics_results_basic.csv")
-```
-
-```{r checkpackage}
-print(paste0("kableExtra version ", packageVersion("kableExtra")))
 ```
 
 # 1. Response rate
