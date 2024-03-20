@@ -430,30 +430,6 @@ While not mapped 1:1 for each respondent, from the figure it appears that for al
 
 ---------------------------------------------------------------------------------
 
-``` {r otherusage_table2, echo = FALSE, warning = FALSE, message = FALSE}
-txt_data_yes <- read_csv("../2_data_deidentified/subsets/data_yes_results_text.csv")
-txt_data_yes_YD6 <- txt_data_yes %>% 
-  filter(qname_main == "YD-6") %>% 
-  mutate(field_name = ifelse(field_name == "Other (please specify)", "Other: LiDAR", field_name)) %>%
-  mutate(field_name = factor(field_name, levels = q_text_order)) %>% 
-  arrange(field_name) %>%
-  select(-main, -ID, -source, -qname, - field_no, -qname_main, -q_code, -q_text)
-
-index_table <- table(fct_inorder(txt_data_yes_YD6$field_name))
-index_table <- index_table[-which(index_table == 0)]
-
-#kable_styling(kable(txt_data_yes_YD6))
-
-
-txt_data_yes_YD6 %>%
-  kbl(col.names = c("", ""), escape = FALSE) %>%
-  remove_column(2) %>%
-  kable_minimal("striped", font_size = 12, full_width = FALSE) %>%
-  #add_header_above(c("Other data usage" = 1)) %>%
-  pack_rows(index = index_table)
-```
-
-
 ## 4.3 Details on dataset access and satisfaction
 
 The following table summarizes the detailed questions per dataset. The numbers represent the percentage of respondents that chose that answer. Questions that allowed multiple answers are indicated in the table with an asterisk: so these percentages can add up to more than 100%.
@@ -507,7 +483,7 @@ yes_data_table$q_text <- fct_inorder(yes_data_table$q_text)
 # Check:
 # levels(yes_data_table$q_text)
 levels(yes_data_table$q_text)[5:11] <- c("Daily", "At least once a week", "2-3 times a month", "Once a month", "Once every 6 months", "Once every year", "Less than once a year")
-levels(yes_data_table$q_text)[18:20] <- c("Slightly well", "Moderately well", "Very well", "Extremely well")
+levels(yes_data_table$q_text)[17:20] <- c("Slightly well", "Moderately well", "Very well", "Extremely well")
 
 # Loop through columns and apply colors to be used in the kable table
 for (i in 3:10) {
@@ -556,8 +532,8 @@ yes_data_table %>%
 
 ```
 
-
 --------------------------------------------------------
+
 **In terms of usage of data, respondents added the following under "Other":**
 
 ``` {r otherusage_table, echo = FALSE, warning = FALSE, message = FALSE}
@@ -589,11 +565,9 @@ In summary, the three usages mentioned here most are personal use, volunteer act
 
 ## 4.4 Details on advantages of dataset access
 
---------------------------------------------------------
-
 The figures below summarize the advantages and disadvantages that respondents listed per acquire method (with more detail on "other" methods of accessing data that respondents listed).
 
-There is also an overview of the advantages listed per acquire method *for each dataset* but since this is an extremely dense overview, it is available upon.
+There is also an overview of the advantages listed per acquire method *for each dataset* but since this is an extremely dense overview, it is currently available upon request (03/20/2024). We will add this information to the Github repository in the next few weeks.
 
 The answers "CDMO" refer to the National Estuarine Research Reserve System Centralized Data Management Office: https://cdmo.baruch.sc.edu/. "SWMP" is the NERR System-Wide Monitoring Program: https://coast.noaa.gov/digitalcoast/data/nerr.html
 
@@ -799,7 +773,12 @@ ggplot(adv_bysource, aes(x = percentage, y = fct_rev(q_text), fill = Advantage))
 
 The tables below summarize the advantages and disadvantages that respondents listed per acquire method (with more detail on "other" methods of accessing data that respondents listed).
 
-There is also an overview of the advantages listed per acquire method *for each dataset* but since this is an extremely dense overview, it is available in the Appendix.
+There is also an overview of the advantages listed per acquire method *for each dataset* but since this is an extremely dense overview, it is currently available upon request (03/20/2024). We will add this information to the Github repository in the next few weeks.
+
+In the treemap below, the size of the main boxes (indicated with different colors and headings in white) represent the percentage of respondents that picked this option out of all respondents. Keep in mind that respondents could pick more than 1 answer.
+
+The size of the boxes inside the main boxes gives an indication of how often the disadvantage (from the main box) was chosen for method of accessing data. E.g. for the disadvantage "Difficult/Complicated to access", the blue-purple box, relatively more respondents picked that as a disadvantage for pick up paper copy method than for the download from website (CDMO/SWMP, SEACAR) method. 
+There are a few boxes that are too small to show text with; but we can safely say those are disadvantages that are less relevant. Again, the detailed data on this can be requested and will also be available on Github at a later date.
 
 ```{r otherdisadvantages_table2, fig.width = 8, fig.height = 8, fig.align = 'center', echo = FALSE, warning = FALSE, message = FALSE}
 # Disadvantages
@@ -842,21 +821,33 @@ yes_data_disadv <- yes_data3_access %>%
   select(-text_answer)
 
 disadv_full_overview <- yes_data_disadv %>% 
-  group_by(field_name, tot_cnt, q_text, Disadvantage) %>% 
+  group_by(Disadvantage) %>% # Took out field_name and q_text here, because
+  # for the treemap we want percentages that the disadvantage was mentioned in total
   count() %>%  
-  mutate(percentage = round(n/tot_cnt*100, 1)) %>% 
-  select(-tot_cnt, -n)
+  ungroup() %>% 
+  mutate(percentage = round(n/sum(n)*100, 1)) %>% 
+  select(-n)
+
+disadv_bysource <- 
 
 # Create summary for only the way of accessing
-disadv_bysource <- yes_data_disadv %>% 
-  select(-tot_cnt) %>% 
-  add_count(q_text) %>% 
-  rename(tot_cnt = n) %>% 
-  group_by(q_text, tot_cnt, Disadvantage) %>% 
+disadv_bysource <- yes_data_disadv %>%
+  group_by(Disadvantage) %>% # Took out field_name and q_text here, because
+  # for the treemap we want percentages that the disadvantage was mentioned in total
   count() %>%  
-  mutate(percentage = round(n/tot_cnt*100, 1)) %>% 
   ungroup() %>% 
-  select(-tot_cnt, -n) %>% 
+  mutate(percentage = round(n/sum(n)*100, 1)) %>% 
+  select(-n) %>% 
+  left_join(yes_data_disadv) %>% 
+  group_by(q_text, percentage, Disadvantage) %>%
+  count() %>%  
+  ungroup() %>% 
+  group_by(Disadvantage) %>% 
+  mutate(tot_n = sum(n)) %>% 
+  ungroup() %>% 
+  mutate(percentage2 = round(n/tot_n * percentage, 1)) %>% # sub-percentage of methods that list that disadvantage
+  ungroup() %>% 
+  #select(-n) %>% 
   mutate(Disadvantage = factor(Disadvantage, levels = c("There are no disadvantages",
                                                      "The format the data are delivered / accessed in is not user-friendly" ,
                                                      "Difficult/Complicated to access",
@@ -872,6 +863,30 @@ disadv_bysource <- yes_data_disadv %>%
                                                      "Other: Not online",
                                                      "Other: Being a pain to the researchers",
                                                      "Other: Do not know how to access data")))
+  
+  # select(-tot_cnt) %>% 
+  # add_count(Disadvantage) %>% 
+  # rename(tot_cnt = n) %>% 
+  # group_by(q_text, tot_cnt, Disadvantage) %>% 
+  # count() %>%  
+  # mutate(percentage = round(n/tot_cnt*100, 1)) %>% # percentage of methods that list that disadvantage
+  # ungroup() %>% 
+  # select(-tot_cnt, -n) %>% 
+  # mutate(Disadvantage = factor(Disadvantage, levels = c("There are no disadvantages",
+  #                                                    "The format the data are delivered / accessed in is not user-friendly" ,
+  #                                                    "Difficult/Complicated to access",
+  #                                                    "Data is received quickly after request",
+  #                                                    "Time consuming to request",
+  #                                                    "Slow to receive",
+  #                                                    "Other: Various formats / data sources",
+  #                                                    "Other: Not up to date",
+  #                                                    "Other: Not complete / not applicable to Guana System",
+  #                                                    "Other: Not easy to use / view on mobile devices",
+  #                                                    "Other: Login required",
+  #                                                    "Other: Not accurate (enough)",
+  #                                                    "Other: Not online",
+  #                                                    "Other: Being a pain to the researchers",
+  #                                                    "Other: Do not know how to access data")))
 
 # Reorder so the access methods are in the same order as the first table
 disadv_bysource$q_text <- factor(disadv_bysource$q_text)
@@ -903,13 +918,13 @@ library(htmltools)
 # }
 
 # Add a new column that has both the label and the percentage, to use for plotting
-disadv_bysource<- disadv_bysource %>% 
-  mutate(q_text_num = paste0(q_text, " (", percentage, "%)"))
+# disadv_bysource<- disadv_bysource %>% 
+#   mutate(q_text_num = paste0(q_text, " (", percentage, "%)"))
 
 #basic treemap
 p <- treemap(disadv_bysource,
-            index=c("Disadvantage","q_text_num"), #index=c("q_text","Disadvantage"),
-            vSize="percentage",
+            index=c("Disadvantage","q_text"), #index=c("q_text","Disadvantage"), OR c("Disadvantage","q_text_num")
+            vSize="percentage2",
             type="index",
             title = "",
             palette = "Set2",
@@ -961,10 +976,11 @@ p <- treemap(disadv_bysource,
 #             rootname = "Disadvantage")
 #   )
 # )
+#While a large number of people indicated there were no disadvantages to certain acquire or access methods, the "free text" answers under "Other" provide insight in some drawbacks people identified. 
 
 ```
 
-While a large number of people indicated there were no disadvantages to certain acquire or access methods, the "free text" answers under "Other" provide insight in some drawbacks people identified. 
+
 
 -------------------------------------------------------------------------------
 
