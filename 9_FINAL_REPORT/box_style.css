@@ -17,6 +17,9 @@
 
 .info {
   background-image: url("images/circle-info-solid.svg");
+  background-repeat: no-repeat;
+  padding-left: 60px;
+  height: 50px;
 }
 
 .boxheader {

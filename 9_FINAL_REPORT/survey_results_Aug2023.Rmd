@@ -30,6 +30,7 @@ options(kableExtra.auto_format = FALSE)
 library(cowplot)
 library(formattable)
 library(RColorBrewer)
+library(fontawesome)
 
 intro <- read_csv("../2_data_deidentified/subsets/intro_results_basic.csv")
 no_access <- read_csv("../2_data_deidentified/subsets/data_no_results_basic.csv")
@@ -86,6 +87,8 @@ ggplot(intro %>%
   theme(legend.position = "none",
         plot.title.position = "plot",
         plot.caption.position =  "plot")
+
+ggsave("./Figures/1_estuary_connection.jpg")
 ```
 
 Under "Other", respondents answered:
@@ -118,6 +121,7 @@ ggplot(intro %>%
   theme_bw()+
   theme(legend.position = "none",
         plot.title.position = "plot")
+ggsave("./Figures/2_engagement.jpg")
 ```
 
 --------------------------------------------------------
@@ -151,6 +155,7 @@ ggplot(intro %>%
                              label.position = "bottom",
                              title.position = "left", title.vjust = 1,
                              reverse = TRUE))
+ggsave("./Figures/3_data_interest.jpg")
 ```
 
 Under "Other", the 4 types of datasets mentioned were: **historical maps**, **water fowl**, **dam operations**, **natural resource management practices/techniques/results**.
@@ -175,19 +180,19 @@ ggplot(intro %>%
   scale_fill_manual(values = c("#67a9cf", "#02818a"))+
   theme_bw()+
   theme(legend.position = "none")
+ggsave("./Figures/4_data_accessed.jpg")
 ```
 
 
 :::: {.infobox .left data-latex=""}
-:::{.boxheader data-latex=""}
-![info icon](images/circle-info-solid.svg){#id .class width=50 height=50px} **Take home messages**
+:::{.boxheader .info data-latex=""}
+**Take home messages**
 :::
 
 - The majority of respondents use the Guana Estuary recreationally (62.7%) and almost half (49%) collect or use data for scientific purposes. In third and fourth place are other work-related and educational connections (resp. 33.3% and 29.4%).
 - Engagement with the Guana Estuary is mostly once a month (21.6% of respondents), with a tie (19.6%) for once a week and once every 6 months. Daily engagement was indicated by 17.6% of respondents. 
 - The top 4 datasets of interest, chosen by more than 60% of the respondents, are: water quality information, information on shellfish, fish and other aquatic organisms, water level information, and information on vegetation. 
 - The majority of respondents (83.7%) has accessed data before.
-
 ::::
 
 Based on their response whether or not they had accessed data, respondents answered different sets of questions. The results are summarized in the next two sections.
@@ -226,6 +231,7 @@ intro %>%
   theme_bw()+
   guides(fill = guide_legend(title = "Rank",
                              reverse = TRUE))
+ggsave("./Figures/5_no_access_interest.jpg")
 ```
 
 ## 3.2 Frequency and usage of data, if accessed in the future
@@ -253,6 +259,7 @@ ggplot(no_access %>%
   scale_fill_distiller(palette = "YlGn", direction = 1)+
   theme_bw()+
   theme(plot.title.position = "plot", legend.position = "none")
+ggsave("./Figures/6_no_access_how_often.jpg")
 ```
 
 --------------------------------------------------------
@@ -280,13 +287,14 @@ ggplot(no_access %>%
   scale_y_discrete(labels = function(x) str_wrap(x, width = 30))+
   theme_bw()+
   theme(plot.title.position = "plot", legend.position = "none")
+ggsave("./Figures/7_no_access_use.jpg")
 ```
 
 Under "Other", respondents listed **environmental impacts** and **resilience planning**.
 
 :::: {.infobox .left data-latex=""}
-:::{.boxheader data-latex=""}
-![info icon](images/circle-info-solid.svg){#id .class width=50 height=50px} **Take home messages**
+:::{.boxheader .info data-latex=""}
+**Take home messages**
 :::
 
 - For the (8) respondents that had not accessed data before, their main interest would be data on water level information, reserve or trail closures, and water quality information.
@@ -330,6 +338,7 @@ intro %>%
   theme_bw()+
   guides(fill = guide_legend(title = "Rank",
                              reverse = TRUE))
+ggsave("./Figures/8_access_interest.jpg")
 ```
 
 Under "Other", the 4 types of datasets mentioned were: **historical maps**, **water fowl**, **dam operations**, **natural resource management practices/techniques/results**.
@@ -382,7 +391,7 @@ yes_data_order <- yes_data %>%
   arrange(desc(percentage))
 
 q_text_order <- factor(yes_data_order$q_text, levels = yes_data_order$q_text)
-
+ggsave("./Figures/9_access_what.jpg")
 ```
 There was an option "Other", to which there was one response: **LiDAR data**. 
 
@@ -419,7 +428,7 @@ ggplot(access_summ, aes(x = diff, y = fct_rev(q_text), fill = q_text))+
   scale_fill_manual(values = color_vector)+
   theme_bw()+
   theme(legend.position = "none")
-
+ggsave("./Figures/10_access_diff_interest_what.jpg")
 ```
 
 While not mapped 1:1 for each respondent, from the figure it appears that for almost all data (aside from water quality information, and "Other") 22.5 - 30% of respondents have not accessed or are not accessing data they would like to access.
@@ -759,7 +768,7 @@ ggplot(adv_bysource, aes(x = percentage, y = fct_rev(q_text), fill = Advantage))
 #   kbl(escape = FALSE) %>% #col.names = c("", "")
 #   kable_minimal("striped") #%>%
 #   #pack_rows(index = tbl_headers)
-
+ggsave("./Figures/11_advantages.jpg")
 
 ```
 
@@ -823,8 +832,6 @@ disadv_full_overview <- yes_data_disadv %>%
   ungroup() %>% 
   mutate(percentage = round(n/sum(n)*100, 1)) %>% 
   select(-n)
-
-disadv_bysource <- 
 
 # Create summary for only the way of accessing
 disadv_bysource <- yes_data_disadv %>%
@@ -974,6 +981,8 @@ p <- treemap(disadv_bysource,
 # )
 #While a large number of people indicated there were no disadvantages to certain acquire or access methods, the "free text" answers under "Other" provide insight in some drawbacks people identified. 
 
+#ggsave(p, "./Figures/12_disadvantages.jpg")
+
 ```
 
 
@@ -981,9 +990,8 @@ p <- treemap(disadv_bysource,
 -------------------------------------------------------------------------------
 
 :::: {.infobox .left data-latex=""}
-
-:::{.boxheader data-latex=""}
-![info icon](images/circle-info-solid.svg){#id .class width=50 height=50px} **Take home messages**
+:::{.boxheader .info data-latex=""}
+**Take home messages**
 :::
 
 - The majority of people that have accessed data before did so for **water quality information**: 85%.
@@ -1036,6 +1044,7 @@ ggplot(dashboard %>%
   theme_bw()+
   theme(legend.position = "none",
         plot.title.position = "plot")
+ggsave("./Figures/13_how.jpg")
 ```
 
 --------------------------------------------------------
@@ -1060,6 +1069,7 @@ ggplot(dashboard %>%
   theme_bw()+
   theme(legend.position = "none",
         plot.title.position = "plot")
+ggsave("./Figures/14_what.jpg")
 ```
 
 The response in the category "Other" is **projections**.
@@ -1104,6 +1114,7 @@ ggplot(dashboard %>%
                              label.position = "bottom",
                              title.position = "left", title.vjust = 1,
                              reverse = TRUE))
+ggsave("./Figures/15_form.jpg")
 ```
 
 
@@ -1143,11 +1154,12 @@ ggplot(dashboard %>%
                              label.position = "bottom",
                              title.position = "left", title.vjust = 1,
                              reverse = TRUE))
+ggsave("./Figures/16_format.jpg")
 ```
 
 :::: {.infobox .left data-latex=""}
-:::{.boxheader data-latex=""}
-![info icon](images/circle-info-solid.svg){#id .class width=50 height=50px} **Take home messages**
+:::{.boxheader .info data-latex=""}
+**Take home messages**
 :::
 - The overwhelming majority of respondents prefer to access a data dashboard on their computer. Slightly less than 50% would (also) want to access it on a cellphone.
 - The type of information respondents would like to access is firstly recent data (from the past year), chosen by almost 95% of respondents. In a shared second place (almost 90% each) came historical data and current data (from the past month). Data representing current conditions was also chosen by just over 70% of the respondents.
@@ -1210,6 +1222,7 @@ gender <- ggplot(demogr %>%
 #   theme(legend.position = "none") 
 
 plot_grid(age, gender, ncol = 2, align = "v")
+ggsave("./Figures/17_age_gender.jpg")
 ```
 
 ----------------------------------------------------
@@ -1229,11 +1242,12 @@ ggplot(demogr %>%
   scale_fill_distiller(palette = "PuBu", direction = 1)+
   theme_bw()+
   theme(plot.title.position = "plot", legend.position = "none")
+ggsave("./Figures/18_distance.jpg")
 ```
 
 :::: {.infobox .left data-latex=""}
-:::{.boxheader data-latex=""}
-![info icon](images/circle-info-solid.svg){#id .class width=50 height=50px} **Take home messages**
+:::{.boxheader .info data-latex=""}
+**Take home messages**
 :::
 - Slightly more respondents were female (55%) than male (45%).
 - Most respondents were 65 or over (32.5%), but the two age groups 35-44 and 45-54 combined made up 35% of the respondents: there is a balance between respondents that are retired and that are mid- to senior-level working professionals (we assume).
@@ -1245,7 +1259,7 @@ ____________________________________________________
 
 # Next steps
 
-Based on this report (and previous workshops), the project team will develop dashboard design recommendations and considerations. Work is already underway on a draft dashboard, and the project team will be in touch before the end of September 2023 about further steps on these, and to inform you of upcoming participation and discussion opportunities.
+Based on this report (and previous workshops), the project team has created dashboard design recommendations and considerations. Work is underway on a draft dashboard, and the project team will be in touch soon about further steps on these, and to inform you of upcoming participation and discussion opportunities.
 
 To access the code that created this document, the survey result data, or jpg versions of the figures, go to https://github.com/GTMNERR-Science-Transfer/Survey-results. 
 
