@@ -450,7 +450,7 @@ levels(q_text_order)[which(q_text_order == "Other (please specify)")] <- "Other:
 yes_data2 <- yes_data %>%
   filter(qname_main != "YD-1") %>%
   group_by(main, field_name) %>%
-  summarize(tot_cnt = length(unique(ID))) %>% 
+  summarize(tot_cnt = length(unique(ID))) %>% # unique respondents
   right_join(yes_data %>% filter(qname_main != "YD-1")) # join because we still need q_text in the rest of the code
 
 # Reorganize data for kable table
@@ -839,16 +839,16 @@ disadv_bysource <- yes_data_disadv %>%
   # for the treemap we want percentages that the disadvantage was mentioned in total
   count() %>%  
   ungroup() %>% 
-  mutate(percentage = round(n/sum(n)*100, 1)) %>% 
-  select(-n) %>% 
+  #mutate(percentage = round(n/sum(n)*100, 1)) %>% 
+  #select(-n) %>% 
   left_join(yes_data_disadv) %>% 
-  group_by(q_text, percentage, Disadvantage) %>%
+  group_by(q_text, Disadvantage) %>% #percentage, 
   count() %>%  
-  ungroup() %>% 
-  group_by(Disadvantage) %>% 
-  mutate(tot_n = sum(n)) %>% 
-  ungroup() %>% 
-  mutate(percentage2 = round(n/tot_n * percentage, 1)) %>% # sub-percentage of methods that list that disadvantage
+  # ungroup() %>% 
+  # group_by(Disadvantage) %>% 
+  # mutate(tot_n = sum(n)) %>% 
+  #ungroup() %>% 
+  #mutate(percentage2 = round(n/tot_n * percentage, 1)) %>% # sub-percentage of methods that list that disadvantage
   ungroup() %>% 
   #select(-n) %>% 
   mutate(Disadvantage = factor(Disadvantage, levels = c("There are no disadvantages",
@@ -896,6 +896,26 @@ disadv_bysource$q_text <- factor(disadv_bysource$q_text)
 disadv_bysource$q_text <- fct_relevel(disadv_bysource$q_text, "Request from a GTMNERR staff member by email", after = 0)
 disadv_bysource$q_text <- fct_relevel(disadv_bysource$q_text, "Pick-up paper copy in person", after = Inf)
 
+# Add total for treemap
+
+totals_to_add <- disadv_bysource %>% 
+  ungroup() %>% 
+  group_by(Disadvantage) %>% 
+  mutate(n = sum(n)) %>% 
+  select(-q_text) %>% 
+  distinct() %>% 
+  rename(labels = Disadvantage) %>% 
+  mutate(parents = "All disadvantage responses") %>% 
+  select(parents, labels, n)
+
+# rename to make it easier to match labels and parents
+names(disadv_bysource)[1] <- "labels" # q_text goes inside disadvantage so that's a label
+names(disadv_bysource)[2] <- "parents" # Disadvantage is one of the main blocks so it's a parent
+
+disadv_bysource_treemap <- disadv_bysource %>% 
+  select(parents, labels, n) %>% 
+  bind_rows(totals_to_add)
+
 # ggplot(disadv_bysource, aes(x = percentage, y = fct_rev(q_text), fill = Disadvantage)) +
 #   geom_col(position = "stack", color = "darkgrey")+
 #   scale_y_discrete(labels = function(x) str_wrap(x, width = 70),drop = FALSE)+
@@ -913,61 +933,61 @@ library(treemap)
 library(d3treeR)
 library(htmltools)
  
-# ln_break <- function (x, nlen = 11) {
-#   require("stringi")
-#   x <- gsub(paste0("(.{1,", nlen, "})(\\s|$)"), "\\1\n", x)
-#   x <- stringi::stri_replace_last_fixed(x, "\n", "")
-#   return(x)
-# }
+ln_break <- function (x, nlen = 11) {
+  require("stringi")
+  x <- gsub(paste0("(.{1,", nlen, "})(\\s|$)"), "\\1\n", x)
+  x <- stringi::stri_replace_last_fixed(x, "\n", "")
+  return(x)
+}
 
 # Add a new column that has both the label and the percentage, to use for plotting
 # disadv_bysource<- disadv_bysource %>% 
 #   mutate(q_text_num = paste0(q_text, " (", percentage, "%)"))
 
-#basic treemap
-p <- treemap(disadv_bysource,
-            index=c("Disadvantage","q_text"), #index=c("q_text","Disadvantage"), OR c("Disadvantage","q_text_num")
-            vSize="percentage2",
-            type="index",
-            title = "",
-            palette = "Set2",
-            fontsize.labels=c(15,12),                # size of labels. Give the size per level of aggregation: size for group, size for subgroup, sub-subgroups...
-            fontcolor.labels=c("white","black"),    # Color of labels
-            fontface.labels=c(2,1),                  # Font of labels: 1,2,3,4 for normal, bold, italic, bold-italic...
-            bg.labels=c("transparent"), # Background color of labels
-            align.labels=list(
-              c("left", "top"),
-              c("right", "bottom")
-            ),
-            overlap.labels=0,
-            inflate.labels=FALSE
-          )
+# #basic treemap
+# p <- treemap(disadv_bysource,
+#             index=c("Disadvantage","q_text"), #index=c("q_text","Disadvantage"), OR c("Disadvantage","q_text_num")
+#             vSize="percentage2",
+#             type="index",
+#             title = "",
+#             palette = "Set2",
+#             fontsize.labels=c(15,12),                # size of labels. Give the size per level of aggregation: size for group, size for subgroup, sub-subgroups...
+#             fontcolor.labels=c("white","black"),    # Color of labels
+#             fontface.labels=c(2,1),                  # Font of labels: 1,2,3,4 for normal, bold, italic, bold-italic...
+#             bg.labels=c("transparent"), # Background color of labels
+#             align.labels=list(
+#               c("left", "top"),
+#               c("right", "bottom")
+#             ),
+#             overlap.labels=0,
+#             inflate.labels=FALSE,
+#             draw = FALSE
+#           )
 
 # THE CODE BELOW IS SUPERCOOL BUT THE PROBLEM IS THAT IT SHOWS THE NON-INTERACTIVE
 # AND INTERACTIVE TREEMAP BOTH. And I have not been able to resolve that.
-# # make it interactive using d3tree ("rootname" becomes the title of the plot)
-# # wrapped inside browsable etc (htmltools package) to change the font type to Arial
+# make it interactive using d3tree ("rootname" becomes the title of the plot)
+# wrapped inside browsable etc (htmltools package) to change the font type to Arial
 # browsable(
-#   tagList(
+#   htmltools::tagList(
 #     tags$head(
-#       #tags$style('text.label{font-size: 20px !important}')
-#       #tags$style("text.label{font-family: 'Arial'; font-size: 20px}"),
-#       tags$script(src="https://d3js.org/d3.v5.min.js"),
-#       tags$style(HTML("
-#         text.label {
-#           font-family: 'Arial';
-#           font-size: 20px;
-#           white-space: pre-wrap; /* Allow text wrapping */
-#         }
-#       ")
-#     )), 
-#     d3tree2(treemap(disadv_bysource,
+#       tags$style('text.label{font-size: 20px !important}'),
+#       tags$style("text.label{font-family: 'Arial'; font-size: 20px}"),
+#       #tags$script(src="https://d3js.org/d3.v5.min.js"),
+#       #tags$style(HTML("
+#       #text.label {
+#       #font-family: 'Arial';
+#       #font-size: 20px;
+#       #white-space: pre-wrap; /* Allow text wrapping */
+#       #}")
+#       ),
+#     d3tree(treemap(disadv_bysource,
 #                     index=c("Disadvantage",
-#                             ln_break("q_text_num")),
+#                             ln_break("q_text")),
 #                     vSize="percentage",
 #                     type="index",
 #                     palette = "Set2",
-#                     fontsize.labels=c(15,12),
+#                     fontsize.labels=c(25,22),
 #                     #bg.labels=c("transparent"),
 #                     #align.labels=list(
 #                     #  c("left", "top"),
@@ -975,17 +995,56 @@ p <- treemap(disadv_bysource,
 #                     #),
 #                     border.col=c("black","white"), # Color of borders of groups, and of subgroups
 #                     #border.lwds=c(7,2),
-#                     fontsize.title=12),
+#                     fontsize.title=12,
+#                     draw = FALSE),
 #             rootname = "Disadvantage")
 #   )
 # )
+
+
+library(plotly)
+
+treemap_interactive <- plot_ly(
+  type="treemap",
+  branchvalues = "total",
+  data = disadv_bysource_treemap,
+  values = ~n,
+  labels = ~labels, # q_text & parent Disadvantages
+  parents = ~parents, # Disadvantage
+  hoverinfo = "label+percent parent", #old: "label+value+percent parent"
+  hoverlabel = list(bgcolor = "white",
+                      font = list(size = 12, color = "black"))
+) 
+
+#treemap_interactive <- treemap_interactive %>% plotly_build()
+treemap_interactive
+
+# d3tree3(treemap(disadv_bysource,
+#                                  # index=c("Disadvantage",
+#                                  #         ln_break("q_text")),
+#                                   index=c("parents",
+#                                          ln_break("labels")),
+#                                  vSize="tot_n",
+#                                  type="index",
+#                                  palette = "Set2",
+#                                  fontsize.labels=c(25,22),
+#                                  #bg.labels=c("transparent"),
+#                                  #align.labels=list(
+#                                  #  c("left", "top"),
+#                                  #  c("right", "bottom")
+#                                  #),
+#                                  border.col=c("black","white"), # Color of borders of groups, and of subgroups
+#                                  #border.lwds=c(7,2),
+#                                  fontsize.title=12,
+#                 draw = FALSE),
+#                          rootname = "Disadvantage")
+
+
 #While a large number of people indicated there were no disadvantages to certain acquire or access methods, the "free text" answers under "Other" provide insight in some drawbacks people identified. 
 
-#ggsave(p, "./Figures/12_disadvantages.jpg")
+#ggsave(plot = p, filename = "./Figures/12_disadvantages.jpg")
 
 ```
-
-
 
 -------------------------------------------------------------------------------
 
