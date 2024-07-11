@@ -571,16 +571,13 @@ In summary, the three usages mentioned here most are personal use, volunteer act
 
 ## 4.4 Details on advantages of dataset access
 
-The figures below summarize the advantages and disadvantages that respondents listed per acquire method (with more detail on "other" methods of accessing data that respondents listed).
-
-There is also an overview of the advantages listed per acquire method *for each dataset* but since this is an extremely dense overview, it is currently available upon request (03/20/2024). We will add this information to the Github repository in the next few weeks.
+The figure below summarizes the advantages that respondents listed per data access method. We added more detail on "Other" methods of accessing data based on responses ("Other: unspecified" is the category where respondents chose "Other" but did not provide more detail).
 
 The answers "CDMO" refer to the National Estuarine Research Reserve System Centralized Data Management Office: https://cdmo.baruch.sc.edu/. "SWMP" is the NERR System-Wide Monitoring Program: https://coast.noaa.gov/digitalcoast/data/nerr.html
 
 "SEACAR" is the Statewide Ecosystem Assessment of Coastal and Aquatic Resources by the Florida Department of Environmental Protection: https://data.florida-seacar.org/
 
-
-``` {r otheradvantages_table, fig.width = 8, fig.height = 8, fig.align = 'center', echo = FALSE, warning = FALSE, message = FALSE}
+``` {r advantages_fig1, fig.width = 8, fig.height = 8, fig.align = 'center', echo = FALSE, warning = FALSE, message = FALSE}
 # yes_data2 has datasets and way of accessing (YD-2 in col qname_main) and advantages/disadvantages (YD-3 and YD-4)
 
 # Read in text data results
@@ -773,6 +770,68 @@ ggsave("./Figures/11_advantages.jpg")
 
 ```
 
+The next figure, a so-called treemap, shows the same information but summarized differently - based on the advantages. The size of the rectangle for each advantage indicates the percentage of times this advantages was picked by respondents. Clicking on each rectangle then shows the data access methods for this advantage was picked; also by percentage. A hover label shows the percentages as text, as well as the advantages or access methods if the text is too long to be readily readable.
+
+```{r advantages_fig2, fig.width = 8, fig.height = 8, fig.align = 'center', echo = FALSE, warning = FALSE, message = FALSE}
+# Treemap for advantages
+
+# Make data summary for treemap  
+adv_bysource_treemap <- yes_data_adv %>%
+  group_by(Advantage) %>% # Took out field_name and q_text here, because
+  # for the treemap we want percentages that the Advantage was mentioned in total
+  count() %>%  
+  ungroup() %>% 
+  left_join(yes_data_adv) %>% 
+  group_by(q_text, Advantage) %>%
+  count() %>%  
+  mutate(Advantage = factor(Advantage, levels = c("Easy/convenient to access" ,
+                                                  "Requesting the data is quick",
+                                                  "Data is received quickly after request",
+                                                  "The format the data are delivered / accessed in is useful",
+                                                  "There are no advantages",
+                                                  "Other: N/A (already have the data / collect data myself)")))
+
+# Reorder so the access methods are in the same order as the first table
+adv_bysource_treemap$q_text <- factor(adv_bysource_treemap$q_text)
+adv_bysource_treemap$q_text <- fct_relevel(adv_bysource_treemap$q_text, "Request from a GTMNERR staff member by email", after = 0)
+adv_bysource_treemap$q_text <- fct_relevel(adv_bysource_treemap$q_text, "Pick-up paper copy in person", after = Inf)
+
+# Add total for treemap
+totals_to_add <- adv_bysource_treemap %>% 
+  ungroup() %>% 
+  group_by(Advantage) %>% 
+  mutate(n = sum(n)) %>% 
+  select(-q_text) %>% 
+  distinct() %>% 
+  rename(labels = Advantage) %>% 
+  mutate(parents = "All advantage responses") %>% 
+  select(parents, labels, n)
+
+# rename to make it easier to match labels and parents
+names(adv_bysource_treemap)[1] <- "labels" # q_text goes inside disadvantage so that's a label
+names(adv_bysource_treemap)[2] <- "parents" # Disadvantage is one of the main blocks so it's a parent
+
+adv_bysource_treemap <- adv_bysource_treemap %>% 
+  select(parents, labels, n) %>% 
+  bind_rows(totals_to_add)
+
+treemap_interactive <- plot_ly(
+  type="treemap",
+  branchvalues = "total",
+  data = adv_bysource_treemap,
+  values = ~n,
+  #ids = ~ids,
+  labels = ~labels, # q_text & parent Disadvantages
+  parents = ~parents, # Disadvantage
+  hoverinfo = "label+percent parent", #old: "label+value+percent parent"
+  hoverlabel = list(font = list(size = 12, color = "black")),
+  textfont = list(weight = "bold") # I don't think this does anything
+)
+
+treemap_interactive
+
+```
+
 -----------------------------------------------------------------
 
 ## 4.5 Details on disadvantages of dataset access
@@ -789,7 +848,7 @@ There are a few boxes that are too small to show text with; but we can safely sa
 ```{r otherdisadvantages_table2, fig.width = 8, fig.height = 8, fig.align = 'center', echo = FALSE, warning = FALSE, message = FALSE}
 # Disadvantages
 
-# Get the text answers linked to "other" advantages
+# Get the text answers linked to "other" disadvantages
 lookup_disadv <- read_csv("../2_data_deidentified/lookup_disadv.csv")
 txt_disadv <- txt_data_yes %>% 
   filter(qname_main == "YD-4") %>% 
@@ -804,7 +863,7 @@ txt_disadv <- txt_data_yes %>%
   filter(!is.na(text_answer)) # Remove NA
 
 # Disadvantages
-# Join data - advantage will now be separate column
+# Join data - disadvantage will now be separate column
 yes_data_disadv <- yes_data3_access %>% 
   left_join(yes_data3_disadv, by = c("field_name", "ID", "tot_cnt")) %>% 
   # do joins for text answers:
@@ -834,8 +893,33 @@ disadv_full_overview <- yes_data_disadv %>%
   mutate(percentage = round(n/sum(n)*100, 1)) %>% 
   select(-n)
 
-# Create summary for only the way of accessing
-disadv_bysource <- yes_data_disadv %>%
+disadv_bysource <- yes_data_disadv %>% 
+  select(-tot_cnt) %>% 
+  add_count(q_text) %>% # Total number of times access method is picked
+  rename(tot_cnt = n) %>% 
+  group_by(q_text, tot_cnt, Disadvantage) %>% 
+  count() %>%  # Count each disadvantage per method 
+  mutate(percentage = round(n/tot_cnt*100, 1)) %>% # Make this a percentage of all disadvantages for that method
+  ungroup() %>% 
+  select(-tot_cnt, -n) %>% 
+  mutate(Disadvantage = factor(Disadvantage, levels = c("There are no disadvantages",
+                                                     "The format the data are delivered / accessed in is not user-friendly" ,
+                                                     "Difficult/Complicated to access",
+                                                     "Data is received quickly after request",
+                                                     "Time consuming to request",
+                                                     "Slow to receive",
+                                                     "Other: Various formats / data sources",
+                                                     "Other: Not up to date",
+                                                     "Other: Not complete / not applicable to Guana System",
+                                                     "Other: Not easy to use / view on mobile devices",
+                                                     "Other: Login required",
+                                                     "Other: Not accurate (enough)",
+                                                     "Other: Not online",
+                                                     "Other: Being a pain to the researchers",
+                                                     "Other: Do not know how to access data")))
+
+# Make data summary for treemap  
+disadv_bysource_treemap <- yes_data_disadv %>%
   group_by(Disadvantage) %>% # Took out field_name and q_text here, because
   # for the treemap we want percentages that the disadvantage was mentioned in total
   count() %>%  
@@ -843,7 +927,7 @@ disadv_bysource <- yes_data_disadv %>%
   #mutate(percentage = round(n/sum(n)*100, 1)) %>% 
   #select(-n) %>% 
   left_join(yes_data_disadv) %>% 
-  group_by(q_text, Disadvantage) %>% #percentage, 
+  group_by(q_text, Disadvantage) %>%
   count() %>%  
   # ungroup() %>% 
   # group_by(Disadvantage) %>% 
@@ -867,39 +951,18 @@ disadv_bysource <- yes_data_disadv %>%
                                                      "Other: Not online",
                                                      "Other: Being a pain to the researchers",
                                                      "Other: Do not know how to access data")))
-  
-  # select(-tot_cnt) %>% 
-  # add_count(Disadvantage) %>% 
-  # rename(tot_cnt = n) %>% 
-  # group_by(q_text, tot_cnt, Disadvantage) %>% 
-  # count() %>%  
-  # mutate(percentage = round(n/tot_cnt*100, 1)) %>% # percentage of methods that list that disadvantage
-  # ungroup() %>% 
-  # select(-tot_cnt, -n) %>% 
-  # mutate(Disadvantage = factor(Disadvantage, levels = c("There are no disadvantages",
-  #                                                    "The format the data are delivered / accessed in is not user-friendly" ,
-  #                                                    "Difficult/Complicated to access",
-  #                                                    "Data is received quickly after request",
-  #                                                    "Time consuming to request",
-  #                                                    "Slow to receive",
-  #                                                    "Other: Various formats / data sources",
-  #                                                    "Other: Not up to date",
-  #                                                    "Other: Not complete / not applicable to Guana System",
-  #                                                    "Other: Not easy to use / view on mobile devices",
-  #                                                    "Other: Login required",
-  #                                                    "Other: Not accurate (enough)",
-  #                                                    "Other: Not online",
-  #                                                    "Other: Being a pain to the researchers",
-  #                                                    "Other: Do not know how to access data")))
 
 # Reorder so the access methods are in the same order as the first table
 disadv_bysource$q_text <- factor(disadv_bysource$q_text)
 disadv_bysource$q_text <- fct_relevel(disadv_bysource$q_text, "Request from a GTMNERR staff member by email", after = 0)
 disadv_bysource$q_text <- fct_relevel(disadv_bysource$q_text, "Pick-up paper copy in person", after = Inf)
 
-# Add total for treemap
+disadv_bysource_treemap$q_text <- factor(disadv_bysource_treemap$q_text)
+disadv_bysource_treemap$q_text <- fct_relevel(disadv_bysource_treemap$q_text, "Request from a GTMNERR staff member by email", after = 0)
+disadv_bysource_treemap$q_text <- fct_relevel(disadv_bysource_treemap$q_text, "Pick-up paper copy in person", after = Inf)
 
-totals_to_add <- disadv_bysource %>% 
+# Add total for treemap
+totals_to_add <- disadv_bysource_treemap %>% 
   ungroup() %>% 
   group_by(Disadvantage) %>% 
   mutate(n = sum(n)) %>% 
@@ -910,10 +973,10 @@ totals_to_add <- disadv_bysource %>%
   select(parents, labels, n)
 
 # rename to make it easier to match labels and parents
-names(disadv_bysource)[1] <- "labels" # q_text goes inside disadvantage so that's a label
-names(disadv_bysource)[2] <- "parents" # Disadvantage is one of the main blocks so it's a parent
+names(disadv_bysource_treemap)[1] <- "labels" # q_text goes inside disadvantage so that's a label
+names(disadv_bysource_treemap)[2] <- "parents" # Disadvantage is one of the main blocks so it's a parent
 
-disadv_bysource_treemap <- disadv_bysource %>% 
+disadv_bysource_treemap <- disadv_bysource_treemap %>% 
   select(parents, labels, n) %>% 
   bind_rows(totals_to_add)
 
@@ -922,17 +985,18 @@ disadv_bysource_treemap <- disadv_bysource %>%
 #                         paste0(labels, "-", parents))) %>% 
 #   select(ids, everything())
 
-# ggplot(disadv_bysource, aes(x = percentage, y = fct_rev(q_text), fill = Disadvantage)) +
-#   geom_col(position = "stack", color = "darkgrey")+
-#   scale_y_discrete(labels = function(x) str_wrap(x, width = 70),drop = FALSE)+
-#   # the following color are from colorbrewer, reordered them so "no advantages" is red
-#   scale_fill_manual(labels = function(x) str_wrap(x, width = 40),
-#                       values = c("#7fc97f", "#beaed4", "#fdc086", "#ffff99", "#f0027f", # 5 colors for main disadvantages (with green being no disadvantages)
-#                                  "#f7fbff", "#deebf7", "#c6dbef", "#9ecae1", "#6baed6", "#4292c6", "#2171b5", "#08519c", "#08306b") # 9 shades of the same color for other
-#                     )+
-#   labs(x = "Percentage", y = "")+
-#   theme_bw()+
-#   theme(legend.position = "top", legend.justification = 1)
+ggplot(disadv_bysource, aes(x = percentage, y = fct_rev(q_text), fill = Disadvantage)) +
+  geom_col(position = "stack", color = "darkgrey")+
+  scale_y_discrete(labels = function(x) str_wrap(x, width = 70),drop = FALSE)+
+  # the following color are from colorbrewer, reordered them so "no advantages" is red
+  scale_fill_manual(name = "", labels = function(x) str_wrap(x, width = 40),
+                      values = c("#7fc97f", "#beaed4", "#fdc086", "#ffff99", "#f0027f", # 5 colors for main disadvantages (with green being no disadvantages)
+                                 "#f7fbff", "#deebf7", "#c6dbef", "#9ecae1", "#6baed6", "#4292c6", "#2171b5", "#08519c", "#08306b") # 9 shades of the same color for other
+                    )+
+  labs(x = "Percentage", y = "")+
+  theme_bw()+
+  theme(legend.position = "top", legend.justification = 1)+
+  guides(fill = guide_legend(ncol = 3, bycol = TRUE)) 
 
 
  
