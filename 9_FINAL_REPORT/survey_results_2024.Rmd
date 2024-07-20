@@ -569,15 +569,23 @@ In summary, the three usages mentioned here most are personal use, volunteer act
 
 -----------------------------------------------------------------------------
 
-## 4.4 Details on advantages of dataset access
+# 5. Advantages and disadvantages - from respondents that have accessed data before
 
-The figure below summarizes the advantages that respondents listed per data access method. We added more detail on "Other" methods of accessing data based on responses ("Other: unspecified" is the category where respondents chose "Other" but did not provide more detail).
+We asked respondents about the advantages and disadvantages of the current manner of accessing datasets. They could choose more than 1 answer (without ranking), and we offered the opportunity to provide free text answers for the options "Download from website" and "Other". For the next few figures we added that level of information to the visualizations ("Other: unspecified" is the category where respondents chose "Other" but did not provide more written detail). 
+
+For both the advantages and disadvantages, results are shown from two perspectives: 
+- first, from the perspective of the data access method (e.g. download from website, request via email, etc), where we show the percentages of (dis)advantages for each. Note that not all data access methods were picked by the same number of respondents, so some have more nuanced (dis)advantages listed if there were more respondents.
+- Second, from the perspective of the (dis)advantages, where we have grouped these together, and show which data set types they were mentioned with. 
+
+## 5.1 Details on advantages of dataset access
+
+The figure below summarizes the advantages that respondents listed per data access method. 
 
 The answers "CDMO" refer to the National Estuarine Research Reserve System Centralized Data Management Office: https://cdmo.baruch.sc.edu/. "SWMP" is the NERR System-Wide Monitoring Program: https://coast.noaa.gov/digitalcoast/data/nerr.html
 
 "SEACAR" is the Statewide Ecosystem Assessment of Coastal and Aquatic Resources by the Florida Department of Environmental Protection: https://data.florida-seacar.org/
 
-``` {r advantages_fig1, fig.width = 8, fig.height = 8, fig.align = 'center', echo = FALSE, warning = FALSE, message = FALSE}
+``` {r advantages_fig1, fig.width = 8, fig.height = 14, fig.align = 'center', echo = FALSE, warning = FALSE, message = FALSE}
 # yes_data2 has datasets and way of accessing (YD-2 in col qname_main) and advantages/disadvantages (YD-3 and YD-4)
 
 # Read in text data results
@@ -732,17 +740,34 @@ adv_bysource <- yes_data_adv %>%
 
 ###### Put in the same order as table above: request from staff, download, other, pick up in person
 
-# Turn this into a stacked (horizontal) bar chart
-ggplot(adv_bysource, aes(x = percentage, y = fct_rev(q_text), fill = Advantage)) +
-  geom_col(position = "stack", color = "darkgrey")+ 
-  scale_y_discrete(labels = function(x) str_wrap(x, width = 70),drop = FALSE)+
-  # the following color are from colorbrewer, reordered them so "no advantages" is red
-  scale_fill_manual(labels = function(x) str_wrap(x, width = 40),
-                      values = c("#8dd3c7", "#ffffb3", "#bebada", "#80b1d3", "#fb8072", "#fdb462"))+
-  labs(x = "Percentage", y = "")+
-  theme_bw()+
-  theme(legend.position = "top", legend.justification = 1)
+# # Turn this into a stacked (horizontal) bar chart
+# ggplot(adv_bysource, aes(x = percentage, y = fct_rev(q_text), fill = Advantage)) +
+#   geom_col(position = "stack", color = "darkgrey")+ 
+#   scale_y_discrete(labels = function(x) str_wrap(x, width = 70),drop = FALSE)+
+#   # the following color are from colorbrewer, reordered them so "no advantages" is red
+#   scale_fill_manual(labels = function(x) str_wrap(x, width = 40),
+#                       values = c("#8dd3c7", "#ffffb3", "#bebada", "#80b1d3", "#fb8072", "#fdb462"))+
+#   labs(x = "Percentage", y = "")+
+#   theme_bw()+
+#   theme(legend.position = "top", legend.justification = 1)
 
+# Or a bubble chart:
+ggplot(adv_bysource, aes(x = Advantage, y = fct_rev(q_text), color = Advantage, size = percentage)) +
+  geom_point()+ 
+  geom_text(aes(label = percentage), color = "black", size = 3)+
+  scale_y_discrete(labels = function(x) str_wrap(x, width = 50), drop = FALSE)+
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 30), drop = FALSE,
+                   position = "top")+
+  scale_size_continuous(range = c(0,30))+
+  # the following color are from colorbrewer, reordered them so "no advantages" is red
+  scale_color_manual(labels = function(x) str_wrap(x, width = 40),
+                      values = c("#8dd3c7", "#ffffb3", "#bebada", "#80b1d3", "#fb8072", "#fdb462"))+
+  labs(x = NULL, y = NULL)+
+  theme_bw()+
+  theme(legend.position = "none",
+        axis.text.x = element_text(angle = 60, vjust = 0.5, hjust = 0),
+        axis.text = element_text(color = "black", size = 10),
+        plot.margin = margin(t = 0, r = 30, b = 0, l = 0))
 # THE FOLLOWING CODE IS TO MAKE A TABLE. DIDN'T LOOK GREAT THOUGH
 # adv_bysource2 <- adv_bysource %>% 
 #  pivot_wider(names_from = Advantage, values_from = percentage)
@@ -770,7 +795,12 @@ ggsave("./Figures/11_advantages.jpg")
 
 ```
 
-The next figure, a so-called treemap, shows the same information but summarized differently - based on the advantages. The size of the rectangle for each advantage indicates the percentage of times this advantages was picked by respondents. Clicking on each rectangle then shows the data access methods for this advantage was picked; also by percentage. A hover label shows the percentages as text, as well as the advantages or access methods if the text is too long to be readily readable.
+The next figure, a so-called treemap, shows the information for the same questions but summarized differently; based on the advantages. The size of the rectangle for each advantage indicates the percentage of respondents that picked this advantages compared to all advantage answers (outer box). Clicking on each rectangle then shows the data access methods for which this advantage was picked; also by percentage. A hover label shows the percentages as text, as well as the advantages or access methods if the text is too long to be readily readable.
+
+In the treemap below, the size of the main boxes (indicated with different colors and headings in white) represent the percentage of respondents that picked this option out of all respondents. Keep in mind that respondents could pick more than 1 answer.
+
+The size of the boxes inside the main boxes gives an indication of how often the disadvantage (from the main box) was chosen for method of accessing data. E.g. for the disadvantage "Difficult/Complicated to access", the blue-purple box, relatively more respondents picked that as a disadvantage for pick up paper copy method than for the download from website (CDMO/SWMP, SEACAR) method. 
+There are a few boxes that are too small to show text with; but we can safely say those are disadvantages that are less relevant. Again, the detailed data on this can be requested and will also be available on Github at a later date.
 
 ```{r advantages_fig2, fig.width = 8, fig.height = 8, fig.align = 'center', echo = FALSE, warning = FALSE, message = FALSE}
 # Treemap for advantages
@@ -834,7 +864,7 @@ treemap_interactive
 
 -----------------------------------------------------------------
 
-## 4.5 Details on disadvantages of dataset access
+## 5.2 Details on disadvantages of dataset access
 
 The tables below summarize the advantages and disadvantages that respondents listed per acquire method (with more detail on "other" methods of accessing data that respondents listed).
 
@@ -1112,13 +1142,13 @@ treemap_interactive
 
 _______________________________________________________________
 
-# 5. Dashboard preferences
+# 6. Dashboard preferences
 
 The survey asked respondents about their preferences regarding dashboard features (type and format of information, data delivery mode) and how they would access the dashboard.
 
 By "dashboard" we meant a user interface on a computer display that presents (up-to-date) information with visualization tools such as graphs, charts, and tables - in a dynamic and interactive way.
 
-## 5.1 How to access data
+## 6.1 How to access data
 
 ```{r dash_how, fig.width = 5, fig.height = 3, echo = FALSE, message = FALSE, fig.align = 'center'}
 # Since not everyone finished the survey, check number of respondents
@@ -1145,7 +1175,7 @@ ggsave("./Figures/13_how.jpg")
 
 --------------------------------------------------------
 
-## 5.2 What type of information
+## 6.2 What type of information
 
 ```{r dash_type, fig.width = 7, fig.height = 4, echo = FALSE, message = FALSE, fig.align = 'center'}
 ggplot(dashboard %>% 
@@ -1172,7 +1202,7 @@ The response in the category "Other" is **projections**.
 
 --------------------------------------------------------
 
-## 5.3 What form of information
+## 6.3 What form of information
 
 When asked about the form of information and the format of data delivery, respondents were also asked to rank their choices. They did not have to rank all options: only those they were interested in.
 
@@ -1216,7 +1246,7 @@ ggsave("./Figures/15_form.jpg")
 
 --------------------------------------------------------
 
-## 5.4 Format of data delivery
+## 6.4 Format of data delivery
 
 ```{r dash_delivery, fig.width = 7, fig.height = 5, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center'}
 order_scores2 <- dashboard %>% 
@@ -1267,11 +1297,11 @@ ggsave("./Figures/16_format.jpg")
 
 ___________________________________________________________
 
-# 6. Characteristics of respondents
+# 7. Characteristics of respondents
 
 Finally, the survey requested demographic information from respondents. This helps the project team get a better understanding of the dashboard's target audience.
 
-## 6.1 Age and gender
+## 7.1 Age and gender
 ```{r age, fig.width = 12, fig.height = 4, echo = FALSE, message = FALSE, warning = FALSE, fig.align = 'center'}
 
 num_resp_dem <- length(unique(demogr$ID))
@@ -1323,7 +1353,7 @@ ggsave("./Figures/17_age_gender.jpg")
 
 ----------------------------------------------------
 
-## 6.2 Distance from the Guana Estuary
+## 7.2 Distance from the Guana Estuary
 ``` {r distance, fig.width = 5, fig.height = 4, echo = FALSE, message = FALSE, fig.align = 'center'}
 ggplot(demogr %>% 
          filter(qname == "DE-4") %>% 
