@@ -768,6 +768,7 @@ ggplot(adv_bysource, aes(x = Advantage, y = fct_rev(q_text), color = Advantage, 
         axis.text.x = element_text(angle = 60, vjust = 0.5, hjust = 0),
         axis.text = element_text(color = "black", size = 10),
         plot.margin = margin(t = 0, r = 30, b = 0, l = 0))
+
 # THE FOLLOWING CODE IS TO MAKE A TABLE. DIDN'T LOOK GREAT THOUGH
 # adv_bysource2 <- adv_bysource %>% 
 #  pivot_wider(names_from = Advantage, values_from = percentage)
@@ -795,12 +796,9 @@ ggsave("./Figures/11_advantages.jpg")
 
 ```
 
-The next figure, a so-called treemap, shows the information for the same questions but summarized differently; based on the advantages. The size of the rectangle for each advantage indicates the percentage of respondents that picked this advantages compared to all advantage answers (outer box). Clicking on each rectangle then shows the data access methods for which this advantage was picked; also by percentage. A hover label shows the percentages as text, as well as the advantages or access methods if the text is too long to be readily readable.
+The next figure, a so-called treemap, shows the information for the same questions but summarized differently; based on the advantages. The size of the different coloured rectangles for each advantage indicates the percentage of respondents that picked this advantages compared to the total advantage answers (outer box). Clicking on each rectangle then shows the data access methods for which this advantage was picked; also by percentage, but now the listed advantage represents 100%. Example: if 32 out of a 204 advantage answers were "Requesting the data is quick", this box (colored red) represents about 16% of the total area. Clicking on this, the detail shows that out of the 32 times this answer was chosen, almost half of those (15, or 47%) were chosen in relation to the method "Request from a GTMNERR staff member by email".
 
-In the treemap below, the size of the main boxes (indicated with different colors and headings in white) represent the percentage of respondents that picked this option out of all respondents. Keep in mind that respondents could pick more than 1 answer.
-
-The size of the boxes inside the main boxes gives an indication of how often the disadvantage (from the main box) was chosen for method of accessing data. E.g. for the disadvantage "Difficult/Complicated to access", the blue-purple box, relatively more respondents picked that as a disadvantage for pick up paper copy method than for the download from website (CDMO/SWMP, SEACAR) method. 
-There are a few boxes that are too small to show text with; but we can safely say those are disadvantages that are less relevant. Again, the detailed data on this can be requested and will also be available on Github at a later date.
+A hover label shows the percentages as text, as well as the advantages or access methods if the text is too long to be readily readable.
 
 ```{r advantages_fig2, fig.width = 8, fig.height = 8, fig.align = 'center', echo = FALSE, warning = FALSE, message = FALSE}
 # Treemap for advantages
@@ -866,16 +864,10 @@ treemap_interactive
 
 ## 5.2 Details on disadvantages of dataset access
 
-The tables below summarize the advantages and disadvantages that respondents listed per acquire method (with more detail on "other" methods of accessing data that respondents listed).
+The following two figures summarize the data on disadvantages in the same way as the advantages were summarized and visualized.
 
-There is also an overview of the advantages listed per acquire method *for each dataset* but since this is an extremely dense overview, it is currently available upon request (03/20/2024). We will add this information to the Github repository in the next few weeks.
+``` {r disadvantages_fig1, fig.width = 8, fig.height = 14, fig.align = 'center', echo = FALSE, warning = FALSE, message = FALSE}
 
-In the treemap below, the size of the main boxes (indicated with different colors and headings in white) represent the percentage of respondents that picked this option out of all respondents. Keep in mind that respondents could pick more than 1 answer.
-
-The size of the boxes inside the main boxes gives an indication of how often the disadvantage (from the main box) was chosen for method of accessing data. E.g. for the disadvantage "Difficult/Complicated to access", the blue-purple box, relatively more respondents picked that as a disadvantage for pick up paper copy method than for the download from website (CDMO/SWMP, SEACAR) method. 
-There are a few boxes that are too small to show text with; but we can safely say those are disadvantages that are less relevant. Again, the detailed data on this can be requested and will also be available on Github at a later date.
-
-```{r otherdisadvantages_table2, fig.width = 8, fig.height = 8, fig.align = 'center', echo = FALSE, warning = FALSE, message = FALSE}
 # Disadvantages
 
 # Get the text answers linked to "other" disadvantages
@@ -948,6 +940,47 @@ disadv_bysource <- yes_data_disadv %>%
                                                      "Other: Being a pain to the researchers",
                                                      "Other: Do not know how to access data")))
 
+# bubble chart:
+ggplot(disadv_bysource, aes(x = Disadvantage, y = fct_rev(q_text), color = Disadvantage, size = percentage)) +
+  geom_point()+ 
+  geom_text(aes(label = percentage), color = "black", size = 3)+
+  scale_y_discrete(labels = function(x) str_wrap(x, width = 50), drop = FALSE)+
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 30), drop = FALSE,
+                   position = "top")+
+  scale_size_continuous(range = c(0,30))+
+  # the following color are from colorbrewer, reordered them so "no advantages" is red
+  scale_color_manual(labels = function(x) str_wrap(x, width = 40),
+                      values = c("#7fc97f", "#beaed4", "#fdc086", "#ffff99", "#f0027f", # 5 colors for main disadvantages (with green being no disadvantages)
+                                 "#f7fbff", "#deebf7", "#c6dbef", "#9ecae1", "#6baed6", "#4292c6", "#2171b5", "#08519c", "#08306b") # 9 shades of the same color for other
+                    )+
+  labs(x = NULL, y = NULL)+
+  theme_bw()+
+  theme(legend.position = "none",
+        axis.text.x = element_text(angle = 60, vjust = 0.5, hjust = 0),
+        axis.text = element_text(color = "black", size = 10),
+        plot.margin = margin(t = 0, r = 30, b = 0, l = 0))
+
+# ggplot(disadv_bysource, aes(x = percentage, y = fct_rev(q_text), fill = Disadvantage)) +
+#   geom_col(position = "stack", color = "darkgrey")+
+#   scale_y_discrete(labels = function(x) str_wrap(x, width = 70),drop = FALSE)+
+#   # the following color are from colorbrewer, reordered them so "no advantages" is red
+#   scale_fill_manual(name = "", labels = function(x) str_wrap(x, width = 40),
+#                       values = c("#7fc97f", "#beaed4", "#fdc086", "#ffff99", "#f0027f", # 5 colors for main disadvantages (with green being no disadvantages)
+#                                  "#f7fbff", "#deebf7", "#c6dbef", "#9ecae1", "#6baed6", "#4292c6", "#2171b5", "#08519c", "#08306b") # 9 shades of the same color for other
+#                     )+
+#   labs(x = "Percentage", y = "")+
+#   theme_bw()+
+#   theme(legend.position = "top", legend.justification = 1)+
+#   guides(fill = guide_legend(ncol = 3, bycol = TRUE)) 
+
+```
+
+The next figure, a so-called treemap, shows the information for the same questions but summarized differently; based on the advantages. The size of the different coloured rectangles for each advantage indicates the percentage of respondents that picked this advantages compared to the total advantage answers (outer box). Clicking on each rectangle then shows the data access methods for which this advantage was picked; also by percentage, but now the listed advantage represents 100%. Example: if 32 out of a 204 advantage answers were "Requesting the data is quick", this box (colored red) represents about 16% of the total area. Clicking on this, the detail shows that out of the 32 times this answer was chosen, almost half of those (15, or 47%) were chosen in relation to the method "Request from a GTMNERR staff member by email".
+
+A hover label shows the percentages as text, as well as the advantages or access methods if the text is too long to be readily readable.
+
+```{r disadvantages_fig2, fig.width = 8, fig.height = 8, fig.align = 'center', echo = FALSE, warning = FALSE, message = FALSE}
+
 # Make data summary for treemap  
 disadv_bysource_treemap <- yes_data_disadv %>%
   group_by(Disadvantage) %>% # Took out field_name and q_text here, because
@@ -1015,18 +1048,7 @@ disadv_bysource_treemap <- disadv_bysource_treemap %>%
 #                         paste0(labels, "-", parents))) %>% 
 #   select(ids, everything())
 
-ggplot(disadv_bysource, aes(x = percentage, y = fct_rev(q_text), fill = Disadvantage)) +
-  geom_col(position = "stack", color = "darkgrey")+
-  scale_y_discrete(labels = function(x) str_wrap(x, width = 70),drop = FALSE)+
-  # the following color are from colorbrewer, reordered them so "no advantages" is red
-  scale_fill_manual(name = "", labels = function(x) str_wrap(x, width = 40),
-                      values = c("#7fc97f", "#beaed4", "#fdc086", "#ffff99", "#f0027f", # 5 colors for main disadvantages (with green being no disadvantages)
-                                 "#f7fbff", "#deebf7", "#c6dbef", "#9ecae1", "#6baed6", "#4292c6", "#2171b5", "#08519c", "#08306b") # 9 shades of the same color for other
-                    )+
-  labs(x = "Percentage", y = "")+
-  theme_bw()+
-  theme(legend.position = "top", legend.justification = 1)+
-  guides(fill = guide_legend(ncol = 3, bycol = TRUE)) 
+
 
 
  
