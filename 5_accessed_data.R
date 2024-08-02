@@ -14,7 +14,7 @@ renv::restore()
 library(tidyverse)
 
 #### Load data --------------------------------------------------
-yes_data <- read_csv("data_deidentified/subsets/data_yes_results_basic.csv")
+yes_data <- read_csv("2_data_deidentified/subsets/data_yes_results_basic.csv")
 
 #### Visualize dashboard preferences ------------------------------------------
 # YD-1 - What Guana Estuary data do you currently use, or have you used in the past?
@@ -36,7 +36,7 @@ ggplot(yes_data %>%
   theme_bw()+
   #xlim(0,75)+
   theme(legend.position = "none")
-ggsave("results/yes_access_which_data.jpg")
+ggsave("8_results/yes_access_which_data.jpg")
 
 #### YD-2 How is data obtained? -----------------------------------------------
 ggplot(yes_data %>% 
@@ -47,7 +47,7 @@ ggplot(yes_data %>%
   theme_bw()+
   theme(legend.position = "none")+
   facet_wrap(.~ field_name)
-ggsave("results/yes_access_how.jpg", width = 12, height = 7)
+ggsave("8_results/yes_access_how.jpg", width = 12, height = 7)
 
 #### Add something here on "other" options, and website addresses
 
@@ -61,7 +61,7 @@ ggplot(yes_data %>%
   theme(legend.position = "none")+
   facet_wrap(.~ field_name)
 #### Change this to percentages?
-ggsave("results/yes_access_advantages.jpg", width = 12, height = 7)
+ggsave("8_results/yes_access_advantages.jpg", width = 12, height = 7)
 
 #### YD-4 Disadvantages? -----------------------------------------------
 ggplot(yes_data %>% 
@@ -73,7 +73,7 @@ ggplot(yes_data %>%
   theme(legend.position = "none")+
   facet_wrap(.~ field_name)
 #### Change this to percentages?
-ggsave("results/yes_access_disadvantages.jpg", width = 12, height = 7)
+ggsave("8_results/yes_access_disadvantages.jpg", width = 12, height = 7)
 
 #### YD-5 How often? -----------------------------------------------
 ggplot(yes_data %>% 
@@ -88,7 +88,7 @@ ggplot(yes_data %>%
   theme_bw()+
   theme(legend.position = "none")+
   facet_wrap(.~ field_name)
-ggsave("results/yes_access_how_often.jpg", width = 12, height = 7)
+ggsave("8_results/yes_access_how_often.jpg", width = 12, height = 7)
 
 # Other option:
 ggplot(yes_data %>% 
@@ -115,7 +115,7 @@ ggplot(yes_data %>%
   theme_bw()+
   theme(legend.position = "none")+
   facet_wrap(.~ field_name)
-ggsave("results/yes_access_uses.jpg", width = 12, height = 7)
+ggsave("8_results/yes_access_uses.jpg", width = 12, height = 7)
 
 #### YD-7 Satisfaction? -----------------------------------------------
 ggplot(yes_data %>% 
@@ -129,7 +129,7 @@ ggplot(yes_data %>%
   theme_bw()+
   theme(legend.position = "none")+
   facet_wrap(.~ field_name)
-ggsave("results/yes_access_satisfaction.jpg", width = 12, height = 7)
+ggsave("8_results/yes_access_satisfaction.jpg", width = 12, height = 7)
 
 ###### Other approach: make all 6 plots per field and put together - probably
 # better in terms of figuring out for each dataset what the issues are?

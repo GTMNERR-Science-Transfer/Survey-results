@@ -14,7 +14,7 @@ renv::restore()
 library(tidyverse)
 
 #### Load data --------------------------------------------------
-yes_data <- read_csv("data_deidentified/subsets/data_yes_results_basic.csv")
+yes_data <- read_csv("2_data_deidentified/subsets/data_yes_results_basic.csv")
 
 #### Visualize dashboard preferences ------------------------------------------
 # YD-1 - What Guana Estuary data do you currently use, or have you used in the past?
@@ -40,4 +40,4 @@ yes_data_table <- yes_data %>%
   arrange(qname_main) %>% 
   select(-qname_main)
 
-write_csv(yes_data_table, "results/yes_access_summary_table.csv")
+write_csv(yes_data_table, "8_results/yes_access_summary_table.csv")

@@ -14,7 +14,7 @@ renv::restore()
 library(tidyverse)
 
 #### Load data --------------------------------------------------
-trust <- read_csv("data_deidentified/subsets/trust_results_basic.csv")
+trust <- read_csv("2_data_deidentified/subsets/trust_results_basic.csv")
 
 #### Make tabular outputs
 # table() and prop.table()
@@ -83,7 +83,7 @@ ggplot(TR0,
   theme_bw()+
   theme(legend.position = "none")+
   annotate(geom = "text", label = paste0("N = ", sum(TR0$cnt)), x = 2.4, y = 60)
-ggsave("results/trust_coregroup.jpg")
+ggsave("8_results/trust_coregroup.jpg")
 
 ##### TR-1 Trust in UF team ---------------------------------------------
 ggplot(TR1,
@@ -94,7 +94,7 @@ ggplot(TR1,
   theme(legend.position = "none", axis.text.y = element_text(size=12)) +
   annotate(geom = "text", label = paste0("N = ", sum(TR1$cnt)), x = 57, y = 4.3)
 
-ggsave("results/trust_UFteam.jpg")
+ggsave("8_results/trust_UFteam.jpg")
 
 ##### TR-2 Trust in abilities and tech expertise -----------------------------
 
@@ -106,7 +106,7 @@ ggplot(TR2,
   theme(legend.position = "none", axis.text.y = element_text(size=12)) +
   annotate(geom = "text", label = paste0("N = ", sum(TR2$cnt)), x = 57, y = 4.3)
 
-ggsave("results/trust_UFexpertise.jpg")
+ggsave("8_results/trust_UFexpertise.jpg")
 
 ##### TR-3 Satisfaction with ... ---------------------------------------------
 
@@ -127,7 +127,7 @@ ggplot(TR5,
   theme(legend.position = "none", axis.text.y = element_text(size=12))+
   annotate(geom = "text", label = paste0("N = ", sum(TR5$cnt)), x = 45, y = 5.3)
 
-ggsave("results/trust_generalengagement.jpg")
+ggsave("8_results/trust_generalengagement.jpg")
 
 
 ##### TR-6 This project engaging with local community -------------------------
@@ -141,4 +141,4 @@ ggplot(TR6,
   theme(legend.position = "none", axis.text.y = element_text(size=12))+
   annotate(geom = "text", label = paste0("N = ", sum(TR5$cnt)), x = 38, y = 5.3)
 
-ggsave("results/trust_projectengagement.jpg")
+ggsave("8_results/trust_projectengagement.jpg")

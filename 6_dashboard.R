@@ -14,7 +14,7 @@ renv::restore()
 library(tidyverse)
 
 #### Load data --------------------------------------------------
-dashboard <- read_csv("data_deidentified/subsets/dashboard_results_basic.csv")
+dashboard <- read_csv("2_data_deidentified/subsets/dashboard_results_basic.csv")
 
 #### Visualize dashboard preferences ------------------------------------------
 # T-1 How to access? (QID23)
@@ -35,7 +35,7 @@ ggplot(dashboard %>%
   theme_bw()+
   theme(legend.position = "none", axis.text.y = element_text(size=12))
 
-ggsave("results/dashboard_access.jpg")
+ggsave("8_results/dashboard_access.jpg")
 
 ##### T-2 Type of information? (QID25) ---------------------------------------
 ggplot(dashboard %>% 
@@ -48,7 +48,7 @@ ggplot(dashboard %>%
   theme_bw()+
   theme(legend.position = "none", axis.text.y = element_text(size=12))
 
-ggsave("results/dashboard_type.jpg")
+ggsave("8_results/dashboard_type.jpg")
 
 ##### T-3 Form of information? (QID49) ----------------------------------------
 ggplot(dashboard %>% 
@@ -61,7 +61,7 @@ ggplot(dashboard %>%
   theme_bw()+
   theme(axis.text.y = element_text(size=12))
 
-ggsave("results/dashboard_form1.jpg", width = 12, height = 7)
+ggsave("8_results/dashboard_form1.jpg", width = 12, height = 7)
 
 # Similar plot, but with the average ranks (1 = most interested)
 ggplot(dashboard %>% 
@@ -73,7 +73,7 @@ ggplot(dashboard %>%
   labs(y = "", x = "", title = "What format of data delivery would suit your needs best?\nAverage ranking (1 = most interested in)")+
   theme_bw()+
   theme(axis.text.y = element_text(size=15))
-ggsave("results/dashboard_form2.jpg", width = 12, height = 7)
+ggsave("8_results/dashboard_form2.jpg", width = 12, height = 7)
 
 ##### T-4 Data delivery? (QID24) ----------------------------------------------
 
@@ -87,7 +87,7 @@ ggplot(dashboard %>%
   theme_bw()+
   theme(axis.text.y = element_text(size=12))
 
-ggsave("results/dashboard_delivery1.jpg", width = 12, height = 7)
+ggsave("8_results/dashboard_delivery1.jpg", width = 12, height = 7)
 
 # Similar plot, but with the average ranks (1 = most interested)
 ggplot(dashboard %>% 
@@ -99,4 +99,5 @@ ggplot(dashboard %>%
   labs(y = "", x = "", title = "What format of data delivery would suit your needs best?\nAverage ranking (1 = most interested in)")+
   theme_bw()+
   theme(axis.text.y = element_text(size=15))
-ggsave("results/dashboard_delivery2.jpg", width = 12, height = 7)
+ggsave("8_results/dashboard_delivery2.jpg", width = 12, height = 7)
+

@@ -15,7 +15,7 @@ library(tidyverse)
 library(cowplot)
 
 #### Load data --------------------------------------------------
-yes_data <- read_csv("data_deidentified/subsets/data_yes_results_basic.csv")
+yes_data <- read_csv("2_data_deidentified/subsets/data_yes_results_basic.csv")
 
 # This script groups the questions and answers together by dataset
 # YD-2 - How do you most frequently obtain or access Guana Estuary data on [Field-1]?
@@ -124,7 +124,7 @@ for (i in 1:8){
           plot.title.position = "plot")
   
   all <- plot_grid(obtain, adv, disadv, howoften, use, satisf, ncol = 1, align = "v")
-  ggsave(filename = paste0("results/yes_access_plots_", i, ".jpg"), plot = all,
+  ggsave(filename = paste0("8_results/yes_access_plots_", i, ".jpg"), plot = all,
          width = 7, height = 15)
 }
 
