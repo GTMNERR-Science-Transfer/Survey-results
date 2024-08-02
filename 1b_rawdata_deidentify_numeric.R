@@ -48,23 +48,27 @@ all_survey_ids <- c("SV_agTpds5m6MDrqAe", # visitor's center
                     "SV_9RjNbEveqMo0MLk") # email
 names(all_survey_ids) <- c("visitor", "kiosk", "socialmedia", "email")
 
-#### Get surveys ####
-
+#### Get surveys and put together ####
+#### ADD CODE: or, if there are no changes, use the existing Rds files!!
 # Collect all our surveys (this can take a while to run)
 if(exists("survey_data")){
   rm(survey_data)
 }
 for (survey in all_survey_ids){
-  survey_ind <- fetch_survey(surveyID = survey, # read survey data
-                             # FYI without changing convert I could not get the 
-                             # full_join to work properly. Some problem with the
-                             # factor levels
-                             label = FALSE, # recoded values instead of text
-                             convert = FALSE, # no conversion to proper data type
-                             force_request = TRUE, # this forces a download (instead 
-                             # of loading existing temporary data downloaded earlier)
-                             save_dir = "survey_downloads_confidential") # surveys will be saved 
-  # as RDS files in this directory
+  #### If you want to download from Qualtrics, uncomment and run the next line
+  # survey_ind <- fetch_survey(surveyID = survey, # read survey data
+  #                            # FYI without changing convert I could not get the 
+  #                            # full_join to work properly. Some problem with the
+  #                            # factor levels
+  #                            label = FALSE, # recoded values instead of text
+  #                            convert = FALSE, # no conversion to proper data type
+  #                            force_request = TRUE, # this forces a download (instead 
+  #                            # of loading existing temporary data downloaded earlier)
+  #                            save_dir = "1_survey_downloads_confidential") # surveys will be saved 
+  # # as RDS files in this directory
+  #### If you want to load existing downloads, uncomment and run the next line
+  survey_ind <- readRDS(file = paste0("1_survey_downloads_confidential/", 
+                                      survey, ".Rds"))
   if (nrow(survey_ind != 0)){ # only if the survey has results, attach them
     if (!exists("survey_data")){ # if survey_data does not yet exist, create it
       survey_ind$source <- names(all_survey_ids[which(all_survey_ids == survey)])
@@ -78,13 +82,13 @@ for (survey in all_survey_ids){
 
 # Filter for those who agreed and for those who did not finalize the survey
 survey_data_unfinished <- survey_data %>% 
-  filter(`Informed Consent` == 1,
-         Finished == 0)
+  filter(`Informed Consent` == 1 | `Informed Consent` == "I agree",
+         Finished == 0 | Finished == FALSE)
 # Print to screen how many unfinished surveys...
 nrow(survey_data_unfinished)
 # None of these probably have email addresses in them, but just in case, saving
 # these to the confidential folder (not tracked by git)
-write_csv(survey_data_unfinished, "survey_downloads_confidential/survey_data_unfinished_numeric_raw.csv")
+write_csv(survey_data_unfinished, "1_survey_downloads_confidential/survey_data_unfinished_numeric_raw.csv")
 
 # Filter for those who agreed and for those who finalized the survey
 survey_data <- survey_data %>% 
@@ -99,7 +103,7 @@ survey_data <- survey_data %>%
 survey_data_contacts <- survey_data %>% 
   select(starts_with("F-"))
 # Add proper questions as headers instead of codes
-questions_detail <- read_csv("metadata/mc_questions_options.csv")
+questions_detail <- read_csv("1_metadata/mc_questions_options.csv")
 names(survey_data_contacts) <- questions_detail %>% 
   filter(str_detect(qname, "F-")) %>% 
   filter(!duplicated(qname)) %>% 
@@ -122,7 +126,7 @@ survey_data_contacts <- survey_data_contacts %>%
 # said no to wanting to give further input and also no to receiving email updates.
 # Maybe/probably still good info to have?
 
-write_csv(survey_data_contacts, "data_deidentified/survey_data_contacts_num.csv")
+write_csv(survey_data_contacts, "2_data_deidentified/survey_data_contacts_num.csv")
 
 # De-identify data
 # Remove email addresses, IPAddress, latitude and longitude 
@@ -141,5 +145,5 @@ survey_data_safe <- survey_data_safe %>%
             "RecipientFirstName", "RecipientEmail", "ExternalReference", 
             "DistributionChannel", "UserLanguage", "Informed Consent"))
 
-write_csv(survey_data_safe, "data_deidentified/survey_data_safe_numeric_raw.csv")
+write_csv(survey_data_safe, "2_data_deidentified/survey_data_safe_numeric_raw.csv")
 
