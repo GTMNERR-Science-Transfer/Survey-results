@@ -1,7 +1,6 @@
 ---
 title: "Guana Estuary Data Dashboard Needs Assessment: Survey Results"
-author: "Geraldine Klarenberg"
-date: "2024-07-08"
+date: "2024-08-02"
 output: 
   html_document:
     css: box_style.css
@@ -18,7 +17,7 @@ output:
 
 The University of Florida and Guana Tolomato Matanzas National Estuarine Research Reserve (GTMNERR) are partnering with the local community and broader science community to develop a web-based, public-facing, interactive dashboard to provide access to Guana Estuary datasets. The aim of this work is to support open science and to increase diverse engagement with the Guana Estuary within the GTMNERR by making the data available interactively, using visualization tools.
 
-To this end, the project team sought feedback from those who have been involved with the Guana Estuary to help them to better understand their needs. This document summarizes the results of an online survey that was made available via email, social media, and QR code. It was sent to the Technical Advisory Group and project-specific stakeholders (identified by the GTMNERR research coordinator).
+To this end, the project team sought feedback from those who have been involved with the Guana Estuary to help them to better understand their needs. This document summarizes the results of an online survey that was made available via email, social media, and QR code. It was sent to the Technical Advisory Group and project-specific stakeholders (identified by the GTMNERR research coordinator). Responses were collected through the software Qualtrics from April 2023 to June 2024. The programming language R (version 4.4.0) was used to deidentify, clean, analyze and publish the results.
 
 This survey was approved by the University of Florida's Institutional Review Board (IRB), IRB#202202509.
 
@@ -41,9 +40,9 @@ demogr <- read_csv("../2_data_deidentified/subsets/demographics_results_basic.cs
 ```
 
 # 1. Response rate
-We received responses from 51 individuals. Out of these, 14 surveys were unfinished. For this report, we also took the unfinished surveys into account. Most results are shown as percentages of respondents picking certain options or answers. Since the total number of responses varies, due to those unfinished surveys, all results show the total number of people (*N*) that answered a question with *N =*.
+There were 56 individuals that started the survey, but 5 only filled in the consent form, but did not answer any questions. Out of the remaining 51, 10 surveys were unfinished. For this report, we also took these unfinished surveys into account. Most results are shown as percentages of respondents picking certain options or answers. Since the total number of responses varies, due to those unfinished surveys, all results show the total number of people (*N*) that answered a question with *N =*.
 
-47 respondents filled in the survey based on a link received via email, 3 via social media, 0 via the QR code available at the GTMNERR Welcome Center, and 1 via the QR code available at the kiosk at the dam.
+47 respondents started or filled in the survey based on a link received via email, 3 via social media, 0 via the QR code available at the GTMNERR Welcome Center, and 1 via the QR code available at the kiosk at the dam.
 
 _____________________________________________________________
 
@@ -60,9 +59,9 @@ num_resp <- length(unique(intro$ID))
 
 ## 2.1 Guana Estuary connection
 
-We asked respondents about their connection with the Guana Estuary. The figure below summarizes the responses, but note that people could pick more than 1 option. This is why the sum of all percentages adds up to more than 100%. 
+We asked respondents about their connection with the Guana Estuary. In total there were 111 connections chosen. The figure below summarizes the responses as percentages of the total number of respondents, but note that people could pick more than 1 option. This is why the sum of all percentages adds up to more than 100%. 
 
-In total there were 111 connections chosen. E.g. a little over 60% of respondents do recreational activities at the Guana Estuary, and almost 50% collect data or use data for scientific purposes - and these choices are not mutually exclusive! Someone could collect data and *also* enjoy the Guana Estuary recreationally. Or volunteer and *also* use the Guana Estuary for educational purposes.
+E.g. a little over 60% of respondents do recreational activities at the Guana Estuary, and almost 50% collect data or use data for scientific purposes - and these choices are not mutually exclusive! Someone could collect data and *also* enjoy the Guana Estuary recreationally. Or volunteer and *also* use the Guana Estuary for educational purposes.
 
 ```{r connected, fig.width = 7, fig.height = 3, echo = FALSE, message = FALSE, fig.align = 'center'}
 # count total number of answers
@@ -102,6 +101,9 @@ Under "Other", respondents answered:
 --------------------------------------------------------
 
 ## 2.2 Level of engagement
+
+The next table indicates how often respondents say they interact(ed) with the Guana Estuary. Only one answer was possible here.
+
 ```{r engage, fig.width = 6, fig.height = 3, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center'}
 ggplot(intro %>% 
          filter(qname == "D-2") %>% 
@@ -128,9 +130,9 @@ ggsave("./Figures/2_engagement.jpg")
 --------------------------------------------------------
 
 ## 2.3 Data of interest (in general)
-We asked respondents what Guana Estuary data they would be interested in, regardless of whether or not they currently have access to these data. Respondents were also asked to rank these datasets, with 1 being the data they are most interested in. They could pick as many or few as they wanted.
+We asked respondents what Guana Estuary data they would be interested in, regardless of whether or not they currently have access to these data. Respondents were also asked to rank their interest in these datasets, with 1 being the data they are most interested in. They could pick as many or few as they wanted.
 
-The figure below shows the percentage of respondents that picked a particular dataset being of interest to them. E.g. over 80% of respondents picked water quality data. The colors indicate how they ranked it: for instance, almost 40% of all respondents ranked water quality data as their number 1 dataset of interest.
+The figure below shows the percentage of respondents that picked a particular dataset being of interest to them. E.g. over 80% of respondents picked water quality data. The colors inside the bar indicate how they ranked it: for instance, almost 40% of all respondents ranked water quality data as their number 1 dataset of interest.
 
 ```{r what_data, fig.width = 7, fig.height = 6, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center'}
 ggplot(intro %>% 
@@ -166,9 +168,12 @@ Under "Other", the 4 types of datasets mentioned were: **historical maps**, **wa
 
 ## 2.4 Previous experience with accessing data associated with Guana Estuary
 
-The survey asked respondents whether they had accessed data before, and by "data", we meant "information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer" for instance spreadsheets, databases, graphs, and maps." 
+The survey asked respondents whether they had accessed data before, and by "data", we clarified that we meant "information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer" for instance spreadsheets, databases, graphs, and maps."
+
+Based on their answer here, respondents were directed to different survey sections. Part 3 of this reports on questions for those who anwered "No", Part 4 on questions for those who answered "Yes".
 
 ```{r accessed_data, fig.width = 4, fig.height = 3, echo = FALSE, message = FALSE, fig.align = 'center'}
+#### CHECK IF N=51 IS CORRECT
 ggplot(intro %>% 
          filter(qname == "D-4") %>% 
          group_by(q_text) %>%
@@ -191,7 +196,7 @@ ggsave("./Figures/4_data_accessed.jpg")
 :::
 
 - The majority of respondents use the Guana Estuary recreationally (62.7%) and almost half (49%) collect or use data for scientific purposes. In third and fourth place are other work-related and educational connections (resp. 33.3% and 29.4%).
-- Engagement with the Guana Estuary is mostly once a month (21.6% of respondents), with a tie (19.6%) for once a week and once every 6 months. Daily engagement was indicated by 17.6% of respondents. 
+- Engagement with the Guana Estuary is high: mostly once a month (21.6% of respondents), with a tie (19.6%) for once a week and once every 6 months. Daily engagement was indicated by 17.6% of respondents. 
 - The top 4 datasets of interest, chosen by more than 60% of the respondents, are: water quality information, information on shellfish, fish and other aquatic organisms, water level information, and information on vegetation. 
 - The majority of respondents (83.7%) has accessed data before.
 ::::
