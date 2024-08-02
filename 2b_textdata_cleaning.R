@@ -19,10 +19,10 @@ renv::restore()
 library(tidyverse)
 
 # Read in de-identified dataset.
-txt_data <- read_csv("data_deidentified/subsets/text_results_basic.csv")
+txt_data <- read_csv("2_data_deidentified/subsets/text_results_basic.csv")
 
 # Load question metadata
-questions_detail <- read_csv("metadata/mc_questions_options.csv")
+questions_detail <- read_csv("1_metadata/mc_questions_options.csv")
 # To add on the actual questions and options picked (in text)
 
 #### 2. Text answers for "has accessed data" data -----------------------------
@@ -35,7 +35,7 @@ txt_data_yes <- txt_data_yes %>%
   left_join(select(questions_detail, qname_main, main, q_code, field_no, field_name, q_text), relationship = "many-to-many") %>%  # add on question type so we can use it to add correct text
   filter(!duplicated(.)) %>% 
   arrange(qname_main, field_no, q_code)
-write_csv(txt_data_yes, "data_deidentified/subsets/data_yes_results_text.csv")
+write_csv(txt_data_yes, "2_data_deidentified/subsets/data_yes_results_text.csv")
 
 # Separate data for the different questions (need to be put in a table in the
 # report)
@@ -54,3 +54,4 @@ txt_data_yes_YD4 <- txt_data_yes %>%
 # Other data usage
 txt_data_yes_YD6 <- txt_data_yes %>% 
   filter(qname_main == "YD-6")
+

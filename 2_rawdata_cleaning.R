@@ -33,7 +33,7 @@ library(tidyverse)
 # Read in de-identified dataset. I prefer to use the numeric results. The "text" results
 # also have numeric results for some questions, and when making long datasets, mixing text
 # and numeric data complicates things.
-all_surveys <- read_csv("data_deidentified/survey_data_safe_numeric_raw.csv")
+all_surveys <- read_csv("2_data_deidentified/survey_data_safe_numeric_raw.csv")
 
 ##### Create sub datasets ------------------------------------
 # Make sure that each also has the ID, so we can match thins up if necessary
@@ -48,7 +48,7 @@ all_surveys <- read_csv("data_deidentified/survey_data_safe_numeric_raw.csv")
 names(all_surveys)
 
 # Load question metadata
-questions_detail <- read_csv("metadata/mc_questions_options.csv")
+questions_detail <- read_csv("1_metadata/mc_questions_options.csv")
 # To add on the actual questions and options picked (in text)
 
 #### Save all text answers separately ------------------------------------
@@ -61,7 +61,7 @@ text_only <- all_surveys %>%
            sep = "_", remove = FALSE, convert = TRUE, fill = "left") %>% 
   select(-type)
 
-write_csv(text_only, "data_deidentified/subsets/text_results_basic.csv")
+write_csv(text_only, "2_data_deidentified/subsets/text_results_basic.csv")
 
 #### Make dataset with "intro" questions ------------------------------------
 
@@ -87,7 +87,7 @@ intro <- all_surveys %>%
   # reorder columns...
   select(ID, source, qname, qname_main, main, q_code, q_text, order)
 
-write_csv(intro, "data_deidentified/subsets/intro_results_basic.csv")
+write_csv(intro, "2_data_deidentified/subsets/intro_results_basic2.csv")
 
 #### Make "has accessed data" dataset ------------------------------------
 # Do in two parts, because the way the questions codes are created is different 
@@ -144,7 +144,7 @@ yes_data2 <- all_surveys %>%
 # Put together
 yes_data <- full_join(yes_data1, yes_data2)
 
-write_csv(yes_data, "data_deidentified/subsets/data_yes_results_basic.csv")
+write_csv(yes_data, "2_data_deidentified/subsets/data_yes_results_basic.csv")
 
 #### Make "has NOT accessed data" dataset ------------------------------------
 no_data <- all_surveys %>% 
@@ -169,7 +169,7 @@ no_data <- all_surveys %>%
   # reorder columns...
   select(ID, source, qname, qname_main, main, q_code, q_text, order)
 
-write_csv(no_data, "data_deidentified/subsets/data_no_results_basic.csv")
+write_csv(no_data, "2_data_deidentified/subsets/data_no_results_basic.csv")
 
 #### Make "dashboard" dataset ------------------------------------
 dashboard <- all_surveys %>% 
@@ -194,7 +194,7 @@ dashboard <- all_surveys %>%
   # reorder columns...
   select(ID, source, qname, qname_main, main, q_code, q_text, order)
 
-write_csv(dashboard, "data_deidentified/subsets/dashboard_results_basic.csv")
+write_csv(dashboard, "2_data_deidentified/subsets/dashboard_results_basic.csv")
 
 #### Make "trust" dataset ------------------------------------
 trust <- all_surveys %>% 
@@ -219,7 +219,7 @@ trust <- all_surveys %>%
   # reorder columns...
   select(ID, source, qname, qname_main, main, q_code, q_text, order)
 
-write_csv(trust, "data_deidentified/subsets/trust_results_basic.csv")
+write_csv(trust, "2_data_deidentified/subsets/trust_results_basic.csv")
 
 #### Make "demographics" dataset ------------------------------------
 demographics <- all_surveys %>% 
@@ -244,5 +244,5 @@ demographics <- all_surveys %>%
   # reorder columns...
   select(ID, source, `DE-1`, qname, qname_main, main, q_code, q_text, order)
 
-write_csv(demographics, "data_deidentified/subsets/demographics_results_basic.csv")
+write_csv(demographics, "2_data_deidentified/subsets/demographics_results_basic.csv")
 
