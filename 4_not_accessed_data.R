@@ -14,7 +14,7 @@ renv::restore()
 library(tidyverse)
 
 #### Load data -----------------------------------
-no_access <- read_csv("data_deidentified/subsets/data_no_results_basic.csv")
+no_access <- read_csv("2_data_deidentified/subsets/data_no_results_basic.csv")
 
 # Questions
 # ND-1 If you had opportunity to access data in future, how often?
@@ -35,7 +35,7 @@ ggplot(no_access %>%
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
   theme_bw()+
   theme(axis.text.y = element_text(size=15))
-ggsave("results/no_access_how_often.jpg", width = 12, height = 7)
+ggsave("8_results/no_access_how_often.jpg", width = 12, height = 7)
 
 #### If opportunity, what type of data? -----------------------------------
 ggplot(no_access %>% 
@@ -46,4 +46,4 @@ ggplot(no_access %>%
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
   theme_bw()+
   theme(axis.text.y = element_text(size=15))
-ggsave("results/no_access_interests.jpg", width = 12, height = 7)
+ggsave("8_results/no_access_interests.jpg", width = 12, height = 7)
