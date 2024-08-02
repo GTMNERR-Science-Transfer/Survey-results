@@ -14,8 +14,8 @@ renv::restore()
 library(tidyverse)
 
 #### Load data -----------------------------------
-intro <- read_csv("data_deidentified/subsets/intro_results_basic.csv")
-demogr <- read_csv("data_deidentified/subsets/demographics_results_basic.csv")
+intro <- read_csv("2_data_deidentified/subsets/intro_results_basic.csv")
+demogr <- read_csv("2_data_deidentified/subsets/demographics_results_basic.csv")
 
 # Save for future ref
 # aes(y = fct_rev(fct_infreq(factor(answer))))) + # Turn answer into factor
@@ -35,7 +35,7 @@ ggplot(demogr %>%
   labs(x = "", y = "", title = "What is your age group?") +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
   theme_bw()
-ggsave("results/demographics_age.jpg")
+ggsave("8_results/demographics_age.jpg")
 
 ##### Gender -----------------------------------
 ggplot(demogr %>% 
@@ -47,7 +47,7 @@ ggplot(demogr %>%
   scale_y_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
   theme_bw()+
   theme(legend.position = "none")
-ggsave("results/demographics_gender.jpg")
+ggsave("8_results/demographics_gender.jpg")
 
 ##### Distance -----------------------------------
 ggplot(demogr %>% 
@@ -57,7 +57,7 @@ ggplot(demogr %>%
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1))+
   labs(x = "", y = "", title = "How far are you from the GTM?") +
   theme_bw()
-ggsave("results/demographics_distance.jpg")
+ggsave("8_results/demographics_distance.jpg")
 
 #### Visualize introductory questions -----------------------------------
 # D-1 How are you connected? (QID6)
@@ -76,7 +76,7 @@ ggplot(intro %>%
   theme_bw()+
   theme(legend.position = "none", axis.text.y = element_text(size=12))
 
-ggsave("results/intro_connected.jpg", width = 12, height = 7)
+ggsave("8_results/intro_connected.jpg", width = 12, height = 7)
 
 ##### How often do you engage with the GTM? -----------------------------------
 # To show the order of the options here properly, we need to re-order the options
@@ -100,7 +100,7 @@ ggplot(intro_engage %>%
   scale_fill_viridis_d()+
   theme_bw()+
   theme(legend.position = "none")
-ggsave("results/intro_GTM_engage.jpg")
+ggsave("8_results/intro_GTM_engage.jpg")
 
 ##### What data are you generally interested in? -----------------------------------
 # For this question, people could order their preferences
@@ -113,7 +113,7 @@ ggplot(intro %>%
   scale_fill_viridis_d(option = "plasma", name = "Rank")+
   theme_bw()+
   theme(axis.text.y = element_text(size=15))
-ggsave("results/intro_interests1.jpg", width = 12, height = 7)
+ggsave("8_results/intro_interests1.jpg", width = 12, height = 7)
 
 # Similar plot, but with the average ranks (1 = most interested)
 ggplot(intro %>% 
@@ -125,7 +125,7 @@ ggplot(intro %>%
   labs(y = "", x = "", title = "What datasets are you interested in?\nAverage ranking (1 = most interested in)")+
   theme_bw()+
   theme(axis.text.y = element_text(size=15))
-ggsave("results/intro_interests2.jpg", width = 12, height = 7)
+ggsave("8_results/intro_interests2.jpg", width = 12, height = 7)
 
 ##### Have you ever accessed data? -----------------------------------
 ggplot(intro %>% 
@@ -136,4 +136,4 @@ ggplot(intro %>%
   scale_fill_manual(values = c("chocolate1", "darkorchid2"))+
   theme_bw()+
   theme(legend.position = "none")
-ggsave("results/intro_data_access.jpg")
+ggsave("8_results/intro_data_access.jpg")
