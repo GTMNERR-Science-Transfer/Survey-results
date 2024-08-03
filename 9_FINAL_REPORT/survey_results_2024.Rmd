@@ -69,6 +69,8 @@ num_answers <- intro %>%
   filter(str_detect(qname, "D-1")) %>% 
   summarize(num_answers = n()) %>% 
   pull(num_answers)
+# # Alternative to count number of respondents (doublecheck):
+# num_resp <- intro %>% filter(qname_main == "D-1") %>% pull(ID) %>% n_distinct()
 
 ggplot(intro %>% 
          filter(str_detect(qname, "D-1")) %>% 
@@ -105,6 +107,9 @@ Under "Other", respondents answered:
 The next table indicates how often respondents say they interact(ed) with the Guana Estuary. Only one answer was possible here.
 
 ```{r engage, fig.width = 6, fig.height = 3, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center'}
+# Check number of answers again
+num_resp <- intro %>% filter(qname_main == "D-2") %>% pull(ID) %>% n_distinct()
+
 ggplot(intro %>% 
          filter(qname == "D-2") %>% 
          mutate(q_text = fct_rev(factor(q_text, levels = c("Daily", "At least once a week",
@@ -135,6 +140,11 @@ We asked respondents what Guana Estuary data they would be interested in, regard
 The figure below shows the percentage of respondents that picked a particular dataset being of interest to them. E.g. over 80% of respondents picked water quality data. The colors inside the bar indicate how they ranked it: for instance, almost 40% of all respondents ranked water quality data as their number 1 dataset of interest.
 
 ```{r what_data, fig.width = 7, fig.height = 6, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center'}
+
+# Check number of answers again
+num_resp <- intro %>% filter(qname_main == "D-3") %>% pull(ID) %>% n_distinct()
+# Here we are already losing people - responses goes to 49
+
 ggplot(intro %>% 
          filter(str_detect(qname, "D-3")) %>% 
          group_by(q_text, order) %>%
@@ -170,10 +180,13 @@ Under "Other", the 4 types of datasets mentioned were: **historical maps**, **wa
 
 The survey asked respondents whether they had accessed data before, and by "data", we clarified that we meant "information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer" for instance spreadsheets, databases, graphs, and maps."
 
-Based on their answer here, respondents were directed to different survey sections. Part 3 of this reports on questions for those who anwered "No", Part 4 on questions for those who answered "Yes".
+Based on their answer here, respondents were directed to different survey sections. Part 3 of this reports on questions for those who answered "No", Part 4 on questions for those who answered "Yes" to this question.
 
 ```{r accessed_data, fig.width = 4, fig.height = 3, echo = FALSE, message = FALSE, fig.align = 'center'}
-#### CHECK IF N=51 IS CORRECT
+# Check number of answers again
+num_resp <- intro %>% filter(qname_main == "D-4") %>% pull(ID) %>% n_distinct()
+# Still 49
+
 ggplot(intro %>% 
          filter(qname == "D-4") %>% 
          group_by(q_text) %>%
