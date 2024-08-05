@@ -222,31 +222,28 @@ ___________________________________________________________
 
 ## 3.1 Datasets of interest
 
-For respondents that had not (yet) accessed data (N = 8), the figure below summarizes their answers from section 2.3 (datasets of interest). In this figure, the datasets are ordered according to their **average ranking**, once again 1 being the dataset of most interest. For this ranking calculation, the rank was set to 0 if it was not picked at all by respondents.
+For respondents that had not (yet) accessed data (N = 8), the figure below summarizes their answers from section 2.3 (datasets of interest). In this figure, the datasets are ordered according to their **average ranking** (the number on the right of the bars), once again 1 being the dataset of most interest.
 
-This paints an interesting picture, as, for instance, water quality data were picked by most respondents, but in terms of average ranking it comes in 4th (3rd) place. Only one person responded they were not interested in any data ("None"), hence this item ranks first, as the average of 1 is 1... We can essentially disregard this item. The 3 datasets that have rankings between 2 and 3 are water level information, reserve or trail closures, and water quality information. However, information on vegetation, and information on fish, shellfish and other aquatic organisms was also picked by more than 60% (5 respondents) - but it was ranked lower on average.  
+One person responded they were not interested in any data ("None"), hence this item ranks first, as the average of 1 is 1... We can essentially disregard this item. The rest of the figure paints an interesting picture, as, for instance, water quality data were picked by most respondents, but in terms of average ranking it comes in 3rd place of the datasets of interest. The 3 datasets that have average rankings between 2 and 3 are water level information, reserve or trail closures, and water quality information. However, information on vegetation, and information on fish, shellfish and other aquatic organisms was also picked by more than 60% (5 respondents) - but it was ranked lower on average.  
 
 ```{r link_to_23_no_data, echo = FALSE, message = FALSE}
 # count total number of answers
 num_resp_no_data <- length(unique(no_access$ID))
 
+#| Considered also taking into account the options that were NOT chosen, e.g. by
+#| giving them the value 8. But that would actually not give the correct impression.
+#| Because what we want to show is HOW important a dataset is when people chose it 
+
 intro %>%
   filter(ID %in% unique(no_access$ID),
          str_detect(qname, "D-3")) %>%
-  # add categories that were not chosen and assign 0
-  full_join(data.frame("ID" = rep(unique(no_access$ID), 7), 
-                       "q_code" = rep(c(1,2,3,4,5,6,7), length(unique(no_access$ID))))) %>% 
-  mutate(order = ifelse(is.na(order), 0, order)) %>% 
-  #### TO DO: make sure this works with q_text!!! BUT THEN ALSO remove it from
-  # the counts... bc they weren't picked!!!
-  group_by(q_code, order) %>% #q_code instead of q_text
+  group_by(q_text, order) %>% 
   summarize(cnt = n()) %>%
-  filter(!is.na(q_code)) %>% # Take out the NAs associated with the 0 rank
   mutate(percentage = round(cnt/num_resp_no_data*100, 1)) %>%
-  group_by(q_code) %>% 
+  group_by(q_text) %>% 
   mutate(tot_perc = sum(percentage), ave_score = sum(order*cnt)/sum(cnt)) %>%
   
-  ggplot(aes(y = reorder(q_code, ave_score, decreasing = TRUE), x = percentage, fill = fct_rev(factor(order))))+
+  ggplot(aes(y = reorder(q_text, ave_score, decreasing = TRUE), x = percentage, fill = fct_rev(factor(order))))+
   geom_col(color = "darkgrey") +
   labs(y = "", x = paste0("Percentage of respondents (N = ", num_resp_no_data, ")"), 
        title = "What datasets are you interested in?",
@@ -254,11 +251,31 @@ intro %>%
   scale_fill_brewer(palette = "YlGn", direction = 1)+
   #scale_fill_viridis_d(option = "plasma", name = "Rank", direction = -1)+
   scale_y_discrete(labels = function(x) str_wrap(x, width = 50))+
-  geom_text(aes(x = 79, y = q_code, label = round(ave_score, 2)), check_overlap = TRUE)+
+  geom_text(aes(x = 79, y = q_text, label = round(ave_score, 2)), check_overlap = TRUE, fontface = "italic")+
   theme_bw()+
   guides(fill = guide_legend(title = "Rank",
                              reverse = TRUE))
 ggsave("./Figures/5_no_access_interest.jpg")
+
+intro %>%
+  filter(ID %in% unique(no_access$ID),
+         str_detect(qname, "D-3")) %>%
+  group_by(q_text, order) %>% 
+  summarize(cnt = n()) %>%
+  mutate(percentage = round(cnt/num_resp_no_data*100, 1)) %>%
+  group_by(q_text) %>% 
+  mutate(tot_perc = sum(percentage), ave_score = sum(order*cnt)/sum(cnt)) %>%
+  
+  ggplot(aes(y = ave_score, x = tot_perc, color = q_text))+
+  geom_point() +
+  labs(y = "", x = paste0("Percentage of respondents (N = ", num_resp_no_data, ")"), 
+       title = "What datasets are you interested in?",
+       caption  = "NOTE: Respondents could pick more than 1 response") +
+  scale_color_brewer(palette = "YlGn", direction = 1)+
+  #scale_fill_viridis_d(option = "plasma", name = "Rank", direction = -1)+
+  scale_y_reverse()+
+  theme_bw()+
+  guides(fill = guide_legend(title = "Dataset of interest"))
 ```
 
 ## 3.2 Frequency and usage of data, if accessed in the future
