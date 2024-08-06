@@ -237,15 +237,15 @@ num_resp_no_data <- length(unique(no_access$ID))
 intro %>%
   filter(ID %in% unique(no_access$ID),
          str_detect(qname, "D-3")) %>%
-  group_by(q_text, order) %>% 
+  group_by(q_text, order) %>%
   summarize(cnt = n()) %>%
   mutate(percentage = round(cnt/num_resp_no_data*100, 1)) %>%
-  group_by(q_text) %>% 
+  group_by(q_text) %>%
   mutate(tot_perc = sum(percentage), ave_score = sum(order*cnt)/sum(cnt)) %>%
-  
+
   ggplot(aes(y = reorder(q_text, ave_score, decreasing = TRUE), x = percentage, fill = fct_rev(factor(order))))+
   geom_col(color = "darkgrey") +
-  labs(y = "", x = paste0("Percentage of respondents (N = ", num_resp_no_data, ")"), 
+  labs(y = "", x = paste0("Percentage of respondents (N = ", num_resp_no_data, ")"),
        title = "What datasets are you interested in?",
        caption  = "NOTE: Respondents could pick more than 1 response") +
   scale_fill_brewer(palette = "YlGn", direction = 1)+
@@ -257,25 +257,25 @@ intro %>%
                              reverse = TRUE))
 ggsave("./Figures/5_no_access_interest.jpg")
 
-intro %>%
-  filter(ID %in% unique(no_access$ID),
-         str_detect(qname, "D-3")) %>%
-  group_by(q_text, order) %>% 
-  summarize(cnt = n()) %>%
-  mutate(percentage = round(cnt/num_resp_no_data*100, 1)) %>%
-  group_by(q_text) %>% 
-  mutate(tot_perc = sum(percentage), ave_score = sum(order*cnt)/sum(cnt)) %>%
-  
-  ggplot(aes(y = ave_score, x = tot_perc, color = q_text))+
-  geom_point() +
-  labs(y = "", x = paste0("Percentage of respondents (N = ", num_resp_no_data, ")"), 
-       title = "What datasets are you interested in?",
-       caption  = "NOTE: Respondents could pick more than 1 response") +
-  scale_color_brewer(palette = "YlGn", direction = 1)+
-  #scale_fill_viridis_d(option = "plasma", name = "Rank", direction = -1)+
-  scale_y_reverse()+
-  theme_bw()+
-  guides(fill = guide_legend(title = "Dataset of interest"))
+# # Maybe make a scatter plot of ave percentage vs ave score?
+# intro %>%
+#   filter(ID %in% unique(no_access$ID),
+#          str_detect(qname, "D-3")) %>%
+#   group_by(q_text, order) %>% 
+#   summarize(cnt = n()) %>%
+#   mutate(percentage = round(cnt/num_resp_no_data*100, 1)) %>%
+#   group_by(q_text) %>% 
+#   mutate(tot_perc = sum(percentage), ave_score = sum(order*cnt)/sum(cnt)) %>%
+#   
+#   ggplot(aes(y = ave_score, x = tot_perc, color = q_text))+
+#   geom_point() +
+#   labs(y = "", x = paste0("Percentage of respondents (N = ", num_resp_no_data, ")"), 
+#        title = "What datasets are you interested in?",
+#        caption  = "NOTE: Respondents could pick more than 1 response") +
+#   #scale_color_brewer(palette = "YlGn", direction = 1)+
+#   scale_y_reverse()+
+#   theme_bw()+
+#   guides(fill = guide_legend(title = "Dataset of interest"))
 ```
 
 ## 3.2 Frequency and usage of data, if accessed in the future
