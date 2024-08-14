@@ -610,7 +610,34 @@ txt_data_yes_YD6 %>%
 
 In summary, the three usages mentioned here most are personal use, volunteer activities, and management purposes (vegetation / invasive plants, prescribed fire). 
 
------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+:::: {.infobox .left data-latex=""}
+:::{.boxheader .info data-latex=""}
+**Take home messages**
+:::
+
+- The majority of people that have accessed data before did so for **water quality information**: 85%.
+- **Water level information** and **information on fish, shellfish or other aquatic organisms** were accessed by 55% of the respondents, and 45% had accessed **information on vegetation**. All the other datasets were accessed by fewer than 40% of respondents.
+- Comparing this to the information on the data people *would like* to access (regardless of whether they have in the past or can do so), the number people that would like to access data on fish, shellfish, or other aquatic organisms, water levels, weather, vegetation, and terrestrial animals is larger than those who have actually accessed those data. Only for water quality data there is a small discrepancy between the number of people wanting to access those data, and the number who have.
+
+------------------------------------------------------------------------------
+
+- For the 4 most popular types of datasets (bolded above), the majority of respondents obtain these data by requesting it from GTMNERR staff (by email) and also the majority finds the way they access data easy and convenient. In addition, 35-55% find the format in which they get the data useful. While 40-45% of respondents say there are no disadvantages in accessing these datasets, these results show that GTMNERR staff probably spend considerable time providing these data (and do an excellent job!). 
+- About 70 to 85% of people access these data at least once a month, with most more frequent than that.
+- The majority of respondents use these data for research purposes, but a considerable number of people also use them for other purposes such as education or other work-related purposes (not research/education).
+- For all these 4 data, 80 to 100% of respondents indicate that they satisfy their needs slightly to moderately well. 
+
+------------------------------------------------------------------------------
+
+- In contrast, the other 4 types of information (weather, reserve or trail closures, terrestrial animals and LiDAR) are mostly accessed through websites - but also here, respondents feel data access is easy / convenient, and the format is useful. 
+- Also for these data, respondents feel that there are not many disadvantages, though they did highlight difficulty in accessing weather data (25%) and the time it takes to request information on terrestrial animals (42.9%).
+- In terms frequency of accessing these data, most people either access these data once month (weather, and terrestrial animals) or daily (reserve and trail closures, and terrestrial animals).
+- The usage of these data fairly evenly distributed across the options that were provided - as well as how well the data satisfied people's needs. 
+
+::::
+
+____________________________________________________
 
 # 5. Advantages and disadvantages - from respondents that have accessed data before
 
@@ -839,7 +866,7 @@ ggsave("./Figures/11_advantages.jpg")
 
 ```
 
-The next figure, a so-called treemap, shows the information for the same questions but summarized differently; based on the advantages. The size of the different coloured rectangles for each advantage indicates the percentage of respondents that picked this advantages compared to the total advantage answers (outer box). Clicking on each rectangle then shows the data access methods for which this advantage was picked; also by percentage, but now the listed advantage represents 100%. Example: if 32 out of a 204 advantage answers were "Requesting the data is quick", this box (colored red) represents about 16% of the total area. Clicking on this, the detail shows that out of the 32 times this answer was chosen, almost half of those (15, or 47%) were chosen in relation to the method "Request from a GTMNERR staff member by email".
+The next figure, a so-called treemap, shows the information for the same questions but summarized differently; based on the advantages. The size of the different coloured rectangles for each advantage indicates the percentage of respondents that picked this advantage compared to the total advantage answers (outer box). Clicking on each rectangle then shows the data access methods for which this advantage was picked; also by percentage, but now the selected advantage represents 100%. Example: if 32 out of a 204 advantage answers were "Requesting the data is quick", this box (colored red) represents about 16% of the total area. Clicking on this, the detail shows that out of the 32 times this answer was chosen, almost half of those (15, or 47%) were chosen in relation to the method "Request from a GTMNERR staff member by email".
 
 A hover label shows the percentages as text, as well as the advantages or access methods if the text is too long to be readily readable.
 
@@ -987,21 +1014,20 @@ disadv_bysource <- yes_data_disadv %>%
 ggplot(disadv_bysource, aes(x = Disadvantage, y = fct_rev(q_text), color = Disadvantage, size = percentage)) +
   geom_point()+ 
   geom_text(aes(label = percentage), color = "black", size = 3)+
-  scale_y_discrete(labels = function(x) str_wrap(x, width = 50), drop = FALSE)+
-  scale_x_discrete(labels = function(x) str_wrap(x, width = 30), drop = FALSE,
-                   position = "top")+
+  scale_y_discrete(labels = function(x) str_wrap(x, width = 40), drop = FALSE)+
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 50), drop = FALSE,
+                   position = "top", guide = guide_axis(angle = 90))+
   scale_size_continuous(range = c(0,30))+
   # the following color are from colorbrewer, reordered them so "no advantages" is red
   scale_color_manual(labels = function(x) str_wrap(x, width = 40),
-                      values = c("#7fc97f", "#beaed4", "#fdc086", "#ffff99", "#f0027f", # 5 colors for main disadvantages (with green being no disadvantages)
+                      values = c("#7fc97f", "#beaed4", "#fdc086", "#ffff99", "#666666", # 5 colors for main disadvantages (with green being no disadvantages)
                                  "#f7fbff", "#deebf7", "#c6dbef", "#9ecae1", "#6baed6", "#4292c6", "#2171b5", "#08519c", "#08306b") # 9 shades of the same color for other
                     )+
   labs(x = NULL, y = NULL)+
   theme_bw()+
   theme(legend.position = "none",
-        axis.text.x = element_text(angle = 60, vjust = 0.5, hjust = 0),
-        axis.text = element_text(color = "black", size = 10),
-        plot.margin = margin(t = 0, r = 30, b = 0, l = 0))
+        #axis.text.x = element_text(angle = 90, hjust = 0),
+        axis.text = element_text(color = "black", size = 10))
 
 # ggplot(disadv_bysource, aes(x = percentage, y = fct_rev(q_text), fill = Disadvantage)) +
 #   geom_col(position = "stack", color = "darkgrey")+
@@ -1018,9 +1044,9 @@ ggplot(disadv_bysource, aes(x = Disadvantage, y = fct_rev(q_text), color = Disad
 
 ```
 
-The next figure, a so-called treemap, shows the information for the same questions but summarized differently; based on the advantages. The size of the different coloured rectangles for each advantage indicates the percentage of respondents that picked this advantages compared to the total advantage answers (outer box). Clicking on each rectangle then shows the data access methods for which this advantage was picked; also by percentage, but now the listed advantage represents 100%. Example: if 32 out of a 204 advantage answers were "Requesting the data is quick", this box (colored red) represents about 16% of the total area. Clicking on this, the detail shows that out of the 32 times this answer was chosen, almost half of those (15, or 47%) were chosen in relation to the method "Request from a GTMNERR staff member by email".
+The next figure, a so-called treemap, shows the information for the same questions but summarized differently; based on the disadvantages. The size of the different coloured rectangles for each disadvantage indicates the percentage of respondents that picked this disadvantage compared to the total disadvantage answers (outer box). Clicking on each rectangle then shows the data access methods for which this disadvantage was picked; also by percentage, but now the selected disadvantage represents 100%.
 
-A hover label shows the percentages as text, as well as the advantages or access methods if the text is too long to be readily readable.
+A hover label shows the percentages as text, as well as the disadvantages or access methods if the text is too long to be readily readable.
 
 ```{r disadvantages_fig2, fig.width = 8, fig.height = 8, fig.align = 'center', echo = FALSE, warning = FALSE, message = FALSE}
 
@@ -1185,23 +1211,15 @@ treemap_interactive
 **Take home messages**
 :::
 
-- The majority of people that have accessed data before did so for **water quality information**: 85%.
-- **Water level information** and **information on fish, shellfish or other aquatic organisms** were accessed by 55% of the respondents, and 45% had accessed **information on vegetation**. All the other datasets were accessed by fewer than 40% of respondents.
-- Comparing this to the information on the data people *would like* to access (regardless of whether they have in the past or can do so), the number people that would like to access data on fish, shellfish, or other aquatic organisms, water levels, weather, vegetation, and terrestrial animals is larger than those who have actually accessed those data. Only for water quality data there is a small discrepancy between the number of people wanting to access those data, and the number who have.
+- In terms of **advantages**, there were only 2 access methods for which respondents said there were no advantages: picking up paper copies, and downloading data from the NOAA website.
+- For many methods, access convenience and the usefulness of the data format were highlighted as advantages.
+- The speed with which data is received is listed as an advantage for some methods, but fewer times than the above 2 advantages. This could be because data is **not** received quickly; but it could also be that this is not an advantage that is important to respondents...
 
 ------------------------------------------------------------------------------
 
-- For the 4 most popular types of datasets (bolded above), the majority of respondents obtain these data by requesting it from GTMNERR staff (by email) and also the majority finds the way they access data easy and convenient. In addition, 35-55% find the format in which they get the data useful. While 40-45% of respondents say there are no disadvantages in accessing these datasets, these results show that GTMNERR staff probably spend considerable time providing these data (and do an excellent job!). 
-- About 70 to 85% of people access these data at least once a month, with most more frequent than that.
-- The majority of respondents use these data for research purposes, but a considerable number of people also use them for other purposes such as education or other work-related purposes (not research/education).
-- For all these 4 data, 80 to 100% of respondents indicate that they satisfy their needs slightly to moderately well. 
-
-------------------------------------------------------------------------------
-
-- In contrast, the other 4 types of information (weather, reserve or trail closures, terrestrial animals and LiDAR) are mostly accessed through websites - but also here, respondents feel data access is easy / conventient, and the format is useful. 
-- Also for these data, respondents feel that there are not many disadvantages, though they did highlight difficulty in accessing weather data (25%) and the time it takes to request information on terrestrial animals (42.9%).
-- In terms frequency of accessing these data, most people either access these data once month (weather, and terrestrial animals) or daily (reserve and trail closures, and terrestrial animals).
-- The usage of these data fairly evenly distributed across the options that were provided - as well as how well the data satisfied people's needs. 
+- For the **disadvantages** the results are a little murkier, as many respondents filled in their own disadvantages under the "Other:" option.
+- However, a number of methods received only "There are no disadvantages" responses: downloading data from iNaturalist, from SEACAR, and requesting data from FWC. Various other download methods also received a large number of responses for this answer.
+- A few of notable disadvantages are: the difficulty and non-user-friendliness of getting data from CDMO / SWMP (or SEACAR), the slow receipt of data from the NOAA website(s), the complications of picking up paper copies, and the lack of up-to-date data and the various formats when downloading data from UF IFAS and / or FLDEP websites.
 
 ::::
 
