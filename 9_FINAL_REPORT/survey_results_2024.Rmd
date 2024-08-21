@@ -40,9 +40,9 @@ demogr <- read_csv("../2_data_deidentified/subsets/demographics_results_basic.cs
 ```
 
 # 1. Response rate
-There were 56 individuals that started the survey, but 5 only filled in the consent form, but did not answer any questions. Out of the remaining 51, 10 surveys were unfinished. For this report, we also took these unfinished surveys into account. Most results are shown as percentages of respondents picking certain options or answers. Since the total number of responses varies, due to those unfinished surveys, all results show the total number of people (*N*) that answered a question with *N =*.
+There were 56 individuals that started the survey, but five did not answer any questions. Out of the remaining 51, ten surveys were unfinished. For this report, we also took these unfinished surveys into account. Most results are shown as percentages of respondents selecting certain options or answers. Since the total number of responses varies, due to those unfinished surveys, all results show the total number of people (*N*) that answered a question.
 
-47 respondents started or filled in the survey based on a link received via email, 3 via social media, 0 via the QR code available at the GTMNERR Welcome Center, and 1 via the QR code available at the kiosk at the dam.
+In terms of origination, 47 respondents started or filled in the survey based on a link received via email, three via social media, zero via the QR code available at the GTMNERR Welcome Center, and one via the QR code available at the kiosk at the dam.
 
 _____________________________________________________________
 
@@ -59,9 +59,9 @@ num_resp <- length(unique(intro$ID))
 
 ## 2.1 Guana Estuary connection
 
-We asked respondents about their connection with the Guana Estuary. In total there were 111 connections chosen. The figure below summarizes the responses as percentages of the total number of respondents, but note that people could pick more than 1 option. This is why the sum of all percentages adds up to more than 100%. 
+We asked respondents about their connection with the Guana Estuary. In total there were 111 connections chosen. The figure below summarizes the responses as percentages of the total number of respondents but note that people could select more than one option. This is why the sum of all percentages adds up to more than 100%. 
 
-E.g. a little over 60% of respondents do recreational activities at the Guana Estuary, and almost 50% collect data or use data for scientific purposes - and these choices are not mutually exclusive! Someone could collect data and *also* enjoy the Guana Estuary recreationally. Or volunteer and *also* use the Guana Estuary for educational purposes.
+For example, a little over 60% of respondents do recreational activities at the Guana Estuary, and almost 50% collect data or use data for scientific purposes - and these choices are not mutually exclusive! Someone could collect data and *also* enjoy the Guana Estuary recreationally. Or volunteer and *also* use the Guana Estuary for educational purposes.
 
 ```{r connected, fig.width = 7, fig.height = 3, echo = FALSE, message = FALSE, fig.align = 'center'}
 # count total number of answers
@@ -81,7 +81,7 @@ ggplot(intro %>%
   geom_col(color = "darkgrey") +
   labs(y = "", x = paste0("Percentage of all respondents (N = ", num_resp, ")"), 
        title = "How are you connected to the Guana Estuary?",
-       caption  = "NOTE: Respondents could pick more than 1 response") +
+       caption  = "NOTE: Respondents could select more than 1 response") +
   scale_fill_distiller(palette = "PuBuGn", direction = 1)+
   #scale_fill_viridis_d(option = "mako")+
   scale_y_discrete(labels = function(x) str_wrap(x, width = 50))+
@@ -135,9 +135,9 @@ ggsave("./Figures/2_engagement.jpg")
 --------------------------------------------------------
 
 ## 2.3 Data of interest (in general)
-We asked respondents what Guana Estuary data they would be interested in, regardless of whether or not they currently have access to these data. Respondents were also asked to rank their interest in these datasets, with 1 being the data they are most interested in. They could pick as many or few as they wanted.
+We asked respondents what Guana Estuary data they would be interested in, regardless of whether or not they currently have access to these data. Respondents were also asked to rank their interest in these datasets, with "1" being the data they are most interested in. They could select as many or few as they wanted.
 
-The figure below shows the percentage of respondents that picked a particular dataset being of interest to them. E.g. over 80% of respondents picked water quality data. The colors inside the bar indicate how they ranked it: for instance, almost 40% of all respondents ranked water quality data as their number 1 dataset of interest.
+The figure below shows the percentage of respondents that selected a particular dataset being of interest to them. For example, over 80% of respondents selected water quality data. The colors inside the bar indicate how they ranked it: for instance, almost 40% of all respondents ranked water quality data as their number "1" dataset of interest.
 
 ```{r what_data, fig.width = 7, fig.height = 6, echo = FALSE, warning = FALSE, message = FALSE, fig.align = 'center'}
 
@@ -156,7 +156,7 @@ ggplot(intro %>%
   geom_col(color = "darkgrey") +
   labs(y = "", x = paste0("Percentage of respondents (N = ", num_resp, ")"), 
        title = "What datasets are you interested in?",
-       caption  = "NOTE: Respondents could pick more than 1 response") +
+       caption  = "NOTE: Respondents could select more than 1 response") +
   scale_fill_viridis_d(option = "plasma", name = "Rank", direction = -1)+
   scale_y_discrete(labels = function(x) str_wrap(x, width = 50))+
   theme_bw()+
@@ -171,16 +171,16 @@ ggplot(intro %>%
 ggsave("./Figures/3_data_interest.jpg")
 ```
 
-Under "Other", the 4 types of datasets mentioned were: **historical maps**, **water fowl**, **dam operations**, **natural resource management practices/techniques/results**.
+Under "Other", the four types of datasets mentioned were: **historical maps**, **water fowl**, **dam operations**, **natural resource management practices/techniques/results**.
 
 
 --------------------------------------------------------
 
 ## 2.4 Previous experience with accessing data associated with Guana Estuary
 
-The survey asked respondents whether they had accessed data before, and by "data", we clarified that we meant "information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer" for instance spreadsheets, databases, graphs, and maps."
+The survey asked respondents whether they had accessed data before, and by "data", we clarified that we meant "information, especially facts or numbers, collected to be examined and considered and used to help decision-making; or information in an electronic form that can be stored and used by a computer, for instance spreadsheets, databases, graphs, and maps."
 
-Based on their answer here, respondents were directed to different survey sections. Part 3 of this reports on questions for those who answered "No", Part 4 on questions for those who answered "Yes" to this question.
+Based on their answer here, respondents were directed to different survey sections. Part 3 of this document reports on questions for those who answered "No", Parts 4 and 5 on questions for those who answered "Yes" to this question.
 
 ```{r accessed_data, fig.width = 4, fig.height = 3, echo = FALSE, message = FALSE, fig.align = 'center'}
 # Check number of answers again
@@ -208,13 +208,13 @@ ggsave("./Figures/4_data_accessed.jpg")
 **Take home messages**
 :::
 
-- The majority of respondents use the Guana Estuary recreationally (62.7%) and almost half (49%) collect or use data for scientific purposes. In third and fourth place are other work-related and educational connections (resp. 33.3% and 29.4%).
+- The majority of respondents use the Guana Estuary recreationally (62.7%) and almost half (49%) collect or use its data for scientific purposes. In third and fourth place are other work-related and educational connections (resp. 33.3% and 29.4%).
 - Engagement with the Guana Estuary is high: mostly once a month (21.6% of respondents), with a tie (19.6%) for once a week and once every 6 months. Daily engagement was indicated by 17.6% of respondents. 
-- The top 4 datasets of interest, chosen by more than 60% of the respondents, are: water quality information, information on shellfish, fish and other aquatic organisms, water level information, and information on vegetation. 
+- The top four datasets of interest, chosen by more than 60% of the respondents, are: water quality information, information on shellfish, fish and other aquatic organisms, water level information, and information on vegetation. 
 - The majority of respondents (83.7%) has accessed data before.
 ::::
 
-Based on their response whether or not they had accessed data, respondents answered different sets of questions. The results are summarized in the next two sections.
+Based on their response whether they had accessed data, respondents answered different sets of questions. The results are summarized in the next two sections.
 
 ___________________________________________________________
 
@@ -222,15 +222,15 @@ ___________________________________________________________
 
 ## 3.1 Datasets of interest
 
-For respondents that had not (yet) accessed data (N = 8), the figure below summarizes their answers from section 2.3 (datasets of interest). In this figure, the datasets are ordered according to their **average ranking** (the number on the right of the bars), once again 1 being the dataset of most interest.
+For respondents that had not (yet) accessed data (N = 8), the figure below summarizes their answers from section 2.3 (datasets of interest). In this figure, the datasets are ordered according to their **average ranking** (the number on the right of the bars), once again "1" being the dataset of most interest.
 
-One person responded they were not interested in any data ("None"), hence this item ranks first, as the average of 1 is 1... We can essentially disregard this item. The rest of the figure paints an interesting picture, as, for instance, water quality data were picked by most respondents, but in terms of average ranking it comes in 3rd place of the datasets of interest. The 3 datasets that have average rankings between 2 and 3 are water level information, reserve or trail closures, and water quality information. However, information on vegetation, and information on fish, shellfish and other aquatic organisms was also picked by more than 60% (5 respondents) - but it was ranked lower on average.  
+One person responded they were not interested in any data ("None"), hence this item ranks first, as the average of 1 is 1. The rest of the responses paints an interesting picture, as, for instance, water quality data were selected by most respondents, but in terms of average ranking it comes in third place of the datasets of interest. The three datasets that have average rankings between "2" and "3" are water level information, reserve or trail closures, and water quality information. However, information on vegetation, and information on fish, shellfish and other aquatic organisms was also selected by more than 60% (five respondents) - but it was ranked lower on average.  
 
 ```{r link_to_23_no_data, echo = FALSE, message = FALSE}
 # count total number of answers
 num_resp_no_data <- length(unique(no_access$ID))
 
-#| Considered also taking into account the options that were NOT chosen, e.g. by
+#| Considered also taking into account the options that were NOT chosen, for example by
 #| giving them the value 8. But that would actually not give the correct impression.
 #| Because what we want to show is HOW important a dataset is when people chose it 
 
@@ -247,7 +247,7 @@ intro %>%
   geom_col(color = "darkgrey") +
   labs(y = "", x = paste0("Percentage of respondents (N = ", num_resp_no_data, ")"),
        title = "What datasets are you interested in?",
-       caption  = "NOTE: Respondents could pick more than 1 response") +
+       caption  = "NOTE: Respondents could select more than 1 response") +
   scale_fill_brewer(palette = "YlGn", direction = 1)+
   #scale_fill_viridis_d(option = "plasma", name = "Rank", direction = -1)+
   scale_y_discrete(labels = function(x) str_wrap(x, width = 50))+
@@ -271,7 +271,7 @@ ggsave("./Figures/5_no_access_interest.jpg")
 #   geom_point() +
 #   labs(y = "", x = paste0("Percentage of respondents (N = ", num_resp_no_data, ")"), 
 #        title = "What datasets are you interested in?",
-#        caption  = "NOTE: Respondents could pick more than 1 response") +
+#        caption  = "NOTE: Respondents could select more than 1 response") +
 #   #scale_color_brewer(palette = "YlGn", direction = 1)+
 #   scale_y_reverse()+
 #   theme_bw()+
@@ -282,7 +282,7 @@ ggsave("./Figures/5_no_access_interest.jpg")
 
 The survey asked these respondents broad questions on how often they would access these data, and what they would use them for.
 
-The figure below shows that 25% (2 respondents) were not interested in accessing data, and that about half of the respondents would access data either once a month or once a year (25% each).
+The figure below shows that 25% (two respondents) were not interested in accessing data, and that about half of the respondents would access data either once a month or once a year (25% each).
 
 ```{r no_access_howoften, fig.width = 8, fig.height = 3, echo = FALSE, message = FALSE, fig.align = 'center'}
 
@@ -308,7 +308,7 @@ ggsave("./Figures/6_no_access_how_often.jpg")
 
 --------------------------------------------------------
 
-In terms of what people would use data for, the majority would use it for (non-research / non-educational) work-related purposes and decision making, as per the figure below. Also here, respondents could pick more than one answer, so the sum of all percentages is more than 100%.
+In terms of what people would use data for, the majority would use it for (non-research / non-educational) work-related purposes and decision making, as per the figure below. Also here, respondents could select more than one answer, so the sum of all percentages is more than 100%.
 
 ```{r no_access_what, fig.width = 8, fig.height = 3, echo = FALSE, message = FALSE, fig.align = 'center'}
 # count total number of answers
@@ -326,7 +326,7 @@ ggplot(no_access %>%
   geom_col(color = "darkgrey") +
   labs(y = "", x = paste0("Percentage of respondents (N = ", num_resp_no_data, ")"), 
        title = "If you had the opportunity to access data in the future, what would you use these data for?",
-       caption  = "NOTE: Respondents could pick more than 1 response") +
+       caption  = "NOTE: Respondents could select more than 1 response") +
   scale_fill_distiller(palette = "YlGn", direction = 1)+
   scale_y_discrete(labels = function(x) str_wrap(x, width = 30))+
   theme_bw()+
@@ -341,20 +341,20 @@ Under "Other", respondents listed **environmental impacts** and **resilience pla
 **Take home messages**
 :::
 
-- For the (8) respondents that had not accessed data before, their main interest would be data on water level information, reserve or trail closures, and water quality information.
+- For the (eight) respondents that had not accessed data before, their main interest would be data on water level information, reserve or trail closures, and water quality information.
 - If they could access data, 25% of respondents would access data once a month and 25% once a year.
-- 25% of respondents (2 people) are not interested in accessing data.
-- The majority of usage of data would be for (non-research / non-educational) work-related purposes and decision making: each of those options was picked by 3 people.
+- 25% of respondents (two people) are not interested in accessing data.
+- The majority of usage of data would be for (non-research / non-educational) work-related purposes and decision making: each of those options was selected by three people.
 
 ::::
 
 ____________________________________________________
 
-# 4. Feedback from respondents that have accessed data before
+# 4. Feedback from respondents that had accessed data before
 
-For respondents that have accessed data before (N = 40), the figure below summarizes their answers from section 2.3 (datasets of interest - regardless of whether respondents can or have accessed these data). In this figure, the datasets are ordered according to their average ranking, once again 1 being the dataset of most interest.
+For respondents that had accessed data before (N = 40), the figure below summarizes their answers from section 2.3 (datasets of interest - regardless of whether respondents can or have accessed these data). In this figure, the datasets are ordered according to their average ranking, once again 1 being the dataset of most interest.
 
-The top 3 data of interest are water quality information, information on shellfish, fish and other aquatic organisms, and water level information: both in terms of average ranking and the percentage of respondents picking these. Interestingly, more than half the respondents chose weather information and vegetation information as data of interest, but their rankings are relatively low. 
+The top three data of interest are water quality information, information on shellfish, fish and other aquatic organisms, and water level information: both in terms of average ranking and the percentage of respondents selecting these. Interestingly, more than half the respondents chose weather information and vegetation information as data of interest, but their rankings are relatively low. 
 
 ## 4.1 Datasets of interest
 
@@ -375,7 +375,7 @@ intro %>%
   geom_col(color = "darkgrey") +
   labs(y = "", x = paste0("Percentage of respondents (N = ", num_resp_yes_data, ")"), 
        title = "What datasets are you interested in?",
-       caption  = "NOTE: Respondents could pick more than 1 response") +
+       caption  = "NOTE: Respondents could select more than 1 response") +
   scale_fill_viridis_d(option = "plasma", name = "Rank", direction = -1)+
   scale_y_discrete(labels = function(x) str_wrap(x, width = 50))+
   geom_text(aes(x = 98, y = q_text, label = round(ave_score, 2)), check_overlap = TRUE)+
@@ -385,13 +385,13 @@ intro %>%
 ggsave("./Figures/8_access_interest.jpg")
 ```
 
-Under "Other", the 4 types of datasets mentioned were: **historical maps**, **water fowl**, **dam operations**, **natural resource management practices/techniques/results**.
+Under "Other", the four types of datasets mentioned were: **historical maps**, **water fowl**, **dam operations**, **natural resource management practices/techniques/results**.
 
 ---------------------------------------------------------------------------------
 
 ## 4.2 Data used or accessed
 
-In the section for respondents that have/had accessed data before, the survey asked which datasets they had accessed, and a number of detailed questions about their experiences related to how they accessed these data, the advantages and disadvantages of this access, the frequency of access, the usage of the data, and respondents' satisfaction with these data (for their needs).
+In the section for respondents that had accessed data before, the survey asked which datasets they had accessed, and a number of detailed questions about their experiences related to how they accessed these data, the advantages and disadvantages of this access, the frequency of access, the usage of the data, and respondents' satisfaction with these data (for their needs).
 
 ```{r access_what, fig.width = 8, fig.height = 4, echo = FALSE, message = FALSE, fig.align = 'center'}
 
@@ -416,7 +416,7 @@ ggplot(yes_data %>%
   labs(x = paste0("Percentage of respondents (N = ", num_resp_yes_data, ")"), 
        y = "", 
        title = "What Guana Estuary data do you currently use, or have you used in the past?",
-       caption  = "NOTE: Respondents could pick more than 1 response") +
+       caption  = "NOTE: Respondents could select more than 1 response") +
   scale_y_discrete(labels = function(x) str_wrap(x, width = 40))+
   scale_fill_manual(values = rev(color_vector))+
   #scale_fill_distiller(palette = "YlGnBu", direction = 1)+
@@ -441,7 +441,7 @@ There was an option "Other", to which there was one response: **LiDAR data**.
 
 ---------------------------------------------------------------------------------
 
-When comparing the datasets respondents would like to access (regardless whether they can or have - section 2.3) and the datasets they have actually accessed, there is a clear discrepancy, see figure below.
+When making a comparison between the datasets respondents would *like* to access (regardless whether they can or have - section 2.3) and the datasets they *had* actually accessed, there is a clear discrepancy, see figure below.
 
 ```{r comparison, fig.width = 8, fig.height = 4, echo = FALSE, warning = FALSE, message = FALSE}
 wants_access <- intro %>%
@@ -475,7 +475,7 @@ ggplot(access_summ, aes(x = diff, y = fct_rev(q_text), fill = q_text))+
 ggsave("./Figures/10_access_diff_interest_what.jpg")
 ```
 
-While not mapped 1:1 for each respondent, from the figure it appears that for almost all data (aside from water quality information, and "Other") 22.5 - 30% of respondents have not accessed or are not accessing data they would like to access.
+While not explicitly mapped 1:1 for each respondent, from the figure it appears that for almost all data (aside from water quality information, and "Other") 22.5 - 30% of respondents had not accessed or are not accessing data they would like to access.
 
 ---------------------------------------------------------------------------------
 
@@ -617,43 +617,48 @@ In summary, the three usages mentioned here most are personal use, volunteer act
 **Take home messages**
 :::
 
-- The majority of people that have accessed data before did so for **water quality information**: 85%.
+- The majority of people that had accessed data before did so for **water quality information**: 85%.
 - **Water level information** and **information on fish, shellfish or other aquatic organisms** were accessed by 55% of the respondents, and 45% had accessed **information on vegetation**. All the other datasets were accessed by fewer than 40% of respondents.
-- Comparing this to the information on the data people *would like* to access (regardless of whether they have in the past or can do so), the number people that would like to access data on fish, shellfish, or other aquatic organisms, water levels, weather, vegetation, and terrestrial animals is larger than those who have actually accessed those data. Only for water quality data there is a small discrepancy between the number of people wanting to access those data, and the number who have.
+- Comparing this to the information on the data people *would like* to access (regardless of whether they had in the past or can do so), the number people that would like to access data on fish, shellfish, or other aquatic organisms, water levels, weather, vegetation, and terrestrial animals is larger than those who had actually accessed those data. Only for water quality data there is a small discrepancy between the number of people wanting to access those data, and the number who had.
 
 ------------------------------------------------------------------------------
 
-- For the 4 most popular types of datasets (bolded above), the majority of respondents obtain these data by requesting it from GTMNERR staff (by email) and also the majority finds the way they access data easy and convenient. In addition, 35-55% find the format in which they get the data useful. While 40-45% of respondents say there are no disadvantages in accessing these datasets, these results show that GTMNERR staff probably spend considerable time providing these data (and do an excellent job!). 
+- For the four most popular types of datasets (bolded above), the majority of respondents obtain these data by requesting it from GTMNERR staff (by email).
 - About 70 to 85% of people access these data at least once a month, with most more frequent than that.
 - The majority of respondents use these data for research purposes, but a considerable number of people also use them for other purposes such as education or other work-related purposes (not research/education).
-- For all these 4 data, 80 to 100% of respondents indicate that they satisfy their needs slightly to moderately well. 
+- For all these four data types, 80 to 100% of respondents indicate that they satisfy their needs slightly to moderately well. 
 
 ------------------------------------------------------------------------------
 
-- In contrast, the other 4 types of information (weather, reserve or trail closures, terrestrial animals and LiDAR) are mostly accessed through websites - but also here, respondents feel data access is easy / convenient, and the format is useful. 
-- Also for these data, respondents feel that there are not many disadvantages, though they did highlight difficulty in accessing weather data (25%) and the time it takes to request information on terrestrial animals (42.9%).
-- In terms frequency of accessing these data, most people either access these data once month (weather, and terrestrial animals) or daily (reserve and trail closures, and terrestrial animals).
+- In contrast, the other four types of information (weather, reserve or trail closures, terrestrial animals and LiDAR) are mostly accessed through websites.
+- In terms frequency of accessing these data, most people either access these data once a month (weather, and terrestrial animals) or daily (reserve and trail closures, and terrestrial animals).
 - The usage of these data fairly evenly distributed across the options that were provided - as well as how well the data satisfied people's needs. 
 
 ::::
 
 ____________________________________________________
 
-# 5. Advantages and disadvantages - from respondents that have accessed data before
+# 5. Advantages and disadvantages - from respondents that had accessed data before
 
-We asked respondents about the advantages and disadvantages of the current manner of accessing datasets. They could choose more than 1 answer (without ranking), and we offered the opportunity to provide free text answers for the options "Download from website" and "Other". For the next few figures we added that level of information to the visualizations ("Other: unspecified" is the category where respondents chose "Other" but did not provide more written detail). 
+We asked respondents about the advantages and disadvantages of the current manner of accessing datasets. They could choose more than one answer (without ranking), and we offered the opportunity to provide free text answers for the options "Download from website" and "Other". For the next few figures we added those specific levels of information to the visualizations ("Other: unspecified" is the category where respondents chose "Other" but did not provide more written detail). 
 
 For both the advantages and disadvantages, results are shown from two perspectives: 
-- first, from the perspective of the data access method (e.g. download from website, request via email, etc), where we show the percentages of (dis)advantages for each. Note that not all data access methods were picked by the same number of respondents, so some have more nuanced (dis)advantages listed if there were more respondents.
-- Second, from the perspective of the (dis)advantages, where we have grouped these together, and show which data set types they were mentioned with. 
+- first, from the perspective of the data access method (for example, download from website, request via email, etc), where we show the percentages of (dis)advantages for each. Note that not all data access methods were selected by the same number of respondents, so some have more nuanced (dis)advantages listed if there were more respondents.
+- Second, from the perspective of the (dis)advantages, where we have grouped these together, and show which dataset types they were mentioned with. 
 
 ## 5.1 Details on advantages of dataset access
 
 The figure below summarizes the advantages that respondents listed per data access method. 
 
-The answers "CDMO" refer to the National Estuarine Research Reserve System Centralized Data Management Office: https://cdmo.baruch.sc.edu/. "SWMP" is the NERR System-Wide Monitoring Program: https://coast.noaa.gov/digitalcoast/data/nerr.html
+The abbreviations refer to the following:
 
-"SEACAR" is the Statewide Ecosystem Assessment of Coastal and Aquatic Resources by the Florida Department of Environmental Protection: https://data.florida-seacar.org/
+- "CDMO" is the National Estuarine Research Reserve (NERR) System Centralized Data Management Office: https://cdmo.baruch.sc.edu/; 
+- "SWMP" is the NERR System-Wide Monitoring Program: https://coast.noaa.gov/digitalcoast/data/nerr.html;
+- "SEACAR" is the Statewide Ecosystem Assessment of Coastal and Aquatic Resources by the Florida Department of Environmental Protection: https://data.florida-seacar.org/;
+- "FL DEP" is the Florida Department of Environmental Protection;
+- "NOAA" refers to the National Oceanic and Atmospheric Administration, and "COPEPOD" is their global plankton database: https://www.st.nmfs.noaa.gov/copepod/;
+- "UF IFAS" is the University of Florida Institute of Food and Agricultural Sciences; and
+- "FWC" is the Florida Fish and Wildlife Conservation Commission.
 
 ``` {r advantages_fig1, fig.width = 8, fig.height = 14, fig.align = 'center', echo = FALSE, warning = FALSE, message = FALSE}
 # yes_data2 has datasets and way of accessing (YD-2 in col qname_main) and advantages/disadvantages (YD-3 and YD-4)
@@ -727,12 +732,12 @@ yes_data_adv <- yes_data3_access %>%
   # do joins for text answers:
   left_join(txt_sources) %>% # Add info on other data sources, join is based on ID
   mutate(q_text = ifelse(q_text == "Other (please specify)", paste0("Other: ", text_answer), q_text)) %>% # Replace "Other (please specify)" with actual answer for data sources
-  # Turns out not everyone filled in a source if they picked this answer. Make this look nicer than NA
+  # Turns out not everyone filled in a source if they selected this answer. Make this look nicer than NA
   mutate(q_text = ifelse(q_text == "Other: NA", paste0("Other: unspecified"), q_text)) %>%
   select(-text_answer) %>% # Remove col text_answer bc is also used next joins
   left_join(txt_websites) %>% # Add info on websites, join is based on ID
   mutate(q_text = ifelse(q_text == "Download from website (If so, what website?)", paste0("Download from website: ", text_answer), q_text)) %>% 
-  # Turns out not everyone filled in a website if they picked this answer. Make this look nicer than NA
+  # Turns out not everyone filled in a website if they selected this answer. Make this look nicer than NA
   mutate(q_text = ifelse(q_text == "Download from website: NA", paste0("Download from website: unspecified"), q_text)) %>% 
   select(-text_answer) %>% 
   left_join(txt_adv) %>% 
@@ -866,7 +871,7 @@ ggsave("./Figures/11_advantages.jpg")
 
 ```
 
-The next figure, a so-called treemap, shows the information for the same questions but summarized differently; based on the advantages. The size of the different coloured rectangles for each advantage indicates the percentage of respondents that picked this advantage compared to the total advantage answers (outer box). Clicking on each rectangle then shows the data access methods for which this advantage was picked; also by percentage, but now the selected advantage represents 100%. Example: if 32 out of a 204 advantage answers were "Requesting the data is quick", this box (colored red) represents about 16% of the total area. Clicking on this, the detail shows that out of the 32 times this answer was chosen, almost half of those (15, or 47%) were chosen in relation to the method "Request from a GTMNERR staff member by email".
+The next figure, also known as a treemap, shows the information for the same questions but summarized differently; based on the advantages. The size of the different colored rectangles for each advantage indicates the percentage of respondents that selected this advantage compared to the total advantage answers (outer box). Clicking on each rectangle then shows the data access methods for which this advantage was selected; also by percentage, but now the selected advantage represents 100%. Example: if 32 out of a 204 advantage answers were "Requesting the data is quick", this box (colored red) represents about 16% of the total area. Clicking on this, the detail shows that out of the 32 times this answer was chosen, almost half of those (15, or 47%) were chosen in relation to the method "Request from a GTMNERR staff member by email".
 
 A hover label shows the percentages as text, as well as the advantages or access methods if the text is too long to be readily readable.
 
@@ -934,7 +939,7 @@ treemap_interactive
 
 ## 5.2 Details on disadvantages of dataset access
 
-The following two figures summarize the data on disadvantages in the same way as the advantages were summarized and visualized.
+The following two figures summarize the data on disadvantages in the same way as the advantages were summarized and visualized, starting with the disadvantages per data access method.
 
 ``` {r disadvantages_fig1, fig.width = 8, fig.height = 14, fig.align = 'center', echo = FALSE, warning = FALSE, message = FALSE}
 
@@ -961,12 +966,12 @@ yes_data_disadv <- yes_data3_access %>%
   # do joins for text answers:
   left_join(txt_sources) %>% # Add info on other data sources, join is based on ID
   mutate(q_text = ifelse(q_text == "Other (please specify)", paste0("Other: ", text_answer), q_text)) %>% # Replace "Other (please specify)" with actual answer for data sources
-  # Turns out not everyone filled in a source if they picked this answer. Make this look nicer than NA
+  # Turns out not everyone filled in a source if they selected this answer. Make this look nicer than NA
   mutate(q_text = ifelse(q_text == "Other: NA", paste0("Other: unspecified"), q_text)) %>%
   select(-text_answer) %>% # Remove col text_answer bc is also used next joins
   left_join(txt_websites) %>% # Add info on websites, join is based on ID
   mutate(q_text = ifelse(q_text == "Download from website (If so, what website?)", paste0("Download from website: ", text_answer), q_text)) %>% 
-  # Turns out not everyone filled in a website if they picked this answer. Make this look nicer than NA
+  # Turns out not everyone filled in a website if they selected this answer. Make this look nicer than NA
   mutate(q_text = ifelse(q_text == "Download from website: NA", paste0("Download from website: unspecified"), q_text)) %>% 
   select(-text_answer) %>% 
   left_join(txt_disadv) %>% 
@@ -987,7 +992,7 @@ disadv_full_overview <- yes_data_disadv %>%
 
 disadv_bysource <- yes_data_disadv %>% 
   select(-tot_cnt) %>% 
-  add_count(q_text) %>% # Total number of times access method is picked
+  add_count(q_text) %>% # Total number of times access method is selected
   rename(tot_cnt = n) %>% 
   group_by(q_text, tot_cnt, Disadvantage) %>% 
   count() %>%  # Count each disadvantage per method 
@@ -1044,7 +1049,7 @@ ggplot(disadv_bysource, aes(x = Disadvantage, y = fct_rev(q_text), color = Disad
 
 ```
 
-The next figure, a so-called treemap, shows the information for the same questions but summarized differently; based on the disadvantages. The size of the different coloured rectangles for each disadvantage indicates the percentage of respondents that picked this disadvantage compared to the total disadvantage answers (outer box). Clicking on each rectangle then shows the data access methods for which this disadvantage was picked; also by percentage, but now the selected disadvantage represents 100%.
+Similar to the section 5.1, the next figure, the treemap, shows the information for the same questions but summarized differently; based on the disadvantages. The size of the different colored rectangles for each disadvantage indicates the percentage of respondents that selected this disadvantage compared to the total disadvantage answers (outer box). Clicking on each rectangle then shows the data access methods for which this disadvantage was selected; also by percentage, but now the selected disadvantage represents 100%.
 
 A hover label shows the percentages as text, as well as the disadvantages or access methods if the text is too long to be readily readable.
 
@@ -1211,15 +1216,23 @@ treemap_interactive
 **Take home messages**
 :::
 
-- In terms of **advantages**, there were only 2 access methods for which respondents said there were no advantages: picking up paper copies, and downloading data from the NOAA website.
+- In terms of **advantages**, there were only two access methods for which respondents said there were no advantages: picking up paper copies, and downloading data from the NOAA website.
 - For many methods, access convenience and the usefulness of the data format were highlighted as advantages.
-- The speed with which data is received is listed as an advantage for some methods, but fewer times than the above 2 advantages. This could be because data is **not** received quickly; but it could also be that this is not an advantage that is important to respondents...
+- The speed with which data is received is listed as an advantage for some methods, but fewer times than the above two advantages. This could be because data is **not** received quickly; but it could also be that this is not an advantage that is important to respondents.
 
 ------------------------------------------------------------------------------
 
-- For the **disadvantages** the results are a little murkier, as many respondents filled in their own disadvantages under the "Other:" option.
-- However, a number of methods received only "There are no disadvantages" responses: downloading data from iNaturalist, from SEACAR, and requesting data from FWC. Various other download methods also received a large number of responses for this answer.
-- A few of notable disadvantages are: the difficulty and non-user-friendliness of getting data from CDMO / SWMP (or SEACAR), the slow receipt of data from the NOAA website(s), the complications of picking up paper copies, and the lack of up-to-date data and the various formats when downloading data from UF IFAS and / or FLDEP websites.
+- For the **disadvantages** the results are more heterogeneous, as many respondents filled in their own disadvantages under the "Other:" option.
+- However, a number of methods received only "There are no disadvantages" responses: downloading data from iNaturalist, from SEACAR, and requesting data from FWC. Various other download methods also received a reasonable number of responses for this answer.
+- A few notable disadvantages are: the difficulty and non-user-friendliness of getting data from CDMO / SWMP (or SEACAR), the slow receipt of data from the NOAA website(s), the complications of picking up paper copies, and the lack of up-to-date data and the various formats when downloading data from UF IFAS and / or FL DEP websites.
+
+------------------------------------------------------------------------------
+
+Linking these results to section 4, some additional information:
+
+- The majority of respondents finds the way they access data easy and convenient for the four most accessed datasets (water quality information; water level information; information on fish, shellfish or other aquatic organisms; information on vegetation). In addition, 35-55% find the format in which they get these data useful. While 40-45% of respondents say there are no disadvantages in accessing these datasets, these results show that GTMNERR staff probably spend considerable time providing these data (and do an excellent job!). 
+
+- Also for the remaining datasets (weather; reserve or trail closures; terrestrial animals; LiDAR) respondents largely feel data access is easy / convenient, and the format is useful. Respondents feel that there are not many disadvantages, though they do highlight difficulty in accessing weather data (25%) and the time it takes to request information on terrestrial animals (42.9%).
 
 ::::
 
@@ -1248,7 +1261,7 @@ ggplot(dashboard %>%
   geom_col(color = "darkgrey") +
   labs(y = "", x = paste0("Percentage of respondents (N = ", num_resp_db, ")"), 
        title = "How would you prefer to access data?",
-       caption  = "NOTE: Respondents could pick more than 1 response") +
+       caption  = "NOTE: Respondents could select more than 1 response") +
   scale_fill_distiller(palette = "BuPu", direction = 1)+
   theme_bw()+
   theme(legend.position = "none",
@@ -1272,7 +1285,7 @@ ggplot(dashboard %>%
   geom_col(color = "darkgrey") +
   labs(y = "", x = paste0("Percentage of respondents (N = ", num_resp_db, ")"), 
        title = "What type of information do you prefer?",
-       caption  = "NOTE: Respondents could pick more than 1 response") +
+       caption  = "NOTE: Respondents could select more than 1 response") +
   scale_fill_distiller(palette = "BuPu", direction = 1)+
   scale_y_discrete(labels = function(x) str_wrap(x, width = 20))+
   theme_bw()+
@@ -1310,7 +1323,7 @@ ggplot(dashboard %>%
   geom_col(color = "darkgrey") +
   labs(y = "", x = paste0("Percentage of respondents (N = ", num_resp_db, ")"), 
        title = "What form of information do you prefer?",
-       caption  = "NOTE: Respondents could pick more than 1 response") +
+       caption  = "NOTE: Respondents could select more than 1 response") +
   #scale_fill_viridis_d(option = "rocket", name = "Rank", direction = -1)+
   scale_fill_brewer(palette = "BuPu")+ 
   scale_y_discrete(labels = function(x) str_wrap(x, width = 30))+
@@ -1349,7 +1362,7 @@ ggplot(dashboard %>%
   geom_col(color = "darkgrey") +
   labs(y = "", x = paste0("Percentage of respondents (N = ", num_resp_db, ")"), 
        title = "What format of data delivery would suit your needs best?",
-       caption  = "NOTE: Respondents could pick more than 1 response") +
+       caption  = "NOTE: Respondents could select more than 1 response") +
   #scale_fill_viridis_d(option = "rocket", name = "Rank", direction = -1)+
   scale_y_discrete(labels = function(x) str_wrap(x, width = 30))+
   scale_fill_brewer(palette = "BuPu")+ #
@@ -1372,9 +1385,9 @@ ggsave("./Figures/16_format.jpg")
 :::
 - The overwhelming majority of respondents prefer to access a data dashboard on their computer. Slightly less than 50% would (also) want to access it on a cellphone.
 - The type of information respondents would like to access is firstly recent data (from the past year), chosen by almost 95% of respondents. In a shared second place (almost 90% each) came historical data and current data (from the past month). Data representing current conditions was also chosen by just over 70% of the respondents.
-- In terms of providing aggregated data through the dashboard, an equal number of respondents is interested in data aggregated by location as well as for time periods. Aggregation by location is ranked slightly higher by most respondents (1.7 vs 1.8 for time periods; again, lower values indicate higher preference/higher ranking).
+- In terms of providing aggregated data through the dashboard, an equal number of respondents is interested in data aggregated by location as well as by time periods. On average, aggregation by location is ranked slightly higher by most respondents (1.7 vs 1.8 for time periods; again, lower values indicate higher preference/higher ranking).
 - A relatively large number of people is also interested in non-aggregated ("raw") data: almost 75%.
-- All data delivery formats suggested in the survey were popular with the respondents. While data downloads did not get the most votes in absolute numbers, almost half of those who picked this format ranked it their number 1 format: it has the best (lowest) average ranking. Maps and figures were about equally popular, both in absolute numbers as well as rankings. And while online tables came in "last" place, more than 75% of people would like to see this data format. 
+- All data delivery formats suggested in the survey were popular with the respondents. While data downloads did not get the most votes in absolute numbers, almost half of those who selected this format ranked it their number "1" format: it has the best (lowest) average ranking. Maps and figures were about equally popular, both in absolute numbers as well as rankings. And while online tables came in "last" place, still more than 75% of people would like to see data in this format. 
 
 ::::
 
@@ -1459,7 +1472,7 @@ ggsave("./Figures/18_distance.jpg")
 **Take home messages**
 :::
 - Slightly more respondents were female (55%) than male (45%).
-- Most respondents were 65 or over (32.5%), but the two age groups 35-44 and 45-54 combined made up 35% of the respondents: there is a balance between respondents that are retired and that are mid- to senior-level working professionals (we assume).
+- Most respondents were 65 or over (32.5%), but the two age groups 35-44 and 45-54 combined made up 35% of the respondents: we assume this reflects a balance between respondents that are retired and that are mid- to senior-level working professionals.
 - Most people live 31-60 minutes driving distance away from the Guana Estuary, which (together with the 11-30 minute driving distance option) probably corresponds to the nearest towns (Ponte Vedra, St Augustine). Those two categories made up 67.5% of the responses, meaning that the majority of the respondents have strong local connections to the area. 30% of respondents live further away (greater than 60 minutes driving distance), which most likely represents (visiting) scientists.
 
 ::::
@@ -1468,7 +1481,7 @@ ____________________________________________________
 
 # Next steps
 
-Based on this report (and previous workshops), the project team has created dashboard design recommendations and considerations. Work is underway on a draft dashboard, and the project team will be in touch soon about further steps on these, and to inform you of upcoming participation and discussion opportunities.
+The project team is considering dashboard designs based on this report, and previous workshops. Work is underway on a draft (prototype) dashboard, and the project team will be in touch soon about further steps on this, and to inform you of upcoming participation and discussion opportunities.
 
 To access the code that created this document, the survey result data, or jpg versions of the figures, go to https://github.com/GTMNERR-Science-Transfer/Survey-results. 
 
