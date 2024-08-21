@@ -1,0 +1,10 @@
+name: Publish Document
+title:
+username:
+account: rpubs
+server: rpubs.com
+hostUrl: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/1212158/8bb506296dad4a559c73c5229c6158c3
+bundleId: https://api.rpubs.com/api/v1/document/1212158/8bb506296dad4a559c73c5229c6158c3
+url: http://rpubs.com/gklarenberg/1212158
+version: 1
